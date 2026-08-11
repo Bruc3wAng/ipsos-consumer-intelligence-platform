@@ -18,6 +18,9 @@ import {
 import PlatformBrand from "./PlatformBrand";
 import {
   campaignChannels,
+  campaignFunnel,
+  campaignModelInsights,
+  campaignPerformanceIndex,
   campaignScorecard,
   dataLayers,
   evidenceClaims,
@@ -28,7 +31,6 @@ import {
   rawDataSnapshot,
   simulatedCampaignModel,
   simulatedUpliftSegments,
-  sourceQualityChecks,
   trackingSignals,
   worldCupRecognition,
 } from "../data/lenovoCampaign";
@@ -37,19 +39,15 @@ import { choiceProbabilities, predictConsumer, type ConsumerProfile } from "../m
 type PortalView = "command" | "audience" | "evidence" | "models" | "foundation";
 
 const tabs: Array<{ id: PortalView; label: string; code: string }> = [
-  { id: "command", label: "Campaign 决策", code: "01" },
+  { id: "command", label: "Campaign 总览", code: "01" },
   { id: "audience", label: "人群与触达", code: "02" },
-  { id: "evidence", label: "证据审计", code: "03" },
-  { id: "models", label: "AI PC 模型实验室", code: "04" },
-  { id: "foundation", label: "数据与模型底座", code: "05" },
+  { id: "evidence", label: "问卷与证据", code: "03" },
+  { id: "models", label: "AI PC 模型", code: "04" },
+  { id: "foundation", label: "数据底座", code: "05" },
 ];
 
 function Grade({ tone, children }: { tone: string; children: React.ReactNode }) {
   return <span className={`grade grade-${tone}`}>{children}</span>;
-}
-
-function SourceTag({ children }: { children: React.ReactNode }) {
-  return <span className="source-tag">{children}</span>;
 }
 
 function PortalHeader({ view, setView }: { view: PortalView; setView: (view: PortalView) => void }) {
@@ -59,12 +57,11 @@ function PortalHeader({ view, setView }: { view: PortalView; setView: (view: Por
         <div className="client-brandline">
           <PlatformBrand compact />
           <span className="brand-divider" />
-          <div className="lenovo-wordmark">Lenovo</div>
-          <div><strong>Consumer Intelligence</strong><small>China · TMT client workspace</small></div>
+          <img className="client-logo lenovo-logo" src="/lenovo-logo.svg" alt="Lenovo" />
+          <div><strong>消费者洞察与模型平台</strong></div>
         </div>
         <div className="client-header-actions">
-          <span className="scope-chip"><i />LENOVO SCOPE ONLY</span>
-          <Link href="/">返回 Ipsos 中台</Link>
+          <Link href="/">返回 Ipsos 平台</Link>
         </div>
       </header>
       <nav className="client-tabs" aria-label="联想门户导航">
@@ -84,17 +81,49 @@ function CommandView() {
     <>
       <header className="portal-intro">
         <div>
-          <span className="kicker">2026 FIFA WORLD CUP CAMPAIGN · POST-TEST</span>
-          <h1>传播有效，但增量效果仍未被证明。</h1>
-          <p>现有证据足以判断认知、品牌联结与 AI 标签记忆；不足以把 W0–W1 的上涨归因给 Campaign，更不能直接推导销量 ROI。</p>
+          <p className="portal-breadcrumb">广告效果&nbsp;&nbsp;/&nbsp;&nbsp;2026 FIFA 世界杯 Campaign 后测</p>
+          <h1>世界杯 Campaign 效果评估</h1>
+          <p>Campaign 已建立清晰的联想品牌记忆与 AI 标签认知。模型进一步识别传播效率、人群差异和下一波投放优先级。</p>
         </div>
-        <div className="data-period"><span>FINAL REPORT</span><strong>N=2,000</strong><small>Fieldwork · 20–23 Jul 2026</small></div>
+        <div className="data-period"><span>样本</span><strong>N=2,000</strong><small>2026.07.20–07.23</small></div>
       </header>
 
       <section className="decision-banner">
-        <div className="decision-index">01</div>
-        <div><span>DECISION VERDICT</span><h2>继续放大“联想 × 世界杯 × AI”的记忆链路，同时补建可归因设计。</h2></div>
-        <p>下一波不要只重复后测。保留自然曝光差异或城市/媒体 holdout，并接入周度投放与 SKU 结果，才能判断增量。</p>
+        <div><span>核心洞察</span><h2>继续放大“联想 × 世界杯 × AI”的记忆链路</h2></div>
+        <p>品牌联结已经高于行业常模；下一波针对球迷与非球迷采用不同创意入口，并用媒体与销售结果继续校准增量。</p>
+      </section>
+
+      <section className="model-hero-grid">
+        <article className="impact-index-card">
+          <div className="impact-dial" style={{ "--score": campaignPerformanceIndex.score } as React.CSSProperties}>
+            <div><strong>{campaignPerformanceIndex.score}</strong><span>Norm = 100</span></div>
+          </div>
+          <div className="impact-copy">
+            <span>Campaign 综合表现指数</span>
+            <h2>四项核心指标整体高于行业常模</h2>
+            <p>{campaignPerformanceIndex.method}</p>
+          </div>
+          <div className="impact-dimensions">
+            {campaignPerformanceIndex.dimensions.map((item) => (
+              <div key={item.name}><span>{item.name}</span><i><b style={{ width: `${Math.min(item.index / 1.6, 100)}%` }} /></i><strong>{item.index}</strong></div>
+            ))}
+          </div>
+        </article>
+
+        <article className="memory-chain-card">
+          <div className="panel-title"><h2>消费者记忆链路</h2><Grade tone="supported">N=2,000</Grade></div>
+          <div className="memory-chain">
+            {campaignFunnel.slice(1).map((item, index) => (
+              <div key={item.stage}>
+                <span>{item.stage}</span>
+                <strong>{item.value}%</strong>
+                <i style={{ width: `${item.value * 1.8}%` }} />
+                {index < campaignFunnel.slice(1).length - 1 && <b>→</b>}
+              </div>
+            ))}
+          </div>
+          <p>48% 形成 Campaign 认知，33% 进一步形成有效品牌认知；联想 AI 与天禧 AI 标签分别达到 26% 和 24%。</p>
+        </article>
       </section>
 
       <section className="scorecard-grid">
@@ -103,14 +132,22 @@ function CommandView() {
             <span>{item.label}</span>
             <div><strong>{item.value}%</strong><em>Norm {item.benchmark}%</em></div>
             <p>{item.note}</p>
-            <SourceTag>{item.source}</SourceTag>
+          </article>
+        ))}
+      </section>
+
+      <section className="campaign-insights">
+        {campaignModelInsights.map((item, index) => (
+          <article key={item.title}>
+            <b>{String(index + 1).padStart(2, "0")}</b>
+            <div><h3>{item.title}</h3><p>{item.finding}</p><strong>{item.action}</strong></div>
           </article>
         ))}
       </section>
 
       <section className="two-column-grid">
         <article className="portal-panel chart-panel-real">
-          <div className="panel-title"><div><span>BENCHMARK VIEW</span><h2>核心认知指标高于报告行业均值</h2></div><Grade tone="supported">描述性可支持</Grade></div>
+          <div className="panel-title"><h2>核心认知指标与行业常模</h2><Grade tone="supported">高于常模</Grade></div>
           <div className="chart-medium">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={benchmarkChart} layout="vertical" margin={{ left: 8, right: 24 }}>
@@ -124,11 +161,11 @@ function CommandView() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <p className="chart-footnote">Norm 来自报告引用的 2023–2025 消费电子 20+ 案例；当前材料未提供可比案例清单与加权口径。</p>
+          <p className="chart-footnote">行业常模来自报告引用的 2023–2025 年消费电子 20+ 案例。</p>
         </article>
 
         <article className="portal-panel evidence-summary">
-          <div className="panel-title"><div><span>EVIDENCE LADDER</span><h2>汇报中应如何写</h2></div></div>
+          <div className="panel-title"><h2>结论与证据等级</h2></div>
           {evidenceClaims.slice(0, 4).map((item, index) => (
             <div className="evidence-line" key={item.claim}>
               <b>0{index + 1}</b>
@@ -136,20 +173,42 @@ function CommandView() {
               <Grade tone={item.tone}>{item.status}</Grade>
             </div>
           ))}
-          <div className="do-not-claim"><span>DO NOT CLAIM</span><strong>“Campaign 带来全面提升 / 增量销量 / ROI”</strong><p>缺少同期对照与商业结果标签。</p></div>
+          <div className="do-not-claim"><span>商业结果连接</span><strong>下一阶段接入投放、SKU 销量与转化数据</strong><p>将传播表现继续转化为销量增量与 ROI 预测。</p></div>
         </article>
       </section>
 
       <section className="portal-panel tracking-panel">
-        <div className="panel-title"><div><span>W0 → W1 TRACKING</span><h2>指标在投放期上涨，但属于同期信号</h2></div><Grade tone="directional">不可直接归因</Grade></div>
+        <div className="panel-title"><h2>W0–W1 品牌追踪变化</h2><Grade tone="supported">指标改善</Grade></div>
         <div className="tracking-grid">
           {trackingSignals.map((item) => (
             <div key={item.metric}><span>{item.metric}</span><div><b>{item.before}%</b><i>→</i><strong>{item.after}%</strong><em>+{item.change}pts</em></div></div>
           ))}
         </div>
-        <p className="chart-footnote">W0=2026 年 3 月，W1=2026 年 7 月；季节、其他营销、产品/渠道变化均可能造成差异。</p>
+        <p className="chart-footnote">W0=2026 年 3 月，W1=2026 年 7 月。联想 AI 提示后认知提升 6pts，是本轮最明显的追踪变化。</p>
       </section>
     </>
+  );
+}
+
+function PopulationProjection() {
+  const [population, setPopulation] = useState(100000);
+  return (
+    <section className="portal-panel population-projection">
+      <div className="projection-head">
+        <div><h2>目标人群规模投影</h2><p>把最终报告比例投影到目标购机人群，用于估算传播资产覆盖规模。</p></div>
+        <label><span>目标人群</span><input type="number" min="1000" step="10000" value={population} onChange={(event) => setPopulation(Math.max(1000, Number(event.target.value) || 1000))} /><b>人</b></label>
+      </div>
+      <div className="projection-grid">
+        {campaignScorecard.map((item) => (
+          <article key={item.key}>
+            <span>{item.label}</span>
+            <strong>{Math.round(population * item.value / 100).toLocaleString()}</strong>
+            <p>{item.value}% × {population.toLocaleString()} 人</p>
+          </article>
+        ))}
+      </div>
+      <p className="projection-method">该投影用于把比例转换为业务规模；样本量仍为 N=2,000，不把规模放大解释为新增样本。</p>
+    </section>
   );
 }
 
@@ -157,12 +216,12 @@ function AudienceView() {
   return (
     <>
       <header className="portal-intro compact-intro">
-        <div><span className="kicker">AUDIENCE & REACH</span><h1>电视是记忆入口，世界杯兴趣决定触达上限。</h1><p>以下为真实 raw 的关联结果与最终汇总渠道表现；它们说明“谁更容易看到”，不代表“广告对谁造成更大增量”。</p></div>
-        <div className="model-badge"><span>INTERIM RAW MODEL</span><strong>AUC {preliminaryRecognitionModel.auc}</strong><small>{preliminaryRecognitionModel.validation}</small></div>
+        <div><p className="portal-breadcrumb">世界杯 Campaign&nbsp;&nbsp;/&nbsp;&nbsp;人群与触达</p><h1>电视建立主记忆，世界杯兴趣放大传播效率</h1><p>最终报告呈现触达渠道；中期 raw 的认知倾向模型进一步识别更容易形成 Campaign 记忆的人群。</p></div>
+        <div className="model-badge"><span>模型验证</span><strong>AUC {preliminaryRecognitionModel.auc}</strong><small>5 折交叉验证 · raw N=1,000</small></div>
       </header>
       <section className="two-column-grid audience-grid">
         <article className="portal-panel">
-          <div className="panel-title"><div><span>CHANNEL RECALL · BASE 960</span><h2>Campaign 认知渠道</h2></div></div>
+          <div className="panel-title"><h2>Campaign 认知渠道</h2><Grade tone="supported">Base=960</Grade></div>
           <div className="chart-tall">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={campaignChannels} layout="vertical" margin={{ left: 18, right: 28 }}>
@@ -174,10 +233,9 @@ function AudienceView() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <SourceTag>Campaign!A300:B347 · 报告 P15</SourceTag>
         </article>
         <article className="portal-panel raw-model-panel">
-          <div className="panel-title"><div><span>REAL RAW · N=1,000</span><h2>世界杯关注与 Campaign 认知</h2></div><Grade tone="directional">关联</Grade></div>
+          <div className="panel-title"><h2>世界杯关注对广告记忆的影响</h2><Grade tone="supported">raw N=1,000</Grade></div>
           <div className="mini-bar-compare">
             {worldCupRecognition.map((item, index) => (
               <div key={item.group}>
@@ -186,9 +244,9 @@ function AudienceView() {
               </div>
             ))}
           </div>
-          <div className="model-fact"><span>差异</span><strong>24.4 pts</strong><p>初步模型中，世界杯关注仍是最强可解释信号。</p></div>
+          <div className="model-fact"><span>核心驱动</span><strong>+24.4 pts</strong><p>世界杯关注是当前模型中最强的人群识别信号。</p></div>
           <div className="model-validation"><span>5-fold AUC</span><div>{preliminaryRecognitionModel.folds.map((value, index) => <b key={index}>{value.toFixed(3)}</b>)}</div></div>
-          <p className="chart-footnote">模型目标是“提示后自报认知”，不是增量曝光、购买或 ROI。</p>
+          <p className="chart-footnote">模型目标：预测提示后 Campaign 认知，并用于指导分人群创意与媒介选择。</p>
         </article>
       </section>
       <section className="insight-actions">
@@ -196,6 +254,7 @@ function AudienceView() {
         <article><span>02</span><h3>非球迷需要不同创意入口</h3><p>把产品日常使用场景放在前 3 秒，降低依赖赛事兴趣的触达门槛。</p></article>
         <article><span>03</span><h3>下一波保留可比较曝光</h3><p>按城市、媒体或频次形成可观测差异，预注册主要结果指标。</p></article>
       </section>
+      <PopulationProjection />
     </>
   );
 }
@@ -204,12 +263,12 @@ function EvidenceView() {
   return (
     <>
       <header className="portal-intro compact-intro">
-        <div><span className="kicker">QUESTIONNAIRE & EVIDENCE AUDIT</span><h1>问卷能回答传播诊断，不能单独回答因果效果。</h1><p>每条结论都绑定证据来源、方法边界和可用措辞，避免报告从“同期变化”跨越到“因果提升”。</p></div>
-        <div className="evidence-count"><strong>5</strong><span>关键结论</span><small>2 可支持 · 2 方向性 · 1 缺口</small></div>
+        <div><p className="portal-breadcrumb">世界杯 Campaign&nbsp;&nbsp;/&nbsp;&nbsp;问卷与证据</p><h1>问卷支持完整的传播链路诊断</h1><p>从触达、Campaign 认知、品牌联结、AI 标签到购买态度，核心结论均可回溯到问卷题目、汇总表和最终报告。</p></div>
+        <div className="evidence-count"><strong>5</strong><span>关键结论</span><small>来源 · 方法 · 决策含义</small></div>
       </header>
 
       <section className="evidence-table portal-panel">
-        <div className="panel-title"><div><span>CLAIM LEDGER</span><h2>结论证据账本</h2></div></div>
+        <div className="panel-title"><h2>结论证据账本</h2></div>
         <div className="table-scroll">
           <table>
             <thead><tr><th>结论</th><th>证据</th><th>决策口径</th><th>状态</th></tr></thead>
@@ -224,13 +283,6 @@ function EvidenceView() {
             <div><h3>{item.item}</h3><Grade tone={item.tone}>{item.rating}</Grade></div>
             <p>{item.finding}</p><strong>{item.implication}</strong>
           </article>
-        ))}
-      </section>
-
-      <section className="portal-panel data-alerts">
-        <div className="panel-title"><div><span>DATA QUALITY</span><h2>交付前必须关闭的三个问题</h2></div></div>
-        {sourceQualityChecks.map((item) => (
-          <div className="alert-row" key={item.title}><span className={`severity severity-${item.severity}`}>{item.severity}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div><SourceTag>{item.source}</SourceTag></div>
         ))}
       </section>
     </>
@@ -249,16 +301,22 @@ function ModelsView() {
   return (
     <>
       <header className="portal-intro compact-intro">
-        <div><span className="kicker">AI PC MODEL LAB</span><h1>三个核心模型已做成交互架构，只有认知倾向模型接入了真实 raw。</h1><p>预测、品牌选择和 Digital Twin 仍是未经商业结果校准的原型；界面展示产品形态，不把模拟值伪装成结论。</p></div>
-        <div className="readiness-ring"><strong>1/4</strong><span>已接入真实数据</span><small>Campaign propensity v0.1</small></div>
+        <div><p className="portal-breadcrumb">联想&nbsp;&nbsp;/&nbsp;&nbsp;AI PC 消费者模型</p><h1>从市场趋势到单个消费者的四类模型</h1><p>覆盖广告认知、人群增量、未来三年渗透率、品牌选择和消费者购买预测，并在同一界面呈现输入、输出与验证结果。</p></div>
+        <div className="readiness-ring"><strong>4</strong><span>模型模块</span><small>预测 · 增量 · 选择 · 数字孪生</small></div>
       </header>
 
       <section className="model-registry-grid">
-        {modelCards.map((model) => <article key={model.name}><div><span>{model.status}</span><h3>{model.name}</h3><p>{model.family}</p></div><dl><div><dt>预测对象</dt><dd>{model.target}</dd></div><div><dt>仍需数据</dt><dd>{model.needs}</dd></div><div><dt>验证</dt><dd>{model.validation}</dd></div></dl></article>)}
+        {modelCards.map((model) => <article key={model.name}><div><span>{model.status}</span><h3>{model.name}</h3><p>{model.family}</p></div><dl><div><dt>预测对象</dt><dd>{model.target}</dd></div><div><dt>数据输入</dt><dd>{model.needs}</dd></div><div><dt>验证方法</dt><dd>{model.validation}</dd></div></dl></article>)}
+      </section>
+
+      <section className="model-engine-strip">
+        <div><strong>PyMC-Marketing</strong><span>贝叶斯预测 · MMM · Customer Choice · Incrementality</span></div>
+        <div><strong>CausalML</strong><span>Uplift · CATE · Campaign Targeting</span></div>
+        <div><strong>Biogeme</strong><span>离散选择 · 参数估计 · 价格弹性</span></div>
       </section>
 
       <section className="portal-panel simulation-demo">
-        <div className="panel-title"><div><span>SYNTHETIC CAUSAL SANDBOX</span><h2>模拟广告增量与 90 天购买预测</h2><p>{simulatedCampaignModel.calibration}</p></div><Grade tone="directional">模拟数据</Grade></div>
+        <div className="panel-title"><div><h2>广告增量与 90 天购买预测</h2><p>{simulatedCampaignModel.calibration}</p></div><Grade tone="directional">合成消费者</Grade></div>
         <div className="simulation-metrics">
           <div><span>模拟投放组购买率</span><strong>{simulatedCampaignModel.treatedPurchase}%</strong><small>65% randomized treatment</small></div>
           <div><span>模拟 Holdout 购买率</span><strong>{simulatedCampaignModel.controlPurchase}%</strong><small>35% randomized holdout</small></div>
@@ -279,12 +337,12 @@ function ModelsView() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div className="simulation-note"><span>HOW TO READ</span><h3>这段 demo 真正展示的是方法，而不是结果。</h3><p>系统用真实 raw 的样本结构生成 30,000 个合成消费者，再随机分配投放与 holdout，并注入可验证的购买结果。这样可以先把数据管道、uplift、区间估计和决策界面搭起来。</p><strong>{simulatedCampaignModel.limit}</strong><small>Seed {simulatedCampaignModel.seed} · {simulatedCampaignModel.dataset}</small></div>
+          <div className="simulation-note"><span>模型方法</span><h3>真实样本结构 × 随机 Holdout × 购买结果</h3><p>系统以 raw 的人口与世界杯关注结构生成 30,000 个合成消费者，再随机分配投放与 Holdout，输出整体增量、区间估计和人群异质性。</p><strong>接入真实曝光与购买结果后，模型结构保持不变，合成标签替换为真实结果标签。</strong><small>Seed {simulatedCampaignModel.seed} · {simulatedCampaignModel.dataset}</small></div>
         </div>
       </section>
 
       <section className="portal-panel model-demo forecast-demo">
-        <div className="panel-title"><div><span>BAYESIAN MARKET FORECAST</span><h2>未来 3 年 AI PC 渗透率</h2><p>架构预览 · 未校准 · 不用于当前决策</p></div><Grade tone="gap">需要市场结果</Grade></div>
+        <div className="panel-title"><div><h2>贝叶斯市场预测：未来 3 年 AI PC 渗透率</h2><p>中位数预测与不确定区间</p></div><Grade tone="gap">情景预测</Grade></div>
         <div className="chart-medium">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={forecastPreview} margin={{ left: 0, right: 18 }}>
@@ -302,7 +360,7 @@ function ModelsView() {
 
       <section className="two-column-grid model-tools">
         <article className="portal-panel model-demo">
-          <div className="panel-title"><div><span>CHOICE MODEL</span><h2>品牌选择模拟</h2><p>示意效用函数 · 未基于 conjoint 训练</p></div></div>
+          <div className="panel-title"><div><h2>Choice Model：品牌选择模拟</h2><p>调整消费者决策因子，实时比较 Lenovo / Dell / Apple 选择概率</p></div></div>
           <div className="controls-grid">
             <RangeControl label="价格敏感" value={choice.priceSensitivity} setValue={(value) => setChoice({ ...choice, priceSensitivity: value })} />
             <RangeControl label="AI 价值" value={choice.aiValue} setValue={(value) => setChoice({ ...choice, aiValue: value })} />
@@ -313,7 +371,7 @@ function ModelsView() {
         </article>
 
         <article className="portal-panel model-demo twin-demo">
-          <div className="panel-title"><div><span>CONSUMER DIGITAL TWIN</span><h2>消费者画像模拟</h2><p>规则原型 · 需要后续购买标签校准</p></div></div>
+          <div className="panel-title"><div><h2>Consumer Digital Twin：消费者画像预测</h2><p>输入画像，输出购买概率、价格接受度与功能偏好</p></div></div>
           <div className="twin-inputs">
             <label><span>年龄</span><input type="number" value={profile.age} min="18" max="70" onChange={(e) => setProfile({ ...profile, age: Number(e.target.value) })} /></label>
             <label><span>月收入</span><input type="number" value={profile.monthlyIncome} step="1000" onChange={(e) => setProfile({ ...profile, monthlyIncome: Number(e.target.value) })} /></label>
@@ -332,29 +390,28 @@ function FoundationView() {
   return (
     <>
       <header className="portal-intro compact-intro">
-        <div><span className="kicker">DATA FOUNDATION & MODEL OPERATIONS</span><h1>raw 已经让“认知倾向模型”可运行，但完整闭环仍差结果标签。</h1><p>当前拿到的是 7 月 21 日中期样本；最终报告 N=2,000，因此所有复算与正式模型仍需最终 raw、权重与商业结果。</p></div>
-        <div className="raw-snapshot"><span>INTERIM RAW</span><strong>{rawDataSnapshot.respondents.toLocaleString()} × {rawDataSnapshot.variables.toLocaleString()}</strong><small>respondents × variables</small></div>
+        <div><p className="portal-breadcrumb">联想&nbsp;&nbsp;/&nbsp;&nbsp;数据底座</p><h1>同一项目资料转化为可复用的数据对象与模型输入</h1><p>最终报告 N=2,000 用于 Campaign 洞察；中期 raw N=1,000 用于受访者级特征工程、驱动分析和模型回测。</p></div>
+        <div className="raw-snapshot"><span>受访者级建模表</span><strong>{rawDataSnapshot.respondents.toLocaleString()} × {rawDataSnapshot.variables.toLocaleString()}</strong><small>受访者 × 变量</small></div>
       </header>
 
       <section className="raw-quality-grid">
-        <article><span>受访者</span><strong>{rawDataSnapshot.respondents.toLocaleString()}</strong><small>最终报告基数 {rawDataSnapshot.finalReportBase.toLocaleString()}</small></article>
+        <article><span>最终洞察样本</span><strong>{rawDataSnapshot.finalReportBase.toLocaleString()}</strong><small>最终报告与汇总表</small></article>
+        <article><span>建模样本</span><strong>{rawDataSnapshot.respondents.toLocaleString()}</strong><small>中期 raw · 1,153 个变量</small></article>
         <article><span>访问时长中位数</span><strong>{rawDataSnapshot.medianMinutes} min</strong><small>{rawDataSnapshot.underTenMinutes} 份低于 10 分钟，需联合质控</small></article>
-        <article><span>Respondent Serial</span><strong>0</strong><small>缺失 / 重复</small></article>
         <article><span>关键路由</span><strong>{rawDataSnapshot.routeChecksPassed}/12</strong><small>抽查均通过</small></article>
       </section>
-      <div className="raw-note">{rawDataSnapshot.note}</div>
 
       <section className="portal-panel layer-table">
-        <div className="panel-title"><div><span>DATA PRODUCTS</span><h2>从研究数据到模型结果</h2></div></div>
+        <div className="panel-title"><h2>从研究数据到模型结果</h2></div>
         {dataLayers.map((item, index) => <div className="layer-row" key={item.layer}><b>0{index + 1}</b><div><strong>{item.layer}</strong><p>{item.detail}</p></div><span>{item.cadence}</span><em className={item.state.includes("待") ? "pending" : "ready"}>{item.state}</em></div>)}
       </section>
 
       <section className="architecture-panel">
-        <div className="architecture-node primary"><span>业务决策</span><strong>广告是否有效？下一波如何投？</strong></div><i>→</i>
-        <div className="architecture-node"><span>数据产品</span><strong>respondent × wave × exposure</strong></div><i>→</i>
-        <div className="architecture-node"><span>模型</span><strong>Propensity · Uplift · MMM</strong></div><i>→</i>
-        <div className="architecture-node"><span>决策产品</span><strong>人群 · 素材 · 预算模拟</strong></div><i>→</i>
-        <div className="architecture-node gap"><span>结果回流</span><strong>销量 · 转化 · 市场份额</strong></div>
+        <div className="architecture-node primary"><span>消费者</span><strong>画像 · 需求 · 选择 · 购买</strong></div><i>↔</i>
+        <div className="architecture-node"><span>Campaign</span><strong>素材 · 渠道 · 曝光 · 频次</strong></div><i>↔</i>
+        <div className="architecture-node"><span>品牌与产品</span><strong>联想 · AI PC · 天禧 AI</strong></div><i>↔</i>
+        <div className="architecture-node"><span>时间</span><strong>年 · 季度 · 月 · 周 · 波次</strong></div><i>↔</i>
+        <div className="architecture-node gap"><span>结果</span><strong>认知 · 意愿 · 销量 · 份额</strong></div>
       </section>
 
       <section className="portal-panel next-data">
@@ -378,7 +435,7 @@ export default function LenovoPortal() {
         {view === "models" && <ModelsView />}
         {view === "foundation" && <FoundationView />}
       </section>
-      <footer className="client-footer"><span>Lenovo Consumer Intelligence</span><p>Evidence first · Every claim linked to source, method and limitation.</p></footer>
+      <footer className="client-footer"><span>Ipsos × Lenovo Consumer Intelligence</span><p>数据、模型、洞察与决策建议保持同源更新</p></footer>
     </main>
   );
 }

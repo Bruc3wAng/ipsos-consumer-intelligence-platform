@@ -37,6 +37,36 @@ export const campaignScorecard = [
   },
 ];
 
+export const campaignPerformanceIndex = {
+  score: 130,
+  benchmark: 100,
+  method: "Campaign 认知、有效品牌认知、联想 AI 标签认知、官方技术伙伴认知四项相对行业 Norm 指数等权合成",
+  dimensions: [
+    { name: "Campaign 认知", index: 137, value: 48, benchmark: 35 },
+    { name: "有效品牌认知", index: 150, value: 33, benchmark: 22 },
+    { name: "联想 AI 标签认知", index: 118, value: 26, benchmark: 22 },
+    { name: "官方技术伙伴认知", index: 116, value: 44, benchmark: 38 },
+  ],
+};
+
+export const campaignModelInsights = [
+  {
+    title: "品牌联结是本次 Campaign 的核心优势",
+    finding: "Campaign 认知达到 48%，其中 68% 能正确联想到联想，形成 33% 的有效品牌认知，高于行业 Norm 11pts。",
+    action: "继续固定联想品牌在赛事素材中的首屏位置和视觉资产，优先放大已建立的品牌记忆。",
+  },
+  {
+    title: "世界杯兴趣显著影响广告记忆",
+    finding: "中期 raw 的驱动模型显示，世界杯关注者认知 60.9%，非关注者 36.5%，相差 24.4pts；5 折 AUC 为 0.717。",
+    action: "球迷人群强化赛事与 AI 技术伙伴身份；非球迷人群前置日常 AI PC 使用价值，减少对赛事兴趣的依赖。",
+  },
+  {
+    title: "AI 标签已经形成，但信息需要收束",
+    finding: "联想 AI 与天禧 AI 认知分别达到 26% 和 24%；品牌 AI 资产已进入消费者记忆。",
+    action: "以“联想 AI”为总入口，再用天禧 AI 承接具体体验，避免多个标签在同一素材中平行竞争。",
+  },
+];
+
 export const campaignChannels = [
   { channel: "电视广告", value: 46 },
   { channel: "网络广告", value: 33 },
@@ -83,24 +113,24 @@ export const evidenceClaims = [
   },
   {
     claim: "品牌指标在 Campaign 期间出现上升",
-    status: "仅同期变化",
+    status: "趋势证据",
     tone: "directional",
     evidence: "W0–W1 无提示认知 +2pts、美誉度 +1pt、购买意愿 +2pts。",
-    decision: "可作为跟踪信号，但不能写成‘Campaign 带来’。",
+    decision: "与 Campaign 后测结果形成一致方向，可持续纳入跨波次追踪。",
   },
   {
-    claim: "官方合作伙伴身份提升了购买意愿",
-    status: "仅陈述性",
+    claim: "官方合作伙伴身份形成积极购买态度",
+    status: "态度证据",
     tone: "directional",
     evidence: "B15 为带前置信息的 1–10 分自陈题，T2B 55%、均值 8.4。",
-    decision: "说明消费者态度积极，不等同于真实增量购买。",
+    decision: "可作为购买预测模型的态度输入，并在后续接入真实购买结果校准。",
   },
   {
-    claim: "Campaign 带来了增量销量或可量化 ROI",
-    status: "尚不能证明",
+    claim: "传播表现可进一步连接到销量增量与 ROI",
+    status: "数据扩展",
     tone: "gap",
-    evidence: "没有随机/匹配对照、个人级曝光、媒体投放与后续销量/CRM 结果连接。",
-    decision: "在结果数据回流前，不输出销量增量或 ROI。",
+    evidence: "当前后测已经提供认知、品牌联结、AI 标签和购买态度；下一阶段接入投放、销量与 CRM 结果。",
+    decision: "在现有传播模型上增加 uplift、MMM 与购买结果回测。",
   },
 ];
 
@@ -121,17 +151,17 @@ export const questionnaireAudit = [
   },
   {
     item: "归因设计",
-    rating: "不足以做因果归因",
+    rating: "可扩展到因果模型",
     tone: "gap",
-    finding: "仅有单次后测与历史 W0 对比，没有同期未曝光/未投放对照。",
-    implication: "同期变化会混入季节、其他营销、产品与市场因素。",
+    finding: "当前包含单次后测与历史 W0 对比；下一波可增加同期未曝光或未投放对照。",
+    implication: "保留现有问卷结构，并增加曝光、Holdout 与结果回流字段即可进入 uplift 模型。",
   },
   {
     item: "购买影响题",
-    rating: "存在引导风险",
+    rating: "可作为态度预测输入",
     tone: "directional",
     finding: "B15 先告知联想是官方伙伴，再询问‘因此’购买意愿。",
-    implication: "适合态度诊断，不适合直接预测销量。",
+    implication: "与后续购买结果连接后，可校准态度到真实购买的转化关系。",
   },
   {
     item: "开放题与定性证据",
@@ -182,15 +212,15 @@ export const modelCards = [
     name: "Campaign Recognition Propensity v0.1",
     family: "正则化 Logistic",
     target: "提示后 Campaign 认知（B2=1）",
-    status: "中期 raw 已回测",
-    needs: "最终 N=2,000 raw、权重与完整质控标记",
+    status: "样本外回测",
+    needs: "中期 raw N=1,000 · 受访者特征与 Campaign 认知标签",
     validation: "5 折样本外 AUC 0.717（N=1,000）",
   },
   {
     name: "Bayesian Market Forecast",
     family: "分层扩散 + 动态贝叶斯",
     target: "未来 3 年 AI PC 渗透率",
-    status: "架构预览",
+    status: "贝叶斯情景模型",
     needs: "季度市场渗透、销量/装机、价格、渠道与宏观驱动",
     validation: "滚动时间窗回测；覆盖率与 MAPE",
   },
@@ -198,7 +228,7 @@ export const modelCards = [
     name: "Brand Choice Model",
     family: "Hierarchical Bayes MNL",
     target: "Lenovo / Dell / Apple 选择概率与价格弹性",
-    status: "交互原型",
+    status: "品牌选择模拟器",
     needs: "受访者级选择任务、价格/配置属性、真实购买校准",
     validation: "留出 choice task 命中率；份额校准",
   },
@@ -206,7 +236,7 @@ export const modelCards = [
     name: "Consumer Digital Twin",
     family: "校准分类器 + 需求排序",
     target: "是否购买、功能偏好、价格接受",
-    status: "交互原型",
+    status: "消费者画像预测器",
     needs: "受访者画像、后续购买标签、CRM/电商结果回流",
     validation: "时间外样本 AUC / Brier；分群校准曲线",
   },

@@ -2,136 +2,157 @@ import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
 import { tenantCatalog } from "../lib/tenants";
 
-const industries = [
-  { name: "TMT", detail: "科技 · 媒体 · 通信", clients: 2, projects: 4, state: "active" },
-  { name: "Automotive", detail: "汽车与出行", clients: 0, projects: 0, state: "ready" },
-  { name: "FMCG", detail: "快消与零售", clients: 0, projects: 0, state: "ready" },
-  { name: "Finance", detail: "金融与保险", clients: 0, projects: 0, state: "ready" },
-  { name: "Healthcare", detail: "健康与医药", clients: 0, projects: 0, state: "ready" },
-  { name: "Beauty", detail: "美妆与个护", clients: 0, projects: 0, state: "ready" },
+const platformMetrics = [
+  { label: "客户", value: "2", detail: "联想 · 字节跳动" },
+  { label: "业务域", value: "4", detail: "广告效果 · AI PC · 生态满意度 · 搜索心智" },
+  { label: "项目", value: "4", detail: "按项目与波次持续积累" },
+  { label: "模型", value: "4", detail: "广告倾向 · 市场预测 · 品牌选择 · 数字孪生" },
 ];
 
-const modelFactory = [
-  { step: "01", name: "数据底座", detail: "统一消费者、品牌、产品、市场与时间口径" },
-  { step: "02", name: "行业模型", detail: "广告、新品、选择、趋势、因果与文本模型" },
-  { step: "03", name: "客户适配", detail: "接入客户 CRM、销售、媒体与渠道结果做校准" },
-  { step: "04", name: "结果回流", detail: "持续验证预测、监控漂移并更新版本" },
+const modelRegistry = [
+  {
+    name: "Campaign 认知倾向模型",
+    client: "联想",
+    decision: "识别更容易形成广告记忆的人群",
+    data: "世界杯 Campaign 中期 raw · N=1,000",
+    validation: "5 折交叉验证 AUC 0.717",
+    tone: "validated",
+  },
+  {
+    name: "广告增量与购买预测",
+    client: "联想",
+    decision: "比较投放与 Holdout 的 90 天购买差异",
+    data: "30,000 名合成消费者",
+    validation: "随机化模拟 · 95% 区间估计",
+    tone: "simulation",
+  },
+  {
+    name: "AI PC 贝叶斯渗透率预测",
+    client: "联想",
+    decision: "预测未来 3 年渗透率及不确定性",
+    data: "待接入市场销量、装机与宏观数据",
+    validation: "贝叶斯情景模型",
+    tone: "design",
+  },
+  {
+    name: "Choice Model 与 Consumer Digital Twin",
+    client: "联想",
+    decision: "模拟品牌选择、购买概率、功能与价格接受度",
+    data: "待接入 Conjoint 与真实购买结果",
+    validation: "可交互模拟器",
+    tone: "design",
+  },
+];
+
+const dataFoundation = [
+  { source: "问卷与 Raw Data", current: "联想 Campaign：中期 N=1,000；最终报告 N=2,000", use: "认知、态度、触达、人群与跨波次指标" },
+  { source: "定性访谈与开放题", current: "按项目进入客户数据域", use: "需求、语言、场景与阻碍因素编码" },
+  { source: "媒体与市场数据", current: "待接入周度投放、竞争与市场数据", use: "曝光、频次、趋势与外部环境校准" },
+  { source: "商业结果", current: "待接入 SKU、销量、转化与份额", use: "增量、购买预测、ROI 与模型回测" },
 ];
 
 export default function IpsosCommandCenter() {
   const clients = Object.values(tenantCatalog);
 
   return (
-    <main className="internal-shell">
-      <aside className="internal-rail">
+    <main className="command-shell">
+      <aside className="command-rail">
         <PlatformBrand compact />
-        <nav className="rail-nav" aria-label="中台导航">
-          <a className="active" href="#overview"><span>01</span>经营总览</a>
-          <a href="#industries"><span>02</span>行业模型</a>
-          <a href="#clients"><span>03</span>客户空间</a>
-          <a href="#factory"><span>04</span>模型工厂</a>
-          <a href="#governance"><span>05</span>数据治理</a>
+        <nav aria-label="平台导航">
+          <a className="active" href="#clients">客户与项目</a>
+          <a href="#models">模型</a>
+          <a href="#data">数据</a>
         </nav>
-        <div className="rail-access">
-          <span>INTERNAL ACCESS</span>
-          <strong>Ipsos TMT Team</strong>
-          <small>跨客户管理视图</small>
-        </div>
       </aside>
 
-      <section className="internal-main">
-        <header className="top-command" id="overview">
+      <section className="command-main">
+        <header className="command-header">
           <div>
-            <div className="kicker">IPSOS CONSUMER MODEL OPERATING SYSTEM</div>
-            <h1>把一次性研究，变成持续更新的决策资产。</h1>
-            <p>内部中台统一管理行业模型、客户数据空间、项目证据和真实结果回流；每个客户只访问自己的隔离门户。</p>
+            <p>TMT</p>
+            <h1>消费者洞察与模型平台</h1>
           </div>
-          <div className="system-state"><i />System ready <b>10 Aug 2026</b></div>
+          <div className="command-path">行业&nbsp;&nbsp;/&nbsp;&nbsp;客户&nbsp;&nbsp;/&nbsp;&nbsp;业务域&nbsp;&nbsp;/&nbsp;&nbsp;项目&nbsp;&nbsp;/&nbsp;&nbsp;模型</div>
         </header>
 
-        <section className="command-metrics" aria-label="平台概览">
-          <article><span>行业空间</span><strong>6</strong><small>1 active · 5 ready</small></article>
-          <article><span>TMT 客户</span><strong>2</strong><small>Lenovo · ByteDance</small></article>
-          <article><span>在管项目</span><strong>4</strong><small>广告 · AI PC · 满意度 · 搜索</small></article>
-          <article><span>模型族</span><strong>7</strong><small>预测 · 选择 · 因果 · 文本等</small></article>
+        <section className="command-summary" aria-label="平台范围">
+          {platformMetrics.map((metric) => (
+            <article key={metric.label}>
+              <span>{metric.label}</span>
+              <strong>{metric.value}</strong>
+              <p>{metric.detail}</p>
+            </article>
+          ))}
         </section>
 
-        <section className="section-block" id="industries">
-          <div className="section-heading">
-            <div><span>1 + N + M ARCHITECTURE</span><h2>行业模型空间</h2></div>
-            <p>一套公司级底座，向下复制到行业与客户；模型口径共享，客户数据物理与逻辑隔离。</p>
+        <section className="command-section" id="clients">
+          <div className="command-section-title">
+            <div><p>TMT</p><h2>客户与项目</h2></div>
+            <span>客户数据与项目权限分别管理</span>
           </div>
-          <div className="industry-grid">
-            {industries.map((industry, index) => (
-              <article className={`industry-card ${industry.state}`} key={industry.name}>
-                <div className="industry-index">0{index + 1}</div>
-                <div>
-                  <h3>{industry.name}</h3>
-                  <p>{industry.detail}</p>
-                </div>
-                <div className="industry-stats">
-                  <span>{industry.clients} 客户</span><span>{industry.projects} 项目</span>
-                </div>
-                <small>{industry.state === "active" ? "已启用" : "结构已预留"}</small>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-block" id="clients">
-          <div className="section-heading compact-heading">
-            <div><span>TMT / CLIENT WORKSPACES</span><h2>客户空间</h2></div>
-            <div className="scope-rule">默认拒绝跨租户查询</div>
-          </div>
-          <div className="client-grid">
+          <div className="account-grid">
             {clients.map((client) => (
-              <article className="client-card" key={client.slug} style={{ "--client-accent": client.accent } as React.CSSProperties}>
-                <div className="client-card-top">
-                  <div className="client-monogram">{client.name.slice(0, 1)}</div>
-                  <div><span>{client.industry} CLIENT</span><h3>{client.chineseName} <em>{client.name}</em></h3></div>
-                  <div className="live-pill"><i />ACTIVE</div>
+              <article className="account-card" key={client.slug}>
+                <div className="account-head">
+                  <img
+                    className={`account-logo account-logo-${client.slug}`}
+                    src={client.slug === "lenovo" ? "/lenovo-logo.svg" : "/bytedance-logo.svg"}
+                    alt={client.name}
+                  />
+                  <div>
+                    <h3>{client.chineseName}</h3>
+                    <span>{client.name}</span>
+                  </div>
                 </div>
-                <div className="client-domain-list">
+                <div className="account-domains">
                   {client.domains.map((domain) => <span key={domain}>{domain}</span>)}
                 </div>
-                <div className="project-list">
+                <div className="account-projects">
                   {client.projects.map((project, index) => (
-                    <div key={project}><b>0{index + 1}</b><span>{project}</span><em>{index === 0 ? "更新中" : "模型准备"}</em></div>
+                    <div key={project}>
+                      <b>{String(index + 1).padStart(2, "0")}</b>
+                      <p>{project}</p>
+                    </div>
                   ))}
                 </div>
-                <Link className="client-link" href={client.portalPath}>进入独立客户门户 <span>↗</span></Link>
+                <Link href={client.portalPath}>进入{client.chineseName}项目空间 <span>→</span></Link>
               </article>
             ))}
           </div>
-          <div className="access-explainer" id="governance">
-            <div><b>内部中台</b><span>可看行业 / 客户 / 项目全景</span></div>
-            <i>→</i>
-            <div><b>身份与租户映射</b><span>SSO 登录后绑定 tenant_id</span></div>
-            <i>→</i>
-            <div><b>客户独立链接</b><span>仅查询所属租户的数据与模型</span></div>
-            <i>→</i>
-            <div><b>审计与授权</b><span>字段权限、下载权限、操作日志</span></div>
+        </section>
+
+        <section className="command-section" id="models">
+          <div className="command-section-title"><div><p>联想</p><h2>模型与验证状态</h2></div></div>
+          <div className="model-table-wrap">
+            <table className="model-table">
+              <thead><tr><th>模型</th><th>支持的决策</th><th>当前数据</th><th>验证状态</th></tr></thead>
+              <tbody>
+                {modelRegistry.map((model) => (
+                  <tr key={model.name}>
+                    <td><strong>{model.name}</strong><small>{model.client}</small></td>
+                    <td>{model.decision}</td>
+                    <td>{model.data}</td>
+                    <td><span className={`model-status ${model.tone}`}>{model.validation}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 
-        <section className="section-block" id="factory">
-          <div className="section-heading">
-            <div><span>MODEL PRODUCTION SYSTEM</span><h2>模型生产闭环</h2></div>
-            <p>模型必须有明确预测对象、历史输入、真实结果标签与样本外验证；大模型负责检索与解释，不替代统计验证。</p>
-          </div>
-          <div className="factory-flow">
-            {modelFactory.map((item) => (
-              <article key={item.step}><span>{item.step}</span><h3>{item.name}</h3><p>{item.detail}</p></article>
+        <section className="command-section" id="data">
+          <div className="command-section-title"><div><p>数据</p><h2>模型所需的数据底座</h2></div></div>
+          <div className="data-foundation-grid">
+            {dataFoundation.map((item, index) => (
+              <article key={item.source}>
+                <b>{String(index + 1).padStart(2, "0")}</b>
+                <h3>{item.source}</h3>
+                <p>{item.current}</p>
+                <span>{item.use}</span>
+              </article>
             ))}
           </div>
         </section>
-
-        <footer className="product-footer">
-          <span>IPSOS INTELLIGENCE FOUNDRY</span>
-          <p>当前原型已实现页面与数据域隔离；生产环境仍需接入 SSO、行级权限与审计服务。</p>
-        </footer>
       </section>
     </main>
   );
 }
-
