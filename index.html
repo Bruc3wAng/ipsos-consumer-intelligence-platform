@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="refresh"
+      content="0; url=https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site"
+    />
     <title>Ipsos Consumer Intelligence Platform</title>
+    <script>
+      window.location.replace("https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site");
+    </script>
     <style>
       :root {
         color-scheme: light;
         font-family: Arial, "Microsoft YaHei", sans-serif;
-        background: #edf1f7;
-        color: #102052;
+        background: #14215f;
+        color: #ffffff;
       }
 
       * {
@@ -20,33 +27,22 @@
 
       html,
       body {
-        width: 100%;
-        height: 100%;
+        min-height: 100%;
         margin: 0;
-        overflow: hidden;
       }
 
-      .loading {
-        position: fixed;
-        inset: 0;
-        z-index: 1;
+      body {
         display: grid;
+        min-height: 100vh;
         place-items: center;
-        background:
-          radial-gradient(circle at 78% 24%, rgba(35, 176, 174, 0.2), transparent 30%),
-          linear-gradient(135deg, #111d58 0%, #263d98 58%, #168e9e 100%);
-        color: #fff;
-        transition: opacity 220ms ease;
-      }
-
-      .loading.is-ready {
-        pointer-events: none;
-        opacity: 0;
-      }
-
-      .brand {
-        max-width: 680px;
         padding: 32px;
+        background:
+          radial-gradient(circle at 78% 24%, rgba(54, 202, 191, 0.22), transparent 30%),
+          linear-gradient(135deg, #101a50 0%, #263d98 58%, #168e9e 100%);
+      }
+
+      main {
+        max-width: 720px;
         text-align: center;
       }
 
@@ -60,64 +56,34 @@
       }
 
       h1 {
-        margin: 0;
+        margin: 0 0 20px;
         font-family: "Microsoft YaHei", Arial, sans-serif;
-        font-size: clamp(28px, 4vw, 52px);
+        font-size: clamp(30px, 5vw, 54px);
         font-weight: 500;
         letter-spacing: -0.03em;
       }
 
-      .line {
-        width: 92px;
-        height: 3px;
-        margin: 24px auto 0;
-        background: #55e0d5;
-      }
-
-      iframe {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-        background: #edf1f7;
-      }
-
-      noscript {
-        position: fixed;
-        inset: 0;
-        z-index: 3;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-        background: #fff;
+      p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        line-height: 1.8;
       }
 
       a {
-        color: #223eb0;
+        color: #ffffff;
+        font-weight: 700;
+        text-underline-offset: 4px;
       }
     </style>
   </head>
   <body>
-    <div class="loading" id="loading" aria-live="polite">
-      <div class="brand">
-        <p class="eyebrow">Ipsos Consumer Intelligence</p>
-        <h1>消费者洞察与模型平台</h1>
-        <div class="line" aria-hidden="true"></div>
-      </div>
-    </div>
-    <iframe
-      title="Ipsos Consumer Intelligence Platform"
-      src="https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site"
-      allow="clipboard-read; clipboard-write; fullscreen"
-      referrerpolicy="strict-origin-when-cross-origin"
-      onload="document.getElementById('loading').classList.add('is-ready')"
-    ></iframe>
-    <noscript>
+    <main>
+      <p class="eyebrow">Ipsos Consumer Intelligence</p>
+      <h1>消费者洞察与模型平台</h1>
       <p>
-        请打开
-        <a href="https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site">Ipsos Consumer Intelligence Platform</a>。
+        正在进入平台。如果页面没有自动跳转，请
+        <a href="https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site">点击这里继续</a>。
       </p>
-    </noscript>
+    </main>
   </body>
 </html>
