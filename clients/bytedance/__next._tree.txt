@@ -1,0 +1,4 @@
+:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/0~jt7vkn3heyb.css","style"]
+:HL["/ipsos-consumer-intelligence-platform/ipsos-logo.png","image"]
+:HL["/ipsos-consumer-intelligence-platform/bytedance-logo.svg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"clients","param":null,"prefetchHints":0,"slots":{"children":{"name":"bytedance","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"v3cDNzjokVhDnwUhlsIAT"}

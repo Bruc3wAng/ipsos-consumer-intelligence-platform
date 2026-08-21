@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[11968,["/ipsos-consumer-intelligence-platform/_next/static/chunks/12zbrbrxakma2.js","/ipsos-consumer-intelligence-platform/_next/static/chunks/0la0uy97nonyo.js"],"default"]
+3:I[87804,["/ipsos-consumer-intelligence-platform/_next/static/chunks/12zbrbrxakma2.js","/ipsos-consumer-intelligence-platform/_next/static/chunks/0la0uy97nonyo.js"],"default"]
+4:[]
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"v3cDNzjokVhDnwUhlsIAT"}

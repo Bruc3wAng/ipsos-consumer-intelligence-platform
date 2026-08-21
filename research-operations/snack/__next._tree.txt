@@ -1,0 +1,2 @@
+:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/0~jt7vkn3heyb.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"research-operations","param":null,"prefetchHints":0,"slots":{"children":{"name":"snack","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"v3cDNzjokVhDnwUhlsIAT"}
