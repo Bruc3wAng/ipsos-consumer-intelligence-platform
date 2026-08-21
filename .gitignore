@@ -47,3 +47,12 @@ next-env.d.ts
 /output/
 /logs/
 /.pnpm-store/
+
+# local services, task context and research stores
+/.launchd/
+/context/
+/PROJECT_BRIEF.md
+/db/*.sqlite
+/信息存储/
+*.command
+*.tsbuildinfo

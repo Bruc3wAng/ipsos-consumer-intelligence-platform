@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "market": "中国",
+    "category": "PC / AI PC",
+    "time_grain": "FY25/26季度",
+    "alignment_keys": [
+      "市场",
+      "季度",
+      "品牌/产品线",
+      "议题"
+    ],
+    "causal_boundary": "季度并列趋势不等同于广告增量；广告增量需要暴露/对照、地区匹配或其他可识别设计。"
+  },
+  "source_status": [
+    {
+      "source": "BHT问卷",
+      "status": "connected",
+      "coverage": "FY25/26 Q1–Q4 · 大众消费者 · 每期N=2,000",
+      "answers": "认知、品牌资产、态度、购买意向与人群差异"
+    },
+    {
+      "source": "媒体/行为信号",
+      "status": "connected",
+      "coverage": "FY25/26 Q1–Q3 · ThinkPad / YOGA / 全栈AI",
+      "answers": "曝光后搜索、浏览、收藏与加购表现"
+    },
+    {
+      "source": "Synthesio Social",
+      "status": "awaiting_export",
+      "coverage": "待接入真实查询与导出",
+      "answers": "声量、情绪、主题、受众与异常信号"
+    },
+    {
+      "source": "销售/转化结果",
+      "status": "awaiting_client_result",
+      "coverage": "待接入SKU×市场×时间结果",
+      "answers": "实际购买、销量、转化、退货与商业增量"
+    }
+  ],
+  "aligned_quarters": [
+    {
+      "wave": "FY25/26 Q1",
+      "field_period": "2025 Jun",
+      "ai_pc_aided_awareness": 23,
+      "ai_pc_unaided_awareness": 11,
+      "base": 2000,
+      "campaign_count": 3,
+      "exposure_10k": 805.18,
+      "search_10k": 76.83,
+      "browse_10k": 40.95,
+      "favorite_people": 5117,
+      "cart_people": 4670,
+      "social_status": "not_connected"
+    },
+    {
+      "wave": "FY25/26 Q2",
+      "field_period": "2025 Sep",
+      "ai_pc_aided_awareness": 26,
+      "ai_pc_unaided_awareness": 14,
+      "base": 2000,
+      "campaign_count": 2,
+      "exposure_10k": 318.72,
+      "search_10k": 5.07,
+      "browse_10k": 0.3,
+      "favorite_people": 42,
+      "cart_people": 35,
+      "social_status": "not_connected"
+    },
+    {
+      "wave": "FY25/26 Q3",
+      "field_period": "2025 Dec",
+      "ai_pc_aided_awareness": 31,
+      "ai_pc_unaided_awareness": 19,
+      "base": 2000,
+      "campaign_count": 3,
+      "exposure_10k": 958.51,
+      "search_10k": 79.11,
+      "browse_10k": 43.19,
+      "favorite_people": 6555,
+      "cart_people": 5902,
+      "social_status": "not_connected"
+    },
+    {
+      "wave": "FY25/26 Q4",
+      "field_period": "2026 Mar",
+      "ai_pc_aided_awareness": 34,
+      "ai_pc_unaided_awareness": 21,
+      "base": 2000,
+      "campaign_count": 0,
+      "exposure_10k": null,
+      "search_10k": null,
+      "browse_10k": null,
+      "favorite_people": null,
+      "cart_people": null,
+      "social_status": "not_connected"
+    }
+  ],
+  "campaigns": [
+    {
+      "wave": "FY25/26 Q1",
+      "product": "ThinkPad X1 Carbon Aura AI元启版",
+      "media": "机场",
+      "period": "2025.04.01–04.07",
+      "exposure_10k": 355.98,
+      "search_rate": 9.56,
+      "search_10k": 34.031688,
+      "browse_rate": 53.17,
+      "browse_10k": 18.094649,
+      "favorite_rate": 0.92,
+      "favorite_people": 1665,
+      "cart_rate": 0.85,
+      "cart_people": 1538
+    },
+    {
+      "wave": "FY25/26 Q1",
+      "product": "YOGA Air15 Aura AI元启版",
+      "media": "机场",
+      "period": "2025.04.01–04.07",
+      "exposure_10k": 382.63,
+      "search_rate": 10.89,
+      "search_10k": 41.668407,
+      "browse_rate": 54.86,
+      "browse_10k": 22.859288,
+      "favorite_rate": 1.51,
+      "favorite_people": 3452,
+      "cart_rate": 1.37,
+      "cart_people": 3132
+    },
+    {
+      "wave": "FY25/26 Q1",
+      "product": "联想全栈AI",
+      "media": "机场",
+      "period": "2025.04.01–04.09",
+      "exposure_10k": 66.57,
+      "search_rate": 1.69,
+      "search_10k": 1.125033,
+      "browse_rate": null,
+      "browse_10k": null,
+      "favorite_rate": null,
+      "favorite_people": null,
+      "cart_rate": null,
+      "cart_people": null
+    },
+    {
+      "wave": "FY25/26 Q2",
+      "product": "ThinkPad X1 Carbon Aura AI",
+      "media": "机场",
+      "period": "2025.07.01–09.30",
+      "exposure_10k": 64.4,
+      "search_rate": 1.17,
+      "search_10k": 0.8,
+      "browse_rate": 38.75,
+      "browse_10k": 0.3,
+      "favorite_rate": 1.43,
+      "favorite_people": 42,
+      "cart_rate": 1.21,
+      "cart_people": 35
+    },
+    {
+      "wave": "FY25/26 Q2",
+      "product": "联想全栈AI",
+      "media": "机场",
+      "period": "2025.09.25–09.30",
+      "exposure_10k": 254.32,
+      "search_rate": 1.68,
+      "search_10k": 4.272576,
+      "browse_rate": null,
+      "browse_10k": null,
+      "favorite_rate": null,
+      "favorite_people": null,
+      "cart_rate": null,
+      "cart_people": null
+    },
+    {
+      "wave": "FY25/26 Q3",
+      "product": "ThinkPad X1 Carbon Aura AI",
+      "media": "机场",
+      "period": "2025.11.03–11.16",
+      "exposure_10k": 240.4,
+      "search_rate": 1.21,
+      "search_10k": 2.9,
+      "browse_rate": 41.2,
+      "browse_10k": 1.2,
+      "favorite_rate": 1.45,
+      "favorite_people": 174,
+      "cart_rate": 1.26,
+      "cart_people": 151
+    },
+    {
+      "wave": "FY25/26 Q3",
+      "product": "YOGA Air14 Aura AI元启版",
+      "media": "机场",
+      "period": "2025.10.29–11.13",
+      "exposure_10k": 696.76,
+      "search_rate": 10.9,
+      "search_10k": 75.94684,
+      "browse_rate": 55.15,
+      "browse_10k": 41.884682,
+      "favorite_rate": 1.52,
+      "favorite_people": 6366,
+      "cart_rate": 1.37,
+      "cart_people": 5738
+    },
+    {
+      "wave": "FY25/26 Q3",
+      "product": "联想YOGA-张凌赫版",
+      "media": "户外",
+      "period": "2025.10.29–11.18",
+      "exposure_10k": 21.35,
+      "search_rate": 1.23,
+      "search_10k": 0.262605,
+      "browse_rate": 40.7,
+      "browse_10k": 0.10688,
+      "favorite_rate": 1.43,
+      "favorite_people": 15,
+      "cart_rate": 1.21,
+      "cart_people": 13
+    }
+  ],
+  "social_schema": [
+    {
+      "metric": "话题声量",
+      "grain": "日/周 × 市场 × 品牌 × 议题",
+      "use": "识别讨论规模与异常峰值"
+    },
+    {
+      "metric": "声量份额",
+      "grain": "周 × 市场 × 竞品组",
+      "use": "判断品牌在同一议题中的相对存在感"
+    },
+    {
+      "metric": "净情绪与情绪分布",
+      "grain": "周 × 品牌 × 议题",
+      "use": "区分正向兴趣、问题与风险"
+    },
+    {
+      "metric": "主题与主题增速",
+      "grain": "周 × 市场 × 品牌",
+      "use": "发现消费者自发讨论的AI功能、性能、价格、隐私与服务主题"
+    },
+    {
+      "metric": "受众特征",
+      "grain": "市场 × 受众群 × 主题",
+      "use": "与BHT高潜人群做方向核对"
+    },
+    {
+      "metric": "异常信号",
+      "grain": "日/周 × 指标",
+      "use": "识别声量、情绪或主题占比的显著变化"
+    }
+  ],
+  "ai_upgrade_layers": [
+    {
+      "layer": "01 数据接入与质量",
+      "current_assets": "Synthesio Dashboard / API、多语种来源、Noise Reducer与Human Review",
+      "structured_fields": [
+        "source_id",
+        "market",
+        "language",
+        "platform",
+        "published_at",
+        "query_id",
+        "brand",
+        "product"
+      ],
+      "ai_models": [
+        "相关性分类",
+        "广告/招聘/诈骗/重复内容识别",
+        "语言识别",
+        "实体消歧"
+      ],
+      "quality_gate": "抽样复核精确率与召回率；保留查询版本、排除原因和原始来源链接",
+      "client_output": "可审计的有效消费者对话基数、来源结构与数据质量",
+      "status": "可由现有Synthesio资产接入"
+    },
+    {
+      "layer": "02 Semantic AI事件化",
+      "current_assets": "Topic Modeling、实体识别、深度语义与情绪分析",
+      "structured_fields": [
+        "entity",
+        "action",
+        "object",
+        "descriptor",
+        "emotion",
+        "sentiment",
+        "intent",
+        "need",
+        "barrier",
+        "usage_scenario"
+      ],
+      "ai_models": [
+        "主题聚类",
+        "实体与属性抽取",
+        "方面级情绪",
+        "需求/障碍/场景多标签分类"
+      ],
+      "quality_gate": "与人工编码样本比较F1；低置信记录进入Human Review，不直接进入结论",
+      "client_output": "品牌/产品/功能/场景/问题/情绪可交叉的Social指标表",
+      "status": "需要统一PC行业本体与标注样本"
+    },
+    {
+      "layer": "03 Signals与跨源检测",
+      "current_assets": "Signals、趋势检测与Signals GenAI思路",
+      "structured_fields": [
+        "metric",
+        "current_window",
+        "baseline_window",
+        "change",
+        "z_score",
+        "change_point",
+        "affected_segment"
+      ],
+      "ai_models": [
+        "异常检测",
+        "变点检测",
+        "主题增速",
+        "跨源方向一致性",
+        "领先/滞后回放"
+      ],
+      "quality_gate": "控制低声量误报、多重检验与季节性；至少两期回放后才启用自动预警",
+      "client_output": "哪些议题在上升、影响哪个人群、BHT与行为是否同步、下一步验证什么",
+      "status": "BHT与行为已对齐，Social待接"
+    },
+    {
+      "layer": "04 Research AI证据回答",
+      "current_assets": "Survey Analysis与多源Consumer Intelligence",
+      "structured_fields": [
+        "research_question",
+        "claim",
+        "evidence_id",
+        "source",
+        "period",
+        "base",
+        "confidence",
+        "boundary"
+      ],
+      "ai_models": [
+        "问题路由",
+        "证据检索",
+        "冲突检测",
+        "带来源回答",
+        "下一期问卷建议"
+      ],
+      "quality_gate": "每个数字可追溯；证据冲突并列展示；无结果标签时拒绝生成因果或销量结论",
+      "client_output": "可直接用于决策的论点、证据、限制与下一行动",
+      "status": "本地证据回答已起步，生成式服务待接"
+    },
+    {
+      "layer": "05 GEO与AI搜索品牌表现",
+      "current_assets": "Synthesio GEO：消费者问题、LLM回答、品牌可见度、主题、形象与来源",
+      "structured_fields": [
+        "consumer_question",
+        "llm",
+        "response_date",
+        "brand_visibility",
+        "rank",
+        "portrayal",
+        "theme",
+        "cited_source",
+        "misinformation_flag"
+      ],
+      "ai_models": [
+        "真实消费者问题聚类",
+        "LLM回答采集",
+        "品牌/竞品比较",
+        "叙事与来源缺口识别"
+      ],
+      "quality_gate": "固定问题样本和模型版本；多次采样估计不稳定性；与BHT搜索/品牌KPI分开注册",
+      "client_output": "AI搜索中品牌是否出现、如何被描述、由哪些来源塑造、需要补什么内容",
+      "status": "可作为PC与AI PC的新信号模块"
+    }
+  ],
+  "semantic_event_schema": {
+    "grain": "一条公开对话/评论/搜索问题 × 一个语义事件",
+    "identity_fields": [
+      "event_id",
+      "source_id",
+      "query_id",
+      "published_at",
+      "market",
+      "language",
+      "platform"
+    ],
+    "entity_fields": [
+      "brand",
+      "product_line",
+      "model",
+      "feature",
+      "competitor"
+    ],
+    "meaning_fields": [
+      "action",
+      "object",
+      "descriptor",
+      "usage_scenario",
+      "need",
+      "barrier",
+      "journey_stage"
+    ],
+    "attitude_fields": [
+      "sentiment",
+      "emotion",
+      "intent",
+      "stance"
+    ],
+    "quality_fields": [
+      "relevance_score",
+      "model_confidence",
+      "noise_class",
+      "human_review_status",
+      "taxonomy_version"
+    ],
+    "evidence_fields": [
+      "evidence_snippet",
+      "source_url",
+      "source_type",
+      "allowed_use"
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "aipc_awareness_up_behavior_volatile",
+      "claim": "FY25/26 Q1–Q4大众消费者AI PC提示后认知由23%升至34%，同期已监测PC Campaign搜索量波动明显，Q4没有PC Campaign记录；认知上升不能归因于单一季度投放。",
+      "evidence": [
+        "BHT平台数据表",
+        "FY25/26 Campaign大数据报告Q1–Q4",
+        "campaign报告数据整理20260409"
+      ],
+      "allowed_use": [
+        "提出多源验证假设",
+        "确定Social接入优先级",
+        "跨期解释"
+      ],
+      "not_allowed": [
+        "广告因果增量",
+        "销售提升",
+        "媒体ROI"
+      ]
+    },
+    {
+      "claim_id": "q3_yoga_behavior_stronger_than_thinkpad",
+      "claim": "FY25/26 Q3已监测Campaign中，YOGA机场投放的搜索/曝光转化率为10.90%，ThinkPad为1.21%；两者产品、投放期和点位不同，差异用于确定进一步核查对象，不直接解释为创意优劣。",
+      "evidence": [
+        "FY25/26 Campaign大数据报告Q3",
+        "YOGA与ThinkPad工作表"
+      ],
+      "allowed_use": [
+        "选择需深挖的产品线",
+        "对齐Social主题与BHT品牌指标"
+      ],
+      "not_allowed": [
+        "跨Campaign效果排名",
+        "创意因果结论"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "联想FY26品牌健康度监测平台数据表",
+      "type": "survey_tracking"
+    },
+    {
+      "name": "Ipsos-FY2526 联想Campaign大数据报告-Q1–Q4",
+      "type": "media_behavior_report"
+    },
+    {
+      "name": "FY25-26 campaign报告数据 整理20260409",
+      "type": "media_behavior_workbook"
+    },
+    {
+      "name": "Ipsos Synthesio AI-enabled Consumer Intelligence Platform",
+      "type": "official_method_reference",
+      "url": "https://www.ipsos.com/en-sg/ai-enabled-consumer-intelligence-platform"
+    },
+    {
+      "name": "Semantic AI by Synthesio",
+      "type": "official_method_reference",
+      "url": "https://resources.ipsos.com/semantic-ai-guide.html"
+    },
+    {
+      "name": "Ipsos Synthesio GEO",
+      "type": "official_method_reference",
+      "url": "https://www.ipsos.com/en-ca/unlock-your-brand-visibility-ai-era-ipsos-synthesio-geo"
+    }
+  ]
+}

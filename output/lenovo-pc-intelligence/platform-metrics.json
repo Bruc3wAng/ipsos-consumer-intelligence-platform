@@ -1,0 +1,515 @@
+{
+  "meta": {
+    "study": "联想FY26品牌健康度监测",
+    "latest_wave": "26 Jun",
+    "market": "中国",
+    "unit": "%",
+    "source_role": "联想项目平台数据表；用于中国PC与AI PC项目实证",
+    "sources": [
+      {
+        "audience": "大众消费者",
+        "file": "Ipsos-FY26-大众-平台数据表-20260730.xlsx",
+        "sheets": [
+          "AI PC",
+          "笔记本品牌认知度和美誉度"
+        ]
+      },
+      {
+        "audience": "SMB",
+        "file": "Ipsos-FY26-SMB-平台数据表-20260730.xlsx",
+        "sheets": [
+          "AI PC",
+          "商用笔记本品牌-认知、美誉"
+        ]
+      },
+      {
+        "audience": "政企大客户",
+        "file": "Ipsos-FY26-政企大客户-平台数据表-20260804.xlsx",
+        "sheets": [
+          "AI PC",
+          "商用笔记本品牌-认知、美誉",
+          "商用笔记本品牌-采购考虑因素"
+        ]
+      }
+    ]
+  },
+  "audiences": [
+    {
+      "code": "consumer",
+      "name": "大众消费者",
+      "ai_pc": {
+        "wave": "26 Jun",
+        "unaided": {
+          "value": 23,
+          "base": 2000,
+          "vs_last_wave": null
+        },
+        "aided": {
+          "value": 36,
+          "base": 2000,
+          "vs_last_wave": null
+        },
+        "reputation": null,
+        "recognition_gap": 13
+      },
+      "ai_pc_trend": [
+        {
+          "wave": "24 Jun",
+          "unaided": 3,
+          "aided": 10,
+          "reputation": null
+        },
+        {
+          "wave": "24 Sep",
+          "unaided": 4,
+          "aided": 12,
+          "reputation": null
+        },
+        {
+          "wave": "24 Dec",
+          "unaided": 6,
+          "aided": 15,
+          "reputation": null
+        },
+        {
+          "wave": "25 Mar",
+          "unaided": 9,
+          "aided": 19,
+          "reputation": null
+        },
+        {
+          "wave": "25 Jun",
+          "unaided": 11,
+          "aided": 23,
+          "reputation": null
+        },
+        {
+          "wave": "25 Sep",
+          "unaided": 14,
+          "aided": 26,
+          "reputation": null
+        },
+        {
+          "wave": "25 Dec",
+          "unaided": 19,
+          "aided": 31,
+          "reputation": null
+        },
+        {
+          "wave": "26 Mar",
+          "unaided": 21,
+          "aided": 34,
+          "reputation": null
+        },
+        {
+          "wave": "26 Jun",
+          "unaided": 23,
+          "aided": 36,
+          "reputation": null
+        }
+      ],
+      "notebook": [
+        {
+          "brand": "联想",
+          "wave": "26 Jun",
+          "brand_awareness": {
+            "value": 97,
+            "base": 1218,
+            "vs_last_wave": 0
+          },
+          "first_awareness": null,
+          "unaided": null,
+          "aided": {
+            "value": 99,
+            "base": 1218,
+            "vs_last_wave": 0
+          },
+          "reputation": {
+            "value": 45,
+            "base": 1218,
+            "vs_last_wave": 0
+          }
+        }
+      ]
+    },
+    {
+      "code": "smb",
+      "name": "SMB",
+      "ai_pc": {
+        "wave": "26 Jun",
+        "unaided": {
+          "value": 22,
+          "base": 1200,
+          "vs_last_wave": 2
+        },
+        "aided": {
+          "value": 40,
+          "base": 1200,
+          "vs_last_wave": 2
+        },
+        "reputation": {
+          "value": 17,
+          "base": 1200,
+          "vs_last_wave": 2
+        },
+        "recognition_gap": 18
+      },
+      "ai_pc_trend": [
+        {
+          "wave": "24 Jun",
+          "unaided": 6,
+          "aided": 15,
+          "reputation": 2
+        },
+        {
+          "wave": "24 Sep",
+          "unaided": 8,
+          "aided": 18,
+          "reputation": 3
+        },
+        {
+          "wave": "24 Dec",
+          "unaided": 9,
+          "aided": 19,
+          "reputation": 3
+        },
+        {
+          "wave": "25 Mar",
+          "unaided": 12,
+          "aided": 23,
+          "reputation": 7
+        },
+        {
+          "wave": "25 Jun",
+          "unaided": 14,
+          "aided": 26,
+          "reputation": 8
+        },
+        {
+          "wave": "25 Sep",
+          "unaided": 18,
+          "aided": 33,
+          "reputation": 9
+        },
+        {
+          "wave": "25 Dec",
+          "unaided": 20,
+          "aided": 37,
+          "reputation": 15
+        },
+        {
+          "wave": "26 Mar",
+          "unaided": 20,
+          "aided": 38,
+          "reputation": 15
+        },
+        {
+          "wave": "26 Jun",
+          "unaided": 22,
+          "aided": 40,
+          "reputation": 17
+        }
+      ],
+      "notebook": [
+        {
+          "brand": "联想",
+          "wave": "26 Jun",
+          "brand_awareness": null,
+          "first_awareness": {
+            "value": 57,
+            "base": 1200,
+            "vs_last_wave": 0
+          },
+          "unaided": {
+            "value": 91,
+            "base": 1200,
+            "vs_last_wave": 0
+          },
+          "aided": {
+            "value": 99,
+            "base": 1200,
+            "vs_last_wave": 0
+          },
+          "reputation": {
+            "value": 57,
+            "base": 1200,
+            "vs_last_wave": 1
+          }
+        },
+        {
+          "brand": "ThinkPad",
+          "wave": "26 Jun",
+          "brand_awareness": null,
+          "first_awareness": {
+            "value": 27,
+            "base": 1200,
+            "vs_last_wave": 2
+          },
+          "unaided": {
+            "value": 42,
+            "base": 1200,
+            "vs_last_wave": 2
+          },
+          "aided": {
+            "value": 90,
+            "base": 1200,
+            "vs_last_wave": 0
+          },
+          "reputation": {
+            "value": 33,
+            "base": 1200,
+            "vs_last_wave": 0
+          }
+        },
+        {
+          "brand": "ThinkBook",
+          "wave": "26 Jun",
+          "brand_awareness": null,
+          "first_awareness": {
+            "value": 10,
+            "base": 1200,
+            "vs_last_wave": 0
+          },
+          "unaided": {
+            "value": 21,
+            "base": 1200,
+            "vs_last_wave": 1
+          },
+          "aided": {
+            "value": 55,
+            "base": 1200,
+            "vs_last_wave": 2
+          },
+          "reputation": {
+            "value": 9,
+            "base": 1200,
+            "vs_last_wave": 1
+          }
+        }
+      ]
+    },
+    {
+      "code": "enterprise",
+      "name": "政企大客户",
+      "ai_pc": {
+        "wave": "26 Jun",
+        "unaided": {
+          "value": 28,
+          "base": 600,
+          "vs_last_wave": 2
+        },
+        "aided": {
+          "value": 42,
+          "base": 600,
+          "vs_last_wave": 2
+        },
+        "reputation": null,
+        "recognition_gap": 14
+      },
+      "ai_pc_trend": [
+        {
+          "wave": "24 Jun",
+          "unaided": 7,
+          "aided": 16,
+          "reputation": null
+        },
+        {
+          "wave": "24 Sep",
+          "unaided": 9,
+          "aided": 19,
+          "reputation": null
+        },
+        {
+          "wave": "24 Dec",
+          "unaided": 10,
+          "aided": 21,
+          "reputation": null
+        },
+        {
+          "wave": "25 Mar",
+          "unaided": 16,
+          "aided": 26,
+          "reputation": null
+        },
+        {
+          "wave": "25 jun",
+          "unaided": 19,
+          "aided": 31,
+          "reputation": null
+        },
+        {
+          "wave": "25 Sep",
+          "unaided": 23,
+          "aided": 35,
+          "reputation": null
+        },
+        {
+          "wave": "25 Dec",
+          "unaided": 26,
+          "aided": 38,
+          "reputation": null
+        },
+        {
+          "wave": "26 Mar",
+          "unaided": 26,
+          "aided": 40,
+          "reputation": null
+        },
+        {
+          "wave": "26 Jun",
+          "unaided": 28,
+          "aided": 42,
+          "reputation": null
+        }
+      ],
+      "notebook": [
+        {
+          "brand": "ThinkPad",
+          "wave": "26 Jun",
+          "brand_awareness": null,
+          "first_awareness": {
+            "value": 24,
+            "base": 600,
+            "vs_last_wave": 2
+          },
+          "unaided": {
+            "value": 31,
+            "base": 600,
+            "vs_last_wave": 1
+          },
+          "aided": {
+            "value": 89,
+            "base": 600,
+            "vs_last_wave": 0
+          },
+          "reputation": {
+            "value": 34,
+            "base": 600,
+            "vs_last_wave": 0
+          }
+        },
+        {
+          "brand": "联想昭阳",
+          "wave": "26 Jun",
+          "brand_awareness": null,
+          "first_awareness": {
+            "value": 11,
+            "base": 600,
+            "vs_last_wave": 0
+          },
+          "unaided": {
+            "value": 21,
+            "base": 600,
+            "vs_last_wave": 1
+          },
+          "aided": {
+            "value": 57,
+            "base": 600,
+            "vs_last_wave": 2
+          },
+          "reputation": {
+            "value": 9,
+            "base": 600,
+            "vs_last_wave": 1
+          }
+        }
+      ]
+    }
+  ],
+  "enterprise_selection_factors": {
+    "wave": "26 Jun",
+    "base": 600,
+    "factors": [
+      {
+        "indicator": "产品品质和稳定性",
+        "value": 63,
+        "base": 600
+      },
+      {
+        "indicator": "产品配置和技术参数",
+        "value": 54,
+        "base": 600
+      },
+      {
+        "indicator": "品牌知名度高",
+        "value": 45,
+        "base": 600
+      },
+      {
+        "indicator": "产品设计功能符合业务需求",
+        "value": 41,
+        "base": 600
+      },
+      {
+        "indicator": "产品信息安全性",
+        "value": 37,
+        "base": 600
+      },
+      {
+        "indicator": "品牌声誉",
+        "value": 35,
+        "base": 600
+      },
+      {
+        "indicator": "解决方案提供和实施能力",
+        "value": 34,
+        "base": 600
+      },
+      {
+        "indicator": "保修/售后服务的时效性/响应快速",
+        "value": 32,
+        "base": 600
+      },
+      {
+        "indicator": "保修/售后服务的有效性/可有效解决问题",
+        "value": 32,
+        "base": 600
+      },
+      {
+        "indicator": "保修/售后服务的便捷性/可以免费上门",
+        "value": 31,
+        "base": 600
+      },
+      {
+        "indicator": "创新技术",
+        "value": 30,
+        "base": 600
+      },
+      {
+        "indicator": "产品轻薄，便于携带",
+        "value": 28,
+        "base": 600
+      },
+      {
+        "indicator": "与品牌商有长期的合作关系",
+        "value": 26,
+        "base": 600
+      },
+      {
+        "indicator": "产品价格",
+        "value": 20,
+        "base": 600
+      },
+      {
+        "indicator": "产品整体外观设计",
+        "value": 20,
+        "base": 600
+      },
+      {
+        "indicator": "送货服务/完备的物流送货",
+        "value": 18,
+        "base": 600
+      },
+      {
+        "indicator": "品牌高端感",
+        "value": 16,
+        "base": 600
+      },
+      {
+        "indicator": "以往的合作体验",
+        "value": 16,
+        "base": 600
+      }
+    ]
+  }
+}

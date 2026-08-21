@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "project": "AIPC进店用户调研（第二期）",
+    "wave": "W2",
+    "output_count": 4,
+    "source_chain": [
+      "正式问卷与DP Spec",
+      "W2 Raw聚合",
+      "多变量模型",
+      "决策结论",
+      "下一期验证"
+    ],
+    "outcome_boundary": "自报购买意愿提升，不等同于实际购买、销量或因果广告/门店增量"
+  },
+  "outputs": [
+    {
+      "decision_id": "aipc_product_story",
+      "question": "产品与门店体验应突出什么？",
+      "conclusion": "先证明性能与屏幕的基础价值，再用可现场完成的AI信息处理和高质量内容输出建立AI PC差异。",
+      "why": "性能配置和屏幕仍是购机最主要因素，内置AI功能位列其后；在联想门店体验模型中，选择“AI生成内容质量高”与更高的购买意愿提升存在稳定正向关联。",
+      "action": "将门店演示设计成“真实任务—完成时间—输出质量”的可比较流程，优先覆盖信息处理、自然语言交互与内容创作，不只讲AI概念。",
+      "evidence": [
+        {
+          "metric_key": "aipc_core_purchase_factor",
+          "question": "B11",
+          "metric": "最终购机核心影响因素",
+          "item": "性能配置",
+          "value": 56.8,
+          "unit": "%",
+          "base_unweighted": 1000,
+          "analysis_unit": "respondent"
+        },
+        {
+          "metric_key": "aipc_core_purchase_factor",
+          "question": "B11",
+          "metric": "最终购机核心影响因素",
+          "item": "屏幕",
+          "value": 45.0,
+          "unit": "%",
+          "base_unweighted": 1000,
+          "analysis_unit": "respondent"
+        },
+        {
+          "metric_key": "aipc_core_purchase_factor",
+          "question": "B11",
+          "metric": "最终购机核心影响因素",
+          "item": "内置AI功能",
+          "value": 36.9,
+          "unit": "%",
+          "base_unweighted": 1000,
+          "analysis_unit": "respondent"
+        },
+        {
+          "metric_key": "aipc_feature_experienced",
+          "question": "B3a",
+          "metric": "门店内实际体验的AIPC功能",
+          "item": "AI智能信息处理",
+          "value": 37.69,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        }
+      ],
+      "model_evidence": {
+        "target": "联想门店体验后，AIPC购买意愿有明显提升(5)或有一点提升(4)",
+        "driver": "AI生成内容质量高",
+        "odds_ratio": 2.207,
+        "interval": [
+          1.181,
+          4.35
+        ],
+        "interpretation": "控制已纳入变量后的关联强度，不是单一功能的因果增量。"
+      },
+      "next_validation": "下一期保留B3a、C1a与B5，并记录完成任务所需时间、演示是否成功及后续实际购买渠道。"
+    },
+    {
+      "decision_id": "aipc_store_conversion",
+      "question": "门店转化先改什么？",
+      "conclusion": "优先提升销售人员的AIPC专业讲解与易上手的真机体验，这两项同时出现在消费者直接诉求和购买意愿模型中。",
+      "why": "消费者最希望门店提升销售专业性与真机型号丰富度；正面影响购买的首要体验是操作简单和销售专业。模型中，门店整体体验与销售满意度从“一般”变为“比较满意”均对应显著更高的购买意愿提升。",
+      "action": "先落地销售知识测评、统一演示脚本和可直接体验的账号/素材；门店考核同时看演示完成率、满意度和B5购买意愿变化。",
+      "evidence": [
+        {
+          "metric_key": "aipc_store_improvement_need",
+          "question": "C3",
+          "metric": "提升AIPC体验感受的门店做法",
+          "item": "销售专业性强",
+          "value": 61.35,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        },
+        {
+          "metric_key": "aipc_store_improvement_need",
+          "question": "C3",
+          "metric": "提升AIPC体验感受的门店做法",
+          "item": "可体验真机型号多样",
+          "value": 56.73,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        },
+        {
+          "metric_key": "aipc_positive_purchase_experience",
+          "question": "B7a",
+          "metric": "正面影响购买的门店体验",
+          "item": "功能操作简单体验好",
+          "value": 62.69,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        },
+        {
+          "metric_key": "aipc_positive_purchase_experience",
+          "question": "B7a",
+          "metric": "正面影响购买的门店体验",
+          "item": "销售专业性强",
+          "value": 56.15,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        }
+      ],
+      "model_evidence": {
+        "target": "联想门店体验后，AIPC购买意愿有明显提升(5)或有一点提升(4)",
+        "scenarios": [
+          {
+            "dimension": "联想门店整体体验满意度",
+            "from": "一般",
+            "to": "比较满意",
+            "eligible_n": 69,
+            "baseline_association": 30.73,
+            "scenario_association": 63.45,
+            "difference_points": 32.72,
+            "interpretation": "多变量关联情景，不是实验或因果增量"
+          },
+          {
+            "dimension": "联想门店销售人员满意度",
+            "from": "一般",
+            "to": "比较满意",
+            "eligible_n": 75,
+            "baseline_association": 29.13,
+            "scenario_association": 70.68,
+            "difference_points": 41.55,
+            "interpretation": "多变量关联情景，不是实验或因果增量"
+          }
+        ],
+        "interpretation": "多变量条件关联情景，用于确定优先验证对象；不能当作培训或体验改造的因果增量。"
+      },
+      "next_validation": "下一期按门店记录演示执行和销售培训完成情况；如可实施，采用分店分阶段上线或对照设计验证真实增量。"
+    },
+    {
+      "decision_id": "aipc_channel_role",
+      "question": "线上与门店分别承担什么角色？",
+      "conclusion": "线上平台承担主要成交，门店应集中承担真机比较、AI功能体验和专业咨询，而不是复制线上商品页。",
+      "why": "现有用户中综合电商平台是主要购买渠道；未进店的首要障碍是担心过度推销，而最能吸引进店的是型号丰富、销售专业和快速体验具体功能。",
+      "action": "把线上内容负责价格与下单效率，门店负责可验证体验与个性化咨询；用统一活动ID连接到店体验、线上回访和最终渠道。",
+      "evidence": [
+        {
+          "metric_key": "aipc_purchase_channel",
+          "question": "B12",
+          "metric": "AIPC购买渠道",
+          "item": "综合电商平台",
+          "value": 60.33,
+          "unit": "%",
+          "base_unweighted": 484,
+          "analysis_unit": "respondent_with_any_purchased_device"
+        },
+        {
+          "metric_key": "aipc_purchase_channel",
+          "question": "B12",
+          "metric": "AIPC购买渠道",
+          "item": "品牌官方体验店/专卖店",
+          "value": 24.17,
+          "unit": "%",
+          "base_unweighted": 484,
+          "analysis_unit": "respondent_with_any_purchased_device"
+        },
+        {
+          "metric_key": "aipc_no_store_visit_reason",
+          "question": "B8a+B8b",
+          "metric": "未进入线下实体店原因",
+          "item": "担心过度推销",
+          "value": 51.17,
+          "unit": "%",
+          "base_unweighted": 299,
+          "analysis_unit": "respondent"
+        },
+        {
+          "metric_key": "aipc_store_visit_trigger",
+          "question": "B10",
+          "metric": "吸引进入线下实体店的内容",
+          "item": "真机型号多/全",
+          "value": 52.8,
+          "unit": "%",
+          "base_unweighted": 1000,
+          "analysis_unit": "respondent"
+        },
+        {
+          "metric_key": "aipc_store_visit_trigger",
+          "question": "B10",
+          "metric": "吸引进入线下实体店的内容",
+          "item": "销售专业性强",
+          "value": 52.0,
+          "unit": "%",
+          "base_unweighted": 1000,
+          "analysis_unit": "respondent"
+        }
+      ],
+      "model_evidence": null,
+      "next_validation": "新增统一渠道触点与活动ID，区分‘门店影响购买’和‘门店完成购买’，避免只用最终下单渠道评价门店价值。"
+    },
+    {
+      "decision_id": "aipc_next_wave_design",
+      "question": "下一期Tracking怎样把关联变成更强证据？",
+      "conclusion": "W3应锁定B5、C1、C2及核心画像口径，并补充演示执行、渠道回访与真实购买结果，才能验证门店体验是否真正推动转化。",
+      "why": "当前N=520模型能稳定识别体验与销售满意度的关联，体验模型AUC高于仅画像模型，但因变量仍是自报购买意愿提升，尚未连接实际购买。",
+      "action": "在问卷版本、配额和权重固定的前提下，预先锁定主模型与主指标；下一期回填实际结果后报告AUC、Brier、校准与分群误差。",
+      "evidence": [
+        {
+          "metric_key": "aipc_purchase_intent_uplift_distribution",
+          "question": "B5",
+          "metric": "门店体验对购买意愿的影响",
+          "item": "有一点提升",
+          "value": 58.08,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        },
+        {
+          "metric_key": "aipc_purchase_intent_uplift_distribution",
+          "question": "B5",
+          "metric": "门店体验对购买意愿的影响",
+          "item": "有明显提升",
+          "value": 21.15,
+          "unit": "%",
+          "base_unweighted": 520,
+          "analysis_unit": "lenovo_brand_loop"
+        }
+      ],
+      "model_evidence": {
+        "sample_n": 520,
+        "profile_auc": 0.6908,
+        "experience_auc": 0.8704,
+        "experience_auc_interval": [
+          0.8558,
+          0.8814
+        ],
+        "interpretation": "回答谁更可能报告购买意愿提升，不回答实际购买、销量或因果增量。"
+      },
+      "next_validation": "W3沿用B5和核心体验题，以W2训练、W3完全留出验证；若能回传成交或SKU销售，改用真实结果标签。"
+    }
+  ]
+}

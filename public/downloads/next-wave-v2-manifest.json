@@ -1,0 +1,162 @@
+{
+  "version": "V2",
+  "builtAt": "2026-08-20",
+  "stableCoreQuestionIds": [
+    "Q1",
+    "Q2",
+    "Q7",
+    "Q8",
+    "Q9",
+    "Q10"
+  ],
+  "variants": [
+    {
+      "key": "health",
+      "experimentKeys": [
+        "health"
+      ],
+      "experimentQuestionIds": [
+        "PJT_HEALTH_01",
+        "PJT_HEALTH_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_health-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_health-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_health_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_health_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_health_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "price",
+      "experimentKeys": [
+        "price"
+      ],
+      "experimentQuestionIds": [
+        "PJT_PRICE_01",
+        "PJT_PRICE_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_price-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_price-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_price_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_price_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_price_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "health-price",
+      "experimentKeys": [
+        "health",
+        "price"
+      ],
+      "experimentQuestionIds": [
+        "PJT_HEALTH_01",
+        "PJT_HEALTH_02",
+        "PJT_PRICE_01",
+        "PJT_PRICE_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_health-price-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_health-price-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "concept",
+      "experimentKeys": [
+        "concept"
+      ],
+      "experimentQuestionIds": [
+        "PJT_CONCEPT_01",
+        "PJT_CONCEPT_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_concept-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_concept-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_concept_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_concept_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_concept_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "health-concept",
+      "experimentKeys": [
+        "health",
+        "concept"
+      ],
+      "experimentQuestionIds": [
+        "PJT_HEALTH_01",
+        "PJT_HEALTH_02",
+        "PJT_CONCEPT_01",
+        "PJT_CONCEPT_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_health-concept-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_health-concept-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-concept_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-concept_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-concept_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "price-concept",
+      "experimentKeys": [
+        "price",
+        "concept"
+      ],
+      "experimentQuestionIds": [
+        "PJT_PRICE_01",
+        "PJT_PRICE_02",
+        "PJT_CONCEPT_01",
+        "PJT_CONCEPT_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_price-concept-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_price-concept-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_price-concept_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_price-concept_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_price-concept_priority_boost-20260820.xlsx"
+        }
+      }
+    },
+    {
+      "key": "health-price-concept",
+      "experimentKeys": [
+        "health",
+        "price",
+        "concept"
+      ],
+      "experimentQuestionIds": [
+        "PJT_HEALTH_01",
+        "PJT_HEALTH_02",
+        "PJT_PRICE_01",
+        "PJT_PRICE_02",
+        "PJT_CONCEPT_01",
+        "PJT_CONCEPT_02"
+      ],
+      "files": {
+        "questionnaire": "/downloads/中国薄脆饼干新品研究_V2_问卷_health-price-concept-20260820.xlsx",
+        "dpSpec": "/downloads/中国薄脆饼干新品研究_V2_DP_Spec_health-price-concept-20260820.xlsx",
+        "quota": {
+          "independent": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price-concept_independent-20260820.xlsx",
+          "age_gender": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price-concept_age_gender-20260820.xlsx",
+          "priority_boost": "/downloads/中国薄脆饼干新品研究_V2_配额表_health-price-concept_priority_boost-20260820.xlsx"
+        }
+      }
+    }
+  ]
+}

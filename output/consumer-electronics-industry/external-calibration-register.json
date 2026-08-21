@@ -1,0 +1,130 @@
+{
+  "as_of": "2026-08-12",
+  "rules": [
+    "Only compare metrics with aligned geography, period, population, unit and definition.",
+    "Shipment or sales data may calibrate market size and direction, but never replace survey purchase intent.",
+    "Population sources may calibrate weights and target-universe projection, but never inflate the real sample N.",
+    "Company disclosures remain company-level facts and are not evidence of consumer attitudes."
+  ],
+  "sources": [
+    {
+      "id": "nbs_population_2025",
+      "publisher": "国家统计局",
+      "title": "2025年全国1%人口抽样调查主要数据公报",
+      "published": "2026-05-22",
+      "geography": "中国",
+      "metric_family": "population_structure",
+      "refresh": "periodic",
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260522_1963788.html",
+      "allowed_use": ["population gender benchmark", "population boundary", "weighting-method validation"],
+      "not_allowed": ["PC eligible-universe estimate", "purchase-intent calibration", "city-tier weighting without mapping"],
+      "headline_evidence": [
+        {"metric": "全国人口", "value": 1405.45, "unit": "million people", "period": "2025-11-01"},
+        {"metric": "男性占比", "value": 51.03, "unit": "%", "period": "2025-11-01"},
+        {"metric": "女性占比", "value": 48.97, "unit": "%", "period": "2025-11-01"}
+      ]
+    },
+    {
+      "id": "nbs_population_urban_2025",
+      "publisher": "国家统计局",
+      "title": "中华人民共和国2025年国民经济和社会发展统计公报",
+      "published": "2026-02-28",
+      "geography": "中国",
+      "metric_family": "population_urbanization",
+      "refresh": "annual",
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202602/t20260228_1962662.html",
+      "allowed_use": ["urban-population upper boundary", "urbanization context"],
+      "not_allowed": ["T1-T6 weighting without city mapping", "PC eligible-universe estimate"],
+      "headline_evidence": [
+        {"metric": "城镇常住人口", "value": 953.8, "unit": "million people", "period": "2025-12-31"},
+        {"metric": "城镇化率", "value": 67.9, "unit": "%", "period": "2025-12-31"},
+        {"metric": "16至59岁人口占比", "value": 60.6, "unit": "%", "period": "2025-12-31"}
+      ]
+    },
+    {
+      "id": "nbs_income_2025",
+      "publisher": "国家统计局",
+      "title": "2025年居民收入和消费支出情况",
+      "published": "2026-01-19",
+      "geography": "中国",
+      "metric_family": "population_income",
+      "refresh": "annual",
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260119_1962321.html",
+      "allowed_use": ["income weighting benchmark", "urban-rural affordability context"],
+      "not_allowed": ["purchase-intent calibration", "PC ownership calibration"],
+      "headline_evidence": [
+        {"metric": "全国居民人均可支配收入", "value": 43377, "unit": "CNY/year"},
+        {"metric": "全国居民人均可支配收入中位数", "value": 36231, "unit": "CNY/year"},
+        {"metric": "城镇居民人均可支配收入中位数", "value": 51115, "unit": "CNY/year"}
+      ]
+    },
+    {
+      "id": "cnnic_57",
+      "publisher": "中国互联网络信息中心",
+      "title": "第57次《中国互联网络发展状况统计报告》",
+      "published": "2026-02-05",
+      "geography": "中国",
+      "metric_family": "digital_population",
+      "refresh": "semiannual",
+      "url": "https://www3.cnnic.cn/n4/2026/0304/c88-11549.html",
+      "allowed_use": ["digital-reachable universe", "internet-infrastructure context"],
+      "not_allowed": ["PC ownership calibration", "AI PC awareness calibration"],
+      "headline_evidence": [
+        {"metric": "网民规模", "value": 11.25, "unit": "100 million people", "period": "2025-12"},
+        {"metric": "互联网普及率", "value": 80.1, "unit": "%", "period": "2025-12"},
+        {"metric": "生成式人工智能用户规模", "value": 6.02, "unit": "100 million people", "period": "2025-12"}
+      ]
+    },
+    {
+      "id": "omdia_china_pc_2025_2026",
+      "publisher": "Omdia",
+      "title": "Mainland China’s PC shipments fell 2% in Q1 2026 with 14% decline forecast for the full year",
+      "published": "2026-06-22",
+      "geography": "中国",
+      "metric_family": "pc_shipments",
+      "refresh": "quarterly",
+      "url": "https://omdia.tech.informa.com/pr/2026/june/mainland-chinas-pc-shipments-fell-2percent-in-q1-2026-with-14percent-decline-forecast-for-the-full-year",
+      "allowed_use": ["market-size calibration", "directional cross-check", "market-risk context"],
+      "not_allowed": ["purchase-intent replacement", "consumer-segment weighting"],
+      "headline_evidence": [
+        {"metric": "中国PC出货量", "value": 8.9, "unit": "million units", "period": "2026 Q1"},
+        {"metric": "中国PC出货同比", "value": -2, "unit": "%", "period": "2026 Q1"},
+        {"metric": "2026预测出货量", "value": 36, "unit": "million units", "period": "2026 forecast"},
+        {"metric": "2026预测变化", "value": -14, "unit": "%", "period": "2026 forecast"}
+      ]
+    },
+    {
+      "id": "gartner_global_pc_2025",
+      "publisher": "Gartner",
+      "title": "Worldwide PC Shipments Increased 9.1% for the Full Year 2025",
+      "published": "2026-01-20",
+      "geography": "全球",
+      "metric_family": "pc_shipments_brand_share",
+      "refresh": "quarterly",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-1-20-gartner-says-worldwide-pc-shipments-increased-9-point-3-percent-in-fourth-quarter-of-2025-and-9-point-1-percent-for-the-full-year",
+      "allowed_use": ["global market context", "brand shipment benchmark"],
+      "not_allowed": ["China consumer attitude calibration", "brand-awareness replacement"],
+      "headline_evidence": [
+        {"metric": "全球PC出货量", "value": 270.218, "unit": "million units", "period": "2025"},
+        {"metric": "全球PC出货同比", "value": 9.1, "unit": "%", "period": "2025"},
+        {"metric": "联想全球出货份额", "value": 27.2, "unit": "%", "period": "2025"}
+      ]
+    },
+    {
+      "id": "lenovo_fy2526_q2",
+      "publisher": "Lenovo Group",
+      "title": "Second Quarter Financial Results 2025/26",
+      "published": "2026",
+      "geography": "全球公司披露",
+      "metric_family": "company_ai_pc",
+      "refresh": "quarterly",
+      "url": "https://investor.lenovo.com/en/financial/results/press_2526_q2.pdf",
+      "allowed_use": ["company-level AI PC shipment context"],
+      "not_allowed": ["consumer AI PC awareness calibration", "independent market-share benchmark"],
+      "headline_evidence": [
+        {"metric": "AI PC占联想PC出货", "value": 33, "unit": "%"},
+        {"metric": "Windows AI PC份额", "value": 31.1, "unit": "%"}
+      ]
+    }
+  ]
+}

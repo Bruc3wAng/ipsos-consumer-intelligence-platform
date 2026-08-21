@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "title": "中国零食消费者追踪研究问卷模板",
+    "market": "中国",
+    "deep_dive_category": "膨化食品",
+    "data_status": "研究设计模板",
+    "version": "v0.1",
+    "built_at": "2026-08-13",
+    "target": "18-54岁中国城市消费者；正式执行前需确认目标总体与抽样框",
+    "estimated_length": "核心问卷约15分钟",
+    "boundary": "题目、选项、配额与测试价格均为原型设计，需经客户需求、认知访谈和预测试确认后定稿。"
+  },
+  "sample_plan": {
+    "prototype_n": 5000,
+    "recommended_cadence": "季度核心追踪；价格与DCE半年轮换",
+    "quota_status": "模拟配额假设，非人口统计基准",
+    "quota_targets": {
+      "age_group": {
+        "18-24": 0.18,
+        "25-34": 0.3,
+        "35-44": 0.29,
+        "45-54": 0.23
+      },
+      "gender": {
+        "男性": 0.5,
+        "女性": 0.5
+      },
+      "region": {
+        "华东": 0.29,
+        "华南": 0.19,
+        "华北": 0.17,
+        "华中": 0.14,
+        "西南": 0.13,
+        "东北": 0.08
+      },
+      "city_tier": {
+        "一线": 0.18,
+        "新一线": 0.3,
+        "二线": 0.28,
+        "三线及以下": 0.24
+      }
+    },
+    "precision_note": "总体比例在简单随机抽样、50%比例下约±1.4pp；加权、配额与设计效应会扩大误差。"
+  },
+  "questions": [
+    {
+      "module": "配额与分层",
+      "question_id": "S1",
+      "question_text": "您的年龄是？",
+      "response_type": "单选",
+      "options": [
+        "18-24",
+        "25-34",
+        "35-44",
+        "45-54"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "异质性"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "配额与分层",
+      "question_id": "S2",
+      "question_text": "您的性别是？",
+      "response_type": "单选",
+      "options": [
+        "男性",
+        "女性"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "公平性检查"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "配额与分层",
+      "question_id": "S3",
+      "question_text": "您目前常住的地区是？",
+      "response_type": "单选",
+      "options": [
+        "华东",
+        "华南",
+        "华北",
+        "华中",
+        "西南",
+        "东北"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "区域差异"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "配额与分层",
+      "question_id": "S4",
+      "question_text": "您目前常住城市的级别是？",
+      "response_type": "单选",
+      "options": [
+        "一线",
+        "新一线",
+        "二线",
+        "三线及以下"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "渠道可达性"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "配额与分层",
+      "question_id": "S5",
+      "question_text": "您的个人月收入是？",
+      "response_type": "单选",
+      "options": [
+        "6000以下",
+        "6000-12000",
+        "12000-20000",
+        "20000以上"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "价格异质性",
+        "人群分层"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "品类基线",
+      "question_id": "Q1",
+      "question_text": "过去3个月，您购买过以下哪些零食品类？",
+      "response_type": "多选",
+      "options": [
+        "膨化食品",
+        "坚果炒货",
+        "果干蜜饯",
+        "饼干糕点",
+        "肉类零食",
+        "糖果巧克力",
+        "以上均无"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PENETRATION_3M"
+      ],
+      "model_roles": [
+        "购买倾向特征",
+        "深度模块路由"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "品类基线",
+      "question_id": "Q2",
+      "question_text": "过去3个月，您通常每月购买膨化食品多少次？",
+      "response_type": "数值",
+      "options": [
+        "0-12次"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MONTHLY_BUYER",
+        "KPI_FREQUENCY_BUYER"
+      ],
+      "model_roles": [
+        "购买强度",
+        "购买倾向特征"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "品类基线",
+      "question_id": "Q3",
+      "question_text": "您最近一个月购买膨化食品的总支出约为多少？",
+      "response_type": "数值",
+      "options": [
+        "人民币元"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MONTHLY_SPEND_BUYER"
+      ],
+      "model_roles": [
+        "消费价值",
+        "价格分层"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "渠道",
+      "question_id": "Q4",
+      "question_text": "过去3个月，您通过哪些渠道购买过膨化食品？",
+      "response_type": "多选",
+      "options": [
+        "零食量贩",
+        "综合电商",
+        "商超",
+        "即时零售",
+        "便利店"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_CHANNEL_REACH"
+      ],
+      "model_roles": [
+        "渠道覆盖",
+        "渠道重叠"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "渠道",
+      "question_id": "Q5",
+      "question_text": "您购买膨化食品最主要的渠道是？",
+      "response_type": "单选",
+      "options": [
+        "零食量贩",
+        "综合电商",
+        "商超",
+        "即时零售",
+        "便利店"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MAIN_CHANNEL"
+      ],
+      "model_roles": [
+        "渠道倾向",
+        "渠道情景"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q6",
+      "question_text": "您通常在什么场景食用膨化食品？",
+      "response_type": "多选",
+      "options": [
+        "追剧娱乐",
+        "工作学习间隙",
+        "家庭分享",
+        "通勤出行",
+        "社交聚会"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_OCCASION_REACH"
+      ],
+      "model_roles": [
+        "场景分层",
+        "机会识别"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q7",
+      "question_text": "选择膨化食品时，以下因素对您有多重要？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "口味",
+        "价格",
+        "健康/成分",
+        "品牌",
+        "包装便利",
+        "新奇感"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_NEED_IMPORTANCE"
+      ],
+      "model_roles": [
+        "需求驱动",
+        "人群分层",
+        "选择模型交互"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q8",
+      "question_text": "现有膨化食品在健康负担、配料透明和规格便利方面满足您的程度如何？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "健康负担",
+        "配料透明",
+        "规格便利"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_HEALTH_FIT_T2B",
+        "KPI_UNMET_NEED"
+      ],
+      "model_roles": [
+        "需求缺口",
+        "新品方向"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q9",
+      "question_text": "对于70g袋装膨化食品，在以下价格下您是否会考虑购买？",
+      "response_type": "Gabor-Granger逐价询问",
+      "options": [
+        "¥5.9",
+        "¥7.9",
+        "¥9.9",
+        "¥11.9"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PRICE_ACCEPT_7_9",
+        "KPI_PRICE_CURVE"
+      ],
+      "model_roles": [
+        "价格接受曲线",
+        "价格弹性"
+      ],
+      "cadence": "半年"
+    },
+    {
+      "module": "新品概念",
+      "question_id": "Q10",
+      "question_text": "请评价一款70g可重复封口、轻油咸香的膨化食品概念。",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "相关性",
+        "差异化",
+        "购买意向"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_CONCEPT_RELEVANCE_T2B",
+        "KPI_CONCEPT_TRIAL_T2B"
+      ],
+      "model_roles": [
+        "概念门槛",
+        "购买倾向目标"
+      ],
+      "cadence": "按概念"
+    },
+    {
+      "module": "未来行为",
+      "question_id": "Q11",
+      "question_text": "未来1个月，您购买膨化食品的可能性有多大？",
+      "response_type": "5点评分",
+      "options": [
+        "1完全不可能",
+        "2",
+        "3",
+        "4",
+        "5非常可能"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PURCHASE_INTENT_T2B"
+      ],
+      "model_roles": [
+        "购买倾向目标"
+      ],
+      "cadence": "每期"
+    },
+    {
+      "module": "离散选择实验",
+      "question_id": "DCE1-DCE8",
+      "question_text": "在方案A、方案B和均不选择之间做出选择。",
+      "response_type": "三选一选择任务",
+      "options": [
+        "方案A",
+        "方案B",
+        "均不选择"
+      ],
+      "base": "全部有效被访者；每人8题",
+      "required": true,
+      "kpi_ids": [
+        "KPI_DCE_UTILITIES",
+        "KPI_SCENARIO_SHARE"
+      ],
+      "model_roles": [
+        "价格、口味、规格、包装、健康表达和品牌层级效用"
+      ],
+      "cadence": "半年"
+    },
+    {
+      "module": "开放题",
+      "question_id": "OE1",
+      "question_text": "理想的膨化食品还应改善什么？",
+      "response_type": "开放题",
+      "options": [],
+      "base": "全部有效被访者",
+      "required": false,
+      "kpi_ids": [],
+      "model_roles": [
+        "主题编码",
+        "下一期题目建议"
+      ],
+      "cadence": "每期轮换"
+    }
+  ]
+}

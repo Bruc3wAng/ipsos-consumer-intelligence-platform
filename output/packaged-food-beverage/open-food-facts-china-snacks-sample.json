@@ -1,0 +1,2402 @@
+{
+  "meta": {
+    "source": "Open Food Facts API",
+    "source_url": "https://world.openfoodfacts.org/api/v2/search",
+    "scope_id": "china_snacks",
+    "query_scope": "countries_tags_en=china × snacks，前100条API结果",
+    "retrieved_at": "2026-08-12",
+    "data_status": "公开开放数据样本",
+    "license_note": "Open Food Facts 数据再利用须遵守其开放数据许可与署名要求。",
+    "use": "建立中国相关开放零食的条码、品牌、规格、配料与营养属性试点",
+    "blocked_use": "这是开放库中标记涉及中国的商品样本，不等于中国实时在售、渠道覆盖、价格、销量、份额或营养大盘。",
+    "result_count_reported_by_api": 144,
+    "sample_count": 100,
+    "field_coverage_counts": {
+      "product_name": 87,
+      "brand": 87,
+      "quantity": 79,
+      "ingredients": 80,
+      "energy_per_100g": 46,
+      "nutrition_chart_eligible": 40,
+      "invalid_nutrition_excluded": 5
+    },
+    "quality_rule": "营养图候选仅纳入有商品名、每100g能量1–900kcal，且脂肪/糖/碳水不超过100g、钠不超过5g的记录；绘图还要求能量、钠与脂肪三个字段完整。原始异常记录保留但不参与聚合。"
+  },
+  "products": [
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6937003117814",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "牛肉、膨化豆制品、植物油、白砂糖、 芝麻、辣椒、食用盐、味精、香辛料、大豆 分离蛋白、麦芽糖、食品用香精、食品添加剂 (D-异抗坏血酸钠、乳酸链球菌素、辣椒红、呈味核苷酸 二钠)。 致敏物质提示:含有麸质的谷物制品和大豆制品 产品标准号:GB 2726 食品生产许可证编号:SC10451011600728 生产日期:见包装上标示 保质期:180天 贮藏条件:请置于通风阴凉 干燥处保存食用方法:开袋即食 温馨提示:若有胀袋、漏气,请勿食用, 要请联系客服更换。 被委托生产单位:成都优合食品有限公司 地址:成都市双流区九 区走马岭革新大道8号(13) 服务热线:400-1177-517 官方商城:WWW.LPPZ.COM 江街道新华大道536号 委托单位:湖北良品铺子食品工业有限公司 地址:武汉市东西湖 回社 营养成分表",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/700/311/7814/front_zh.6.400.jpg",
+      "last_modified_at": "2025-09-24T12:05:10+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": 37.7,
+        "saturated_fat_g": 112,
+        "carbohydrate_g": 112,
+        "sugars_g": 4,
+        "sodium_g": null
+      },
+      "quality_status": "excluded_invalid_nutrition",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量",
+        "饱和脂肪超出质量范围",
+        "碳水化合物超出质量范围"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743919242",
+      "product_name": "Mexican Chicken Tomato Flavor",
+      "brands": "Lay's",
+      "quantity": "70 g",
+      "countries": "China, Germany",
+      "ingredients_text": "Kartoffel 92%, Palmöl, Tomatengeschmack mit mexikanischer Hühnersauce 4% (Zucker, Maltodextrin, Salz, essbare Glukose, Sojasaucenpulver (gebraute Sojasauce (einschließlich Weizen und Sojabohnen), Maltodextrin, Geschmacksverstärker (E621)), Tomatenpulver, Zwiebel Pulver, Hefeextrakt, säurehydrolysiertes pflanzliches Protein-Gewürzpulver (hydrolysiertes pflanzliches Protein einschließlich Soja), Maltodextrin, Salz, essbare Glucose), Lebensmittelgeschmack (enthält Milch), Essigpulver (Maltodextrin, säurebehandelte Stärke, gebrauter Essig), Knoblauchpulver, Säureregulator (E296, E330), Süßstoff (E960, E951), Antibackmittel (E551), Geschmacksverstärker (E627, E631),\r\nAchtung: Dieses Produkt enthält Aspartam (Quelle der Phenylalanin), Allergene: Kann Spuren von SOJA,WEIZEN und MILCH enthalten,",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/391/9242/front_de.31.400.jpg",
+      "last_modified_at": "2026-08-11T11:57:50+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 577.02813438951,
+        "protein_g": 6,
+        "fat_g": 33.3,
+        "saturated_fat_g": 16.7,
+        "carbohydrate_g": 51.7,
+        "sugars_g": 5,
+        "sodium_g": 0.8
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743919211",
+      "product_name": "经典原味薯片",
+      "brands": "Lay's, 乐事",
+      "quantity": "",
+      "countries": "China",
+      "ingredients_text": "马铃薯、植物油、经典原味调味料(含5'-呈味核苷酸二钠)、 TBHO。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/391/9211/front_zh.3.400.jpg",
+      "last_modified_at": "2026-08-02T05:10:58+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 546.5,
+        "protein_g": 5.7,
+        "fat_g": 35,
+        "saturated_fat_g": 5.7,
+        "carbohydrate_g": 52.7,
+        "sugars_g": 1.3,
+        "sodium_g": 0.551
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6901668938824",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "小麦粉,食用植物油,白砂糖,淀粉,芝士风味复合调味料,乳 清粉,食品添加剂(碳酸氢铵,磷酸二氢钙,碳酸氢钠,氯化钾,抗坏 血酸钠,大豆磷脂,胭脂树橙,乳酸,柠檬酸),干酪制品,全脂乳粉, 再制干酪,食用盐,麦精(饮用水,大麦,麦芽),黄油,食用香精。 过敏原信息:含有小麦、乳制品、大麦和大豆制品。 此生产线也加工含有花生、坚果、芝麻和蛋制品的产品。 营养成分表 项目 每100克 NRV % 能量 2101 千焦 25% 蛋白质 6.4克 11% 脂肪 26.1克 44% - 反式脂肪 0克 碳水化合物 60.4克 20% 钠 597毫克 30% NRV=营养素参考值",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/166/893/8824/front_zh.3.400.jpg",
+      "last_modified_at": "2026-07-25T21:32:01+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6914973603394",
+      "product_name": "",
+      "brands": "Snickers",
+      "quantity": "50 g",
+      "countries": "China, South Korea",
+      "ingredients_text": "元方 ·房,乳脂肪,食用植物油,乳化剂(犬牛奶巧克力(白砂糖,可可脂,可可液块,脱脂 天津防 大豆磷脂,花生仁、鸡蛋蛋白粉。本品,食用有本品乳糖, 高更加量22%。产品类型:涂层型巧克力制品。玛氏食品(中国)有限公司(A) 9号正编号:SC11311160415037中国北京市怀柔区雁栖经济开发区雁栖 北二 SC1 9号101407 产地:北京市 玛氏食品(嘉兴)有限公司(B)食品生产许可证编号: 产地:3040800549 中国浙江省嘉兴经济技术开发区西南新区圣堂路505号314036 运 有嘉兴市 具体产地见生产日期后首位代码 产品标准号:GB/T 19343 合格品 请置于阴凉干燥清洁处,避免阳光直射。消费者服务热线:400-830-1099 向本地通话费是商标 202 每份(1块平 能量 蛋白质 脂肪 热 脂肪 1039kJ 4.4g 12.2g 45 12% 7% 20% 22 %营养素参津 生产日期见背面封口內層",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/691/497/360/3394/front_zh.6.400.jpg",
+      "last_modified_at": "2025-06-19T06:21:26+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 8.6,
+        "fat_g": 23.9,
+        "saturated_fat_g": 8.8,
+        "carbohydrate_g": 57.8,
+        "sugars_g": null,
+        "sodium_g": 0.229
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6921351120305",
+      "product_name": "噜咪啦原切马铃薯片(云贵土豆原味)",
+      "brands": "云贵薯片",
+      "quantity": "50 g",
+      "countries": "China",
+      "ingredients_text": "新鲜马铃薯,棕榈油,云贵土豆原味复合调料",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/135/112/0305/front_zh.3.400.jpg",
+      "last_modified_at": "2025-02-18T03:17:51+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6,
+        "fat_g": 35,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 55.6666666666667,
+        "sugars_g": null,
+        "sodium_g": 0.243333333333333
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6971503920239",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "小麦粉、白砂糖、食用葡萄糖、生活饮用水、 鸡蛋、食用玉米淀粉、食用盐、食品添加剂【复配 膨松剂(焦磷酸二氢二钠、碳酸氢钠、碳酸钙、磷 酸二氢钙、单硬脂酸甘油酯、食用淀粉)、复配乳化 剂(山梨糖醇液、单,双甘油脂肪酸酯、山梨醇酐 单硬脂酸酯、丙二醇、水)、黄原胶、柠檬酸、脱 氢乙酸钠、山梨酸钾】、食品用香精",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/150/392/0239/front_fr.9.400.jpg",
+      "last_modified_at": "2025-02-22T00:42:38+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5.3,
+        "fat_g": 1.8,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 69.2,
+        "sugars_g": null,
+        "sodium_g": 0.325
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6904682000355",
+      "product_name": "王子饼干",
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "小麦粉，白砂糖，食用植物油，淀粉，乳粉，食用葡萄糖,食品添加剂（碳酸氢铵，碳酸氢钠，焦亚硫酸钠）,食用盐,食用香精。",
+      "image_front_url": null,
+      "last_modified_at": "2025-03-20T04:09:09+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5.1,
+        "fat_g": 24,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 64.5,
+        "sugars_g": null,
+        "sodium_g": 0.328
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6943949415174",
+      "product_name": "藕片",
+      "brands": "天之湘",
+      "quantity": "一袋30g",
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/694/394/941/5174/front_zh.5.400.jpg",
+      "last_modified_at": "2025-07-15T09:32:29+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 1.4,
+        "fat_g": 1.4,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 17.4,
+        "sugars_g": null,
+        "sodium_g": 0.26
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6950955909610",
+      "product_name": "蜂蜜云朵蛋糕",
+      "brands": null,
+      "quantity": "50g",
+      "countries": "China",
+      "ingredients_text": "鸡蛋全蛋液、小麦粉、白砂糖、鸡蛋蛋黄液、玉米油、海藻糖、甘油、水、羟丙基二淀粉磷酸酯、山梨糖醇液、葡萄 糖浆、蜂蜜、蜂蜜味酱(复合调味料)、乳粉、 单, 双甘油脂肪酸酯、聚甘油脂肪酸酯、丙二醇脂肪酸酯、山梨醇酐单硬脂酸酯、硬脂酸钾、碳酸氢钠、焦磷酸二氢 二钠、葡萄糖酸-8-内酯、磷酸二氢钙、 柠檬酸、磷酸三钙、乳酸脂肪酸甘油酯、 黄原胶、天然胡萝卜素、蔗糖脂肪酸酯 山梨酸钾、丙酸钠、食用盐、食用香精",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/095/590/9610/front_zh.10.400.jpg",
+      "last_modified_at": "2026-01-12T04:33:49+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6.5,
+        "fat_g": 13.7,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 49.7,
+        "sugars_g": null,
+        "sodium_g": 0.213
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺品牌",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5776879000766",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": null,
+      "last_modified_at": "2025-08-11T00:34:41+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 2191,
+        "protein_g": 5.7,
+        "fat_g": 5.7,
+        "saturated_fat_g": 5.7,
+        "carbohydrate_g": 64,
+        "sugars_g": 20,
+        "sodium_g": 4
+      },
+      "quality_status": "excluded_invalid_nutrition",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "每100g能量超出1–900kcal质量范围"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743915084",
+      "product_name": "意大利香浓红烩味薯片",
+      "brands": "Lay's, Lay's 乐事",
+      "quantity": "40g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/391/5084/front_zh.3.400.jpg",
+      "last_modified_at": "2025-04-27T22:11:58+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 536.5678775445,
+        "protein_g": 5.75,
+        "fat_g": 33.25,
+        "saturated_fat_g": 5.25,
+        "carbohydrate_g": 54,
+        "sugars_g": null,
+        "sodium_g": 0.7775
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6902302888963",
+      "product_name": "番茄味土豆片",
+      "brands": "天使",
+      "quantity": "36g / 袋",
+      "countries": "China",
+      "ingredients_text": "新鲜土豆,植物油,番茄味调味料（白砂糖,食用盐, 番茄粉,味精,麦芽糊精,鸡肉粉末香精,香辛料,冰醋酸,乙酸钠,柠檬酸,DL-苹果酸,二氧化硅,阿斯巴甜,苯丙氨酸,琥珀酸二钠,辣椒红）",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/230/288/8963/front_zh.16.400.jpg",
+      "last_modified_at": "2024-05-03T14:15:07+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5900352014456",
+      "product_name": "Wafers with chocolate flavored cream",
+      "brands": "Familijne",
+      "quantity": "140g",
+      "countries": "China, France",
+      "ingredients_text": "wheat flour, palm oil, sugar, chocolate powder 7.1% (sugar, cocoa mass, fat-reduced cocoa powder, flavorings), whey powder, starch, skim milk powder, fat-reduced cocoa powder, rapeseed oil, lecithin, salt, sodium carbonates, flavoring.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/590/035/201/4456/front_fr.4.400.jpg",
+      "last_modified_at": "2026-03-24T04:59:54+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 513,
+        "protein_g": 5.5,
+        "fat_g": 29,
+        "saturated_fat_g": 15,
+        "carbohydrate_g": 57,
+        "sugars_g": 32,
+        "sodium_g": 0.1
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6928396000364",
+      "product_name": "雙趣蛋",
+      "brands": "",
+      "quantity": "20g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/839/600/0364/front_zh.3.400.jpg",
+      "last_modified_at": "2026-07-27T02:39:20+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 341.8,
+        "protein_g": 5.5,
+        "fat_g": 0.6,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 78.6,
+        "sugars_g": null,
+        "sodium_g": 0.107696
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺品牌"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "7300400391009",
+      "product_name": "Salta Pinnar",
+      "brands": "Orkla Confectionery & Snacks",
+      "quantity": "250 g",
+      "countries": "China, Sweden",
+      "ingredients_text": "Vetemjöl, rapsolja, salt, havssalt (1,3 %), surhetsreglerande medel (natriumhydroxid), maltextrakt (från korn), jäst",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/730/040/039/1009/front_sv.4.400.jpg",
+      "last_modified_at": "2026-04-02T08:22:28+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 391,
+        "protein_g": 12,
+        "fat_g": 5.9,
+        "saturated_fat_g": 0.8,
+        "carbohydrate_g": 71,
+        "sugars_g": 2.4,
+        "sodium_g": 1.77
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5601069106891",
+      "product_name": "Apple Strudel Cookies",
+      "brands": "Danesita",
+      "quantity": "150g",
+      "countries": "China, Spain",
+      "ingredients_text": "Wheat flour, sugar, vegetable fat (palm), raisins: 13%, water, apple preparation:8% [apple purée from concentrate: 27% and apple juice fran concentrate: 16%, sugar, fructose syrup, rice flour, vegetable fat (palm), geling agent (pectin), acidity regulator (citric acid), a flavouring], oat flour, glucose-fructose syrup, raising agents (sodium hydrogen o carbonate, disodium diphosphate, ammonium hydrogen carbonate), flavouring, salt, cinnamon powder: 0,05%",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/560/106/910/6891/front_en.11.400.jpg",
+      "last_modified_at": "2026-03-27T23:06:41+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 457,
+        "protein_g": 5.1,
+        "fat_g": 19,
+        "saturated_fat_g": 9.1,
+        "carbohydrate_g": 65,
+        "sugars_g": 35,
+        "sodium_g": 0.212
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8015565033723",
+      "product_name": "Cookies with cocoa",
+      "brands": "Laurieri",
+      "quantity": "80g",
+      "countries": "China, United States",
+      "ingredients_text": "Wheat flour, sugar, sunflower oil, cocoa powder, glucose syrup, malt extract, raising agents (ammonium bicarbonate, sodium bicarbonate), natural flavorings.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/801/556/503/3723/front_en.5.400.jpg",
+      "last_modified_at": "2023-07-05T14:45:22+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 467,
+        "protein_g": 6.67,
+        "fat_g": 13.33,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 80,
+        "sugars_g": 26.67,
+        "sodium_g": 0.000133
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5000396033014",
+      "product_name": "Crackers with Cracked Black Pepper",
+      "brands": "Carrs, United Biscuits",
+      "quantity": "125g",
+      "countries": "China",
+      "ingredients_text": "Wheat flour, vegetable oil (palm, rapeseed), salt, black pepper (0.5%)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/500/039/603/3014/front_en.4.400.jpg",
+      "last_modified_at": "2025-03-21T02:13:53+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 9.2,
+        "fat_g": 7.7,
+        "saturated_fat_g": 2.9,
+        "carbohydrate_g": 75.5,
+        "sugars_g": 0,
+        "sodium_g": 0.00067564
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8412674106742",
+      "product_name": "Chocolate Flavored Filled Biscuits",
+      "brands": "Reglero",
+      "quantity": "180g",
+      "countries": "China",
+      "ingredients_text": "Wheat flour, chocolate flavoured filling 30% (sugar, vegetable fat (palm), fat reduced cocoa powder 16%*, whey powder (milk), flavouring, emulsifier (lecithins (sunflower), vegetable fat and oil (palm, high oleic sunflower), sugar, glucose-fructose syrup, raising gents (sodium hydrogen carbonate, ammonium hydrogen carbonate), whey powder (milk), salt, emulsifier (lecithins (sunflower), flavouring, antioxidant (sodium ietabisulphite)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/841/267/410/6742/front_en.4.400.jpg",
+      "last_modified_at": "2022-02-25T07:34:07+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5,
+        "fat_g": 17,
+        "saturated_fat_g": 9,
+        "carbohydrate_g": 71,
+        "sugars_g": 28,
+        "sodium_g": 0.82
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6972039816591",
+      "product_name": "蒜香青豆",
+      "brands": "锦玥",
+      "quantity": "210克",
+      "countries": "China",
+      "ingredients_text": "食品名称:蒜香青豆|产品 豆,植物油,蒜香调味粉 玉米淀粉,香辛料,酵母 用香精,阿斯巴甜 (含 营养素参考值%方法:开袋即食|贮存多 品标准代号: GB//T221 质期: 240天|食即生产 营养成分表 每100g 项目 2114KJ 25% R尼 14.8g 25% 蛋白质 脂肪 30. 6g 51% 【生产商】南昌净龙 14% 【地 址】江西桑海 【陈封商】深圳市 【地 址】广东省 碳水化合物 42. 1g 1451mg 73% 【服务热线】136918 三1量",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/203/981/6591/front_zh.4.400.jpg",
+      "last_modified_at": "2021-07-11T04:09:57+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 14.8,
+        "fat_g": 36.6,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 42.1,
+        "sugars_g": null,
+        "sodium_g": 1.474216
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6970541410207",
+      "product_name": "油炸休闲小点心（油炸糕点）虾味",
+      "brands": null,
+      "quantity": "18g",
+      "countries": "China",
+      "ingredients_text": "小麦粉,食用植物油,白砂糖,鱼露, 食用盐,食品添加剂(碳酸氢铵,栀子黄, 甜菜红),味精,海鲜粉调味料(虾粉, 5'-呈味核苷酸二钠)(辐照),食用香精香料, 香辛料(辐照)。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/054/141/0207/front_en.10.400.jpg",
+      "last_modified_at": "2025-03-11T18:51:11+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 0,
+        "protein_g": 8,
+        "fat_g": 27.6,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 63,
+        "sugars_g": 0,
+        "sodium_g": 0.84
+      },
+      "quality_status": "excluded_invalid_nutrition",
+      "quality_issues": [
+        "缺品牌",
+        "每100g能量超出1–900kcal质量范围"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "26246024",
+      "product_name": "Fine Wafer Crackers Pepper & Chives",
+      "brands": "Damora",
+      "quantity": "100g",
+      "countries": "China",
+      "ingredients_text": "Wheat Flour, Cheese Powder {Milk Solids, Cheese Solids [Milk, Salt, Starter Culture, Enzyme (Rennet)], Salt, Acidity Regulator (330)}, Salt, Vegetable Oil, Cracked Black Pepper (0.6%), Dried Chives (0.4%), Raising Agent (500).",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/000/002/624/6024/front_en.4.400.jpg",
+      "last_modified_at": "2025-03-19T23:12:55+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 397,
+        "protein_g": 10.6,
+        "fat_g": 4.8,
+        "saturated_fat_g": 1.8,
+        "carbohydrate_g": 74.5,
+        "sugars_g": 2.3,
+        "sodium_g": 0.67
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6909995103670",
+      "product_name": "小小酥（原味）",
+      "brands": "旺旺",
+      "quantity": "60g / 袋",
+      "countries": "China, France",
+      "ingredients_text": "大米、植物油(含特丁基对苯二酚)、白砂糖、山梨糖醇液、羟丙基淀粉、酿造酱油、米粉、淀粉、味精、辣椒粉、食用盐、酵母抽提物、辣 椒红、5'-呈味核苷酸二钠、乳糖、 甘草粉、柠檬酸钠、食用盐",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/999/510/3670/front_zh.8.400.jpg",
+      "last_modified_at": "2026-03-26T04:27:20+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 550,
+        "protein_g": 3.5,
+        "fat_g": 33.5,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 59,
+        "sugars_g": 0.2,
+        "sodium_g": 0.65
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8809260947122",
+      "product_name": "Mini Mix Pretzel and Crackers Chessy",
+      "brands": "Samjin",
+      "quantity": "65g",
+      "countries": "China",
+      "ingredients_text": "Salted Pretzels {wheat flour, palm oil, corn syrup, processed salt [salt (sodium chloride), potassium iodate], fructose syrup, yeast, ammonium bicarbonate, sodium bicarbonate}, biscuits (wheat flour, palm oil, sugar, fructose syrup, ammonium bicarbonate, barley malt powder, yeast extract powder, whey powder, sodium bicarbonate, salt, protease), palm oil, cheddar cheese seasoning [white cheddar cheese seasoning] Ingredients [Blue cheese (sterilized milk, sea salt, lactic acid bacteria, rennet, penicillium), palm oil, dextrin, casein, whey powder, salt, skim milk, cheddar cheese flavor, citric acid], sugar , Cheddar cheese seasoning {Cheddar cheese powder [Cheddar cheese (milk, salt, lactic acid bacteria, rennet)], whey powder, salt, cream, cheese flavor, disodium hydrogen phosphate}, processed Salt (Potassium Phosphate, Salt), Seasoning Powder (Sodium L-Glutamate, Salt, Yeast Extract Powder, Silicon Dioxide), Cheese Powder ';Processed Cheese {Cheese Sauce [Foam, Cheddar Cheese (Milk, salt, lactic acid bacteria, rennet), lipase, protease, guanhua bean gum], cheese flavor}, yeast extract, beta-cyclodextrin, sugar, salt, glucose syrup, cheddar cheese ( milk, salt, lactic acid bacteria, rennet), flavorings (disodium 5'-inosine phosphate, disodium 5'-guanosine phosphate), yeast extract powder, calcium phosphate, cheese flavor, Sweetener (Aspartame)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/880/926/094/7122/front_en.4.400.jpg",
+      "last_modified_at": "2025-03-21T04:52:47+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 474,
+        "protein_g": 9,
+        "fat_g": 19,
+        "saturated_fat_g": 9,
+        "carbohydrate_g": 66.7,
+        "sugars_g": 3,
+        "sodium_g": 1.002792
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6920907808612",
+      "product_name": "呀土豆",
+      "brands": "好丽友",
+      "quantity": "70g",
+      "countries": "China",
+      "ingredients_text": "马铃薯粉(马铃薯,单双甘油脂肪酸酯、柠檬酸、亚硫酸氢钠),植物 油,淀粉、食品添加剂(酸酸酸淀粉、磷酸酯双淀粉),滋香烤鸡味调味料 「白砂糖,麦芽糊精,食用香精,食用盐、香辛料,味精,酿造酱油,二氧化 硅、柠檬酸、酵母抽提物,阿斯巴甜(含苯丙氨酸),5-呈味核苷酸二钠筆 根红,植物油․磷脂,焦糖色食用葡萄糖,紐甜, 食用盐,食用香精。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/090/780/8612/front_zh.3.400.jpg",
+      "last_modified_at": "2025-09-20T15:54:01+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 2.8,
+        "fat_g": 21.3,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 42.5,
+        "sugars_g": 0,
+        "sodium_g": 211.6
+      },
+      "quality_status": "excluded_invalid_nutrition",
+      "quality_issues": [
+        "缺每100g能量",
+        "钠超出质量范围"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743915060",
+      "product_name": "美国经典原味薯片",
+      "brands": "Lay's, 乐事",
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "乐事一下 真愛 够薄 口味 消费者热线:4008208718(中国大陆地区适用, 地工作日周一到周五9:00--17:00)话费自理 贮存条件:请置于干燥凉爽处,避免阳光直射。开口后请即食,以免受潮。 融方生产商($):百事食品(中国)有限公司 产地:上海市 上海市松江工业区东兴路99号 邮政编码:201600 食品生产许可证编号: SC112310117003092 生产商:百事食品(中国)门限公司北京分厂(QY) 产地:北京市 北京市大兴区青:店镇联华路8号 邮政编码:102605 食品生产许可证编号: SC10111151410047 百事食品(中国)有限公司武汉分厂(WH) 产地:湖北省武汉市 湖北省武汉市东西湖区走马岭汇通大道10号 邮政编码:430043 食品生产许可证编号: SC11242011202405 受委托生产商:百事食品(四川)有限公司(DY)地:四川省德阳市 四川省德阳市泰山南路三段110号 邮政编码 618000 食品生产许可证编号: SC11251060100019 百事食品(广东)有限公司(FS)产地:广东省深山市 广东省佛山市南海区丹灶镇利众路5号 政编码:528216 食品生产许可证编号:SC112440610057 百事食品(山东)有限公司(SD) 产地:山东省临沂市 山东省临沂市临沭县经济开发区持大道1号邮政编码:276715 食品生产许可证编号: SC11237132919294 具体生产商请以生产日期旁的20代号为准 熱品标准号:QB/T 2686 马铃薯、植物油、经典原味调味料(含5’呈味核苷 酸二钠)、TBHQ。 每份食用 项目 能量 蛋白质 肪 - 饱和腰 碳水化 - 糖 2 钠 云重食品 “乐事”、“Lay's”、“百事食品”及其相关文字热經改 为美国百事公司所拥有的商标,百善量易 公司获准在中国使用 保质期 生产",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/391/5060/front_zh.3.400.jpg",
+      "last_modified_at": "2026-01-12T08:22:43+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 2.3,
+        "fat_g": 14,
+        "saturated_fat_g": 7,
+        "carbohydrate_g": 21.1,
+        "sugars_g": 0.5,
+        "sodium_g": 0.2
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6938536200103",
+      "product_name": "肉松面包",
+      "brands": "金马",
+      "quantity": "100g",
+      "countries": "China",
+      "ingredients_text": "小麦粉、人造奶油、奶粉、 鸡蛋、白砂糖、酵母、肉松、沙拉酱、食盐、饮用水。 食品添加剂:膨松剂 ( 酶制剂、 维生素C、硬脂酰乳酸钠、葡萄糖、淀粉)丙酸钙、脱脂乙酸钠、 食用香精。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/853/620/0103/front_en.4.400.jpg",
+      "last_modified_at": "2025-05-28T03:05:04+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 9.4,
+        "fat_g": 3.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 61.7,
+        "sugars_g": null,
+        "sodium_g": 0.304
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8801039280027",
+      "product_name": "海牌海苔",
+      "brands": "海牌",
+      "quantity": "2克*8",
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/880/103/928/0027/front_zh.5.400.jpg",
+      "last_modified_at": "2023-02-23T13:56:21+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6920616317580",
+      "product_name": "旺旺雪饼",
+      "brands": "旺旺",
+      "quantity": "258g",
+      "countries": "China",
+      "ingredients_text": "配料表:大米(≥60%)、白砂糖、植物油(含特丁基 对苯二酚)、米粉、淀粉、食用盐、食品添加剂(明胶 5'-呈味核苷酸二钠)、味精 致敏原信息:此生产线也生产含大豆、麸质谷物、鱼、 蛋、甲壳纲类动物、乳制品的产品",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/061/631/7580/front_zh.3.400.jpg",
+      "last_modified_at": "2024-12-16T14:37:05+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 4.4,
+        "fat_g": 18.5,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 74,
+        "sugars_g": 0,
+        "sodium_g": 0
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6959269900450",
+      "product_name": "鲜蛋酥",
+      "brands": "柏味园",
+      "quantity": "400g / 包",
+      "countries": "China",
+      "ingredients_text": "小麦粉,白砂糖,鲜鸡蛋(添加量≥25%), 棕榈油,食用盐,食品添加剂(碳酸氢铵, 香兰素,β-胡萝卜素)。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/926/990/0450/front_zh.3.400.jpg",
+      "last_modified_at": "2024-05-19T07:31:50+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 7.6,
+        "fat_g": 6.4,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 81.4,
+        "sugars_g": null,
+        "sodium_g": 0.213
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6937451811531",
+      "product_name": "果味大棒棒糖（蜜桃味）",
+      "brands": "不二家",
+      "quantity": "10g / 支 / 包",
+      "countries": "China",
+      "ingredients_text": "白砂糖、麦芽糖浆、食品添加剂(柠檬酸、红花黄)、 食品用香精、速溶绿茶粉",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/745/181/1531/front_zh.3.400.jpg",
+      "last_modified_at": "2023-07-07T15:50:08+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 0,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 97,
+        "sugars_g": 97,
+        "sodium_g": 0
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6911988009852",
+      "product_name": "高纤粗粮饼",
+      "brands": "好吃点",
+      "quantity": "168g / 包 / 24 片",
+      "countries": "China",
+      "ingredients_text": "小麦粉、精炼植物油、食用小麦麸皮、白砂糖、起酥油、鸡蛋、芝麻、花生酱、食品添加剂 (磷酸氢钙、磷脂、碳酸氢钠、碳酸氢铵、柠檬酸、 特丁基对苯二酚)、食用盐、食用香料",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/691/198/800/9852/front_zh.3.400.jpg",
+      "last_modified_at": "2023-07-09T14:08:16+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6.8,
+        "fat_g": 33,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 42,
+        "sugars_g": null,
+        "sodium_g": 0.24
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6911988000170",
+      "product_name": "高纤蔬菜饼",
+      "brands": "好吃点",
+      "quantity": "168g / 包 / 24 片",
+      "countries": "China",
+      "ingredients_text": "小麦粉、精炼植物油、食用小麦麸皮、白砂糖、起酥油、 鸡蛋、芝麻、花生酱、抗性糊精、食品添加剂(磷酸氢钙、磷脂、碳酸氢钠、碳酸氢铵、柠檬酸、特丁基对苯二酚)、脱水蔬菜(分葱)、食用盐、番茄粉、食用香料",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/691/198/800/0170/front_zh.3.400.jpg",
+      "last_modified_at": "2023-07-14T04:12:54+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6.9,
+        "fat_g": 32,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 42,
+        "sugars_g": null,
+        "sodium_g": 0.24
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6901668006011",
+      "product_name": "奥利奥 树莓味+蓝莓味",
+      "brands": "亿滋",
+      "quantity": "194g / 4 包",
+      "countries": "China",
+      "ingredients_text": "小麦粉,白砂糖, 食用植物油,可可粉,淀粉, 食用葡萄糖, 食品添加剂 (碳酸氢钠,碳酸氢铵,大豆磷脂, 柠 檬酸, 胭脂虫红, 栀子蓝),食用盐,蓝莓粉,树莓粉,食用香精香料",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/166/800/6011/front_zh.3.400.jpg",
+      "last_modified_at": "2025-02-04T00:29:22+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 463.917525773196,
+        "protein_g": 4.63917525773196,
+        "fat_g": 20.6185567010309,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 67.0103092783505,
+        "sugars_g": 41.2371134020619,
+        "sodium_g": 0.360824742268041
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6931958063691",
+      "product_name": "QQ桃桃果汁100软糖",
+      "brands": "旺旺",
+      "quantity": "60g / 袋",
+      "countries": "China",
+      "ingredients_text": "麦芽糖、白砂糖、脱色脱酸苹果浓缩汁、明胶、山梨糖醇液、柠檬酸、果胶、 柠檬酸钠、巴西棕榈蜡、食用葡萄糖、浓缩桃汁、浓缩果蔬汁(红萝卜、苹果、黑加仑、柠檬酸)、食品用香精",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/195/806/3691/front_zh.3.400.jpg",
+      "last_modified_at": "2024-02-28T14:29:26+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6.5,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 73.2,
+        "sugars_g": null,
+        "sodium_g": 0.031
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6931958034592",
+      "product_name": "旺仔泡芙（牛奶味）",
+      "brands": "旺旺",
+      "quantity": "30g / 包",
+      "countries": "China",
+      "ingredients_text": "起酥油[精炼植物油(含维生素E)、单, 双甘油脂肪酸酯]、鸡蛋、小麦粉、白砂糖、全脂乳粉、植物油(特丁基对苯二酚)、乳糖、淀粉、食用盐、碳酸氢铵、碳酸氢钠、磷脂、酪蛋白酸钠、液体麦精(大麦、麦芽、水)、食品用香精",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/195/803/4592/front_zh.3.400.jpg",
+      "last_modified_at": "2024-03-11T13:03:22+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 9.2,
+        "fat_g": 39.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 47.4,
+        "sugars_g": null,
+        "sodium_g": 0.505
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6971714701566",
+      "product_name": "谷焙奇酸奶沙琪玛",
+      "brands": "谷焙奇",
+      "quantity": "350g",
+      "countries": "China",
+      "ingredients_text": "Wheat flour, eggs, maltitol liquid, edible vegetable oil (containing tert-butylhydroquinone), gluten, yogurt powder (added ≥3%), whole milk powder (added amount≥2%), sesame seeds, edible salt, food additives (sorbitol liquid, sodium bicarbonate, disodium dibasic phosphate), food flavor.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/171/470/1566/front_zh.3.400.jpg",
+      "last_modified_at": "2024-03-16T03:37:59+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 126,
+        "protein_g": 2.08571428571429,
+        "fat_g": 4.28571428571429,
+        "saturated_fat_g": 0.571428571428571,
+        "carbohydrate_g": 19.7428571428571,
+        "sugars_g": 17.1428571428571,
+        "sodium_g": 0.0156571428571429
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6920912360402",
+      "product_name": "艾比利薯片（田园番茄味）",
+      "brands": "盼盼",
+      "quantity": "60+3g / 袋",
+      "countries": "China",
+      "ingredients_text": "马铃薯雪花全粉(马铃薯、单双甘油脂肪酸酯、 柠檬酸)、植物油、淀粉、马铃薯、复合调味料(白砂糖、 麦芽糊精、番茄粉、食用盐、味精、食品用香精、DL-苹果酸、二氧化硅、柠檬酸、呈味核苷酸二钠、阿斯巴甜、苯丙氨酸)、单双甘油脂肪酸酯、食用盐、味精、碳酸氢钠、磷脂、柠檬酸、特丁基对苯二酚",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/091/236/0402/front_zh.3.400.jpg",
+      "last_modified_at": "2024-03-16T04:23:30+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 2.4,
+        "fat_g": 33.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 59.8,
+        "sugars_g": null,
+        "sodium_g": 0.472
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6901668009784",
+      "product_name": "香脆曲奇 浓浓巧克力味",
+      "brands": "趣多多",
+      "quantity": "510g / 盒 / 24 包",
+      "countries": "China",
+      "ingredients_text": "小麦粉,代可可脂巧克力颗粒,大豆磷脂,食用植物油,白砂糖,乳清粉,可可粉,食品添加剂(碳酸氢钠,碳酸氢铵,磷酸氢二铵,焦糖色,柠檬酸),食用盐,食用香精",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/166/800/9784/front_zh.3.400.jpg",
+      "last_modified_at": "2024-06-19T14:20:54+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5.5,
+        "fat_g": 24.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 60.5,
+        "sugars_g": null,
+        "sodium_g": 0.36
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743922570",
+      "product_name": null,
+      "brands": "Lay's, 乐事",
+      "quantity": "75g",
+      "countries": "China",
+      "ingredients_text": "马铃薯、植物油、青柠味调味料(含食用香精、柠檬酸、DL-苹果酸、阿斯巴甜(含苯丙氨酸)、5'-呈味核苷酸二钠、甜菊糖苷、纽甜)、食用香精、TBHQ。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/392/2570/front_en.3.400.jpg",
+      "last_modified_at": "2026-01-12T08:28:22+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5.66666666666667,
+        "fat_g": 33.3333333333333,
+        "saturated_fat_g": 5.33333333333333,
+        "carbohydrate_g": 54.6666666666667,
+        "sugars_g": 7,
+        "sodium_g": 0.526666666666667
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6956213701187",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": "TRUE FOOD 姚依雪 脆皮面 CUIPIXIAO an 兄弟 非油炸康化食量 长葛市依雪食品厂",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/621/370/1187/front_zh.3.400.jpg",
+      "last_modified_at": "2024-08-21T06:39:02+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": 11.3,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 70.5,
+        "sugars_g": null,
+        "sodium_g": 1.384
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6972434755648",
+      "product_name": "诺特兰得 血橙复合B族维生素咀嚼片 运动营养食品 耐力类",
+      "brands": "诺特兰德",
+      "quantity": "36g (0.6g x 60)",
+      "countries": "China",
+      "ingredients_text": "山梨糖醇,低聚异麦芽糖,牛磺酸,复配营养强化剂(烟酸,泛酸,维生素B1,维生素B6,维生素B2,叶酸,生物素,维生素B12),血橙粉,柠檬酸,硬脂酸镁,食用香精,三氯蔗糖",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/243/475/5648/front_zh.3.400.jpg",
+      "last_modified_at": "2024-08-31T03:40:25+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6920907800968",
+      "product_name": "好丽友•派 涂饰蛋类芯饼 巧克力味",
+      "brands": "Orion",
+      "quantity": "445g",
+      "countries": "China",
+      "ingredients_text": "白砂糖、小麦粉、葡萄糖浆,起酥油、水、可可粉、乳粉、食用葡萄糖、食用盐、鸡蛋,蛋白粉,可可液块,低聚异麦芽糖,乳糖,食品添加剂(磷酸二氢钙,碳酸氢钠、碳酸氢铵，黄原胶,明胶,酪蛋白酸钠,阿拉伯胶,磷脂,食用香精香料),牛脂风味酱(食用牛油,牛肉,酸水解植物蛋白调味液,食用盐)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/090/780/0968/front_zh.3.400.jpg",
+      "last_modified_at": "2024-09-04T06:09:36+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 4.3,
+        "fat_g": 16.5,
+        "saturated_fat_g": 16.5,
+        "carbohydrate_g": 65.7,
+        "sugars_g": null,
+        "sodium_g": 0.255
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6976153190216",
+      "product_name": "DL大月饼（芋泥麻薯酥饼）",
+      "brands": "DL",
+      "quantity": "490克",
+      "countries": "China",
+      "ingredients_text": "香芋馅≥28%(芋头,麦芽糖浆,白芸豆,水,山梨糖醇,大豆油,全脂乳粉,大豆膳食纤维 粉,紫薯粉,奶油,海藻糖,食用盐,山梨酸钾),拉丝麻薯≥17%(复合调味料),小麦粉,奶油冰沙 (食品馅料),黄油,鸭蛋黄,鸡蛋,白砂糖,炼乳,辣味鸡肉松,海藻糖,食醋粉(调味料),食用盐, 风味饮料(表面装饰),复配膨松剂(焦磷酸二氢二钠,碳酸氢钠),碳酸氢铵β-胡萝卜素,山 梨酸钾。致敏物质提示:产品含有麸质的谷物及其制品,大豆及其制品,蛋类及其制品, 乳及乳制品。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/615/319/0216/front_zh.3.400.jpg",
+      "last_modified_at": "2024-09-04T13:30:47+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5,
+        "fat_g": 15.7,
+        "saturated_fat_g": 11,
+        "carbohydrate_g": 58.1,
+        "sugars_g": 18,
+        "sodium_g": 0
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "9556023223915",
+      "product_name": null,
+      "brands": "Zess",
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": null,
+      "last_modified_at": "2026-06-17T19:51:12+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 454.545454545455,
+        "protein_g": 9.09090909090909,
+        "fat_g": 15.9090909090909,
+        "saturated_fat_g": 6.81818181818182,
+        "carbohydrate_g": 72.7272727272727,
+        "sugars_g": 27.2727272727273,
+        "sodium_g": 0.681818181818182
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6974299050012",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": null,
+      "last_modified_at": "2024-10-30T09:05:59+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6977590340011",
+      "product_name": "老味糕点",
+      "brands": "北方威力发",
+      "quantity": "220克",
+      "countries": "China",
+      "ingredients_text": "小麦粉,饮用水,白砂糖,食用植物油 ,鸡蛋,白豆沙,花生仁,红桔丁,白芝麻,葡萄干,玫瑰酱,青红丝,食用盐,丙酸钙,脱氢乙酸钠",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/759/034/0011/front_zh.3.400.jpg",
+      "last_modified_at": "2026-07-25T21:36:41+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 435.8,
+        "protein_g": 8.4,
+        "fat_g": 16.2,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 64.1,
+        "sugars_g": null,
+        "sodium_g": 0.042
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8906033740963",
+      "product_name": "Mcvities BOUrBON",
+      "brands": "mcvities",
+      "quantity": "100g",
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/890/603/374/0963/front_en.10.400.jpg",
+      "last_modified_at": "2026-06-05T23:53:05+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0054300091114",
+      "product_name": "Rocky Mountain Fruit Marshmallows",
+      "brands": "Doumak Inc.",
+      "quantity": "300g",
+      "countries": "China, Czech Republic, France",
+      "ingredients_text": "Glucose syrup, sugar, modified food starch (corn), gelatin (pork), water, natural and artificial flavor, tetrasodium pyrophosphate E450 (stabilizer), E100, E120, E133",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/005/430/009/1114/front_en.28.400.jpg",
+      "last_modified_at": "2026-03-17T14:47:12+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 328,
+        "protein_g": 2,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 80,
+        "sugars_g": 66,
+        "sodium_g": 0.08
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0054300090018",
+      "product_name": "Marshmallows classic",
+      "brands": "Rocky Mountain",
+      "quantity": "300 g",
+      "countries": "Austria, China, Germany, Sweden, Switzerland",
+      "ingredients_text": "Glucose syrup, Sugar, Modified food starch (corn), Gelatin (pork), Water, Tetrasodium pyrophosphate E450 (stabilizer), natural and artificial flavor. Gluten Free",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/005/430/009/0018/front_en.8.400.jpg",
+      "last_modified_at": "2026-04-18T18:32:39+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 324,
+        "protein_g": 2,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 79,
+        "sugars_g": 65,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0077330337335",
+      "product_name": "Beatrix Potter Butter Cookies",
+      "brands": "Beatrix Potter",
+      "quantity": "908g",
+      "countries": "China",
+      "ingredients_text": "Wheat flour,butter(26%),sugar,desiccated coconut,raising agent(ammonium bicarbonate),salt,invert sugar syrup,natural flavor.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/007/733/033/7335/front_en.3.400.jpg",
+      "last_modified_at": "2022-02-11T10:34:19+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 5.8,
+        "fat_g": 23.3,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 66.1,
+        "sugars_g": null,
+        "sodium_g": 0.12192
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0927543915557",
+      "product_name": "意大利香浓红烩味薯片",
+      "brands": "Lay's, 乐事",
+      "quantity": "75 g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/092/754/391/5557/front_en.3.400.jpg",
+      "last_modified_at": "2026-01-12T08:30:30+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "3045140015849",
+      "product_name": "Carrés Noir Noisette",
+      "brands": "Côte d'Or, Mondelez, Mondelez International",
+      "quantity": "200 g e (10 * 20 g)",
+      "countries": "Belgium, China, France",
+      "ingredients_text": "Sucre, pâte de cacao, _noisettes_ entières 20%, beurre de cacao, _beurre_ concentré, émulsifiant (lécithine de _soja_), arôme, _lait_ entier en poudre, Cacao: 47% minimum dans le chocolat noir extra-supérieur,",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/304/514/001/5849/front_fr.62.400.jpg",
+      "last_modified_at": "2026-08-10T11:56:36+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 578,
+        "protein_g": 6.8,
+        "fat_g": 40,
+        "saturated_fat_g": 18,
+        "carbohydrate_g": 43,
+        "sugars_g": 40,
+        "sodium_g": 0.004
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "3560070776238",
+      "product_name": "Lait noisettes & raisins",
+      "brands": "Carrefour, Carrefour Extra",
+      "quantity": "200 g",
+      "countries": "China, France, Italy, Kenya, Morocco, Spain",
+      "ingredients_text": "Sucre, _noisettes_ entières torréfiées15%, raisins secs 15% (raisins secs, huile de tournesol), beurre de cacao, poudre de _lait_ écrémé, pâte de cacao (fèves de cacao* origines Côte d'Ivoire), matière grasse de _lait_ anhydre, émulsifiant: lécithines, arôme naturel de vanille.\nCacao: 32% minimum dans le chocolat au lait.\nPeut contenir des traces d'autres fruits à coque et de céréales contenant du gluten.\n* fèves de cacao issues du programme Transparence Cacao",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/356/007/077/6238/front_en.51.400.jpg",
+      "last_modified_at": "2026-06-03T02:26:45+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 534,
+        "protein_g": 8.5,
+        "fat_g": 33,
+        "saturated_fat_g": 15,
+        "carbohydrate_g": 49,
+        "sugars_g": 45,
+        "sodium_g": 0.06
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "4001686301555",
+      "product_name": "",
+      "brands": "Haribo",
+      "quantity": "100 g",
+      "countries": "China, France, Germany",
+      "ingredients_text": "Glukosesirup; Zucker; Gelatine; Dextrose; Fruchtsaft aus Fruchtsaftkonzentrat: Apfel, Himbeere, Erdbeere, Orange, Zitrone, Ananas; Säuerungs - mittel: Citronensäure; Sonnenblumenöl; Frucht - und Pflanzen - konzentrate: Saflor, Spirulina, Apfel, Holunderbeere, Orange Schwarze Johannisbeere, Kiwi, Zitrone, Aronia, Mango, Traube Passionsfrucht; Aroma; Holunderbeerextrakt; Überzugsmittel Bienenwachs weiß und gelb.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/400/168/630/1555/front_zh.43.400.jpg",
+      "last_modified_at": "2026-08-11T02:59:05+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 348.7093689699,
+        "protein_g": 6.9,
+        "fat_g": 0.5,
+        "saturated_fat_g": 0.1,
+        "carbohydrate_g": 77,
+        "sugars_g": 46,
+        "sodium_g": 0.028
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "4902888116322",
+      "product_name": "Bonbons japonais",
+      "brands": "Morinaga, 森永製菓",
+      "quantity": "",
+      "countries": "China, France, Japan",
+      "ingredients_text": "SIROP DE SUCRE,SUCRE,HUILE DE PLANTE,GELATINE,JUS DE RAISIN CONCENTRE ,CONFITURE, YAOURT CONCENTRE,ACIDULANT,AROMES, EMULSIFIANT, PIGMENT DE CHOU ROUGE,BLEU DE GARDENIA. (ALLERGENES: LAIT.)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/490/288/811/6322/front_fr.37.400.jpg",
+      "last_modified_at": "2026-03-13T01:19:37+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5000159366267",
+      "product_name": "Twix",
+      "brands": "Twix",
+      "quantity": "",
+      "countries": "China, France",
+      "ingredients_text": "sucre, sirop de glucose, farine de _blé_ (17%), matière grasse de palme, beurre de cacao, _lait_ écrémé en poudre, pâte de cacao, _lactose_, _beurre_ concentré (lait), petit-_lait_ en poudre, cacao maigre, sel, émulsififant: _E322), poudre à lever E500, extrait naturel de vanille.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/500/015/936/6267/front_fr.11.400.jpg",
+      "last_modified_at": "2026-03-17T08:05:55+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 494,
+        "protein_g": 4.5,
+        "fat_g": 23.9,
+        "saturated_fat_g": 13.8,
+        "carbohydrate_g": 64.6,
+        "sugars_g": 48.6,
+        "sodium_g": 0.164
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5400219507706",
+      "product_name": "Extra noir 77%",
+      "brands": "Café-Tasse",
+      "quantity": "100 g",
+      "countries": "China, France",
+      "ingredients_text": "Pâte de cacao*, sucre, cacao maigre en poudre*, émulsifiant (lécithine de soja). Peut contenir: lait, oeufs, fruits à coques et gluten.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/540/021/950/7706/front_fr.24.400.jpg",
+      "last_modified_at": "2026-03-20T03:06:01+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 540,
+        "protein_g": 10.2,
+        "fat_g": 40.5,
+        "saturated_fat_g": 24.3,
+        "carbohydrate_g": 24.6,
+        "sugars_g": 19.7,
+        "sodium_g": 0.008
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5410522513257",
+      "product_name": "Dark Callets 811",
+      "brands": "Callebaut",
+      "quantity": "2.5kg",
+      "countries": "Belgium, China, France, Germany",
+      "ingredients_text": "Pâte de cacao, sucre, beurre de cacao, émulsifiant: lécithines (soja), arôme naturel de vanille",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/541/052/251/3257/front_fr.3.400.jpg",
+      "last_modified_at": "2026-05-15T07:49:03+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 551,
+        "protein_g": 5.1,
+        "fat_g": 37,
+        "saturated_fat_g": 22,
+        "carbohydrate_g": 46,
+        "sugars_g": 43,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5411901060096",
+      "product_name": "Paaseieren Hol Tonkeys Fondant",
+      "brands": "Libeert",
+      "quantity": "120 g",
+      "countries": "China, France",
+      "ingredients_text": "quren in dark chocolate, ingled alacboter, cinulgator (soy ecithine), after containing at least 46% cocoa solids kil spere a, e es figurines and dark chocolate, emulsifier ((soy cithrum) ar cocoa 46% minimum, possible traces of gluts, lat and fruts à coque, figuren aus schokolade, zutaten zucker, akaobutter, emulsifier (sojalecithin nattirliche kaobestandteile 40% mindestens,  kann spure alenfrüchten enthalten ,  ures in dark chocolate, ingres we lecithin), natirelo tras or g",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/541/190/106/0096/front_fr.12.400.jpg",
+      "last_modified_at": "2026-07-25T21:33:52+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 540,
+        "protein_g": 5.9,
+        "fat_g": 35,
+        "saturated_fat_g": 21,
+        "carbohydrate_g": 45,
+        "sugars_g": 42,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6903396008718",
+      "product_name": "钙维C脆皮奶球糖果",
+      "brands": "奇峰",
+      "quantity": "108 g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/339/600/8718/front_fr.8.400.jpg",
+      "last_modified_at": "2026-01-16T10:24:51+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6911316375451",
+      "product_name": "Alpenliebe",
+      "brands": "Alpenliebe",
+      "quantity": "",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/691/131/637/5451/front_fr.9.400.jpg",
+      "last_modified_at": "2024-11-25T05:32:36+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6914973600072",
+      "product_name": "Dove(德芙) 榛仁巧克力",
+      "brands": "Dove",
+      "quantity": "43g",
+      "countries": "China",
+      "ingredients_text": "S 营养成分表 包平均43克含有 项目 脂肪 15.59 3 能量 蛋白质 脂肪 每100克(9) NRV% 2344千焦kJ1 28% 7.5克( 26% 4035676 072&quot; 德美 榛仁巧克力配 可可液块乳脂肪乳糖 有限公司(A)食品生产许可证编号 SC11311160415037 中国北京市怀柔区雁栖经济开发区雁栖北二街月100 品(广州)有限公司(B)食品生产许可证编号:SC11333040800549 中国浙江省嘉兴经济技术开发区西南新区圣堂路505 66 浙江省嘉兴市具体产地见生产日期后首位代码产品标准号:GB/T19343合格品贮藏方法请置于阴凉干燥清洁处避免阳光。 冷者服务热线:400-830-1099(运营商收取本地通话费本包装膜采用单一聚丙烯材料可以在特定渠一波回收 SIX Dove Dove Dove Vove Dove Dove",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/691/497/360/0072/front_zh.3.400.jpg",
+      "last_modified_at": "2026-01-09T05:15:11+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6922024730043",
+      "product_name": "大白兔奶糖",
+      "brands": "大白兔",
+      "quantity": "454g",
+      "countries": "China, France",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/202/473/0043/front_zh.20.400.jpg",
+      "last_modified_at": "2026-03-13T13:32:19+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 429,
+        "protein_g": 4.4,
+        "fat_g": 9,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 81.7,
+        "sugars_g": 0,
+        "sodium_g": 0.04
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743915428",
+      "product_name": "墨西哥鸡汁番茄味薯片",
+      "brands": "Lay's, Lay's(乐事), 乐事",
+      "quantity": "45g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/391/5428/front_zh.3.400.jpg",
+      "last_modified_at": "2026-01-12T08:18:28+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6940996701144",
+      "product_name": "明治澳洲坚果夹心黑巧克力",
+      "brands": "Meiji, 明治",
+      "quantity": "58g",
+      "countries": "China",
+      "ingredients_text": "白砂糖、可可液块、澳洲坚果果仁、可可脂、全脂乳粉、植物油、食用香料、 食品添加剂(大豆磷脂、聚甘油蓖麻醇酸酯)。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/694/099/670/1144/front_zh.3.400.jpg",
+      "last_modified_at": "2026-01-12T10:06:23+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "7622200002290",
+      "product_name": "Mignonnette noir de noir",
+      "brands": "CÔTE D'OR",
+      "quantity": "240g",
+      "countries": "Belgium, China, France, Morocco",
+      "ingredients_text": "Sugar, cocoa mass, cocoa butter, emulsifier (SOYA lecithins), natural vanilla flavor, skimmed MILK powder . MAY CONTAIN NUTS.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/762/220/000/2290/front_en.81.400.jpg",
+      "last_modified_at": "2026-08-01T18:29:57+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 522,
+        "protein_g": 5.5,
+        "fat_g": 29,
+        "saturated_fat_g": 17,
+        "carbohydrate_g": 55,
+        "sugars_g": 52,
+        "sodium_g": 0.004
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "7622210724557",
+      "product_name": "",
+      "brands": "Côte d'Or, Mondelez",
+      "quantity": "90 g",
+      "countries": "Belgium, China, France",
+      "ingredients_text": "cocoa paste, cane sugar, cocoa butter, sea salt (0,4%), emulsifier (soy lecithin), vanilla extract,\r\ningredients from organic farming,",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/762/221/072/4557/front_en.55.400.jpg",
+      "last_modified_at": "2026-03-18T22:32:43+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 552,
+        "protein_g": 7.4,
+        "fat_g": 37,
+        "saturated_fat_g": 22,
+        "carbohydrate_g": 44,
+        "sugars_g": 38,
+        "sodium_g": 0.2
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8410095004029",
+      "product_name": "Strawberry cream",
+      "brands": "Helios",
+      "quantity": "170 g (8 x 21 g)",
+      "countries": "China, Spain",
+      "ingredients_text": "Fresa, azúcar, jarabe de glucosa y fructosa, espesantes: pectina (E-440) y goma de garrofín (E-410); acidulante: ácido cítrico (E-330) y conservadores: benzoato sódico (E-211) y sorbato de potasio (E-202); ácido ascórbico (E-300) (vitamina C). Elaborado con 50 g de fruta por 100 g. Contenido en azúcares: 64 g por 100 g.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/841/009/500/4029/front_es.7.400.jpg",
+      "last_modified_at": "2026-03-27T17:36:08+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 260,
+        "protein_g": 0.4,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 64,
+        "sugars_g": 62.9,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "9153758906108",
+      "product_name": "巧克力夹心饼干",
+      "brands": "Oreo",
+      "quantity": "106 g",
+      "countries": "China",
+      "ingredients_text": "白砂糖,小麦粉,食用植物油,可可粉,彩色硬糖颗粒,淀粉, 食品添加剂(碳酸氢钠,碳酸氢铵,大豆磷脂,柠檬酸),食用盐,食用 香精香料(含牛奶制品)。 过敏原信息:含有小麦,牛奶,大豆。 此生产线也加工含有花生,芝麻和蛋制品的产品。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/915/375/890/6108/front_zh.8.400.jpg",
+      "last_modified_at": "2025-08-06T19:25:38+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 4.8,
+        "fat_g": 22.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 65,
+        "sugars_g": null,
+        "sodium_g": 0.42672
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8710486119388",
+      "product_name": "Nougat Soft (Cacahuètes et fruits)",
+      "brands": "Marandi",
+      "quantity": "",
+      "countries": "China, France",
+      "ingredients_text": "sucre, sirop de glucose, arachides (14%), eau, fruits confits (7%, contient: melon, sucre, sirop de glucose-fructose, concentré de cerise, correcteur d'acidité (acide citrique)), graisse végétale (palme), poudre de lait écrémé, albumine de lait, sel, arôme naturel, miel, Peut contenir des traces de fruits à coque,",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/871/048/611/9388/front_fr.9.400.jpg",
+      "last_modified_at": "2026-03-14T07:37:06+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 417,
+        "protein_g": 5.7,
+        "fat_g": 12,
+        "saturated_fat_g": 3.9,
+        "carbohydrate_g": 71,
+        "sugars_g": 57,
+        "sodium_g": 0.108
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "9970229501521",
+      "product_name": "乐吧泡菜味薯片",
+      "brands": "乐吧",
+      "quantity": "50 g",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/997/022/950/1521/front_zh.3.400.jpg",
+      "last_modified_at": "2022-02-11T11:24:19+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "4897043061138",
+      "product_name": "U100牌石头型糖果（巧克力味）",
+      "brands": "U100",
+      "quantity": "70 g",
+      "countries": "China",
+      "ingredients_text": "白砂糖、葡萄糖浆、全脂奶粉、奶油、可可液块、食品添加剂(明胶、L - 柠檬黄、亮蓝、诱惑红、日落黄、食用香精) 。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/489/704/306/1138/front_zh.6.400.jpg",
+      "last_modified_at": "2023-07-20T14:35:15+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 1.2,
+        "fat_g": 4.3,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 71.4,
+        "sugars_g": null,
+        "sodium_g": 0.056
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5400141055900",
+      "product_name": "Saucisses cocktail",
+      "brands": "Boni",
+      "quantity": "14 pièces",
+      "countries": "Belgium, China",
+      "ingredients_text": "70% viande (poulet, porc), eau, amidon (blé, tapioca), lard de porc, sel, plantes aromatiques contient du céleri), épices (contient de la moutarde), extraits d'épices, protéines du lait protéines végétales (contient du soja), émulsifiant (E451), antioxydant (E316), exhausteur de goût E621, conservateur (E250). Contient du gluten, du soja, du lait, du céleri et de la moutarde.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/540/014/105/5900/front_fr.17.400.jpg",
+      "last_modified_at": "2026-03-31T10:50:57+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 191,
+        "protein_g": 12,
+        "fat_g": 14,
+        "saturated_fat_g": 4.4,
+        "carbohydrate_g": 3.1,
+        "sugars_g": 0.5,
+        "sodium_g": 0.68
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6901668005946",
+      "product_name": "奥利奥生日蛋糕味",
+      "brands": "Oreo",
+      "quantity": "",
+      "countries": "China, Ethiopia, Finland, France, Germany, Moldova, North Macedonia, Romania, United Kingdom",
+      "ingredients_text": "Wheat Flour, Sugar,\r\nVegetable Oil, Cocoa Powder, Starch,\r\nCandy 1%, Raising Agent (E500),\r\nEmulsifier (E322 Soya Lecithin), Acidity\r\nRegulators (E503, E330), Salt,\r\nFlavouring (Contains Milk)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/166/800/5946/front_en.15.400.jpg",
+      "last_modified_at": "2026-07-28T16:37:49+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 500,
+        "protein_g": 4.74226804123711,
+        "fat_g": 20,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 70.1030927835052,
+        "sugars_g": 70.1030927835052,
+        "sodium_g": 0.35979381443299
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8852690002930",
+      "product_name": "Samui Coconut Chips",
+      "brands": "Samui",
+      "quantity": "40 g",
+      "countries": "China",
+      "ingredients_text": "COCONUT, CANE SUGAR, SALT",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/885/269/000/2930/front_en.4.400.jpg",
+      "last_modified_at": "2019-01-07T09:46:12+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 0.26,
+        "protein_g": 2,
+        "fat_g": 21,
+        "saturated_fat_g": 17,
+        "carbohydrate_g": 16,
+        "sugars_g": 15,
+        "sodium_g": 0.2032
+      },
+      "quality_status": "excluded_invalid_nutrition",
+      "quality_issues": [
+        "每100g能量超出1–900kcal质量范围"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8003040014602",
+      "product_name": "Biscotti con Gocce di Cioccolato Senza Zuccheri Aggiunti",
+      "brands": "Giampaoli",
+      "quantity": "300g",
+      "countries": "China, France",
+      "ingredients_text": "Wheat flour, Sweetener: Maltitole, Sunflower-seed oil, Chocolate drops with sweetener 8,5% (sweetener: maltitole, cocoa paste, emulsifier: soy lecithin, light cocoa powder, natural vanilla flavouring), Butter (contains milk), Leavening agents: disodium phosphate, sodium acid carbonate, ammonium acid carbonate, Wheat starch, Potato flour, Wheat malt, Salt, Flavourings.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/800/304/001/4602/front_it.4.400.jpg",
+      "last_modified_at": "2026-03-19T09:40:49+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 466,
+        "protein_g": 7.6,
+        "fat_g": 18,
+        "saturated_fat_g": 7.1,
+        "carbohydrate_g": 66.9,
+        "sugars_g": 0.3,
+        "sodium_g": 0.24
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "5390582809111",
+      "product_name": "Cliffs of moher",
+      "brands": "Cliffs of moher",
+      "quantity": "150g",
+      "countries": "China",
+      "ingredients_text": "Wheat Flour, Sugar, Butter (Milk), Vegetable Fat (Palm Oil, Rapeseed Oil, Sunflower NUTRITIONAL INFORMATION Per 100g",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/539/058/280/9111/front_fr.3.400.jpg",
+      "last_modified_at": "2025-05-31T16:51:43+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 542,
+        "protein_g": null,
+        "fat_g": 27.7,
+        "saturated_fat_g": 14.7,
+        "carbohydrate_g": 66.8,
+        "sugars_g": 21.5,
+        "sodium_g": null
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8003040012509",
+      "product_name": "Biscotti al farro",
+      "brands": "Giampaoli",
+      "quantity": null,
+      "countries": "China, Italy",
+      "ingredients_text": "Whole wheat flour 48%, sugar, sunflower oil, 9% spelled flour, eggs, butter (contains milk), skimmed milk powder, rising agents: diphosphate Disodic, sodium acid carbonate, carbonate Ammonium acid, dextrose, potato starch, wheat starch, glucose syrup, honey, wheat malt, aromas, emulsifier: soy lecithin.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/800/304/001/2509/front_en.4.400.jpg",
+      "last_modified_at": "2026-03-30T17:38:57+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 398.2,
+        "protein_g": 9.4,
+        "fat_g": 7.4,
+        "saturated_fat_g": 0.88,
+        "carbohydrate_g": 68,
+        "sugars_g": 25,
+        "sodium_g": 0.08
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "4028491406824",
+      "product_name": "Shortbread cookies plain",
+      "brands": "quickbury",
+      "quantity": "6 pièces, 125gr",
+      "countries": "China, Germany",
+      "ingredients_text": "Farine de blé, matière grasse végétale (palme), sucre, œufs liquides pasteurisés, arôme vanille, sel, agent levant (carbonate de sodium, carbonate d'ammonium), colorant (bêta-carotène E 160a).",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/402/849/140/6824/front_en.15.400.jpg",
+      "last_modified_at": "2026-03-25T19:24:10+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 534,
+        "protein_g": 5.4,
+        "fat_g": 29.4,
+        "saturated_fat_g": 19.6,
+        "carbohydrate_g": 61.3,
+        "sugars_g": 25.9,
+        "sodium_g": 0.07
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6950758401861",
+      "product_name": "Yellow Peach Crisps",
+      "brands": "Family Mart",
+      "quantity": "20g",
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/075/840/1861/front_en.10.400.jpg",
+      "last_modified_at": "2022-02-11T11:52:50+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 3.6,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 84,
+        "sugars_g": null,
+        "sodium_g": 0.022
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6971803311423",
+      "product_name": "Panda Chocolate",
+      "brands": "Yungu Panda",
+      "quantity": "42g",
+      "countries": "China, Singapore",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/180/331/1423/front_en.4.400.jpg",
+      "last_modified_at": "2022-02-11T11:53:23+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "7610400075565",
+      "product_name": "Lindt Swiss luxury",
+      "brands": "Lindt",
+      "quantity": "",
+      "countries": "China",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/761/040/007/5565/front_en.8.400.jpg",
+      "last_modified_at": "2022-12-28T10:51:50+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "4605504515188",
+      "product_name": "Russian Milk Chocolate Alenka 1 Bar X 100G",
+      "brands": "Krasnyi Oktabr PAO, Алёнка",
+      "quantity": "1x15g",
+      "countries": "China, France",
+      "ingredients_text": "Сахар, сухое цельное молоко, масло какао, какао тёртое, эмульгаторы: лецитин соевый, Е476; ароматизаторы. Содержание общего сухого остатка какао - не менее 25,0%, сухого молочного остатка - не менее 12,0%.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/460/550/451/5188/front_en.17.400.jpg",
+      "last_modified_at": "2026-03-19T00:20:55+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 540,
+        "protein_g": 7,
+        "fat_g": 32,
+        "saturated_fat_g": 18.3,
+        "carbohydrate_g": 56,
+        "sugars_g": 54.1,
+        "sodium_g": 0.087
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6901668008176",
+      "product_name": null,
+      "brands": "奥利奥",
+      "quantity": "116g",
+      "countries": "China",
+      "ingredients_text": "小麦粉,白砂糖,食用植物油,可可粉(3.8%),淀粉,食品添加剂(碳酸氢钠,碳酸氢铵,大豆磷脂,柠檬酸,胭脂虫红), 食用盐,草莓粉,食用香精香料。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/690/166/800/8176/front_en.3.400.jpg",
+      "last_modified_at": "2026-01-12T10:13:00+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 4.5,
+        "fat_g": 21.5,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 67.5,
+        "sugars_g": null,
+        "sodium_g": 0.38
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0856366002284",
+      "product_name": "Freeze-dried strawberry crisps",
+      "brands": null,
+      "quantity": null,
+      "countries": "China, United States",
+      "ingredients_text": "Strawberries.",
+      "image_front_url": null,
+      "last_modified_at": "2020-04-23T18:09:23+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 333,
+        "protein_g": 6.67,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 80,
+        "sugars_g": 46.67,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺品牌",
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6958652300006",
+      "product_name": "Pringles Original",
+      "brands": "Pringles",
+      "quantity": "",
+      "countries": "China, Spain",
+      "ingredients_text": "",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/865/230/0006/front_es.13.400.jpg",
+      "last_modified_at": "2026-03-27T20:33:43+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 545.2,
+        "protein_g": 5.2,
+        "fat_g": 34.8,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 52.8,
+        "sugars_g": null,
+        "sodium_g": 0.372
+      },
+      "quality_status": "eligible_nutrition_chart_with_gaps",
+      "quality_issues": [
+        "缺规格"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "3360102240061",
+      "product_name": "Assortiment cadeau de 6 étuis 18g asie",
+      "brands": "Les Anis de Flavigny®",
+      "quantity": "108 g",
+      "countries": "China, France, Japan, South Korea, Taiwan",
+      "ingredients_text": "Sucre, arômes naturels,\ngraines d'anis vert (0,2%)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/336/010/224/0061/front_fr.3.400.jpg",
+      "last_modified_at": "2026-03-26T02:37:07+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 398,
+        "protein_g": 0,
+        "fat_g": null,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 99,
+        "sugars_g": 97,
+        "sodium_g": 0
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "0654954240991",
+      "product_name": "Chocolate Fusion Dark Chocolate Covered Biscuits",
+      "brands": "Original Gourmet",
+      "quantity": "102g",
+      "countries": "China",
+      "ingredients_text": "Dark chocolate 68% (Cocoa mass, sugar, Cocoa butter, Cocoa powder, milk fat, emulsifier (lecithin, polyglycerol polyricinoleate), flavorings, salt, biscuits 32% (wheat flour, sugar, palm oil, skimmed milk powder, raising agents (ammonium hydrogen carbonate), sunflower oil, critic acid, salt, vanilla, sodium metabisulfite)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/065/495/424/0991/front_en.4.400.jpg",
+      "last_modified_at": "2022-02-23T02:37:21+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 6,
+        "fat_g": 26,
+        "saturated_fat_g": 12,
+        "carbohydrate_g": 59,
+        "sugars_g": 33,
+        "sodium_g": 0.77521
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6954427520310",
+      "product_name": "onetang potato chips",
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/695/442/752/0310/front_en.3.400.jpg",
+      "last_modified_at": "2022-03-10T11:06:25+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6921769004280",
+      "product_name": "珍美飞行巧克力",
+      "brands": "珍美",
+      "quantity": "17gx8",
+      "countries": "China",
+      "ingredients_text": "可可脂､可可液块、白砂糖､可可粉、全脂奶粉､低聚异麦芽糖、钝顶螺旋藻;食品添加剂(大豆磷脂、香兰素)。",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/176/900/4280/front_en.4.400.jpg",
+      "last_modified_at": "2025-05-31T00:57:23+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 7.6,
+        "fat_g": 31.4,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 56.5,
+        "sugars_g": null,
+        "sodium_g": 0.12192
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "02777629",
+      "product_name": "珍美飞行巧克力",
+      "brands": "珍美",
+      "quantity": "17g",
+      "countries": "China",
+      "ingredients_text": "可可脂、可可液块、白砂糖、可可粉、全脂奶粉、 低聚异麦芽糖、钝顶螺旋藻;食品添加剂(大豆磷脂、香兰素)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/000/000/277/7629/front_en.13.400.jpg",
+      "last_modified_at": "2025-05-31T11:24:52+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 7.6,
+        "fat_g": 31.4,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 56.5,
+        "sugars_g": null,
+        "sodium_g": 0.12192
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6970976501006",
+      "product_name": "猴头菇饼干",
+      "brands": "利群",
+      "quantity": "散装称重",
+      "countries": "China",
+      "ingredients_text": "小麦粉、食用棕榈油、猴菇粉、 麦芽糖醇、食用盐、食品添加剂(碳酸氢铵、碳酸氢钠、食用香料)",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/697/097/650/1006/front_zh.3.400.jpg",
+      "last_modified_at": "2023-07-27T10:13:00+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": 8.7,
+        "fat_g": 22.6,
+        "saturated_fat_g": null,
+        "carbohydrate_g": 52.4,
+        "sugars_g": 0,
+        "sodium_g": 0.374
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6939805401283",
+      "product_name": "plum",
+      "brands": "Hao Wei jia",
+      "quantity": "32g",
+      "countries": "China, Mauritius",
+      "ingredients_text": "Plum, sucre, sel, miel, acide citrique",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/980/540/1283/front_fr.3.400.jpg",
+      "last_modified_at": "2026-07-27T02:38:31+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "8964201533182",
+      "product_name": null,
+      "brands": null,
+      "quantity": null,
+      "countries": "China",
+      "ingredients_text": null,
+      "image_front_url": "https://images.openfoodfacts.org/images/products/896/420/153/3182/front_en.3.400.jpg",
+      "last_modified_at": "2026-07-27T02:38:49+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "carbohydrate_g": null,
+        "sugars_g": null,
+        "sodium_g": null
+      },
+      "quality_status": "descriptive_only_incomplete",
+      "quality_issues": [
+        "缺商品名",
+        "缺品牌",
+        "缺规格",
+        "缺每100g能量"
+      ]
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6935041525387",
+      "product_name": "Snack de pan",
+      "brands": "Wang Zai",
+      "quantity": "118g",
+      "countries": "China, Spain",
+      "ingredients_text": "Fécula de patata, azúcar,harina de TRIGO,glucosa, emulsionanteE322, antiaglomeranteE503ii, sal.",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/693/504/152/5387/front_es.3.400.jpg",
+      "last_modified_at": "2026-03-28T03:12:43+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 382,
+        "protein_g": 2.6,
+        "fat_g": 1.3,
+        "saturated_fat_g": 0,
+        "carbohydrate_g": 88.6,
+        "sugars_g": 7.2,
+        "sodium_g": 0.06
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "80768258",
+      "product_name": "健達奇趣蛋(女孩版)",
+      "brands": "Ferrero, Kinder",
+      "quantity": "20g",
+      "countries": "China, India, Morocco",
+      "ingredients_text": "price 4.50",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/000/008/076/8258/front_zh.60.400.jpg",
+      "last_modified_at": "2026-06-11T12:28:55+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 550,
+        "protein_g": 10,
+        "fat_g": 30,
+        "saturated_fat_g": 15,
+        "carbohydrate_g": 55,
+        "sugars_g": 50,
+        "sodium_g": 0.624
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "80974482",
+      "product_name": "Kinder Joy Boy",
+      "brands": "Kinder, คินเดอร์",
+      "quantity": "20g",
+      "countries": "China, France, Germany, Morocco, Spain, Thailand",
+      "ingredients_text": "warning, contains a toy, small parties, it is recommended the vigilancia of aqulto, attention, contem um brinqued pequenas, recommended adult vigilance, preferably consume before: see front consume of preference before: see front 0-3 ceo 20ge cujlentes cocoa cube balls in a cream with milk (36,5%) and degreased cocoa crena (30,5%), with surprise, crispy inhos com coverage of cacau em creme de lete (36,5%) e creme de cacau magro (30,5%),  com surpresa, dentes: sugar, vegetable fats (palm, shea), milk skim in poin ), trigo flour, pooped degreased (? 5%), trigo germ, starch or , cocoa paste, celda m'lta extract, in olgeants: lecithins (s01a, and sunflower, milk proteins, cocoa butter, aromas, gaslicane an dcido de ammonium, sodium acid carbonate), salt, about total: skim ete products em pó (19,5%), trigo farinha,  lean pocau (3,5%), cle:19,5% germ, cocoa 4,5%, ingredlentes: a'ucar, vegetais fats (paima, and 00, am trigo, poop paste, cevada malte extract sodium ntocarbonate), salt, envelope or total: produtos do lelte: 19,5 flavors, chemical lighteners ohydrolocarbonate am 4,5%, average nutritional values/average nutritional values energy value 2296 kj/",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/000/008/097/4482/front_en.102.400.jpg",
+      "last_modified_at": "2026-05-11T14:27:09+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 550,
+        "protein_g": 0,
+        "fat_g": 30,
+        "saturated_fat_g": 15,
+        "carbohydrate_g": 60,
+        "sugars_g": 50,
+        "sodium_g": 0.125
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    },
+    {
+      "scope_id": "china_snacks",
+      "barcode": "6924743931350",
+      "product_name": "乐事酸辣柠檬凤爪味薯片",
+      "brands": "Lay's, 乐事",
+      "quantity": "80 g",
+      "countries": "China",
+      "ingredients_text": "Potato, vegetable oil, Hot and sour lemon and chicken feet flavor seasoning (containing food essence, citric acid, 5' - flavored nucleotide disodium, DL-malic acid, capsicum red, aspartame (containing phenylalanine).",
+      "image_front_url": "https://images.openfoodfacts.org/images/products/692/474/393/1350/front_zh.3.400.jpg",
+      "last_modified_at": "2026-01-12T08:16:40+00:00",
+      "nutrition_per_100g": {
+        "energy_kcal": 543.333333333333,
+        "protein_g": 5.66666666666667,
+        "fat_g": 34,
+        "saturated_fat_g": 17,
+        "carbohydrate_g": 54,
+        "sugars_g": 5.66666666666667,
+        "sodium_g": 0.7
+      },
+      "quality_status": "eligible_attribute_analysis",
+      "quality_issues": []
+    }
+  ]
+}

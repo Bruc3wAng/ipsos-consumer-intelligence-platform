@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "name": "PC / AI PC 数据发布与版本",
+    "current_version": "2026-08-12",
+    "market": "中国",
+    "category": "PC / AI PC"
+  },
+  "release": {
+    "version": "2026-08-12",
+    "label": "当前数据版本",
+    "market": "中国",
+    "category": "PC / AI PC",
+    "datasets": 5,
+    "metric_definitions": 119,
+    "aipc_aggregate_observations": 4825,
+    "decision_outputs": 4,
+    "research_answers": "服务端证据检索已接入",
+    "changes": [
+      "PC / AI PC指标体系扩展至119项，新增77条历史题目序列",
+      "AIPC W2的29组指标完成总体与五类人群聚合",
+      "门店B5多变量模型完成重复交叉验证与稳定驱动登记",
+      "Q14跨期模型新增配额与样本框可比性门槛",
+      "四条客户决策结论绑定题号、Base、数值和下一期验证",
+      "研究问答改为服务端证据检索，不再使用前端固定答案"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset_id": "lenovo_bht_consumer_history",
+      "official_name": "联想品牌健康度监测历史大众消费者",
+      "wave": "2023Q1–2024Q2",
+      "sample_n": 16351,
+      "coverage": "6期大众消费者Raw；Q14与品牌、价格和分群指标",
+      "status": "已接入",
+      "comparability": "历史六期已按题号映射；下一期必须另行通过样本框、配额与权重检查",
+      "model_status": "Q14时间留出模型仅作诊断，AUC未达客户决策门槛",
+      "allowed_use": [
+        "历史趋势",
+        "分群差异",
+        "时间留出误差",
+        "模型校准诊断"
+      ],
+      "blocked_use": [
+        "实际购买",
+        "销量",
+        "市场份额",
+        "无权重人数投影"
+      ]
+    },
+    {
+      "dataset_id": "lenovo_bht_all_audiences",
+      "official_name": "联想品牌健康度监测历史交付",
+      "wave": "2023Q1–2024Q2",
+      "sample_n": 25951,
+      "coverage": "大众消费者、SMB与政企大客户的6期历史交付资产",
+      "status": "已接入结构与聚合证据",
+      "comparability": "大众消费者跨6期稳定候选字段 941 个",
+      "model_status": "按具体业务问题选择模型，不将三类研究对象混合拟合",
+      "allowed_use": [
+        "跨期指标治理",
+        "项目资产检索",
+        "研究设计复用"
+      ],
+      "blocked_use": [
+        "不同研究对象直接合并",
+        "未核对题号的同名指标比较"
+      ]
+    },
+    {
+      "dataset_id": "lenovo_fy26_platform",
+      "official_name": "联想FY26品牌健康度监测",
+      "wave": "26 Jun",
+      "sample_n": 3800,
+      "coverage": "大众消费者、SMB、政企大客户的AI PC认知、品牌与企业选型指标",
+      "status": "已接入交付指标",
+      "comparability": "按人群、指标和期次分别保存；不跨总体混合",
+      "model_status": "作为项目事实层和外部模型校准输入",
+      "allowed_use": [
+        "AI PC认知",
+        "品牌基础",
+        "企业选型因素",
+        "跨人群并列比较"
+      ],
+      "blocked_use": [
+        "实际购买",
+        "因果增量"
+      ]
+    },
+    {
+      "dataset_id": "aipc_store_w2",
+      "official_name": "AIPC进店用户调研（第二期）",
+      "wave": "W2",
+      "sample_n": 1000,
+      "coverage": "29组指标；总体与5类人群切分；4,825条聚合观测",
+      "status": "已接入Raw聚合、模型与决策结论",
+      "comparability": "当前为W2单期；W3需锁定题号、Base、配额与权重后才能跨期",
+      "model_status": "B5体验模型重复交叉验证AUC 0.8704；用于关联诊断",
+      "allowed_use": [
+        "产品功能排序",
+        "门店体验诊断",
+        "渠道角色",
+        "人群交叉",
+        "下一期验证设计"
+      ],
+      "blocked_use": [
+        "实际购买",
+        "销量",
+        "因果门店增量"
+      ]
+    },
+    {
+      "dataset_id": "lenovo_fy25q4_q14_gate",
+      "official_name": "联想FY25品牌健康度监测Q4大众消费者",
+      "wave": "FY25 Q4",
+      "sample_n": 1000,
+      "coverage": "Q14笔记本潜在购买者读数与正式问卷、配额证据",
+      "status": "已接入可比性检查",
+      "comparability": "阻断：现有/潜在用户1:1配额与Q14笔记本潜在购买者N=500完全重合",
+      "model_status": "不计为预测误差；样本框统一前仅用于漂移诊断",
+      "allowed_use": [
+        "样本设计漂移识别",
+        "下一期权重与配额治理"
+      ],
+      "blocked_use": [
+        "自然市场需求变化",
+        "销量",
+        "跨期直接预测"
+      ]
+    }
+  ],
+  "quality_gates": [
+    {
+      "gate": "题号与指标定义",
+      "status": "通过",
+      "evidence": "119个指标定义；AIPC W2 29组已聚合",
+      "effect": "允许进入指标检索与交叉分析"
+    },
+    {
+      "gate": "聚合值与Base",
+      "status": "通过",
+      "evidence": "数据库保存4,825条AIPC观测；最小展示Base=30",
+      "effect": "允许总体与分群描述"
+    },
+    {
+      "gate": "跨期可比性",
+      "status": "部分阻断",
+      "evidence": "历史六期可回放；FY25 Q4 Q14因1:1配额被阻断",
+      "effect": "可展示漂移诊断，不发布Q14自然需求预测"
+    },
+    {
+      "gate": "模型验证",
+      "status": "分层使用",
+      "evidence": "BHT Q14 AUC 0.6009；AIPC B5 AUC 0.8704",
+      "effect": "Q14仅诊断；B5用于关联因素与下一期假设"
+    },
+    {
+      "gate": "真实商业结果",
+      "status": "未接入",
+      "evidence": "当前结果变量为问卷购买意向或意愿提升",
+      "effect": "不输出销量、成功概率或因果增量"
+    }
+  ],
+  "next_release_requirements": [
+    {
+      "priority": "P0",
+      "requirement": "AIPC W3保留B5、C1、C2和核心画像口径",
+      "unlock": "以W2训练、W3完全留出验证门店模型"
+    },
+    {
+      "priority": "P0",
+      "requirement": "按固定目标总体重算历史与FY25 Q4的加权Q14",
+      "unlock": "恢复跨期可比性并重新锁定下一期区间"
+    },
+    {
+      "priority": "P1",
+      "requirement": "接入统一活动ID、后续购买渠道或SKU结果",
+      "unlock": "区分门店影响购买与门店完成购买"
+    },
+    {
+      "priority": "P1",
+      "requirement": "接入Synthesio真实主题、情绪、受众和时间序列导出",
+      "unlock": "问卷、Social与行为信号并列验证"
+    },
+    {
+      "priority": "P2",
+      "requirement": "完成3–5个真实SMB任务测试与第二期续用观察",
+      "unlock": "验证持续更新的数据服务是否具备客户价值"
+    }
+  ],
+  "operating_cycle": [
+    {
+      "stage": "新数据接入",
+      "output": "问卷版本、配额、Raw字段、Table口径与来源登记"
+    },
+    {
+      "stage": "可比性检查",
+      "output": "题号映射、样本框、权重、Base和口径差异"
+    },
+    {
+      "stage": "指标与模型更新",
+      "output": "聚合值、分群、模型版本、回测和漂移状态"
+    },
+    {
+      "stage": "结论发布",
+      "output": "论点、证据、行动、不能回答的边界"
+    },
+    {
+      "stage": "真实结果回流",
+      "output": "下一期误差、客户动作与模型使用等级更新"
+    }
+  ],
+  "product_principles": [
+    "每个数据集显示期次、样本、来源、可比性和允许用途",
+    "多期比较先通过样本框、配额、权重和题号检查",
+    "问卷、Social、行为和真实结果并列验证，不相互替代",
+    "更新后的模型必须重新报告样本外表现和使用等级"
+  ]
+}

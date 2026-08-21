@@ -1,6 +1,5 @@
-import LenovoPortal from "../../components/LenovoPortal";
+import LenovoHub from "../../components/LenovoHub";
 
 export default function LenovoClientPage() {
-  return <LenovoPortal />;
+  return <LenovoHub />;
 }
-

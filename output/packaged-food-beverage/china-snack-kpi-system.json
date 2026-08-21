@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "title": "中国膨化食品问卷—KPI—模型试点",
+    "market": "中国",
+    "wave": "SIM-2026Q3",
+    "respondent_count": 5000,
+    "dce_task_count": 40000,
+    "data_status": "确定性模拟问卷数据",
+    "built_at": "2026-08-13",
+    "supported_use": "验证题号、Base、权重、分组、KPI、价格曲线和模型的端到端联动",
+    "blocked_use": "不得作为中国市场真实渗透率、价格接受率、购买意向、品牌份额、销量或市场规模"
+  },
+  "metric_definitions": [
+    {
+      "metric_id": "KPI_PENETRATION_3M",
+      "name": "过去3个月膨化食品购买率",
+      "role": "primary",
+      "question": "Q1",
+      "numerator": "Q1选择膨化食品",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "判断品类覆盖与跨期变化"
+    },
+    {
+      "metric_id": "KPI_MONTHLY_BUYER",
+      "name": "月度活跃购买者比例",
+      "role": "primary",
+      "question": "Q2",
+      "numerator": "过去3个月平均每月购买至少1次",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "区分偶发渗透与持续需求"
+    },
+    {
+      "metric_id": "KPI_PURCHASE_INTENT_T2B",
+      "name": "未来1个月购买意向T2B",
+      "role": "primary",
+      "question": "Q11",
+      "numerator": "Q11=4或5",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "形成下一期领先指标；不等于真实购买率"
+    },
+    {
+      "metric_id": "KPI_FREQUENCY_BUYER",
+      "name": "购买者月均购买频次",
+      "role": "driver",
+      "question": "Q2",
+      "numerator": "购买次数加权合计",
+      "denominator": "Q1选择膨化食品",
+      "unit": "次/月",
+      "decision": "解释需求强度"
+    },
+    {
+      "metric_id": "KPI_MONTHLY_SPEND_BUYER",
+      "name": "购买者最近一个月平均支出",
+      "role": "driver",
+      "question": "Q3",
+      "numerator": "最近一个月购买膨化食品支出加权合计",
+      "denominator": "Q1选择膨化食品",
+      "unit": "元/月",
+      "decision": "识别消费价值层级；不外推市场规模"
+    },
+    {
+      "metric_id": "KPI_CHANNEL_REACH",
+      "name": "购买渠道触达率",
+      "role": "driver",
+      "question": "Q4",
+      "numerator": "过去3个月使用各渠道的购买者",
+      "denominator": "Q1选择膨化食品",
+      "unit": "%",
+      "decision": "比较渠道覆盖与重叠"
+    },
+    {
+      "metric_id": "KPI_MAIN_CHANNEL",
+      "name": "主要购买渠道构成",
+      "role": "driver",
+      "question": "Q5",
+      "numerator": "各渠道选择人数",
+      "denominator": "Q1选择膨化食品",
+      "unit": "%",
+      "decision": "确定渠道测试优先级"
+    },
+    {
+      "metric_id": "KPI_OCCASION_REACH",
+      "name": "食用场景触达率",
+      "role": "driver",
+      "question": "Q6",
+      "numerator": "选择各食用场景的购买者",
+      "denominator": "Q1选择膨化食品",
+      "unit": "%",
+      "decision": "确定产品、传播和规格测试的优先场景"
+    },
+    {
+      "metric_id": "KPI_NEED_IMPORTANCE",
+      "name": "选择因素重要性均值",
+      "role": "driver",
+      "question": "Q7",
+      "numerator": "各因素重要性评分加权合计",
+      "denominator": "全部有效被访者",
+      "unit": "1-5分",
+      "decision": "定义需求优先级并进入购买倾向和选择模型"
+    },
+    {
+      "metric_id": "KPI_PRICE_ACCEPT_7_9",
+      "name": "70g/¥7.9价格接受率",
+      "role": "driver",
+      "question": "Q9",
+      "numerator": "¥7.9选择会考虑购买",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "设定价格实验锚点"
+    },
+    {
+      "metric_id": "KPI_PRICE_CURVE",
+      "name": "70g逐价接受曲线",
+      "role": "driver",
+      "question": "Q9",
+      "numerator": "各测试价格选择会考虑购买",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "识别价格接受拐点与后续实验区间"
+    },
+    {
+      "metric_id": "KPI_CONCEPT_RELEVANCE_T2B",
+      "name": "新品概念相关性T2B",
+      "role": "driver",
+      "question": "Q10",
+      "numerator": "概念相关性=4或5",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "区分概念相关性与购买意向问题"
+    },
+    {
+      "metric_id": "KPI_CONCEPT_TRIAL_T2B",
+      "name": "新品概念购买意向T2B",
+      "role": "driver",
+      "question": "Q10",
+      "numerator": "概念购买意向=4或5",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "概念优化与首轮测试门槛"
+    },
+    {
+      "metric_id": "KPI_HEALTH_FIT_T2B",
+      "name": "健康负担满足度T2B",
+      "role": "guardrail",
+      "question": "Q8",
+      "numerator": "健康负担满足度=4或5",
+      "denominator": "全部有效被访者",
+      "unit": "%",
+      "decision": "防止只提高试购而损害长期产品适配"
+    },
+    {
+      "metric_id": "KPI_UNMET_NEED",
+      "name": "未满足需求指数",
+      "role": "guardrail",
+      "question": "Q7+Q8",
+      "numerator": "需求重要性与当前满足度差距",
+      "denominator": "全部有效被访者",
+      "unit": "0-100",
+      "decision": "发现值得进入产品实验的需求缺口"
+    },
+    {
+      "metric_id": "KPI_DCE_UTILITIES",
+      "name": "产品属性相对效用",
+      "role": "model",
+      "question": "DCE1-DCE8",
+      "numerator": "A/B有效选择任务估计的属性系数",
+      "denominator": "A/B有效选择任务",
+      "unit": "效用系数",
+      "decision": "比较价格、口味、规格、包装、健康表达与品牌层级的相对作用"
+    },
+    {
+      "metric_id": "KPI_SCENARIO_SHARE",
+      "name": "固定方案相对选择份额",
+      "role": "model",
+      "question": "DCE1-DCE8",
+      "numerator": "固定产品方案的模型化相对选择概率",
+      "denominator": "三个固定方案合计",
+      "unit": "%",
+      "decision": "在明确方案边界内比较配置取舍；不等于真实市场份额"
+    }
+  ],
+  "overall_kpis": {
+    "base_n": 5000,
+    "weighted_base": 4999.2,
+    "penetration_3m": 67.7,
+    "monthly_buyer_rate": 52.1,
+    "purchase_intent_t2b": 27.0,
+    "frequency_buyer": 1.46,
+    "monthly_spend_buyer": 27.9,
+    "price_accept_7_9": 85.6,
+    "concept_relevance_t2b": 43.5,
+    "concept_trial_t2b": 45.9,
+    "health_fit_t2b": 19.5,
+    "unmet_need_index": 14.1
+  },
+  "subgroup_kpis": [
+    {
+      "dimension": "age_group",
+      "value": "18-24",
+      "base_n": 939,
+      "weighted_base": 939.7,
+      "penetration_3m": 71.6,
+      "monthly_buyer_rate": 56.9,
+      "purchase_intent_t2b": 28.7,
+      "frequency_buyer": 1.53,
+      "monthly_spend_buyer": 28.7,
+      "price_accept_7_9": 80.2,
+      "concept_relevance_t2b": 45.6,
+      "concept_trial_t2b": 46.3,
+      "health_fit_t2b": 22.4,
+      "unmet_need_index": 12.0
+    },
+    {
+      "dimension": "age_group",
+      "value": "25-34",
+      "base_n": 1509,
+      "weighted_base": 1507.7,
+      "penetration_3m": 70.9,
+      "monthly_buyer_rate": 53.6,
+      "purchase_intent_t2b": 27.3,
+      "frequency_buyer": 1.48,
+      "monthly_spend_buyer": 28.0,
+      "price_accept_7_9": 83.3,
+      "concept_relevance_t2b": 41.9,
+      "concept_trial_t2b": 49.1,
+      "health_fit_t2b": 21.2,
+      "unmet_need_index": 13.4
+    },
+    {
+      "dimension": "age_group",
+      "value": "35-44",
+      "base_n": 1432,
+      "weighted_base": 1431.6,
+      "penetration_3m": 66.3,
+      "monthly_buyer_rate": 50.1,
+      "purchase_intent_t2b": 27.7,
+      "frequency_buyer": 1.39,
+      "monthly_spend_buyer": 27.1,
+      "price_accept_7_9": 88.3,
+      "concept_relevance_t2b": 42.7,
+      "concept_trial_t2b": 45.1,
+      "health_fit_t2b": 17.4,
+      "unmet_need_index": 14.8
+    },
+    {
+      "dimension": "age_group",
+      "value": "45-54",
+      "base_n": 1120,
+      "weighted_base": 1120.2,
+      "penetration_3m": 62.0,
+      "monthly_buyer_rate": 48.8,
+      "purchase_intent_t2b": 24.4,
+      "frequency_buyer": 1.45,
+      "monthly_spend_buyer": 28.1,
+      "price_accept_7_9": 89.6,
+      "concept_relevance_t2b": 44.8,
+      "concept_trial_t2b": 42.1,
+      "health_fit_t2b": 17.2,
+      "unmet_need_index": 16.0
+    },
+    {
+      "dimension": "gender",
+      "value": "男性",
+      "base_n": 2494,
+      "weighted_base": 2493.9,
+      "penetration_3m": 66.9,
+      "monthly_buyer_rate": 51.4,
+      "purchase_intent_t2b": 26.0,
+      "frequency_buyer": 1.45,
+      "monthly_spend_buyer": 27.8,
+      "price_accept_7_9": 85.6,
+      "concept_relevance_t2b": 43.8,
+      "concept_trial_t2b": 46.7,
+      "health_fit_t2b": 18.6,
+      "unmet_need_index": 14.4
+    },
+    {
+      "dimension": "gender",
+      "value": "女性",
+      "base_n": 2506,
+      "weighted_base": 2505.3,
+      "penetration_3m": 68.6,
+      "monthly_buyer_rate": 52.8,
+      "purchase_intent_t2b": 28.1,
+      "frequency_buyer": 1.47,
+      "monthly_spend_buyer": 28.0,
+      "price_accept_7_9": 85.5,
+      "concept_relevance_t2b": 43.2,
+      "concept_trial_t2b": 45.1,
+      "health_fit_t2b": 20.3,
+      "unmet_need_index": 13.8
+    },
+    {
+      "dimension": "region",
+      "value": "华东",
+      "base_n": 1444,
+      "weighted_base": 1447.7,
+      "penetration_3m": 66.5,
+      "monthly_buyer_rate": 51.5,
+      "purchase_intent_t2b": 26.9,
+      "frequency_buyer": 1.46,
+      "monthly_spend_buyer": 28.2,
+      "price_accept_7_9": 85.2,
+      "concept_relevance_t2b": 42.0,
+      "concept_trial_t2b": 45.6,
+      "health_fit_t2b": 18.7,
+      "unmet_need_index": 14.8
+    },
+    {
+      "dimension": "region",
+      "value": "华南",
+      "base_n": 945,
+      "weighted_base": 946.8,
+      "penetration_3m": 68.9,
+      "monthly_buyer_rate": 52.2,
+      "purchase_intent_t2b": 25.5,
+      "frequency_buyer": 1.43,
+      "monthly_spend_buyer": 27.4,
+      "price_accept_7_9": 87.2,
+      "concept_relevance_t2b": 45.1,
+      "concept_trial_t2b": 45.3,
+      "health_fit_t2b": 22.1,
+      "unmet_need_index": 13.1
+    },
+    {
+      "dimension": "region",
+      "value": "华北",
+      "base_n": 850,
+      "weighted_base": 844.0,
+      "penetration_3m": 68.7,
+      "monthly_buyer_rate": 53.0,
+      "purchase_intent_t2b": 29.9,
+      "frequency_buyer": 1.44,
+      "monthly_spend_buyer": 27.1,
+      "price_accept_7_9": 85.9,
+      "concept_relevance_t2b": 41.3,
+      "concept_trial_t2b": 47.0,
+      "health_fit_t2b": 18.8,
+      "unmet_need_index": 14.7
+    },
+    {
+      "dimension": "region",
+      "value": "华中",
+      "base_n": 673,
+      "weighted_base": 670.8,
+      "penetration_3m": 67.7,
+      "monthly_buyer_rate": 50.6,
+      "purchase_intent_t2b": 27.4,
+      "frequency_buyer": 1.45,
+      "monthly_spend_buyer": 27.5,
+      "price_accept_7_9": 84.0,
+      "concept_relevance_t2b": 45.9,
+      "concept_trial_t2b": 46.9,
+      "health_fit_t2b": 20.6,
+      "unmet_need_index": 13.7
+    },
+    {
+      "dimension": "region",
+      "value": "西南",
+      "base_n": 680,
+      "weighted_base": 680.7,
+      "penetration_3m": 70.5,
+      "monthly_buyer_rate": 54.6,
+      "purchase_intent_t2b": 26.3,
+      "frequency_buyer": 1.48,
+      "monthly_spend_buyer": 28.1,
+      "price_accept_7_9": 87.2,
+      "concept_relevance_t2b": 44.1,
+      "concept_trial_t2b": 45.7,
+      "health_fit_t2b": 16.7,
+      "unmet_need_index": 14.5
+    },
+    {
+      "dimension": "region",
+      "value": "东北",
+      "base_n": 408,
+      "weighted_base": 409.2,
+      "penetration_3m": 62.7,
+      "monthly_buyer_rate": 50.9,
+      "purchase_intent_t2b": 25.9,
+      "frequency_buyer": 1.53,
+      "monthly_spend_buyer": 29.7,
+      "price_accept_7_9": 82.0,
+      "concept_relevance_t2b": 44.2,
+      "concept_trial_t2b": 44.3,
+      "health_fit_t2b": 20.0,
+      "unmet_need_index": 12.9
+    },
+    {
+      "dimension": "city_tier",
+      "value": "一线",
+      "base_n": 921,
+      "weighted_base": 922.1,
+      "penetration_3m": 68.3,
+      "monthly_buyer_rate": 52.1,
+      "purchase_intent_t2b": 26.7,
+      "frequency_buyer": 1.45,
+      "monthly_spend_buyer": 27.2,
+      "price_accept_7_9": 89.3,
+      "concept_relevance_t2b": 43.7,
+      "concept_trial_t2b": 46.0,
+      "health_fit_t2b": 20.5,
+      "unmet_need_index": 14.4
+    },
+    {
+      "dimension": "city_tier",
+      "value": "新一线",
+      "base_n": 1513,
+      "weighted_base": 1510.8,
+      "penetration_3m": 68.8,
+      "monthly_buyer_rate": 53.4,
+      "purchase_intent_t2b": 28.6,
+      "frequency_buyer": 1.48,
+      "monthly_spend_buyer": 29.0,
+      "price_accept_7_9": 87.7,
+      "concept_relevance_t2b": 46.4,
+      "concept_trial_t2b": 47.8,
+      "health_fit_t2b": 19.5,
+      "unmet_need_index": 14.0
+    },
+    {
+      "dimension": "city_tier",
+      "value": "二线",
+      "base_n": 1389,
+      "weighted_base": 1384.9,
+      "penetration_3m": 68.1,
+      "monthly_buyer_rate": 52.7,
+      "purchase_intent_t2b": 24.8,
+      "frequency_buyer": 1.49,
+      "monthly_spend_buyer": 27.8,
+      "price_accept_7_9": 83.2,
+      "concept_relevance_t2b": 42.8,
+      "concept_trial_t2b": 45.4,
+      "health_fit_t2b": 19.6,
+      "unmet_need_index": 13.6
+    },
+    {
+      "dimension": "city_tier",
+      "value": "三线及以下",
+      "base_n": 1177,
+      "weighted_base": 1181.3,
+      "penetration_3m": 65.5,
+      "monthly_buyer_rate": 50.0,
+      "purchase_intent_t2b": 28.0,
+      "frequency_buyer": 1.4,
+      "monthly_spend_buyer": 27.0,
+      "price_accept_7_9": 82.7,
+      "concept_relevance_t2b": 40.2,
+      "concept_trial_t2b": 43.7,
+      "health_fit_t2b": 18.4,
+      "unmet_need_index": 14.5
+    },
+    {
+      "dimension": "income",
+      "value": "6000以下",
+      "base_n": 380,
+      "weighted_base": 378.9,
+      "penetration_3m": 70.2,
+      "monthly_buyer_rate": 54.3,
+      "purchase_intent_t2b": 24.6,
+      "frequency_buyer": 1.45,
+      "monthly_spend_buyer": 28.3,
+      "price_accept_7_9": 56.6,
+      "concept_relevance_t2b": 41.8,
+      "concept_trial_t2b": 45.0,
+      "health_fit_t2b": 20.5,
+      "unmet_need_index": 12.5
+    },
+    {
+      "dimension": "income",
+      "value": "6000-12000",
+      "base_n": 1161,
+      "weighted_base": 1161.5,
+      "penetration_3m": 66.2,
+      "monthly_buyer_rate": 51.7,
+      "purchase_intent_t2b": 26.4,
+      "frequency_buyer": 1.52,
+      "monthly_spend_buyer": 27.7,
+      "price_accept_7_9": 75.9,
+      "concept_relevance_t2b": 40.6,
+      "concept_trial_t2b": 44.3,
+      "health_fit_t2b": 18.9,
+      "unmet_need_index": 14.0
+    },
+    {
+      "dimension": "income",
+      "value": "12000-20000",
+      "base_n": 2010,
+      "weighted_base": 2004.9,
+      "penetration_3m": 66.4,
+      "monthly_buyer_rate": 50.9,
+      "purchase_intent_t2b": 27.1,
+      "frequency_buyer": 1.43,
+      "monthly_spend_buyer": 27.7,
+      "price_accept_7_9": 89.5,
+      "concept_relevance_t2b": 44.1,
+      "concept_trial_t2b": 46.3,
+      "health_fit_t2b": 19.2,
+      "unmet_need_index": 14.0
+    },
+    {
+      "dimension": "income",
+      "value": "20000以上",
+      "base_n": 1449,
+      "weighted_base": 1454.0,
+      "penetration_3m": 70.1,
+      "monthly_buyer_rate": 53.6,
+      "purchase_intent_t2b": 28.1,
+      "frequency_buyer": 1.44,
+      "monthly_spend_buyer": 28.2,
+      "price_accept_7_9": 95.4,
+      "concept_relevance_t2b": 45.3,
+      "concept_trial_t2b": 46.7,
+      "health_fit_t2b": 20.0,
+      "unmet_need_index": 14.8
+    }
+  ],
+  "price_curve": [
+    {
+      "price_cny": 5.9,
+      "pack_g": 70,
+      "acceptance_rate": 97.9,
+      "base_n": 5000
+    },
+    {
+      "price_cny": 7.9,
+      "pack_g": 70,
+      "acceptance_rate": 85.6,
+      "base_n": 5000
+    },
+    {
+      "price_cny": 9.9,
+      "pack_g": 70,
+      "acceptance_rate": 54.1,
+      "base_n": 5000
+    },
+    {
+      "price_cny": 11.9,
+      "pack_g": 70,
+      "acceptance_rate": 19.8,
+      "base_n": 5000
+    }
+  ],
+  "channel_reach_distribution": [
+    {
+      "value": "零食量贩",
+      "share": 43.1,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "综合电商",
+      "share": 50.7,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "商超",
+      "share": 44.4,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "即时零售",
+      "share": 40.7,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "便利店",
+      "share": 34.1,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    }
+  ],
+  "main_channel_distribution": [
+    {
+      "value": "零食量贩",
+      "share": 20.3,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "综合电商",
+      "share": 20.6,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "商超",
+      "share": 21.1,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "即时零售",
+      "share": 20.5,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "便利店",
+      "share": 17.5,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    }
+  ],
+  "occasion_reach_distribution": [
+    {
+      "value": "追剧娱乐",
+      "share": 70.1,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "工作学习间隙",
+      "share": 48.1,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "家庭分享",
+      "share": 43.3,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "通勤出行",
+      "share": 29.7,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    },
+    {
+      "value": "社交聚会",
+      "share": 25.0,
+      "base_n": 3386,
+      "weighted_base": 3385.6
+    }
+  ],
+  "need_importance": [
+    {
+      "value": "口味",
+      "mean": 3.93,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    },
+    {
+      "value": "价格",
+      "mean": 3.65,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    },
+    {
+      "value": "健康/成分",
+      "mean": 3.35,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    },
+    {
+      "value": "品牌",
+      "mean": 3.23,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    },
+    {
+      "value": "包装便利",
+      "mean": 3.32,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    },
+    {
+      "value": "新奇感",
+      "mean": 3.11,
+      "base_n": 5000,
+      "weighted_base": 4999.2
+    }
+  ],
+  "models": {
+    "purchase_propensity": {
+      "name": "未来1个月购买意向逻辑回归",
+      "target": "Q11购买意向T2B",
+      "data_status": "中国模拟问卷Raw Data训练",
+      "validation": "单期随机70/30留出；真实tracking接入后改为跨期时间留出",
+      "train_n": 3500,
+      "test_n": 1500,
+      "event_rate_test": 26.1,
+      "train_auc": 0.72,
+      "test_auc": 0.705,
+      "test_brier": 0.174,
+      "allowed_use": "验证问卷变量如何共同解释购买意向，并比较人群内的相对驱动",
+      "blocked_use": "不能外推为实际购买率、销量或市场份额",
+      "coefficients": [
+        {
+          "variable": "截距",
+          "coefficient": -2.458,
+          "ci_low": -3.309,
+          "ci_high": -1.608,
+          "impact_pp_q25_q75": 0.0
+        },
+        {
+          "variable": "过去3个月购买",
+          "coefficient": 0.995,
+          "ci_low": 0.756,
+          "ci_high": 1.235,
+          "impact_pp_q25_q75": 16.3
+        },
+        {
+          "variable": "月均购买频次",
+          "coefficient": 1.769,
+          "ci_low": 1.418,
+          "ci_high": 2.12,
+          "impact_pp_q25_q75": 12.8
+        },
+        {
+          "variable": "口味重要性",
+          "coefficient": 0.858,
+          "ci_low": 0.336,
+          "ci_high": 1.38,
+          "impact_pp_q25_q75": 2.9
+        },
+        {
+          "variable": "健康重要性",
+          "coefficient": -0.149,
+          "ci_low": -0.587,
+          "ci_high": 0.29,
+          "impact_pp_q25_q75": -0.5
+        },
+        {
+          "variable": "新奇重要性",
+          "coefficient": 0.465,
+          "ci_low": 0.033,
+          "ci_high": 0.897,
+          "impact_pp_q25_q75": 1.6
+        },
+        {
+          "variable": "价格敏感",
+          "coefficient": -1.221,
+          "ci_low": -1.721,
+          "ci_high": -0.72,
+          "impact_pp_q25_q75": -4.3
+        },
+        {
+          "variable": "品牌重要性",
+          "coefficient": -0.069,
+          "ci_low": -0.527,
+          "ci_high": 0.389,
+          "impact_pp_q25_q75": -0.2
+        },
+        {
+          "variable": "包装便利重要性",
+          "coefficient": 0.213,
+          "ci_low": -0.271,
+          "ci_high": 0.697,
+          "impact_pp_q25_q75": 0.7
+        },
+        {
+          "variable": "概念购买意向",
+          "coefficient": 0.337,
+          "ci_low": -0.126,
+          "ci_high": 0.799,
+          "impact_pp_q25_q75": 1.2
+        }
+      ]
+    },
+    "discrete_choice": {
+      "name": "二项条件选择模型（A/B有效任务）",
+      "target": "DCE1-DCE8方案A相对方案B的选择",
+      "data_status": "中国模拟选择实验",
+      "respondent_n": 5000,
+      "task_n": 40000,
+      "ab_choice_task_n": 27476,
+      "none_share": 31.3,
+      "allowed_use": "验证价格、口味、规格、包装、健康表达和品牌层级能否在同一选择模型中估计，并在固定方案内比较相对取舍",
+      "blocked_use": "模拟效用与固定方案相对选择份额不能作为真实消费者偏好、市场份额或销量预测",
+      "coefficients": [
+        {
+          "attribute": "截距",
+          "utility": -0.001,
+          "ci_low": -0.03,
+          "ci_high": 0.028
+        },
+        {
+          "attribute": "价格（元）",
+          "utility": -0.442,
+          "ci_low": -0.453,
+          "ci_high": -0.43
+        },
+        {
+          "attribute": "微辣口味",
+          "utility": 0.332,
+          "ci_low": 0.282,
+          "ci_high": 0.383
+        },
+        {
+          "attribute": "芝士口味",
+          "utility": 0.078,
+          "ci_low": 0.028,
+          "ci_high": 0.128
+        },
+        {
+          "attribute": "规格（每10g）",
+          "utility": 0.027,
+          "ci_low": 0.017,
+          "ci_high": 0.037
+        },
+        {
+          "attribute": "可重复封口",
+          "utility": 0.632,
+          "ci_low": 0.59,
+          "ci_high": 0.674
+        },
+        {
+          "attribute": "轻油表达",
+          "utility": 0.417,
+          "ci_low": 0.367,
+          "ci_high": 0.468
+        },
+        {
+          "attribute": "配料简洁",
+          "utility": 0.379,
+          "ci_low": 0.329,
+          "ci_high": 0.43
+        },
+        {
+          "attribute": "成熟品牌",
+          "utility": 0.514,
+          "ci_low": 0.463,
+          "ci_high": 0.565
+        },
+        {
+          "attribute": "成长品牌",
+          "utility": 0.133,
+          "ci_low": 0.083,
+          "ci_high": 0.184
+        }
+      ],
+      "scenario_shares": [
+        {
+          "scenario": "基础咸香",
+          "price": 7.9,
+          "flavor": "经典咸香",
+          "pack_g": 70,
+          "resealable": 0,
+          "health_claim": "无特别表达",
+          "brand_tier": "成长品牌",
+          "relative_choice_share": 28.0
+        },
+        {
+          "scenario": "轻油便利",
+          "price": 9.9,
+          "flavor": "经典咸香",
+          "pack_g": 70,
+          "resealable": 1,
+          "health_claim": "轻油",
+          "brand_tier": "成长品牌",
+          "relative_choice_share": 33.1
+        },
+        {
+          "scenario": "微辣简配",
+          "price": 9.9,
+          "flavor": "微辣",
+          "pack_g": 70,
+          "resealable": 1,
+          "health_claim": "配料简洁",
+          "brand_tier": "新锐品牌",
+          "relative_choice_share": 38.9
+        }
+      ]
+    }
+  },
+  "quality_profile": {
+    "respondent_rows": 5000,
+    "dce_task_rows": 40000,
+    "duplicate_respondent_ids": 0,
+    "missing_required_rows": 0,
+    "routing_violations": 0,
+    "price_monotonicity_violations": 0,
+    "weight_min": 0.75,
+    "weight_max": 1.225,
+    "effective_sample_n": 4968.3,
+    "dimension_minimum_bases": {
+      "age_group": 939,
+      "gender": 2494,
+      "region": 408,
+      "city_tier": 921,
+      "income": 380
+    },
+    "model_gate": "模拟数据只通过工程联动门槛；真实项目仍需问卷认知测试、配额确认、回收质控、加权复核与跨期样本外验证。"
+  }
+}

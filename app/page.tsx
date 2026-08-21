@@ -1,5 +1,5 @@
-import IpsosCommandCenter from "./components/IpsosCommandCenter";
+import GlobalIndustryHome from "./components/GlobalIndustryHome";
 
 export default function Home() {
-  return <IpsosCommandCenter />;
+  return <GlobalIndustryHome />;
 }

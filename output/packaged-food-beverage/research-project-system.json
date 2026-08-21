@@ -1,0 +1,606 @@
+{
+  "meta": {
+    "version": "2026-08-14.project-system.v1",
+    "built_at": "2026-08-14",
+    "market_owner": "益普索中国",
+    "scope": "零食行业研究产品攻坚样例；结构可复制，不代表其他行业已经完成",
+    "data_boundary": "项目设计模板不等于真实研究结果；模型与洞察必须等待对应证据回流。",
+    "blocked_asset_types": [
+      "合同",
+      "协议",
+      "报价",
+      "预算",
+      "费用",
+      "发票",
+      "付款",
+      "结算",
+      "采购",
+      "供应商文件"
+    ]
+  },
+  "intake_fields": [
+    {
+      "field_id": "client_name",
+      "label": "客户名称",
+      "label_en": "Client",
+      "required": true,
+      "decision_use": "项目空间与交付文件命名",
+      "decision_use_en": "Project workspace and delivery naming"
+    },
+    {
+      "field_id": "project_name",
+      "label": "项目名称",
+      "label_en": "Project",
+      "required": true,
+      "decision_use": "版本、期次和交付追踪",
+      "decision_use_en": "Version, wave and delivery tracking"
+    },
+    {
+      "field_id": "business_question",
+      "label": "核心业务问题",
+      "label_en": "Business question",
+      "required": true,
+      "decision_use": "研究任务、KPI与模型路由",
+      "decision_use_en": "Research task, KPI and model routing"
+    },
+    {
+      "field_id": "category",
+      "label": "重点品类",
+      "label_en": "Category",
+      "required": true,
+      "decision_use": "题组、属性与公开数据范围",
+      "decision_use_en": "Question blocks, attributes and public-data scope"
+    },
+    {
+      "field_id": "market_scope",
+      "label": "市场范围",
+      "label_en": "Market scope",
+      "required": true,
+      "decision_use": "问卷语言、本地化、配额和权重",
+      "decision_use_en": "Language, localization, quotas and weighting"
+    },
+    {
+      "field_id": "research_objective",
+      "label": "研究任务",
+      "label_en": "Research task",
+      "required": true,
+      "decision_use": "主模型与交付结果",
+      "decision_use_en": "Primary model and decision output"
+    },
+    {
+      "field_id": "sample_n",
+      "label": "样本量",
+      "label_en": "Sample size",
+      "required": true,
+      "decision_use": "总体精度与可稳定分析的独立切分",
+      "decision_use_en": "Overall precision and stable independent cuts"
+    },
+    {
+      "field_id": "cadence",
+      "label": "研究频率",
+      "label_en": "Cadence",
+      "required": true,
+      "decision_use": "跨期口径、轮换模块和验证窗口",
+      "decision_use_en": "Cross-period definitions, rotating modules and validation windows"
+    },
+    {
+      "field_id": "available_evidence",
+      "label": "已有研究资料",
+      "label_en": "Available evidence",
+      "required": false,
+      "decision_use": "可复用口径、校准与模型成熟度",
+      "decision_use_en": "Reusable definitions, calibration and model maturity"
+    }
+  ],
+  "evidence_requirements": [
+    {
+      "evidence_id": "prior_questionnaire",
+      "name": "往期问卷与题号",
+      "name_en": "Prior questionnaire and IDs",
+      "phase": "design",
+      "enables": "跨期题号、Base与量表对齐",
+      "safe_asset_types": [
+        "docx",
+        "xlsx",
+        "pdf"
+      ],
+      "enables_en": "Align question IDs, bases and scales across periods"
+    },
+    {
+      "evidence_id": "prior_raw",
+      "name": "往期匿名化Raw Data",
+      "name_en": "Prior anonymized raw data",
+      "phase": "validation",
+      "enables": "跨期重算、分群稳定性与时间留出",
+      "safe_asset_types": [
+        "csv",
+        "xlsx",
+        "sav"
+      ],
+      "enables_en": "Recompute periods, test segment stability and create time holdouts"
+    },
+    {
+      "evidence_id": "prior_tables",
+      "name": "往期Table与KPI表",
+      "name_en": "Prior tables and KPI files",
+      "phase": "design",
+      "enables": "历史趋势与指标口径核对",
+      "safe_asset_types": [
+        "xlsx",
+        "csv"
+      ],
+      "enables_en": "Reconcile historical trends and metric definitions"
+    },
+    {
+      "evidence_id": "qualitative",
+      "name": "定性访谈与开放题",
+      "name_en": "Qualitative interviews and open ends",
+      "phase": "design",
+      "enables": "需求假设、消费者语言与选项补全",
+      "safe_asset_types": [
+        "docx",
+        "xlsx",
+        "txt"
+      ],
+      "enables_en": "Complete need hypotheses, consumer language and answer options"
+    },
+    {
+      "evidence_id": "product_spec",
+      "name": "产品概念、规格与价格方案",
+      "name_en": "Concept, pack and price specifications",
+      "phase": "design",
+      "enables": "概念题、价格点和选择实验属性",
+      "safe_asset_types": [
+        "xlsx",
+        "docx",
+        "pptx",
+        "pdf"
+      ],
+      "enables_en": "Define concepts, price points and choice-experiment attributes"
+    },
+    {
+      "evidence_id": "social_search",
+      "name": "社媒、搜索与电商信号",
+      "name_en": "Social, search and commerce signals",
+      "phase": "calibration",
+      "enables": "需求主题与问卷结果的外部交叉验证",
+      "safe_asset_types": [
+        "csv",
+        "xlsx",
+        "json"
+      ],
+      "enables_en": "Triangulate demand themes and survey findings externally"
+    },
+    {
+      "evidence_id": "fieldwork_raw",
+      "name": "本期匿名化Raw Data",
+      "name_en": "Current-wave anonymized raw data",
+      "phase": "analysis",
+      "enables": "加权KPI、分组分析和模型估计",
+      "safe_asset_types": [
+        "csv",
+        "xlsx",
+        "sav"
+      ],
+      "enables_en": "Estimate weighted KPIs, subgroup results and models"
+    },
+    {
+      "evidence_id": "next_wave",
+      "name": "下一期同口径数据",
+      "name_en": "Next comparable wave",
+      "phase": "validation",
+      "enables": "预测误差、区间覆盖率与参数更新",
+      "safe_asset_types": [
+        "csv",
+        "xlsx",
+        "sav"
+      ],
+      "enables_en": "Measure forecast error, interval coverage and parameter updates"
+    },
+    {
+      "evidence_id": "business_outcome",
+      "name": "上市、交易或渠道结果",
+      "name_en": "Launch, transaction or channel outcomes",
+      "phase": "outcome",
+      "enables": "真实购买、复购、销量或上架结果校准",
+      "safe_asset_types": [
+        "csv",
+        "xlsx"
+      ],
+      "enables_en": "Calibrate against purchase, repeat, sales and distribution outcomes"
+    }
+  ],
+  "quota_framework": [
+    {
+      "dimension": "总样本",
+      "control": "硬控",
+      "target_source": "项目设计",
+      "analysis_gate": "完成有效样本与加权有效样本量",
+      "dimension_en": "Total sample",
+      "control_en": "Hard control",
+      "target_source_en": "Project design",
+      "analysis_gate_en": "Completed valid sample and weighted effective sample size"
+    },
+    {
+      "dimension": "年龄 × 性别",
+      "control": "主配额",
+      "target_source": "目标人群或权威人口分布",
+      "analysis_gate": "核心独立切分建议Base≥400",
+      "dimension_en": "Age × gender",
+      "control_en": "Primary quota",
+      "target_source_en": "Target audience or authoritative population distribution",
+      "analysis_gate_en": "Recommended base ≥400 for core independent cuts"
+    },
+    {
+      "dimension": "地区 × 城市级别",
+      "control": "主配额",
+      "target_source": "研究覆盖与目标市场分布",
+      "analysis_gate": "不假设所有多维交叉格均能稳定分析",
+      "dimension_en": "Region × city tier",
+      "control_en": "Primary quota",
+      "target_source_en": "Research coverage and target-market distribution",
+      "analysis_gate_en": "Do not assume every multidimensional cross-cell is stable"
+    },
+    {
+      "dimension": "家庭收入",
+      "control": "软配额 / 加权",
+      "target_source": "品类受众定义与样本可得性",
+      "analysis_gate": "监控极端权重与有效样本量",
+      "dimension_en": "Household income",
+      "control_en": "Soft quota / weighting",
+      "target_source_en": "Category audience and sample feasibility",
+      "analysis_gate_en": "Monitor extreme weights and effective sample size"
+    },
+    {
+      "dimension": "品类购买与重点渠道",
+      "control": "筛选 / 加样",
+      "target_source": "业务问题与模型最小Base",
+      "analysis_gate": "购买者、概念评估者和选择任务分别报告Base",
+      "dimension_en": "Category purchase and priority channels",
+      "control_en": "Screening / boost",
+      "target_source_en": "Business question and minimum model base",
+      "analysis_gate_en": "Report buyer, concept and choice-task bases separately"
+    }
+  ],
+  "quality_controls": [
+    {
+      "control_id": "QC01",
+      "stage": "问卷",
+      "control": "Base、跳转与互斥逻辑检查",
+      "failure_action": "阻止上线",
+      "stage_en": "Questionnaire",
+      "control_en": "Check bases, routing and mutually exclusive logic",
+      "failure_action_en": "Block launch"
+    },
+    {
+      "control_id": "QC02",
+      "stage": "问卷",
+      "control": "移动端长度、矩阵题与随机化检查",
+      "failure_action": "修改题型或拆题",
+      "stage_en": "Questionnaire",
+      "control_en": "Check mobile length, matrices and randomization",
+      "failure_action_en": "Revise or split questions"
+    },
+    {
+      "control_id": "QC03",
+      "stage": "样本",
+      "control": "筛选条件、配额定义与样本来源核对",
+      "failure_action": "重设配额或样本范围",
+      "stage_en": "Sample",
+      "control_en": "Reconcile screeners, quota definitions and sample sources",
+      "failure_action_en": "Reset quotas or sample scope"
+    },
+    {
+      "control_id": "QC04",
+      "stage": "实地",
+      "control": "重复ID、极短时长与异常设备检查",
+      "failure_action": "标记或剔除并保留日志",
+      "stage_en": "Fieldwork",
+      "control_en": "Check duplicate IDs, speeding and abnormal devices",
+      "failure_action_en": "Flag or remove with an audit log"
+    },
+    {
+      "control_id": "QC05",
+      "stage": "实地",
+      "control": "直线作答、逻辑冲突与开放题质量",
+      "failure_action": "按预设规则复核",
+      "stage_en": "Fieldwork",
+      "control_en": "Check straightlining, logical conflicts and open-end quality",
+      "failure_action_en": "Review under prespecified rules"
+    },
+    {
+      "control_id": "QC06",
+      "stage": "数据",
+      "control": "题号、变量、代码和值域一致性",
+      "failure_action": "阻止进入KPI计算",
+      "stage_en": "Data",
+      "control_en": "Reconcile question IDs, variables, codes and value ranges",
+      "failure_action_en": "Block KPI calculation"
+    },
+    {
+      "control_id": "QC07",
+      "stage": "数据",
+      "control": "配额偏差、权重极值与有效样本量",
+      "failure_action": "调整权重或限制切分",
+      "stage_en": "Data",
+      "control_en": "Review quota variance, extreme weights and effective sample size",
+      "failure_action_en": "Adjust weights or restrict cuts"
+    },
+    {
+      "control_id": "QC08",
+      "stage": "指标",
+      "control": "分子、分母、Base、单位和期次一致",
+      "failure_action": "阻止跨期比较",
+      "stage_en": "Metrics",
+      "control_en": "Align numerator, denominator, base, unit and period",
+      "failure_action_en": "Block cross-period comparison"
+    },
+    {
+      "control_id": "QC09",
+      "stage": "模型",
+      "control": "训练/验证隔离、校准和分群误差",
+      "failure_action": "降级为描述性分析",
+      "stage_en": "Model",
+      "control_en": "Separate training and validation; test calibration and segment error",
+      "failure_action_en": "Downgrade to descriptive analysis"
+    },
+    {
+      "control_id": "QC10",
+      "stage": "洞察",
+      "control": "论点可追溯至题号、数据、模型或外部来源",
+      "failure_action": "删除或改写无证据结论",
+      "stage_en": "Insight",
+      "control_en": "Trace every claim to a question, datum, model or external source",
+      "failure_action_en": "Remove or rewrite unsupported claims"
+    }
+  ],
+  "delivery_templates": [
+    {
+      "deliverable_id": "D01",
+      "phase": "design",
+      "name": "研究Brief与决策问题",
+      "name_en": "Research brief and decision question",
+      "owner": "研究负责人",
+      "required_evidence": [],
+      "acceptance": "范围、受众、市场、决策与不能回答的问题明确",
+      "owner_en": "Research lead",
+      "acceptance_en": "Scope, audience, markets, decision and non-answerable questions are explicit"
+    },
+    {
+      "deliverable_id": "D02",
+      "phase": "design",
+      "name": "指标字典与问卷映射",
+      "name_en": "Metric dictionary and question map",
+      "owner": "研究与数据团队",
+      "required_evidence": [],
+      "acceptance": "每个KPI包含题号、分子、分母、Base、单位与用途",
+      "owner_en": "Research and data teams",
+      "acceptance_en": "Every KPI has a question ID, numerator, denominator, base, unit and use"
+    },
+    {
+      "deliverable_id": "D03",
+      "phase": "design",
+      "name": "问卷、题号与逻辑草案",
+      "name_en": "Questionnaire, IDs and logic draft",
+      "owner": "研究团队",
+      "required_evidence": [],
+      "acceptance": "题号、选项、Base、跳转、随机化和预计时长完整",
+      "owner_en": "Research team",
+      "acceptance_en": "Question IDs, options, bases, routing, randomization and expected length are complete"
+    },
+    {
+      "deliverable_id": "D04",
+      "phase": "design",
+      "name": "样本与配额方案",
+      "name_en": "Sample and quota plan",
+      "owner": "抽样与研究团队",
+      "required_evidence": [],
+      "acceptance": "总体精度、主配额、软配额、加样和分组Base边界明确",
+      "owner_en": "Sampling and research teams",
+      "acceptance_en": "Overall precision, primary and soft quotas, boosts and subgroup-base limits are explicit"
+    },
+    {
+      "deliverable_id": "D05",
+      "phase": "design",
+      "name": "分析、模型与验证计划",
+      "name_en": "Analysis, model and validation plan",
+      "owner": "数据科学团队",
+      "required_evidence": [],
+      "acceptance": "主模型、辅助模型、结果变量、留出方式和降级规则明确",
+      "owner_en": "Data science team",
+      "acceptance_en": "Primary and supporting models, outcomes, holdouts and downgrade rules are explicit"
+    },
+    {
+      "deliverable_id": "D06",
+      "phase": "fieldwork",
+      "name": "问卷程序与上线检查",
+      "name_en": "Survey program and launch check",
+      "owner": "研究执行团队",
+      "required_evidence": [],
+      "acceptance": "全路径测试、配额动作、设备适配与数据落点通过",
+      "owner_en": "Research operations team",
+      "acceptance_en": "All paths, quota actions, devices and data landing points pass testing"
+    },
+    {
+      "deliverable_id": "D07",
+      "phase": "fieldwork",
+      "name": "配额与数据质量监控",
+      "name_en": "Quota and data-quality monitor",
+      "owner": "研究执行团队",
+      "required_evidence": [],
+      "acceptance": "按日查看完成量、配额偏差与异常样本",
+      "owner_en": "Research operations team",
+      "acceptance_en": "Daily completion, quota variance and anomalous respondents are monitored"
+    },
+    {
+      "deliverable_id": "D08",
+      "phase": "analysis",
+      "name": "匿名化Raw Data与数据字典",
+      "name_en": "Anonymized raw data and dictionary",
+      "owner": "数据团队",
+      "required_evidence": [
+        "fieldwork_raw"
+      ],
+      "acceptance": "主键唯一、变量完整、值域和路由一致",
+      "owner_en": "Data team",
+      "acceptance_en": "Keys are unique; variables, value ranges and routing are complete"
+    },
+    {
+      "deliverable_id": "D09",
+      "phase": "analysis",
+      "name": "加权KPI、Table与分组结果",
+      "name_en": "Weighted KPIs, tables and subgroup results",
+      "owner": "数据团队",
+      "required_evidence": [
+        "fieldwork_raw"
+      ],
+      "acceptance": "总体与分组数字可复算，Base和显著性口径一致",
+      "owner_en": "Data team",
+      "acceptance_en": "Overall and subgroup results reproduce with consistent bases and significance rules"
+    },
+    {
+      "deliverable_id": "D10",
+      "phase": "analysis",
+      "name": "模型结果、系数与诊断",
+      "name_en": "Model outputs, coefficients and diagnostics",
+      "owner": "数据科学团队",
+      "required_evidence": [
+        "fieldwork_raw"
+      ],
+      "acceptance": "系数、区间、误差、校准与适用边界同时交付",
+      "owner_en": "Data science team",
+      "acceptance_en": "Coefficients, intervals, error, calibration and scope limits ship together"
+    },
+    {
+      "deliverable_id": "D11",
+      "phase": "analysis",
+      "name": "决策Dashboard与洞察页面",
+      "name_en": "Decision dashboard and insight pages",
+      "owner": "研究与行业团队",
+      "required_evidence": [
+        "fieldwork_raw"
+      ],
+      "acceptance": "结论回答业务问题并能追溯至证据",
+      "owner_en": "Research and sector teams",
+      "acceptance_en": "Findings answer the business question and trace back to evidence"
+    },
+    {
+      "deliverable_id": "D12",
+      "phase": "validation",
+      "name": "跨期字段与KPI复算",
+      "name_en": "Cross-wave field map and KPI recomputation",
+      "owner": "数据团队",
+      "required_evidence": [
+        "prior_raw",
+        "fieldwork_raw"
+      ],
+      "acceptance": "同口径重算；差异与断点有记录",
+      "owner_en": "Data team",
+      "acceptance_en": "Comparable definitions are recomputed and breaks are documented"
+    },
+    {
+      "deliverable_id": "D13",
+      "phase": "validation",
+      "name": "下一期回测与模型更新",
+      "name_en": "Next-wave backtest and model update",
+      "owner": "数据科学团队",
+      "required_evidence": [
+        "fieldwork_raw",
+        "next_wave"
+      ],
+      "acceptance": "报告预测误差、区间覆盖、分群误差与更新决定",
+      "owner_en": "Data science team",
+      "acceptance_en": "Forecast error, interval coverage, segment error and update decisions are reported"
+    },
+    {
+      "deliverable_id": "D14",
+      "phase": "outcome",
+      "name": "真实结果校准与行动复盘",
+      "name_en": "Outcome calibration and action review",
+      "owner": "客户与研究团队",
+      "required_evidence": [
+        "fieldwork_raw",
+        "business_outcome"
+      ],
+      "acceptance": "区分意向、选择实验与真实购买/销售结果",
+      "owner_en": "Client and research teams",
+      "acceptance_en": "Intent, experimental choice and observed purchase or sales are separated"
+    }
+  ],
+  "research_checkpoints": [
+    {
+      "checkpoint_id": "R1",
+      "name": "业务问题与指标口径复核",
+      "name_en": "Decision and metric review",
+      "role": "研究负责人",
+      "value": "防止模型回答一个与客户决策相邻但不同的问题",
+      "role_en": "Research lead",
+      "value_en": "Prevents the model from answering a question adjacent to, but different from, the client decision"
+    },
+    {
+      "checkpoint_id": "R2",
+      "name": "问卷、逻辑与消费者语言复核",
+      "name_en": "Questionnaire and consumer-language review",
+      "role": "研究团队",
+      "value": "确保题目可理解、可作答并能进入明确指标",
+      "role_en": "Research team",
+      "value_en": "Ensures questions are understandable, answerable and mapped to defined metrics"
+    },
+    {
+      "checkpoint_id": "R3",
+      "name": "样本、配额与权重复核",
+      "name_en": "Sample, quota and weighting review",
+      "role": "抽样与数据团队",
+      "value": "保证总体与关键人群比较有足够Base且不夸大交叉结果",
+      "role_en": "Sampling and data teams",
+      "value_en": "Protects adequate bases for total and priority segments without overstating cross-cells"
+    },
+    {
+      "checkpoint_id": "R4",
+      "name": "模型、洞察与行动复核",
+      "name_en": "Model, insight and action review",
+      "role": "数据科学与行业团队",
+      "value": "把系数和诊断转成有证据、有边界的客户决策",
+      "role_en": "Data science and sector teams",
+      "value_en": "Turns coefficients and diagnostics into bounded, evidence-backed decisions"
+    }
+  ],
+  "method_sources": [
+    {
+      "source_id": "ipsos_synthesio_aici",
+      "publisher": "Ipsos",
+      "title": "AI-Enabled Consumer Intelligence Platform",
+      "url": "https://www.ipsos.com/en-sg/ai-enabled-consumer-intelligence-platform",
+      "adapted_principle": "问卷、社媒与行为信号并列验证；不把单一信号当作完整消费者事实",
+      "adapted_principle_en": "Triangulate survey, social and behavioral signals rather than treating one source as the whole consumer truth",
+      "retrieved_at": "2026-08-14"
+    },
+    {
+      "source_id": "niq_bases_product_testing",
+      "publisher": "NIQ",
+      "title": "BASES Product Testing",
+      "url": "https://nielseniq.com/global/en/solutions/bases-product-testing/",
+      "adapted_principle": "把历史产品知识、消费者测试、模型与上市结果校准连接起来",
+      "adapted_principle_en": "Connect historical product knowledge, consumer tests, models and launch outcomes",
+      "retrieved_at": "2026-08-14"
+    },
+    {
+      "source_id": "kantar_marketplace",
+      "publisher": "Kantar",
+      "title": "Kantar Marketplace",
+      "url": "https://www.kantar.com/Marketplace",
+      "adapted_principle": "先按业务任务路由到概念、包装、价格、广告或追踪方案",
+      "adapted_principle_en": "Route the business task first to concept, pack, pricing, advertising or tracking",
+      "retrieved_at": "2026-08-14"
+    },
+    {
+      "source_id": "qualtrics_quotas",
+      "publisher": "Qualtrics",
+      "title": "Quotas",
+      "url": "https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/quotas/",
+      "adapted_principle": "把简单配额、交叉配额、完成状态和超配处理纳入上线检查",
+      "adapted_principle_en": "Include simple and cross quotas, completion status and over-quota handling in launch checks",
+      "retrieved_at": "2026-08-14"
+    }
+  ]
+}

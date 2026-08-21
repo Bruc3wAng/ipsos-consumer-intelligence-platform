@@ -1,0 +1,1252 @@
+{
+  "meta": {
+    "title": "中国零食消费者研究完整问卷模板",
+    "version": "v0.2",
+    "built_at": "2026-08-14",
+    "market": "中国为核心，可按海外市场本地化",
+    "category": "零食通用框架；当前以膨化食品示例",
+    "question_count": 46,
+    "module_count": 13,
+    "estimated_length": "根据任务自动选择模块，约11-20分钟"
+  },
+  "governance": {
+    "default_rule": "客户新增或修改题默认保留在项目专项层，不自动改变通用指标体系。",
+    "candidate_rule": "只有具备明确测量对象、时间窗、Base、稳定选项、跨项目可复用性和决策价值的问题，才建议进入通用指标候选。",
+    "approval_rule": "AI只给出纳入建议；通用指标版本更新由研究人员复核并保留版本记录。"
+  },
+  "objective_modules": {
+    "tracking": [
+      "甄别与配额",
+      "品类使用与购买",
+      "品牌与购买旅程",
+      "渠道与货架",
+      "场景与需求",
+      "产品体验与需求",
+      "未来行为",
+      "传播与触点",
+      "背景信息",
+      "开放题"
+    ],
+    "concept": [
+      "甄别与配额",
+      "品类使用与购买",
+      "品牌与购买旅程",
+      "渠道与货架",
+      "场景与需求",
+      "产品体验与需求",
+      "价格",
+      "新品概念",
+      "未来行为",
+      "离散选择实验",
+      "传播与触点",
+      "背景信息",
+      "开放题"
+    ],
+    "pricing": [
+      "甄别与配额",
+      "品类使用与购买",
+      "品牌与购买旅程",
+      "场景与需求",
+      "产品体验与需求",
+      "价格",
+      "未来行为",
+      "离散选择实验",
+      "背景信息"
+    ],
+    "channel": [
+      "甄别与配额",
+      "品类使用与购买",
+      "品牌与购买旅程",
+      "渠道与货架",
+      "场景与需求",
+      "产品体验与需求",
+      "未来行为",
+      "传播与触点",
+      "背景信息",
+      "开放题"
+    ]
+  },
+  "questions": [
+    {
+      "module": "甄别与配额",
+      "question_id": "S1",
+      "question_text": "您的年龄是？",
+      "response_type": "单选",
+      "options": [
+        "18-24",
+        "25-34",
+        "35-44",
+        "45-54"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "异质性"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。",
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "保留通用基础字段",
+      "client_editable": true
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S2",
+      "question_text": "您的性别是？",
+      "response_type": "单选",
+      "options": [
+        "男性",
+        "女性"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "公平性检查"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。",
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "保留通用基础字段",
+      "client_editable": true
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S3",
+      "question_text": "您目前常住的地区是？",
+      "response_type": "单选",
+      "options": [
+        "华东",
+        "华南",
+        "华北",
+        "华中",
+        "西南",
+        "东北"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "权重",
+        "区域差异"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。",
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "保留通用基础字段",
+      "client_editable": true
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S4",
+      "question_text": "您目前常住城市的级别是？",
+      "response_type": "单选",
+      "options": [
+        "一线",
+        "新一线",
+        "二线",
+        "三线及以下"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "分层",
+        "渠道可达性"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。",
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "保留通用基础字段",
+      "client_editable": true
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S5",
+      "question_text": "您的个人月收入是？",
+      "response_type": "单选",
+      "options": [
+        "6000以下",
+        "6000-12000",
+        "12000-20000",
+        "20000以上"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [],
+      "model_roles": [
+        "价格异质性",
+        "人群分层"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。",
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "保留通用基础字段",
+      "client_editable": true
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S6",
+      "question_text": "过去3个月，您是否亲自购买过任何预包装零食？",
+      "response_type": "单选",
+      "options": [
+        "是",
+        "否"
+      ],
+      "base": "全部有效被访者",
+      "logic": "选择‘否’：结束访问或进入非购买者补充样本，取决于项目目标",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "界定可进入购买行为模块的有效购买者Base。",
+      "model_roles": [
+        "样本路由"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用甄别",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S7",
+      "question_text": "您在家庭零食购买决策中通常承担什么角色？",
+      "response_type": "单选",
+      "options": [
+        "主要决定者",
+        "共同决定者",
+        "提出需求但不负责购买",
+        "完全不参与"
+      ],
+      "base": "S6=是",
+      "logic": "选择‘完全不参与’：结束访问或保留为需求影响者样本",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "区分购买决策者与需求影响者，控制行为问题Base。",
+      "model_roles": [
+        "样本路由",
+        "决策角色分层"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用甄别",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S8",
+      "question_text": "您或共同居住家人是否从事市场研究、广告、公关、食品制造或食品零售相关工作？",
+      "response_type": "单选",
+      "options": [
+        "是",
+        "否"
+      ],
+      "base": "全部有效被访者",
+      "logic": "选择‘是’：按项目质量规则结束访问或单独标记",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "降低专业被访者和行业相关偏差。",
+      "model_roles": [
+        "质量控制"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用质控",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S9",
+      "question_text": "您是否愿意认真阅读题目，并根据真实经历作答？",
+      "response_type": "单选",
+      "options": [
+        "愿意",
+        "不愿意"
+      ],
+      "base": "全部有效被访者",
+      "logic": "选择‘不愿意’：结束访问",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成访问质量承诺，不进入业务KPI。",
+      "model_roles": [
+        "质量控制"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用质控",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q1",
+      "question_text": "过去3个月，您购买过以下哪些零食品类？",
+      "response_type": "多选",
+      "options": [
+        "膨化食品",
+        "坚果炒货",
+        "果干蜜饯",
+        "饼干糕点",
+        "肉类零食",
+        "糖果巧克力",
+        "以上均无"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PENETRATION_3M"
+      ],
+      "model_roles": [
+        "购买倾向特征",
+        "深度模块路由"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成品类渗透率与深度模块路由，是通用需求基线。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q2",
+      "question_text": "过去3个月，您通常每月购买膨化食品多少次？",
+      "response_type": "数值",
+      "options": [
+        "0-12次"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MONTHLY_BUYER",
+        "KPI_FREQUENCY_BUYER"
+      ],
+      "model_roles": [
+        "购买强度",
+        "购买倾向特征"
+      ],
+      "cadence": "每期",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "形成购买者频次与月度活跃购买者指标。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q3",
+      "question_text": "您最近一个月购买膨化食品的总支出约为多少？",
+      "response_type": "数值",
+      "options": [
+        "人民币元"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MONTHLY_SPEND_BUYER"
+      ],
+      "model_roles": [
+        "消费价值",
+        "价格分层"
+      ],
+      "cadence": "每期",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "形成购买者花费层级，不直接外推市场规模。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q4",
+      "question_text": "过去3个月，您通过哪些渠道购买过膨化食品？",
+      "response_type": "多选",
+      "options": [
+        "零食量贩",
+        "综合电商",
+        "商超",
+        "即时零售",
+        "便利店"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_CHANNEL_REACH"
+      ],
+      "model_roles": [
+        "渠道覆盖",
+        "渠道重叠"
+      ],
+      "cadence": "每期",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "形成渠道触达与重叠，用于渠道优先级。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q5",
+      "question_text": "您购买膨化食品最主要的渠道是？",
+      "response_type": "单选",
+      "options": [
+        "零食量贩",
+        "综合电商",
+        "商超",
+        "即时零售",
+        "便利店"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_MAIN_CHANNEL"
+      ],
+      "model_roles": [
+        "渠道倾向",
+        "渠道情景"
+      ],
+      "cadence": "每期",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "形成主要渠道构成，用于渠道场景模型。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q6",
+      "question_text": "您通常在什么场景食用膨化食品？",
+      "response_type": "多选",
+      "options": [
+        "追剧娱乐",
+        "工作学习间隙",
+        "家庭分享",
+        "通勤出行",
+        "社交聚会"
+      ],
+      "base": "Q1选择膨化食品",
+      "required": true,
+      "kpi_ids": [
+        "KPI_OCCASION_REACH"
+      ],
+      "model_roles": [
+        "场景分层",
+        "机会识别"
+      ],
+      "cadence": "每期",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "形成场景触达和规格、传播机会。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q7",
+      "question_text": "选择膨化食品时，以下因素对您有多重要？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "口味",
+        "价格",
+        "健康/成分",
+        "品牌",
+        "包装便利",
+        "新奇感"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_NEED_IMPORTANCE"
+      ],
+      "model_roles": [
+        "需求驱动",
+        "人群分层",
+        "选择模型交互"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成需求重要性并进入购买倾向与选择模型。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q8",
+      "question_text": "现有膨化食品在健康负担、配料透明和规格便利方面满足您的程度如何？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "健康负担",
+        "配料透明",
+        "规格便利"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_HEALTH_FIT_T2B",
+        "KPI_UNMET_NEED"
+      ],
+      "model_roles": [
+        "需求缺口",
+        "新品方向"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成满足度与未满足需求护栏。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "价格",
+      "question_id": "Q9",
+      "question_text": "对于70g袋装膨化食品，在以下价格下您是否会考虑购买？",
+      "response_type": "Gabor-Granger逐价询问",
+      "options": [
+        "¥5.9",
+        "¥7.9",
+        "¥9.9",
+        "¥11.9"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PRICE_ACCEPT_7_9",
+        "KPI_PRICE_CURVE"
+      ],
+      "model_roles": [
+        "价格接受曲线",
+        "价格弹性"
+      ],
+      "cadence": "半年",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成逐价接受曲线、价格拐点与价格弹性。",
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按研究任务启用",
+      "client_editable": true
+    },
+    {
+      "module": "新品概念",
+      "question_id": "Q10",
+      "question_text": "请评价一款70g可重复封口、轻油咸香的膨化食品概念。",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "相关性",
+        "差异化",
+        "购买意向"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_CONCEPT_RELEVANCE_T2B",
+        "KPI_CONCEPT_TRIAL_T2B"
+      ],
+      "model_roles": [
+        "概念门槛",
+        "购买倾向目标"
+      ],
+      "cadence": "按概念",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成概念相关性、差异化和试购意向。",
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按研究任务启用",
+      "client_editable": true
+    },
+    {
+      "module": "未来行为",
+      "question_id": "Q11",
+      "question_text": "未来1个月，您购买膨化食品的可能性有多大？",
+      "response_type": "5点评分",
+      "options": [
+        "1完全不可能",
+        "2",
+        "3",
+        "4",
+        "5非常可能"
+      ],
+      "base": "全部有效被访者",
+      "required": true,
+      "kpi_ids": [
+        "KPI_PURCHASE_INTENT_T2B"
+      ],
+      "model_roles": [
+        "购买倾向目标"
+      ],
+      "cadence": "每期",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "形成下一期领先指标和购买倾向目标变量。",
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "保留通用核心指标",
+      "client_editable": true
+    },
+    {
+      "module": "离散选择实验",
+      "question_id": "DCE1-DCE8",
+      "question_text": "在方案A、方案B和均不选择之间做出选择。",
+      "response_type": "三选一选择任务",
+      "options": [
+        "方案A",
+        "方案B",
+        "均不选择"
+      ],
+      "base": "全部有效被访者；每人8题",
+      "required": true,
+      "kpi_ids": [
+        "KPI_DCE_UTILITIES",
+        "KPI_SCENARIO_SHARE"
+      ],
+      "model_roles": [
+        "价格、口味、规格、包装、健康表达和品牌层级效用"
+      ],
+      "cadence": "半年",
+      "logic": "按Base条件显示；不满足Base则跳过",
+      "metric_contribution": "估计价格、口味、规格、包装、表达与品牌层级的相对效用。",
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按研究任务启用",
+      "client_editable": true
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q12",
+      "question_text": "过去3个月，您购买过哪些膨化食品品牌？",
+      "response_type": "多选",
+      "options": [
+        "乐事",
+        "上好佳",
+        "可比克",
+        "旺旺",
+        "好丽友",
+        "其他品牌",
+        "记不清品牌"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "随机品牌顺序；其他品牌显示开放填写",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成品牌购买渗透、品牌组合和迁移分析基础。",
+      "model_roles": [
+        "品牌渗透",
+        "品牌迁移"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q13",
+      "question_text": "您最近一次购买的是哪个品牌？",
+      "response_type": "单选",
+      "options": [
+        "从Q12已选品牌带入",
+        "记不清"
+      ],
+      "base": "Q12至少选择一个品牌",
+      "logic": "只显示Q12已选品牌",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成最近购买品牌和品牌转移起点。",
+      "model_roles": [
+        "最近购买",
+        "迁移模型"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q14",
+      "question_text": "最近一次购买时，您最主要考虑了哪些因素？",
+      "response_type": "最多选3项",
+      "options": [
+        "口味",
+        "价格",
+        "配料/成分",
+        "品牌",
+        "包装规格",
+        "促销",
+        "货架可见",
+        "他人推荐",
+        "新品尝鲜"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "最多选择3项",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "连接实际购买任务与需求驱动，辅助解释Q7重要性。",
+      "model_roles": [
+        "购买驱动",
+        "相对重要性"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q15",
+      "question_text": "最近一次购买更接近以下哪种情况？",
+      "response_type": "单选",
+      "options": [
+        "到店前已计划购买该品牌/产品",
+        "计划买零食但现场决定品牌",
+        "完全临时起意",
+        "由他人决定"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "单选",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "区分计划型与冲动型购买，进入渠道和货架模型。",
+      "model_roles": [
+        "购物任务分层",
+        "货架模型"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q16",
+      "question_text": "最近一次购买后，您再次购买同一产品的可能性有多大？",
+      "response_type": "5点评分",
+      "options": [
+        "1完全不可能",
+        "2",
+        "3",
+        "4",
+        "5非常可能"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "单选；4-5计算T2B",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成复购意向领先指标，后续与真实复购结果校准。",
+      "model_roles": [
+        "复购倾向目标"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q17",
+      "question_text": "您通常购买哪些包装规格？",
+      "response_type": "多选",
+      "options": [
+        "30g及以下单人小包装",
+        "31-70g常规包装",
+        "71-150g分享装",
+        "150g以上家庭装",
+        "多小袋组合装"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "多选",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成规格需求结构并进入产品组合实验。",
+      "model_roles": [
+        "规格偏好",
+        "产品配置"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q18",
+      "question_text": "以下产品表达会在多大程度上提高您的购买兴趣？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "少油/非油炸",
+        "配料表更简单",
+        "低盐",
+        "高蛋白",
+        "真实原料可见",
+        "不添加人工色素"
+      ],
+      "base": "全部有效被访者",
+      "logic": "逐项评分；随机顺序",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "筛选可进入概念与选择实验的健康/成分表达。",
+      "model_roles": [
+        "概念属性筛选",
+        "DCE属性候选"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项；多项目稳定后复核",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q19",
+      "question_text": "您不购买或减少购买膨化食品的主要原因是什么？",
+      "response_type": "多选",
+      "options": [
+        "担心油脂/热量",
+        "担心盐分",
+        "配料不透明",
+        "价格偏高",
+        "口味缺少变化",
+        "包装不方便",
+        "没有合适场景",
+        "其他"
+      ],
+      "base": "Q1未选择膨化食品或Q2低频",
+      "logic": "非购买者或低频者显示",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成品类障碍和需求缺口，辅助解释渗透变化。",
+      "model_roles": [
+        "品类障碍",
+        "未满足需求"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q20",
+      "question_text": "对于您最常购买的膨化食品，以下体验表现如何？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "口味稳定",
+        "酥脆口感",
+        "吃后负担感",
+        "包装便利",
+        "份量合适",
+        "价格值得"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "逐项评分；随机顺序",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "连接重要性与表现，形成可行动的改进优先级。",
+      "model_roles": [
+        "体验表现",
+        "需求缺口"
+      ],
+      "indicator_layer": "通用核心",
+      "inclusion_recommendation": "建议进入通用指标候选",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q21",
+      "question_text": "您最希望下一款膨化食品优先改善什么？",
+      "response_type": "单选",
+      "options": [
+        "口味",
+        "口感",
+        "健康/成分",
+        "包装",
+        "规格",
+        "价格",
+        "新奇感"
+      ],
+      "base": "全部有效被访者",
+      "logic": "单选",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成产品改进首要方向和概念输入。",
+      "model_roles": [
+        "改进优先级"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项",
+      "client_editable": true,
+      "cadence": "按项目"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q22",
+      "question_text": "对于70g袋装膨化食品，低于什么价格会让您开始怀疑产品质量？",
+      "response_type": "数值输入",
+      "options": [
+        "人民币元"
+      ],
+      "base": "全部有效被访者",
+      "logic": "数值范围校验：1-50元",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成价格敏感度计量中的过低价格点。",
+      "model_roles": [
+        "Van Westendorp"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按价格项目启用",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q23",
+      "question_text": "对于70g袋装膨化食品，什么价格是便宜但质量仍可接受？",
+      "response_type": "数值输入",
+      "options": [
+        "人民币元"
+      ],
+      "base": "全部有效被访者",
+      "logic": "必须高于或等于Q22",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成便宜价格点。",
+      "model_roles": [
+        "Van Westendorp"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按价格项目启用",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q24",
+      "question_text": "对于70g袋装膨化食品，什么价格开始显得贵但仍可能购买？",
+      "response_type": "数值输入",
+      "options": [
+        "人民币元"
+      ],
+      "base": "全部有效被访者",
+      "logic": "必须高于或等于Q23",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成偏贵价格点。",
+      "model_roles": [
+        "Van Westendorp"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按价格项目启用",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q25",
+      "question_text": "对于70g袋装膨化食品，高于什么价格会贵到不再考虑购买？",
+      "response_type": "数值输入",
+      "options": [
+        "人民币元"
+      ],
+      "base": "全部有效被访者",
+      "logic": "必须高于或等于Q24",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成过高价格点并检查价格单调性。",
+      "model_roles": [
+        "Van Westendorp",
+        "价格质控"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按价格项目启用",
+      "client_editable": true,
+      "cadence": "半年"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q26",
+      "question_text": "在购买零食时，以下货架位置通常有多大影响？",
+      "response_type": "5点评分矩阵",
+      "options": [
+        "入口主题陈列",
+        "主通道端架",
+        "品类主货架中层",
+        "收银台附近",
+        "线上搜索结果前列",
+        "平台活动会场"
+      ],
+      "base": "Q1选择膨化食品",
+      "logic": "逐项评分；随机顺序",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成货架可见度与渠道触点的项目输入。",
+      "model_roles": [
+        "货架可见度",
+        "渠道情景"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项",
+      "client_editable": true,
+      "cadence": "按渠道项目"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q27",
+      "question_text": "看到新品陈列时，哪些信息最能推动您进一步查看？",
+      "response_type": "最多选3项",
+      "options": [
+        "新品/首发",
+        "价格优惠",
+        "口味描述",
+        "成分/健康信息",
+        "品牌",
+        "销量/评价",
+        "包装视觉",
+        "试吃"
+      ],
+      "base": "全部有效被访者",
+      "logic": "最多选择3项",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "用于货架信息层级和包装正面信息优化。",
+      "model_roles": [
+        "货架信息驱动"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项",
+      "client_editable": true,
+      "cadence": "按渠道项目"
+    },
+    {
+      "module": "传播与触点",
+      "question_id": "Q28",
+      "question_text": "过去4周，您在哪里看到过零食新品或相关内容？",
+      "response_type": "多选",
+      "options": [
+        "短视频平台",
+        "内容社区",
+        "电商平台",
+        "线下门店",
+        "朋友/家人",
+        "电视/户外广告",
+        "未看到"
+      ],
+      "base": "全部有效被访者",
+      "logic": "多选；‘未看到’互斥",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成新品信息触点和传播诊断变量。",
+      "model_roles": [
+        "触点覆盖",
+        "传播诊断"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项",
+      "client_editable": true,
+      "cadence": "按项目"
+    },
+    {
+      "module": "传播与触点",
+      "question_id": "Q29",
+      "question_text": "哪类内容最容易让您相信一款零食新品值得尝试？",
+      "response_type": "单选",
+      "options": [
+        "真实试吃评价",
+        "成分/营养证据",
+        "品牌官方介绍",
+        "达人推荐",
+        "朋友推荐",
+        "销量与用户评价",
+        "价格优惠"
+      ],
+      "base": "全部有效被访者",
+      "logic": "单选",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "形成可信信息来源分层，用于概念和传播设计。",
+      "model_roles": [
+        "信任驱动",
+        "内容策略"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项",
+      "client_editable": true,
+      "cadence": "按项目"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D1",
+      "question_text": "您的最高受教育程度是？",
+      "response_type": "单选",
+      "options": [
+        "高中及以下",
+        "大专",
+        "本科",
+        "硕士及以上"
+      ],
+      "base": "全部有效被访者",
+      "logic": "问卷末尾显示",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "用于样本描述与异质性分析，不作为默认业务KPI。",
+      "model_roles": [
+        "样本描述",
+        "异质性"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用背景",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D2",
+      "question_text": "您目前的职业状态是？",
+      "response_type": "单选",
+      "options": [
+        "全职工作",
+        "兼职/自由职业",
+        "学生",
+        "家庭照护",
+        "暂未就业",
+        "退休",
+        "其他"
+      ],
+      "base": "全部有效被访者",
+      "logic": "问卷末尾显示",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "用于场景、收入与时间结构解释。",
+      "model_roles": [
+        "样本描述",
+        "场景分层"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用背景",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D3",
+      "question_text": "您的家庭常住人口数是？",
+      "response_type": "单选",
+      "options": [
+        "1人",
+        "2人",
+        "3人",
+        "4人",
+        "5人及以上"
+      ],
+      "base": "全部有效被访者",
+      "logic": "问卷末尾显示",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "用于家庭装、分享装和消费场景解释。",
+      "model_roles": [
+        "家庭结构",
+        "规格需求"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用背景",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D4",
+      "question_text": "您的家庭中是否有18岁以下儿童或青少年？",
+      "response_type": "多选",
+      "options": [
+        "0-5岁",
+        "6-11岁",
+        "12-17岁",
+        "没有"
+      ],
+      "base": "全部有效被访者",
+      "logic": "‘没有’与其他选项互斥",
+      "required": true,
+      "kpi_ids": [],
+      "metric_contribution": "用于家庭购买与产品安全需求分层。",
+      "model_roles": [
+        "家庭结构",
+        "需求异质性"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用背景",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D5",
+      "question_text": "您的家庭月收入大约是？",
+      "response_type": "单选",
+      "options": [
+        "10000元以下",
+        "10000-19999元",
+        "20000-29999元",
+        "30000-49999元",
+        "50000元及以上",
+        "不愿回答"
+      ],
+      "base": "全部有效被访者",
+      "logic": "问卷末尾显示；允许不愿回答",
+      "required": false,
+      "kpi_ids": [],
+      "metric_contribution": "与个人收入共同解释价格接受，避免单一收入代理。",
+      "model_roles": [
+        "价格异质性",
+        "样本描述"
+      ],
+      "indicator_layer": "通用基础",
+      "inclusion_recommendation": "建议保留通用背景",
+      "client_editable": true,
+      "cadence": "每期"
+    },
+    {
+      "module": "开放题",
+      "question_id": "OE1",
+      "question_text": "理想的膨化食品还应改善什么？",
+      "response_type": "开放题",
+      "options": [],
+      "base": "全部有效被访者",
+      "required": false,
+      "kpi_ids": [],
+      "model_roles": [
+        "主题编码",
+        "下一期题目建议"
+      ],
+      "cadence": "每期轮换",
+      "logic": "全部有效被访者显示",
+      "metric_contribution": "补充结构化题目未覆盖的需求，生成下一期候选变量。",
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "按研究任务启用",
+      "client_editable": true
+    },
+    {
+      "module": "开放题",
+      "question_id": "OE2",
+      "question_text": "如果可以让零食品牌只做一项改变，您最希望改变什么？为什么？",
+      "response_type": "开放题",
+      "options": [],
+      "base": "全部有效被访者",
+      "logic": "问卷末尾显示；可跳过",
+      "required": false,
+      "kpi_ids": [],
+      "metric_contribution": "形成消费者语言、原因链与下一轮量化题候选。",
+      "model_roles": [
+        "主题模型",
+        "消费者语言"
+      ],
+      "indicator_layer": "项目专项",
+      "inclusion_recommendation": "保留项目专项；高频稳定主题可提交通用候选",
+      "client_editable": true,
+      "cadence": "按项目"
+    }
+  ]
+}

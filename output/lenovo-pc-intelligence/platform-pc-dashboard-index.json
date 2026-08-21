@@ -1,0 +1,1797 @@
+{
+  "meta": {
+    "study": "联想品牌健康度监测平台数据表",
+    "market": "中国",
+    "grain": "研究受众 × PC产品域 × 平台工作表 × 期次 × 品牌/指标项",
+    "generated_at": "2026-08-12T10:09:24.663493+00:00",
+    "counts": {
+      "observations": 25608,
+      "audiences": 3,
+      "product_spaces": 8,
+      "sheets": 26,
+      "waves": 37,
+      "brands": 40,
+      "indicator_groups": 17
+    },
+    "evidence_boundary": "全部数值来自最新累计平台数据表的交付聚合行；不同研究受众的Base不相加，未接权重时不投影总体人数。"
+  },
+  "sources": [
+    {
+      "audience": "大众消费者",
+      "file": "Ipsos-FY26-大众-平台数据表-20260730.xlsx",
+      "sheet_count": 14,
+      "sheets": [
+        "笔记本品牌认知度和美誉度",
+        "笔记本品牌认知度和美誉度-八大区",
+        "笔记本品牌认知度和美誉度-四大人群",
+        "笔记本形象base",
+        "笔记本子品牌-YOGA及其竞品",
+        "笔记本子品牌-小新及其竞品",
+        "笔记本子品牌-拯救者及其竞品",
+        "台式机",
+        "台式机各品类认知度",
+        "台式机品牌形象",
+        "AI PC",
+        "个人智能体",
+        "AI主机",
+        "个人智能设备AI服务"
+      ],
+      "observation_count": 9503
+    },
+    {
+      "audience": "SMB",
+      "file": "Ipsos-FY26-SMB-平台数据表-20260730.xlsx",
+      "sheet_count": 9,
+      "sheets": [
+        "商用笔记本品牌-认知、美誉",
+        "商用台式机品牌-品牌形象",
+        "商用笔记本品牌-品牌形象",
+        "商用笔记本子品牌-品牌形象",
+        "商用笔记本品牌-子品牌认知、美誉",
+        "商用笔记本品牌-信息获取渠道",
+        "商用笔记本品牌-采购考虑因素",
+        "商用台式机品牌-认知、美誉",
+        "AI PC"
+      ],
+      "observation_count": 10616
+    },
+    {
+      "audience": "政企大客户",
+      "file": "Ipsos-FY26-政企大客户-平台数据表-20260804.xlsx",
+      "sheet_count": 10,
+      "sheets": [
+        "AI PC",
+        "国产电脑",
+        "商用笔记本品牌-认知、美誉",
+        "商用笔记本品牌-品牌形象",
+        "商用笔记本品牌-采购考虑因素",
+        "商用台式机品牌-认知、美誉",
+        "商用台式机品牌-品牌形象",
+        "商用台式机品牌-采购考虑因素",
+        "工作站-认知、美誉",
+        "智能一体机|AI一体机-24Q3新增"
+      ],
+      "observation_count": 5489
+    }
+  ],
+  "facets": {
+    "audiences": [
+      "SMB",
+      "大众消费者",
+      "政企大客户"
+    ],
+    "product_spaces": [
+      "AI PC",
+      "AI一体机",
+      "AI主机",
+      "个人智能设备与服务",
+      "台式电脑",
+      "国产PC",
+      "工作站",
+      "笔记本电脑"
+    ],
+    "sheets": [
+      "AI PC",
+      "AI主机",
+      "个人智能体",
+      "个人智能设备AI服务",
+      "台式机",
+      "台式机各品类认知度",
+      "台式机品牌形象",
+      "商用台式机品牌-品牌形象",
+      "商用台式机品牌-认知、美誉",
+      "商用台式机品牌-采购考虑因素",
+      "商用笔记本品牌-信息获取渠道",
+      "商用笔记本品牌-品牌形象",
+      "商用笔记本品牌-子品牌认知、美誉",
+      "商用笔记本品牌-认知、美誉",
+      "商用笔记本品牌-采购考虑因素",
+      "商用笔记本子品牌-品牌形象",
+      "国产电脑",
+      "工作站-认知、美誉",
+      "智能一体机|AI一体机-24Q3新增",
+      "笔记本品牌认知度和美誉度",
+      "笔记本品牌认知度和美誉度-八大区",
+      "笔记本品牌认知度和美誉度-四大人群",
+      "笔记本子品牌-YOGA及其竞品",
+      "笔记本子品牌-小新及其竞品",
+      "笔记本子品牌-拯救者及其竞品",
+      "笔记本形象base"
+    ],
+    "waves": [
+      "17 Sep",
+      "18 Mar",
+      "18 Sep",
+      "19 Mar",
+      "19  Sep",
+      "20 Mar",
+      "20 Jun",
+      "20Jun",
+      "20 Sep",
+      "20 Dec",
+      "20Dec",
+      "21 Mar",
+      "21Jun",
+      "21 Jun",
+      "21 Sep",
+      "21 Dec",
+      "22Mar",
+      "22 Mar",
+      "22 Jun",
+      "22Sep",
+      "22 Sep",
+      "22 Dec",
+      "23 Mar",
+      "23 Jun",
+      "23 Sep",
+      "23 Dec",
+      "24 Mar",
+      "24 Jun",
+      "24 Sep",
+      "24 Dec",
+      "25 Mar",
+      "25 Jun",
+      "25 jun",
+      "25 Sep",
+      "25 Dec",
+      "26 Mar",
+      "26 Jun"
+    ],
+    "indicator_groups": [
+      "关注的活动形式",
+      "品牌形象",
+      "品牌美誉度",
+      "品牌美誉度-分八大区",
+      "品牌美誉度-分四大人群",
+      "品牌认知度",
+      "品牌认知度-分八大区",
+      "品牌认知度-分四大人群",
+      "商用台式机采购考虑因素",
+      "商用笔记本采购考虑因素",
+      "感兴趣的IT内容",
+      "感兴趣的IT内容排序",
+      "接触IT设备电子产品信息渠道",
+      "提示后总认知",
+      "无提示总认知",
+      "无提示第一认知",
+      "采购IT设备电子产品信息获取渠道"
+    ],
+    "brands": [
+      "AOC",
+      "OPPO",
+      "ThinkBook",
+      "ThinkCentre",
+      "ThinkPad",
+      "ThinkStation",
+      "VIVO",
+      "三星",
+      "华为",
+      "华硕",
+      "宏碁",
+      "小米",
+      "微软",
+      "惠普",
+      "惠普暗影精灵",
+      "戴尔",
+      "拯救者",
+      "攀升",
+      "新华三",
+      "曙光",
+      "机械师",
+      "机械革命",
+      "极摩客",
+      "海尔",
+      "清华同方",
+      "神州",
+      "紫光",
+      "美的",
+      "联想",
+      "联想启天",
+      "联想扬天",
+      "联想昭阳",
+      "联想百应",
+      "英伟达",
+      "苹果",
+      "荣耀",
+      "长城",
+      "零刻",
+      "雷神",
+      "雷蛇"
+    ]
+  },
+  "by_audience": {
+    "SMB": 10616,
+    "大众消费者": 9503,
+    "政企大客户": 5489
+  },
+  "by_product_space": {
+    "AI PC": 459,
+    "台式电脑": 7992,
+    "笔记本电脑": 16437,
+    "AI主机": 27,
+    "个人智能设备与服务": 222,
+    "AI一体机": 105,
+    "国产PC": 90,
+    "工作站": 276
+  },
+  "insights": [
+    {
+      "insight_id": "aipc_大众消费者_无提示总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "大众消费者",
+      "claim": "大众消费者中，联想AI PC无提示认知从24 Jun的3%升至26 Jun的23%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 3.0,
+          "base": 2000,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 23.0,
+          "base": 2000,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "aipc_大众消费者_提示后总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "大众消费者",
+      "claim": "大众消费者中，联想AI PC提示后认知从24 Jun的10%升至26 Jun的36%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 10.0,
+          "base": 2000,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 36.0,
+          "base": 2000,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "aipc_SMB_无提示总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "SMB",
+      "claim": "SMB中，联想AI PC无提示认知从24 Jun的6%升至26 Jun的22%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 6.0,
+          "base": 1200,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 22.0,
+          "base": 1200,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "aipc_SMB_提示后总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "SMB",
+      "claim": "SMB中，联想AI PC提示后认知从24 Jun的15%升至26 Jun的40%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 15.0,
+          "base": 1200,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 40.0,
+          "base": 1200,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "aipc_政企大客户_无提示总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "政企大客户",
+      "claim": "政企大客户中，联想AI PC无提示认知从24 Jun的7%升至26 Jun的28%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 7.0,
+          "base": 600,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 28.0,
+          "base": 600,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "aipc_政企大客户_提示后总认知",
+      "decision": "AI PC品牌传播",
+      "audience": "政企大客户",
+      "claim": "政企大客户中，联想AI PC提示后认知从24 Jun的16%升至26 Jun的42%。",
+      "evidence": [
+        {
+          "wave": "24 Jun",
+          "value": 16.0,
+          "base": 600,
+          "source_sheet": "AI PC"
+        },
+        {
+          "wave": "26 Jun",
+          "value": 42.0,
+          "base": 600,
+          "source_sheet": "AI PC"
+        }
+      ],
+      "implication": "可用于判断品牌心智变化及分受众传播重点；需要与同期媒体、Social和市场供给信号并列解释。",
+      "boundary": "品牌认知变化不等于AI PC渗透率、销量或广告因果增量。"
+    },
+    {
+      "insight_id": "enterprise_notebook_procurement_top_factors",
+      "decision": "商用笔记本产品与服务配置",
+      "audience": "政企大客户",
+      "claim": "26 Jun政企商用笔记本采购中，首要考虑因素是产品品质和稳定性（63%）。",
+      "evidence": [
+        {
+          "item": "产品品质和稳定性",
+          "value": 63.0,
+          "base": 600,
+          "source_sheet": "商用笔记本品牌-采购考虑因素"
+        },
+        {
+          "item": "产品配置和技术参数",
+          "value": 54.0,
+          "base": 600,
+          "source_sheet": "商用笔记本品牌-采购考虑因素"
+        },
+        {
+          "item": "品牌知名度高",
+          "value": 45.0,
+          "base": 600,
+          "source_sheet": "商用笔记本品牌-采购考虑因素"
+        },
+        {
+          "item": "产品设计功能符合业务需求",
+          "value": 41.0,
+          "base": 600,
+          "source_sheet": "商用笔记本品牌-采购考虑因素"
+        },
+        {
+          "item": "产品信息安全性",
+          "value": 37.0,
+          "base": 600,
+          "source_sheet": "商用笔记本品牌-采购考虑因素"
+        }
+      ],
+      "implication": "产品方案、销售材料与服务承诺应优先覆盖高频采购标准，再按行业、规模与采购角色进行下一层验证。",
+      "boundary": "多选考虑比例反映声明重要性，不是控制其他因素后的独立效应；进入驱动模型前需连接个体Raw和采购结果。"
+    }
+  ],
+  "sheet_catalog": [
+    {
+      "audience": "SMB",
+      "product_space": "AI PC",
+      "sheet": "AI PC"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-品牌形象"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-认知、美誉"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-信息获取渠道"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-品牌形象"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-子品牌认知、美誉"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-认知、美誉"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-采购考虑因素"
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本子品牌-品牌形象"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "AI PC",
+      "sheet": "AI PC"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "AI主机",
+      "sheet": "AI主机"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "个人智能设备与服务",
+      "sheet": "个人智能体"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "个人智能设备与服务",
+      "sheet": "个人智能设备AI服务"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机各品类认知度"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机品牌形象"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度-八大区"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度-四大人群"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-YOGA及其竞品"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-小新及其竞品"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-拯救者及其竞品"
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本形象base"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "AI PC",
+      "sheet": "AI PC"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "AI一体机",
+      "sheet": "智能一体机|AI一体机-24Q3新增"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-品牌形象"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-认知、美誉"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-采购考虑因素"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "国产PC",
+      "sheet": "国产电脑"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "工作站",
+      "sheet": "工作站-认知、美誉"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-品牌形象"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-认知、美誉"
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-采购考虑因素"
+    }
+  ],
+  "filter_catalog": [
+    {
+      "audience": "SMB",
+      "product_space": "AI PC",
+      "sheet": "AI PC",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "ThinkCentre",
+        "华为",
+        "宏碁",
+        "小米",
+        "惠普",
+        "戴尔",
+        "清华同方",
+        "联想",
+        "联想扬天"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知",
+        "无提示第一认知"
+      ],
+      "brands": [
+        "ThinkCentre",
+        "华为",
+        "华硕",
+        "宏碁",
+        "小米",
+        "惠普",
+        "戴尔",
+        "清华同方",
+        "联想扬天"
+      ],
+      "waves": [
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-信息获取渠道",
+      "indicator_groups": [
+        "关注的活动形式",
+        "感兴趣的IT内容",
+        "感兴趣的IT内容排序",
+        "接触IT设备电子产品信息渠道",
+        "采购IT设备电子产品信息获取渠道"
+      ],
+      "brands": [],
+      "waves": [
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "22 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-子品牌认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知"
+      ],
+      "brands": [
+        "ThinkBook",
+        "ThinkPad",
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想扬天",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知",
+        "无提示第一认知"
+      ],
+      "brands": [
+        "ThinkBook",
+        "ThinkPad",
+        "华为",
+        "华硕",
+        "惠普",
+        "戴尔",
+        "联想",
+        "联想扬天",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-采购考虑因素",
+      "indicator_groups": [
+        "商用笔记本采购考虑因素"
+      ],
+      "brands": [],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun"
+      ]
+    },
+    {
+      "audience": "SMB",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本子品牌-品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "ThinkBook",
+        "ThinkPad",
+        "联想扬天"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "AI PC",
+      "sheet": "AI PC",
+      "indicator_groups": [
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "AI主机",
+      "sheet": "AI主机",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "机械革命",
+        "极摩客",
+        "联想",
+        "联想百应",
+        "英伟达",
+        "苹果",
+        "零刻",
+        "雷神"
+      ],
+      "waves": [
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "个人智能设备与服务",
+      "sheet": "个人智能体",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "OPPO",
+        "VIVO",
+        "三星",
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "个人智能设备与服务",
+      "sheet": "个人智能设备AI服务",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华硕",
+        "惠普",
+        "海尔",
+        "美的",
+        "联想"
+      ],
+      "waves": [
+        "25 Jun",
+        "25 Sep",
+        "25 Dec"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华硕",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机各品类认知度",
+      "indicator_groups": [
+        "提示后总认知"
+      ],
+      "brands": [
+        "AOC ",
+        "宏碁",
+        "惠普",
+        "惠普暗影精灵",
+        "戴尔",
+        "拯救者",
+        "攀升",
+        "机械师",
+        "清华同方",
+        "联想",
+        "雷神"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "台式电脑",
+      "sheet": "台式机品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "华硕",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度",
+      "indicator_groups": [
+        "品牌美誉度",
+        "品牌认知度",
+        "提示后总认知"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "17 Sep",
+        "18 Mar",
+        "18 Sep",
+        "19 Mar",
+        "19  Sep",
+        "20 Mar",
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度-八大区",
+      "indicator_groups": [
+        "品牌美誉度-分八大区",
+        "品牌认知度-分八大区"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本品牌认知度和美誉度-四大人群",
+      "indicator_groups": [
+        "品牌美誉度-分四大人群",
+        "品牌认知度-分四大人群"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-YOGA及其竞品",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "小米",
+        "戴尔",
+        "联想",
+        "苹果"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-小新及其竞品",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "华硕",
+        "宏碁",
+        "小米",
+        "惠普",
+        "戴尔",
+        "联想",
+        "荣耀"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本子品牌-拯救者及其竞品",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华硕",
+        "宏碁",
+        "小米",
+        "惠普",
+        "戴尔",
+        "机械师",
+        "机械革命",
+        "神州",
+        "联想",
+        "雷蛇"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "大众消费者",
+      "product_space": "笔记本电脑",
+      "sheet": "笔记本形象base",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "华为",
+        "小米",
+        "微软",
+        "惠普",
+        "戴尔",
+        "联想",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "20 Jun",
+        "20 Sep",
+        "20 Dec",
+        "21 Mar",
+        "21 Jun",
+        "21 Sep",
+        "21 Dec",
+        "22 Mar",
+        "22 Jun",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "AI PC",
+      "sheet": "AI PC",
+      "indicator_groups": [
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "联想",
+        "苹果"
+      ],
+      "waves": [
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "AI一体机",
+      "sheet": "智能一体机|AI一体机-24Q3新增",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "联想"
+      ],
+      "waves": [
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "ThinkCentre",
+        "华为",
+        "宏碁",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "清华同方",
+        "联想启天"
+      ],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知",
+        "无提示第一认知"
+      ],
+      "brands": [
+        "ThinkCentre",
+        "华为",
+        "宏碁",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "清华同方",
+        "联想启天"
+      ],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "台式电脑",
+      "sheet": "商用台式机品牌-采购考虑因素",
+      "indicator_groups": [
+        "商用台式机采购考虑因素"
+      ],
+      "brands": [],
+      "waves": [
+        "20 Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "国产PC",
+      "sheet": "国产电脑",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "华为",
+        "新华三",
+        "曙光",
+        "清华同方",
+        "紫光",
+        "联想",
+        "长城"
+      ],
+      "waves": [
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "工作站",
+      "sheet": "工作站-认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知"
+      ],
+      "brands": [
+        "ThinkStation",
+        "华硕",
+        "惠普",
+        "戴尔",
+        "苹果"
+      ],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-品牌形象",
+      "indicator_groups": [
+        "品牌形象"
+      ],
+      "brands": [
+        "ThinkPad",
+        "华为",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "联想",
+        "联想昭阳",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-认知、美誉",
+      "indicator_groups": [
+        "品牌美誉度",
+        "提示后总认知",
+        "无提示总认知",
+        "无提示第一认知"
+      ],
+      "brands": [
+        "ThinkPad",
+        "华为",
+        "华硕",
+        "惠普",
+        "戴尔",
+        "新华三",
+        "联想昭阳",
+        "苹果",
+        "荣耀"
+      ],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    },
+    {
+      "audience": "政企大客户",
+      "product_space": "笔记本电脑",
+      "sheet": "商用笔记本品牌-采购考虑因素",
+      "indicator_groups": [
+        "商用笔记本采购考虑因素"
+      ],
+      "brands": [],
+      "waves": [
+        "20Jun",
+        "20Dec",
+        "21Jun",
+        "22Mar",
+        "22 Sep",
+        "22 Dec",
+        "23 Mar",
+        "23 Jun",
+        "23 Sep",
+        "23 Dec",
+        "24 Mar",
+        "24 Jun",
+        "24 Sep",
+        "24 Dec",
+        "25 Mar",
+        "25 Jun",
+        "25 Sep",
+        "25 Dec",
+        "26 Mar",
+        "26 Jun"
+      ]
+    }
+  ],
+  "default_query": {
+    "audience": "大众消费者",
+    "product_space": "AI PC",
+    "sheet": "AI PC",
+    "indicator_group": "提示后总认知",
+    "brand": "联想",
+    "wave": "全部期次"
+  }
+}

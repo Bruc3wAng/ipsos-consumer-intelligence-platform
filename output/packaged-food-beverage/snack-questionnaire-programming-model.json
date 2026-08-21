@@ -1,0 +1,2275 @@
+{
+  "meta": {
+    "project": "中国零食消费者研究",
+    "market": "中国",
+    "source_version": "v0.3",
+    "selected_languages": [
+      "zh-CN",
+      "en"
+    ],
+    "logic_columns": [
+      "zh-CN",
+      "en"
+    ],
+    "questionnaire_count": 46,
+    "option_code_rule": "常规选项顺序编码；开放Other=98；None/记不清/不愿回答=99；98/99固定置底",
+    "logic_rule": "使用=、≠、区间、/、或、&表达条件；terminate表示结束访问"
+  },
+  "questions": [
+    {
+      "module": "甄别与配额",
+      "question_id": "S1",
+      "label": "年龄",
+      "type": "SA",
+      "wording": "您的年龄是？",
+      "wording_en": "What is your age?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "18-24",
+          "text_en": "18-24",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "25-34",
+          "text_en": "25-34",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "35-44",
+          "text_en": "35-44",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "45-54",
+          "text_en": "45-54",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S2",
+      "label": "性别",
+      "type": "SA",
+      "wording": "您的性别是？",
+      "wording_en": "What is your gender?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "男性",
+          "text_en": "Male",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "女性",
+          "text_en": "Female",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S3",
+      "label": "常住地区",
+      "type": "SA",
+      "wording": "您目前常住的地区是？",
+      "wording_en": "In which region do you currently live?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "华东",
+          "text_en": "East China",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "华南",
+          "text_en": "South China",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "华北",
+          "text_en": "North China",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "华中",
+          "text_en": "Central China",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "西南",
+          "text_en": "Southwest China",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "东北",
+          "text_en": "Northeast China",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S4",
+      "label": "城市级别",
+      "type": "SA",
+      "wording": "您目前常住城市的级别是？",
+      "wording_en": "What is the city tier of the city where you currently live?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "一线",
+          "text_en": "Tier 1",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "新一线",
+          "text_en": "New Tier 1",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "二线",
+          "text_en": "Tier 2",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "三线及以下",
+          "text_en": "Tier 3 or below",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S5",
+      "label": "个人月收入",
+      "type": "SA",
+      "wording": "您的个人月收入是？",
+      "wording_en": "What is your personal monthly income?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "6000以下",
+          "text_en": "Below RMB 6,000",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "6000-12000",
+          "text_en": "RMB 6,000-11,999",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "12000-20000",
+          "text_en": "RMB 12,000-19,999",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "20000以上",
+          "text_en": "RMB 20,000 or above",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于当前模块的分析、解释或后续题目优化。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S6",
+      "label": "零食购买经历",
+      "type": "SA",
+      "wording": "过去3个月，您是否亲自购买过任何预包装零食？",
+      "wording_en": "In the past 3 months, have you personally purchased any pre-packaged snacks?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "是",
+          "text_en": "Yes",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "否",
+          "text_en": "No",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "界定可进入购买行为模块的有效购买者Base。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S7",
+      "label": "家庭购买角色",
+      "type": "SA",
+      "wording": "您在家庭零食购买决策中通常承担什么角色？",
+      "wording_en": "What role do you usually play in household snack purchase decisions?",
+      "setting": "单选",
+      "base": "S6=是",
+      "base_en": "S6=1",
+      "programmer_logic": "S6=1时出示；否则跳至S8。",
+      "programmer_logic_en": "Ask if S6=1; otherwise skip to S8",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "主要决定者",
+          "text_en": "Main decision-maker",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "共同决定者",
+          "text_en": "Joint decision-maker",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "提出需求但不负责购买",
+          "text_en": "Raise the need but do not make the purchase",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "完全不参与",
+          "text_en": "Not involved at all",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "区分购买决策者与需求影响者，控制行为问题Base。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S8",
+      "label": "近期同类调研",
+      "type": "MA",
+      "wording": "请问您在过去6个月中接受过以下类型的市场调研吗？",
+      "wording_en": "Which of the following types of market research have you participated in during the past 6 months?",
+      "setting": "多选；code99固定置底且与其他选项互斥",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-3随机；选中1或2时终止访问；99固定置底，与其他选项互斥。",
+      "programmer_logic_en": "Randomize codes 1-3; terminate if code 1 or 2 is selected; code 99 fixed at bottom and exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "食品饮料类",
+          "text_en": "Food and beverages",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "零售渠道类（如商超、便利店、零食量贩或电商等）",
+          "text_en": "Retail channels, such as supermarkets, convenience stores, snack specialty chains or e-commerce",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "其他快速消费品类",
+          "text_en": "Other fast-moving consumer goods",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "以上均无",
+          "text_en": "None of the above",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "排除近期参加同类研究的被访者，降低专业被访和记忆效应偏差。"
+    },
+    {
+      "module": "甄别与配额",
+      "question_id": "S9",
+      "label": "相关行业排除",
+      "type": "MA",
+      "wording": "请问您本人或您的家人有在以下行业从事工作的吗？",
+      "wording_en": "Do you or any member of your family work in any of the following industries?",
+      "setting": "多选；code99固定置底且与其他选项互斥",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-4随机；选中1-4中任一项时终止访问；99固定置底，与其他选项互斥。",
+      "programmer_logic_en": "Randomize codes 1-4; terminate if any code 1-4 is selected; code 99 fixed at bottom and exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "广告或公关公司",
+          "text_en": "Advertising or public relations",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "市场研究公司",
+          "text_en": "Market research",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "食品或饮料生产、经销或零售企业",
+          "text_en": "Food or beverage manufacturing, distribution or retail",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "商超、便利店、零食量贩或电商平台的采购、选品或招商主管部门",
+          "text_en": "Merchandising, sourcing or vendor recruitment for supermarkets, convenience stores, snack specialty chains or e-commerce platforms",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "以上皆无",
+          "text_en": "None of the above",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "排除与研究品类或研究行业直接相关的从业者及家属。"
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q1",
+      "label": "购买品类",
+      "type": "MA",
+      "wording": "过去3个月，您购买过以下哪些零食品类？",
+      "wording_en": "Which of the following snack categories have you purchased in the past 3 months?",
+      "setting": "多选；code99互斥",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "99固定置底，与其他选项互斥。",
+      "programmer_logic_en": "Code 99 is exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "膨化食品",
+          "text_en": "Puffed snacks",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "坚果炒货",
+          "text_en": "Nuts and seeds",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "果干蜜饯",
+          "text_en": "Dried fruit and preserved fruit",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "饼干糕点",
+          "text_en": "Biscuits and pastries",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "肉类零食",
+          "text_en": "Meat snacks",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "糖果巧克力",
+          "text_en": "Confectionery and chocolate",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "以上均无",
+          "text_en": "None of the above",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [
+        "KPI_PENETRATION_3M"
+      ],
+      "metric_contribution": "形成品类渗透率与深度模块路由，是通用需求基线。"
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q2",
+      "label": "购买频次",
+      "type": "Numeric",
+      "wording": "过去3个月，您通常每月购买膨化食品多少次？",
+      "wording_en": "In the past 3 months, how many times per month did you usually purchase puffed snacks?",
+      "setting": "数值输入；0-12次；只允许整数",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示",
+      "programmer_logic_en": "Ask if Q1=1",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "0-12次",
+          "text_en": "0-12 times",
+          "behavior": "数值输入；0-12次；只允许整数",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [
+        "KPI_MONTHLY_BUYER",
+        "KPI_FREQUENCY_BUYER"
+      ],
+      "metric_contribution": "形成购买者频次与月度活跃购买者指标。"
+    },
+    {
+      "module": "品类使用与购买",
+      "question_id": "Q3",
+      "label": "月度支出",
+      "type": "Numeric",
+      "wording": "您最近一个月购买膨化食品的总支出约为多少？",
+      "wording_en": "Approximately how much did you spend on puffed snacks in the most recent month?",
+      "setting": "数值输入；人民币元；≥0",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示",
+      "programmer_logic_en": "Ask if Q1=1",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "人民币元",
+          "text_en": "RMB",
+          "behavior": "数值输入；人民币元；≥0",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [
+        "KPI_MONTHLY_SPEND_BUYER"
+      ],
+      "metric_contribution": "形成购买者花费层级，不直接外推市场规模。"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q4",
+      "label": "购买渠道",
+      "type": "MA",
+      "wording": "过去3个月，您通过哪些渠道购买过膨化食品？",
+      "wording_en": "Through which channels have you purchased puffed snacks in the past 3 months?",
+      "setting": "多选；选项随机",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；选项1-5随机。",
+      "programmer_logic_en": "Ask if Q1=1; randomize codes 1-5",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "零食量贩",
+          "text_en": "Snack specialty chains",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "综合电商",
+          "text_en": "General e-commerce",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "商超",
+          "text_en": "Supermarkets and hypermarkets",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "即时零售",
+          "text_en": "On-demand retail",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "便利店",
+          "text_en": "Convenience stores",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_CHANNEL_REACH"
+      ],
+      "metric_contribution": "形成渠道触达与重叠，用于渠道优先级。"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q5",
+      "label": "主要渠道",
+      "type": "SA",
+      "wording": "您购买膨化食品最主要的渠道是？",
+      "wording_en": "What is your main channel for purchasing puffed snacks?",
+      "setting": "单选；选项随机",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；选项1-5随机。",
+      "programmer_logic_en": "Ask if Q1=1; randomize codes 1-5",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "零食量贩",
+          "text_en": "Snack specialty chains",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "综合电商",
+          "text_en": "General e-commerce",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "商超",
+          "text_en": "Supermarkets and hypermarkets",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "即时零售",
+          "text_en": "On-demand retail",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "便利店",
+          "text_en": "Convenience stores",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_MAIN_CHANNEL"
+      ],
+      "metric_contribution": "形成主要渠道构成，用于渠道场景模型。"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q6",
+      "label": "食用场景",
+      "type": "MA",
+      "wording": "您通常在什么场景食用膨化食品？",
+      "wording_en": "In which situations do you usually eat puffed snacks?",
+      "setting": "多选；选项随机",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；选项1-5随机。",
+      "programmer_logic_en": "Ask if Q1=1; randomize codes 1-5",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "追剧娱乐",
+          "text_en": "Watching shows or entertainment",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "工作学习间隙",
+          "text_en": "During work or study breaks",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "家庭分享",
+          "text_en": "Sharing with family",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "通勤出行",
+          "text_en": "Commuting or travelling",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "社交聚会",
+          "text_en": "Social gatherings",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_OCCASION_REACH"
+      ],
+      "metric_contribution": "形成场景触达和规格、传播机会。"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q7",
+      "label": "选择因素重要性",
+      "type": "Matrix-SA",
+      "wording": "选择膨化食品时，以下因素对您有多重要？",
+      "wording_en": "How important are the following factors when you choose puffed snacks?",
+      "setting": "逐项单选；1=完全不重要，5=非常重要；题项随机",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "题项1-6随机；量表选项顺序固定。",
+      "programmer_logic_en": "Randomize items 1-6",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "口味",
+          "text_en": "Taste",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "价格",
+          "text_en": "Price",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "健康/成分",
+          "text_en": "Health and ingredients",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "品牌",
+          "text_en": "Brand",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "包装便利",
+          "text_en": "Packaging convenience",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "新奇感",
+          "text_en": "Novelty",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_NEED_IMPORTANCE"
+      ],
+      "metric_contribution": "形成需求重要性并进入购买倾向与选择模型。"
+    },
+    {
+      "module": "场景与需求",
+      "question_id": "Q8",
+      "label": "当前满足度",
+      "type": "Matrix-SA",
+      "wording": "现有膨化食品在健康负担、配料透明和规格便利方面满足您的程度如何？",
+      "wording_en": "How well do current puffed snacks meet your needs in terms of health burden, ingredient transparency and pack convenience?",
+      "setting": "逐项单选；1=完全不满足，5=完全满足；题项随机",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "题项1-3随机；量表选项顺序固定。",
+      "programmer_logic_en": "Randomize items 1-3",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "健康负担",
+          "text_en": "Health burden",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "配料透明",
+          "text_en": "Ingredient transparency",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "规格便利",
+          "text_en": "Pack convenience",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_HEALTH_FIT_T2B",
+        "KPI_UNMET_NEED"
+      ],
+      "metric_contribution": "形成满足度与未满足需求护栏。"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q9",
+      "label": "逐价购买考虑",
+      "type": "Matrix-SA",
+      "wording": "对于70g袋装膨化食品，在以下价格下您是否会考虑购买？",
+      "wording_en": "Would you consider purchasing a 70g bag of puffed snacks at each of the following prices?",
+      "setting": "逐价询问；1=会考虑购买，2=不会考虑购买",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "按价格由低到高逐一询问；任一价格选择2时，后续更高价格自动记为2并结束本题。",
+      "programmer_logic_en": "Ask prices in ascending order from code 1 to 4; once code 2 is selected, auto-code all higher prices as code 2 and end the question",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "¥5.9",
+          "text_en": "RMB 5.9",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "¥7.9",
+          "text_en": "RMB 7.9",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "¥9.9",
+          "text_en": "RMB 9.9",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "¥11.9",
+          "text_en": "RMB 11.9",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_PRICE_ACCEPT_7_9",
+        "KPI_PRICE_CURVE"
+      ],
+      "metric_contribution": "形成逐价接受曲线、价格拐点与价格弹性。"
+    },
+    {
+      "module": "新品概念",
+      "question_id": "Q10",
+      "label": "新品概念评价",
+      "type": "Matrix-SA",
+      "wording": "请评价一款70g可重复封口、轻油咸香的膨化食品概念。",
+      "wording_en": "Please evaluate a concept for a 70g, resealable, lightly oiled savoury puffed snack.",
+      "setting": "逐项单选；1=非常低，5=非常高",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "题项1-3顺序固定；量表选项顺序固定。",
+      "programmer_logic_en": "Keep items 1-3 in fixed order",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "相关性",
+          "text_en": "Relevance",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "差异化",
+          "text_en": "Differentiation",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "购买意向",
+          "text_en": "Purchase intent",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_CONCEPT_RELEVANCE_T2B",
+        "KPI_CONCEPT_TRIAL_T2B"
+      ],
+      "metric_contribution": "形成概念相关性、差异化和试购意向。"
+    },
+    {
+      "module": "未来行为",
+      "question_id": "Q11",
+      "label": "未来购买意向",
+      "type": "SA",
+      "wording": "未来1个月，您购买膨化食品的可能性有多大？",
+      "wording_en": "How likely are you to purchase puffed snacks in the next month?",
+      "setting": "单选；1=完全不可能，5=非常可能",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "",
+      "programmer_logic_en": "",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "1完全不可能",
+          "text_en": "1 Not at all likely",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "2",
+          "text_en": "2",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "3",
+          "text_en": "3",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "4",
+          "text_en": "4",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "5非常可能",
+          "text_en": "5 Extremely likely",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_PURCHASE_INTENT_T2B"
+      ],
+      "metric_contribution": "形成下一期领先指标和购买倾向目标变量。"
+    },
+    {
+      "module": "离散选择实验",
+      "question_id": "DCE1-DCE8",
+      "label": "产品方案选择",
+      "type": "SA",
+      "wording": "在方案A、方案B和均不选择之间做出选择。",
+      "wording_en": "Please choose between Product A, Product B and Neither.",
+      "setting": "每人8组；每组A/B/均不选择三选一",
+      "base": "全部有效被访者；每人8题",
+      "base_en": "全部有效被访者；每人8题",
+      "programmer_logic": "循环出示8组；每组方案A/B左右随机；3“均不选择”固定；方案属性按DCE设计文件导入。",
+      "programmer_logic_en": "Show 8 tasks per respondent; randomize Product A/B left-right; keep code 3 fixed; import attributes from the DCE design file",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "方案A",
+          "text_en": "Product A",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "方案B",
+          "text_en": "Product B",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "均不选择",
+          "text_en": "Neither",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [
+        "KPI_DCE_UTILITIES",
+        "KPI_SCENARIO_SHARE"
+      ],
+      "metric_contribution": "估计价格、口味、规格、包装、表达与品牌层级的相对效用。"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q12",
+      "label": "购买品牌",
+      "type": "MA",
+      "wording": "过去3个月，您购买过哪些膨化食品品牌？",
+      "wording_en": "Which brands of puffed snacks have you purchased in the past 3 months?",
+      "setting": "多选；品牌选项随机；code98/99固定置底",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；选项1-5随机；98/99固定置底；99与其他选项互斥。",
+      "programmer_logic_en": "Ask if Q1=1; randomize codes 1-5; keep codes 98/99 fixed at bottom; code 99 is exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "乐事",
+          "text_en": "Lay's",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "上好佳",
+          "text_en": "Oishi",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "可比克",
+          "text_en": "Copico",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "旺旺",
+          "text_en": "Want Want",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "好丽友",
+          "text_en": "Orion",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 98,
+          "text": "其他，请注明：________",
+          "text_en": "Other brand",
+          "behavior": "开放填写；固定置底",
+          "behavior_en": "Open end; fixed at bottom"
+        },
+        {
+          "code": 99,
+          "text": "记不清品牌",
+          "text_en": "Cannot remember the brand",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成品牌购买渗透、品牌组合和迁移分析基础。"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q13",
+      "label": "最近购买品牌",
+      "type": "SA",
+      "wording": "您最近一次购买的是哪个品牌？",
+      "wording_en": "Which brand did you purchase most recently?",
+      "setting": "单选；从Q12过录已选品牌",
+      "base": "Q12至少选择一个品牌",
+      "base_en": "Q12至少选择一个品牌",
+      "programmer_logic": "Q12选中1-5或98时出示；过录Q12已选品牌并保留原Code；仅选中1个品牌时自动过录；99固定置底。",
+      "programmer_logic_en": "Ask if Q12=1-5/98; pipe selected brands from Q12 and retain their original codes; auto-code when only one brand is selected; code 99 fixed at bottom",
+      "required": true,
+      "options": [
+        {
+          "code": "Q12原code",
+          "text": "从Q12已选品牌带入",
+          "text_en": "Pipe in the brands selected at Q12",
+          "behavior": "从Q12过录；保留原code",
+          "behavior_en": "Pipe from Q12; retain original code"
+        },
+        {
+          "code": 99,
+          "text": "记不清",
+          "text_en": "Cannot remember",
+          "behavior": "固定置底",
+          "behavior_en": "Fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成最近购买品牌和品牌转移起点。"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q14",
+      "label": "最近购买考虑因素",
+      "type": "MA",
+      "wording": "最近一次购买时，您最主要考虑了哪些因素？",
+      "wording_en": "What were the main factors you considered for your most recent purchase?",
+      "setting": "多选；选项随机；最多3项",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；选项1-9随机；最多选择3项。",
+      "programmer_logic_en": "Ask if Q1=1; randomize codes 1-9; select up to 3",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "口味",
+          "text_en": "Taste",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "价格",
+          "text_en": "Price",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "配料/成分",
+          "text_en": "Ingredients",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "品牌",
+          "text_en": "Brand",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "包装规格",
+          "text_en": "Pack size",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "促销",
+          "text_en": "Promotion",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 7,
+          "text": "货架可见",
+          "text_en": "Shelf visibility",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 8,
+          "text": "他人推荐",
+          "text_en": "Recommendation from others",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 9,
+          "text": "新品尝鲜",
+          "text_en": "Trying something new",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "连接实际购买任务与需求驱动，辅助解释Q7重要性。"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q15",
+      "label": "购买计划性",
+      "type": "SA",
+      "wording": "最近一次购买更接近以下哪种情况？",
+      "wording_en": "Which of the following best describes your most recent purchase?",
+      "setting": "单选",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示",
+      "programmer_logic_en": "Ask if Q1=1",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "到店前已计划购买该品牌/产品",
+          "text_en": "I planned to purchase this brand or product before visiting the store",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "计划买零食但现场决定品牌",
+          "text_en": "I planned to buy snacks but chose the brand at the point of purchase",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "完全临时起意",
+          "text_en": "It was completely unplanned",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "由他人决定",
+          "text_en": "Someone else made the decision",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "区分计划型与冲动型购买，进入渠道和货架模型。"
+    },
+    {
+      "module": "品牌与购买旅程",
+      "question_id": "Q16",
+      "label": "再次购买意向",
+      "type": "SA",
+      "wording": "最近一次购买后，您再次购买同一产品的可能性有多大？",
+      "wording_en": "After your most recent purchase, how likely are you to purchase the same product again?",
+      "setting": "单选；1=完全不可能，5=非常可能",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；code4-5计算T2B",
+      "programmer_logic_en": "Ask if Q1=1; codes 4-5 form T2B",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "1完全不可能",
+          "text_en": "1 Not at all likely",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "2",
+          "text_en": "2",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "3",
+          "text_en": "3",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "4",
+          "text_en": "4",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "5非常可能",
+          "text_en": "5 Extremely likely",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成复购意向领先指标，后续与真实复购结果校准。"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q17",
+      "label": "包装规格",
+      "type": "MA",
+      "wording": "您通常购买哪些包装规格？",
+      "wording_en": "Which pack sizes do you usually purchase?",
+      "setting": "多选",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示",
+      "programmer_logic_en": "Ask if Q1=1",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "30g及以下单人小包装",
+          "text_en": "Individual small pack, 30g or below",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "31-70g常规包装",
+          "text_en": "Regular pack, 31-70g",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "71-150g分享装",
+          "text_en": "Sharing pack, 71-150g",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "150g以上家庭装",
+          "text_en": "Family pack, above 150g",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "多小袋组合装",
+          "text_en": "Multipack of small packs",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成规格需求结构并进入产品组合实验。"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q18",
+      "label": "产品表达吸引力",
+      "type": "Matrix-SA",
+      "wording": "以下产品表达会在多大程度上提高您的购买兴趣？",
+      "wording_en": "To what extent would each of the following product claims increase your interest in purchasing?",
+      "setting": "逐项单选；1=完全不会提高，5=显著提高；题项随机",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "题项1-6随机；量表选项顺序固定。",
+      "programmer_logic_en": "Randomize items 1-6",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "少油/非油炸",
+          "text_en": "Less oil or not fried",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "配料表更简单",
+          "text_en": "Simpler ingredient list",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "低盐",
+          "text_en": "Lower salt",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "高蛋白",
+          "text_en": "High protein",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "真实原料可见",
+          "text_en": "Visible real ingredients",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "不添加人工色素",
+          "text_en": "No artificial colours",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "筛选可进入概念与选择实验的健康/成分表达。"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q19",
+      "label": "购买阻碍",
+      "type": "MA",
+      "wording": "您不购买或减少购买膨化食品的主要原因是什么？",
+      "wording_en": "What are the main reasons you do not purchase or reduce your purchase of puffed snacks?",
+      "setting": "多选；选项随机；code98固定置底",
+      "base": "Q1未选择膨化食品或Q2低频",
+      "base_en": "Q1未选择膨化食品或Q2低频",
+      "programmer_logic": "Q1≠1，或Q1=1且Q2=0-1时出示；选项1-7随机；98固定置底。",
+      "programmer_logic_en": "Ask if Q1≠1 or (Q1=1 & Q2=0-1); randomize codes 1-7; code 98 fixed at bottom",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "担心油脂/热量",
+          "text_en": "Concern about fat or calories",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "担心盐分",
+          "text_en": "Concern about salt",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "配料不透明",
+          "text_en": "Unclear ingredients",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "价格偏高",
+          "text_en": "Price is too high",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "口味缺少变化",
+          "text_en": "Insufficient flavour variety",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "包装不方便",
+          "text_en": "Inconvenient packaging",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 7,
+          "text": "没有合适场景",
+          "text_en": "No suitable occasion",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 98,
+          "text": "其他，请注明：________",
+          "text_en": "Other",
+          "behavior": "开放填写；固定置底",
+          "behavior_en": "Open end; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成品类障碍和需求缺口，辅助解释渗透变化。"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q20",
+      "label": "现有产品体验",
+      "type": "Matrix-SA",
+      "wording": "对于您最常购买的膨化食品，以下体验表现如何？",
+      "wording_en": "How does the puffed snack you purchase most often perform on the following aspects?",
+      "setting": "逐项单选；1=很差，5=很好；题项随机",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；题项1-6随机；量表选项顺序固定。",
+      "programmer_logic_en": "Ask if Q1=1; randomize items 1-6",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "口味稳定",
+          "text_en": "Consistent taste",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "酥脆口感",
+          "text_en": "Crispy texture",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "吃后负担感",
+          "text_en": "How light it feels after eating",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "包装便利",
+          "text_en": "Packaging convenience",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "份量合适",
+          "text_en": "Appropriate quantity",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "价格值得",
+          "text_en": "Value for money",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "连接重要性与表现，形成可行动的改进优先级。"
+    },
+    {
+      "module": "产品体验与需求",
+      "question_id": "Q21",
+      "label": "优先改善方向",
+      "type": "SA",
+      "wording": "您最希望下一款膨化食品优先改善什么？",
+      "wording_en": "What should the next puffed-snack product improve first?",
+      "setting": "单选；选项随机",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-7随机。",
+      "programmer_logic_en": "Randomize codes 1-7",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "口味",
+          "text_en": "Taste",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "口感",
+          "text_en": "Texture",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "健康/成分",
+          "text_en": "Health or ingredients",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "包装",
+          "text_en": "Packaging",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "规格",
+          "text_en": "Pack size",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "价格",
+          "text_en": "Price",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 7,
+          "text": "新奇感",
+          "text_en": "Novelty",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成产品改进首要方向和概念输入。"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q22",
+      "label": "最低可信价格",
+      "type": "Numeric",
+      "wording": "对于70g袋装膨化食品，低于什么价格会让您开始怀疑产品质量？",
+      "wording_en": "For a 70g bag of puffed snacks, below what price would you begin to doubt its quality?",
+      "setting": "数值输入；1-50元",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "仅允许输入1-50的数值；超出范围时提示并停留在本题。",
+      "programmer_logic_en": "Numeric range 1-50; do not continue if outside range",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "人民币元",
+          "text_en": "RMB",
+          "behavior": "数值输入；1-50元",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成价格敏感度计量中的过低价格点。"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q23",
+      "label": "便宜价格",
+      "type": "Numeric",
+      "wording": "对于70g袋装膨化食品，什么价格是便宜但质量仍可接受？",
+      "wording_en": "For a 70g bag of puffed snacks, what price would you consider inexpensive while still acceptable in quality?",
+      "setting": "数值输入；1-50元",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "仅允许输入1-50的数值；Q23≥Q22；不满足时提示并停留在本题。",
+      "programmer_logic_en": "Numeric range 1-50; require Q23≥Q22",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "人民币元",
+          "text_en": "RMB",
+          "behavior": "数值输入；1-50元",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成便宜价格点。"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q24",
+      "label": "偏贵价格",
+      "type": "Numeric",
+      "wording": "对于70g袋装膨化食品，什么价格开始显得贵但仍可能购买？",
+      "wording_en": "For a 70g bag of puffed snacks, at what price would it begin to feel expensive but you might still consider purchasing it?",
+      "setting": "数值输入；1-50元",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "仅允许输入1-50的数值；Q24≥Q23；不满足时提示并停留在本题。",
+      "programmer_logic_en": "Numeric range 1-50; require Q24≥Q23",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "人民币元",
+          "text_en": "RMB",
+          "behavior": "数值输入；1-50元",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成偏贵价格点。"
+    },
+    {
+      "module": "价格",
+      "question_id": "Q25",
+      "label": "过高价格",
+      "type": "Numeric",
+      "wording": "对于70g袋装膨化食品，高于什么价格会贵到不再考虑购买？",
+      "wording_en": "For a 70g bag of puffed snacks, above what price would it be too expensive for you to consider purchasing?",
+      "setting": "数值输入；1-50元",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "仅允许输入1-50的数值；Q25≥Q24；不满足时提示并停留在本题。",
+      "programmer_logic_en": "Numeric range 1-50; require Q25≥Q24",
+      "required": true,
+      "options": [
+        {
+          "code": "",
+          "text": "人民币元",
+          "text_en": "RMB",
+          "behavior": "数值输入；1-50元",
+          "behavior_en": "Numeric input"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成过高价格点并检查价格单调性。"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q26",
+      "label": "货架位置影响",
+      "type": "Matrix-SA",
+      "wording": "在购买零食时，以下货架位置通常有多大影响？",
+      "wording_en": "When purchasing snacks, how much influence do the following shelf positions usually have?",
+      "setting": "逐项单选；1=完全没有影响，5=影响很大；题项随机",
+      "base": "Q1选择膨化食品",
+      "base_en": "Q1=1",
+      "programmer_logic": "Q1=1时出示；题项1-6随机；量表选项顺序固定。",
+      "programmer_logic_en": "Ask if Q1=1; randomize items 1-6",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "入口主题陈列",
+          "text_en": "Themed display at the entrance",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "主通道端架",
+          "text_en": "Endcap on the main aisle",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "品类主货架中层",
+          "text_en": "Eye-level position in the category aisle",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "收银台附近",
+          "text_en": "Near the checkout",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "线上搜索结果前列",
+          "text_en": "Top positions in online search results",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "平台活动会场",
+          "text_en": "Platform campaign page",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成货架可见度与渠道触点的项目输入。"
+    },
+    {
+      "module": "渠道与货架",
+      "question_id": "Q27",
+      "label": "新品陈列信息",
+      "type": "MA",
+      "wording": "看到新品陈列时，哪些信息最能推动您进一步查看？",
+      "wording_en": "When you see a new-product display, which information is most likely to make you look more closely?",
+      "setting": "多选；选项随机；最多3项",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-8随机；最多选择3项。",
+      "programmer_logic_en": "Randomize codes 1-8; select up to 3",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "新品/首发",
+          "text_en": "New product or first launch",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "价格优惠",
+          "text_en": "Price promotion",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "口味描述",
+          "text_en": "Flavour description",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "成分/健康信息",
+          "text_en": "Ingredients or health information",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "品牌",
+          "text_en": "Brand",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "销量/评价",
+          "text_en": "Sales volume or reviews",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 7,
+          "text": "包装视觉",
+          "text_en": "Packaging design",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 8,
+          "text": "试吃",
+          "text_en": "Sampling",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于货架信息层级和包装正面信息优化。"
+    },
+    {
+      "module": "传播与触点",
+      "question_id": "Q28",
+      "label": "新品触点",
+      "type": "MA",
+      "wording": "过去4周，您在哪里看到过零食新品或相关内容？",
+      "wording_en": "Where have you seen new snack products or related content in the past 4 weeks?",
+      "setting": "多选；code99互斥",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-6随机；99固定置底，与其他选项互斥。",
+      "programmer_logic_en": "Randomize codes 1-6; code 99 fixed at bottom and exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "短视频平台",
+          "text_en": "Short-video platforms",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "内容社区",
+          "text_en": "Content communities",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "电商平台",
+          "text_en": "E-commerce platforms",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "线下门店",
+          "text_en": "Physical stores",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "朋友/家人",
+          "text_en": "Friends or family",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "电视/户外广告",
+          "text_en": "Television or outdoor advertising",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "未看到",
+          "text_en": "Have not seen any",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成新品信息触点和传播诊断变量。"
+    },
+    {
+      "module": "传播与触点",
+      "question_id": "Q29",
+      "label": "新品信任内容",
+      "type": "SA",
+      "wording": "哪类内容最容易让您相信一款零食新品值得尝试？",
+      "wording_en": "Which type of content is most likely to convince you that a new snack product is worth trying?",
+      "setting": "单选；选项随机",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "选项1-7随机。",
+      "programmer_logic_en": "Randomize codes 1-7",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "真实试吃评价",
+          "text_en": "Authentic tasting reviews",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "成分/营养证据",
+          "text_en": "Ingredient or nutrition evidence",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "品牌官方介绍",
+          "text_en": "Official brand introduction",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "达人推荐",
+          "text_en": "Influencer recommendation",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "朋友推荐",
+          "text_en": "Recommendation from friends",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "销量与用户评价",
+          "text_en": "Sales volume and user reviews",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 7,
+          "text": "价格优惠",
+          "text_en": "Price promotion",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "形成可信信息来源分层，用于概念和传播设计。"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D1",
+      "label": "教育程度",
+      "type": "SA",
+      "wording": "您的最高受教育程度是？",
+      "wording_en": "What is the highest level of education you have completed?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示",
+      "programmer_logic_en": "Ask at the end of the questionnaire",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "高中及以下",
+          "text_en": "Senior high school or below",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "大专",
+          "text_en": "College diploma",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "本科",
+          "text_en": "Bachelor's degree",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "硕士及以上",
+          "text_en": "Master's degree or above",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于样本描述与异质性分析，不作为默认业务KPI。"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D2",
+      "label": "职业状态",
+      "type": "SA",
+      "wording": "您目前的职业状态是？",
+      "wording_en": "What is your current employment status?",
+      "setting": "单选；code98固定置底",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示；选项1-6随机；98固定置底。",
+      "programmer_logic_en": "Ask at the end; randomize codes 1-6; code 98 fixed at bottom",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "全职工作",
+          "text_en": "Employed full-time",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "兼职/自由职业",
+          "text_en": "Part-time or freelance",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "学生",
+          "text_en": "Student",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "家庭照护",
+          "text_en": "Homemaker or caregiver",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "暂未就业",
+          "text_en": "Not currently employed",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 6,
+          "text": "退休",
+          "text_en": "Retired",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 98,
+          "text": "其他，请注明：________",
+          "text_en": "Other",
+          "behavior": "开放填写；固定置底",
+          "behavior_en": "Open end; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于场景、收入与时间结构解释。"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D3",
+      "label": "家庭人口",
+      "type": "SA",
+      "wording": "您的家庭常住人口数是？",
+      "wording_en": "How many people usually live in your household?",
+      "setting": "单选",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示",
+      "programmer_logic_en": "Ask at the end of the questionnaire",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "1人",
+          "text_en": "1 person",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "2人",
+          "text_en": "2 people",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "3人",
+          "text_en": "3 people",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "4人",
+          "text_en": "4 people",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "5人及以上",
+          "text_en": "5 people or more",
+          "behavior": "",
+          "behavior_en": ""
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于家庭装、分享装和消费场景解释。"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D4",
+      "label": "未成年家庭成员",
+      "type": "MA",
+      "wording": "您的家庭中是否有18岁以下儿童或青少年？",
+      "wording_en": "Does your household include any children or teenagers under the age of 18?",
+      "setting": "多选；code99互斥",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示；99固定置底，与其他选项互斥。",
+      "programmer_logic_en": "Ask at the end; code 99 is exclusive",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "text": "0-5岁",
+          "text_en": "Aged 0-5",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "6-11岁",
+          "text_en": "Aged 6-11",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "12-17岁",
+          "text_en": "Aged 12-17",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "没有",
+          "text_en": "None",
+          "behavior": "互斥；固定置底",
+          "behavior_en": "Exclusive; fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "用于家庭购买与产品安全需求分层。"
+    },
+    {
+      "module": "背景信息",
+      "question_id": "D5",
+      "label": "家庭月收入",
+      "type": "SA",
+      "wording": "您的家庭月收入大约是？",
+      "wording_en": "Approximately what is your household's monthly income?",
+      "setting": "单选；code99固定置底；可不答",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示；99固定置底；非必答。",
+      "programmer_logic_en": "Ask at the end; code 99 fixed at bottom; response optional",
+      "required": false,
+      "options": [
+        {
+          "code": 1,
+          "text": "10000元以下",
+          "text_en": "Below RMB 10,000",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 2,
+          "text": "10000-19999元",
+          "text_en": "RMB 10,000-19,999",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 3,
+          "text": "20000-29999元",
+          "text_en": "RMB 20,000-29,999",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 4,
+          "text": "30000-49999元",
+          "text_en": "RMB 30,000-49,999",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 5,
+          "text": "50000元及以上",
+          "text_en": "RMB 50,000 or above",
+          "behavior": "",
+          "behavior_en": ""
+        },
+        {
+          "code": 99,
+          "text": "不愿回答",
+          "text_en": "Prefer not to answer",
+          "behavior": "固定置底",
+          "behavior_en": "Fixed at bottom"
+        }
+      ],
+      "kpi_ids": [],
+      "metric_contribution": "与个人收入共同解释价格接受，避免单一收入代理。"
+    },
+    {
+      "module": "开放题",
+      "question_id": "OE1",
+      "label": "理想产品改善",
+      "type": "OE",
+      "wording": "理想的膨化食品还应改善什么？",
+      "wording_en": "What else should an ideal puffed snack improve?",
+      "setting": "开放题；可不答",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "非必答。",
+      "programmer_logic_en": "Response optional",
+      "required": false,
+      "options": [],
+      "kpi_ids": [],
+      "metric_contribution": "补充结构化题目未覆盖的需求，生成下一期候选变量。"
+    },
+    {
+      "module": "开放题",
+      "question_id": "OE2",
+      "label": "品牌单项改变",
+      "type": "OE",
+      "wording": "如果可以让零食品牌只做一项改变，您最希望改变什么？为什么？",
+      "wording_en": "If a snack brand could make only one change, what would you most want it to change, and why?",
+      "setting": "开放题；可不答",
+      "base": "All",
+      "base_en": "All qualified respondents",
+      "programmer_logic": "问卷末尾出示；非必答。",
+      "programmer_logic_en": "Ask at the end; response optional",
+      "required": false,
+      "options": [],
+      "kpi_ids": [],
+      "metric_contribution": "形成消费者语言、原因链与下一轮量化题候选。"
+    }
+  ]
+}

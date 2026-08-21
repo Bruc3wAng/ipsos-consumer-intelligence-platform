@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "model_id": "lenovo_pc_q14_dynamic_beta_v1",
+    "study": "联想品牌健康度监测历史大众消费者",
+    "target": "Q14未来12个月计划购买笔记本电脑的问卷样本占比",
+    "outcome_boundary": "预测下一期问卷KPI，不等同于实际购买率、销量或市场份额",
+    "model_family": "带时间衰减的Beta-Binomial动态更新",
+    "source": "evidence-register.json / notebook_purchase_intent_12m",
+    "deployment_status": "blocked_pending_sample_frame_harmonization"
+  },
+  "series": [
+    {
+      "wave": "2023Q1",
+      "base": 2581,
+      "value": 69.0
+    },
+    {
+      "wave": "2023Q2",
+      "base": 2938,
+      "value": 66.0
+    },
+    {
+      "wave": "2023Q3",
+      "base": 3531,
+      "value": 62.0
+    },
+    {
+      "wave": "2023Q4",
+      "base": 2500,
+      "value": 64.0
+    },
+    {
+      "wave": "2024Q1",
+      "base": 2401,
+      "value": 63.0
+    },
+    {
+      "wave": "2024Q2",
+      "base": 2400,
+      "value": 59.0
+    }
+  ],
+  "parameter_selection": {
+    "method": "用三个滚动时间点选择衰减参数；这些时间点属于参数调优证据，不作为独立样本外验证",
+    "candidate_decay": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "selected_decay": 0.5,
+    "selection_metric": "MAE"
+  },
+  "backtest": {
+    "rows": [
+      {
+        "holdout_wave": "2023Q4",
+        "training_waves": [
+          "2023Q1",
+          "2023Q2",
+          "2023Q3"
+        ],
+        "prediction": 63.84,
+        "interval_low": 62.58,
+        "interval_high": 65.09,
+        "actual": 64.0,
+        "absolute_error": 0.16,
+        "prior_wave_prediction": 62.0,
+        "prior_wave_absolute_error": 2.0
+      },
+      {
+        "holdout_wave": "2024Q1",
+        "training_waves": [
+          "2023Q1",
+          "2023Q2",
+          "2023Q3",
+          "2023Q4"
+        ],
+        "prediction": 63.91,
+        "interval_low": 62.62,
+        "interval_high": 65.2,
+        "actual": 63.0,
+        "absolute_error": 0.91,
+        "prior_wave_prediction": 64.0,
+        "prior_wave_absolute_error": 1.0
+      },
+      {
+        "holdout_wave": "2024Q2",
+        "training_waves": [
+          "2023Q1",
+          "2023Q2",
+          "2023Q3",
+          "2023Q4",
+          "2024Q1"
+        ],
+        "prediction": 63.48,
+        "interval_low": 62.15,
+        "interval_high": 64.8,
+        "actual": 59.0,
+        "absolute_error": 4.48,
+        "prior_wave_prediction": 63.0,
+        "prior_wave_absolute_error": 4.0
+      }
+    ],
+    "model_mae_points": 1.85,
+    "prior_wave_mae_points": 2.33,
+    "improvement_points": 0.48,
+    "beats_baseline": true,
+    "tuning_rmse_points": 2.64,
+    "evidence_role": "历史调优表现；真正的后一期使用必须先通过样本框与配额可比性检查"
+  },
+  "later_wave_validation": {
+    "wave": "FY25 Q4",
+    "base": 1000,
+    "value": 50.0,
+    "positive_n": 500,
+    "source": "信息存储/26-022043-01-YOGA用户调研（联想25Q4)/4 raw data/C/IIS_Deliver_CSV_S26016668大众消费F (0409).zip",
+    "sample_design": "问卷与配额表规定现有用户/潜在用户=1:1，各N=500；Q14=1定义为笔记本电脑潜在购买者。",
+    "comparability_status": "quota_constrained_not_natural_market_holdout",
+    "historical_model_prediction": 61.3,
+    "reported_gap_from_historical_prediction": -11.3,
+    "validation_result": "不作为预测误差计分；样本设计与历史训练期未完成统一校准",
+    "comparability_note": "题号与选项代码一致，但FY25 Q4的现有/潜在用户被固定为1:1，且中间期次未入库。50%读数与潜在用户配额完全重合，不能解释为自然市场需求下降。"
+  },
+  "historical_frozen_forecast": {
+    "forecast_wave": "2024Q3",
+    "prediction": 61.3,
+    "interval_low": 55.94,
+    "interval_high": 66.65,
+    "interval_method": "Beta-Binomial抽样方差与历史调优RMSE合并，仅供历史方法审计",
+    "latest_observed_wave": "2024Q2",
+    "latest_observed": 59.0,
+    "change_vs_latest": 2.3
+  },
+  "decision": {
+    "recommended_use": "用于识别跨期样本设计漂移，并在统一样本框、配额与权重后重建Q14预测",
+    "not_allowed": [
+      "实际购买率",
+      "销量预测",
+      "市场份额预测",
+      "无权重样本直接外推人口规模"
+    ],
+    "next_validation": "先按固定目标总体重算历史期与FY25 Q4加权Q14，再锁定下一期预测；同时保留问卷版本、配额表、权重方案和模型版本。",
+    "client_answer": "当前能确认的是样本结构发生变化，不能确认笔记本自然需求下降11.3个百分点。完成可比口径校准后，模型才能回答下一期方向与区间。"
+  }
+}

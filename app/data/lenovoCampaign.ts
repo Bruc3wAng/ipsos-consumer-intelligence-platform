@@ -116,7 +116,7 @@ export const evidenceClaims = [
     status: "趋势证据",
     tone: "directional",
     evidence: "W0–W1 无提示认知 +2pts、美誉度 +1pt、购买意愿 +2pts。",
-    decision: "与 Campaign 后测结果形成一致方向，可持续纳入跨波次追踪。",
+    decision: "与 Campaign 后测结果形成一致方向，可持续纳入跨期追踪。",
   },
   {
     claim: "官方合作伙伴身份形成积极购买态度",

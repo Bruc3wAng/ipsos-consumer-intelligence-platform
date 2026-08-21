@@ -1,0 +1,1833 @@
+{
+  "meta": {
+    "project": "AIPC进店用户调研（第二期）",
+    "model_id": "aipc_lenovo_store_b5_logit_v1",
+    "model_family": "Ridge logistic regression",
+    "source": "信息存储/25-025231-01 AIPC进店用户调研(W2)/5.Rawdata/RawData-1000本.xlsx",
+    "target_question": "B5",
+    "target_definition": "联想门店体验后，AIPC购买意愿有明显提升(5)或有一点提升(4)",
+    "outcome_boundary": "自报购买意愿提升，不等同于实际购买、销量或因果广告/门店增量",
+    "population": "W2中完成联想品牌门店体验评价、且B5有有效答案的被访者"
+  },
+  "sample": {
+    "n": 520,
+    "positive_n": 412,
+    "negative_n": 108,
+    "positive_rate": 79.23,
+    "target_distribution": {
+      "2": 3,
+      "3": 105,
+      "4": 302,
+      "5": 110
+    }
+  },
+  "validation": {
+    "method": "20次重复的分层5折样本外交叉验证",
+    "profile_only": {
+      "auc": 0.6908,
+      "auc_low": 0.6732,
+      "auc_high": 0.7023,
+      "brier": 0.1476,
+      "brier_low": 0.1455,
+      "brier_high": 0.1509,
+      "log_loss": 0.4674,
+      "log_loss_low": 0.4617,
+      "log_loss_high": 0.4758,
+      "repeats": 20,
+      "folds": 5,
+      "observed_rate": 79.23
+    },
+    "profile_plus_experience": {
+      "auc": 0.8704,
+      "auc_low": 0.8558,
+      "auc_high": 0.8814,
+      "brier": 0.0943,
+      "brier_low": 0.09,
+      "brier_high": 0.0982,
+      "log_loss": 0.3305,
+      "log_loss_low": 0.3188,
+      "log_loss_high": 0.3438,
+      "repeats": 20,
+      "folds": 5,
+      "observed_rate": 79.23
+    },
+    "auc_gain": 0.1796,
+    "brier_improvement": 0.0533,
+    "calibration": [
+      {
+        "n": 104,
+        "predicted": 30.57,
+        "observed": 26.92
+      },
+      {
+        "n": 104,
+        "predicted": 78.9,
+        "observed": 86.54
+      },
+      {
+        "n": 104,
+        "predicted": 91.77,
+        "observed": 90.38
+      },
+      {
+        "n": 104,
+        "predicted": 95.9,
+        "observed": 96.15
+      },
+      {
+        "n": 104,
+        "predicted": 98.76,
+        "observed": 96.15
+      }
+    ]
+  },
+  "coefficients": [
+    {
+      "key": "S0=1",
+      "source": "S0",
+      "level": "1",
+      "group": "性别",
+      "name": "男",
+      "reference": "女",
+      "coefficient": -0.4657,
+      "odds_ratio": 0.628,
+      "or_low": 0.399,
+      "or_high": 1.099,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S1a=2",
+      "source": "S1a",
+      "level": "2",
+      "group": "年龄",
+      "name": "18–30岁",
+      "reference": "41–55岁",
+      "coefficient": 0.5408,
+      "odds_ratio": 1.717,
+      "or_low": 0.947,
+      "or_high": 2.766,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "S1a=3",
+      "source": "S1a",
+      "level": "3",
+      "group": "年龄",
+      "name": "31–40岁",
+      "reference": "41–55岁",
+      "coefficient": 0.7875,
+      "odds_ratio": 2.198,
+      "or_low": 1.087,
+      "or_high": 4.273,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "S2a=2",
+      "source": "S2a",
+      "level": "2",
+      "group": "城市级别",
+      "name": "T2",
+      "reference": "T1",
+      "coefficient": 0.3233,
+      "odds_ratio": 1.382,
+      "or_low": 0.792,
+      "or_high": 2.535,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "S2a=3",
+      "source": "S2a",
+      "level": "3",
+      "group": "城市级别",
+      "name": "T3",
+      "reference": "T1",
+      "coefficient": 0.3696,
+      "odds_ratio": 1.447,
+      "or_low": 0.721,
+      "or_high": 3.305,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "S2a=4",
+      "source": "S2a",
+      "level": "4",
+      "group": "城市级别",
+      "name": "T4",
+      "reference": "T1",
+      "coefficient": -0.028,
+      "odds_ratio": 0.972,
+      "or_low": 0.408,
+      "or_high": 2.134,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=1",
+      "source": "S4",
+      "level": "1",
+      "group": "个人月收入",
+      "name": "5,000元及以下",
+      "reference": "10,001–15,000元",
+      "coefficient": 0.2753,
+      "odds_ratio": 1.317,
+      "or_low": 0.544,
+      "or_high": 3.136,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "S4=2",
+      "source": "S4",
+      "level": "2",
+      "group": "个人月收入",
+      "name": "5,001–8,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -0.2324,
+      "odds_ratio": 0.793,
+      "or_low": 0.384,
+      "or_high": 1.994,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=3",
+      "source": "S4",
+      "level": "3",
+      "group": "个人月收入",
+      "name": "8,001–10,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -0.4597,
+      "odds_ratio": 0.631,
+      "or_low": 0.359,
+      "or_high": 1.31,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=5",
+      "source": "S4",
+      "level": "5",
+      "group": "个人月收入",
+      "name": "15,001–20,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -1.1183,
+      "odds_ratio": 0.327,
+      "or_low": 0.178,
+      "or_high": 0.567,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=6",
+      "source": "S4",
+      "level": "6",
+      "group": "个人月收入",
+      "name": "20,001–30,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -0.4065,
+      "odds_ratio": 0.666,
+      "or_low": 0.331,
+      "or_high": 1.415,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=7",
+      "source": "S4",
+      "level": "7",
+      "group": "个人月收入",
+      "name": "30,001–40,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -0.8974,
+      "odds_ratio": 0.408,
+      "or_low": 0.165,
+      "or_high": 1.14,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=8",
+      "source": "S4",
+      "level": "8",
+      "group": "个人月收入",
+      "name": "40,001–50,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -0.4715,
+      "odds_ratio": 0.624,
+      "or_low": 0.293,
+      "or_high": 1.445,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "S8=1",
+      "source": "S8",
+      "level": "1",
+      "group": "AIPC关注程度",
+      "name": "非常感兴趣，经常关注",
+      "reference": "比较感兴趣，主动了解过",
+      "coefficient": 0.1308,
+      "odds_ratio": 1.14,
+      "or_low": 0.706,
+      "or_high": 1.964,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "S10=1",
+      "source": "S10",
+      "level": "1",
+      "group": "用户类型",
+      "name": "现有用户",
+      "reference": "潜在用户",
+      "coefficient": -0.8611,
+      "odds_ratio": 0.423,
+      "or_low": 0.217,
+      "or_high": 0.617,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1=2",
+      "source": "B_loop[{_1}].C1",
+      "level": "2",
+      "group": "联想门店整体体验满意度",
+      "name": "比较不满意",
+      "reference": "比较满意",
+      "coefficient": -0.8896,
+      "odds_ratio": 0.411,
+      "or_low": 0.198,
+      "or_high": 1.318,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1=3",
+      "source": "B_loop[{_1}].C1",
+      "level": "3",
+      "group": "联想门店整体体验满意度",
+      "name": "一般",
+      "reference": "比较满意",
+      "coefficient": -1.8343,
+      "odds_ratio": 0.16,
+      "or_low": 0.077,
+      "or_high": 0.256,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1=5",
+      "source": "B_loop[{_1}].C1",
+      "level": "5",
+      "group": "联想门店整体体验满意度",
+      "name": "非常满意",
+      "reference": "比较满意",
+      "coefficient": 1.0112,
+      "odds_ratio": 2.749,
+      "or_low": 1.629,
+      "or_high": 5.06,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C2=2",
+      "source": "B_loop[{_1}].C2",
+      "level": "2",
+      "group": "联想门店销售人员满意度",
+      "name": "比较不满意",
+      "reference": "比较满意",
+      "coefficient": -0.7091,
+      "odds_ratio": 0.492,
+      "or_low": 0.241,
+      "or_high": 1.635,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C2=3",
+      "source": "B_loop[{_1}].C2",
+      "level": "3",
+      "group": "联想门店销售人员满意度",
+      "name": "一般",
+      "reference": "比较满意",
+      "coefficient": -2.3731,
+      "odds_ratio": 0.093,
+      "or_low": 0.042,
+      "or_high": 0.149,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C2=5",
+      "source": "B_loop[{_1}].C2",
+      "level": "5",
+      "group": "联想门店销售人员满意度",
+      "name": "非常满意",
+      "reference": "比较满意",
+      "coefficient": 1.0963,
+      "odds_ratio": 2.993,
+      "or_low": 1.935,
+      "or_high": 5.049,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~1",
+      "source": "B_loop[{_1}].B3a",
+      "level": "1",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能优化系统（智能调配性能、个性化电脑配置等）",
+      "reference": "未选择该项",
+      "coefficient": 0.4152,
+      "odds_ratio": 1.515,
+      "or_low": 0.975,
+      "or_high": 2.64,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~10",
+      "source": "B_loop[{_1}].B3a",
+      "level": "10",
+      "group": "实际体验的AIPC内容",
+      "name": "AI翻译（实时翻译、生成多语言字幕等）",
+      "reference": "未选择该项",
+      "coefficient": -0.1405,
+      "odds_ratio": 0.869,
+      "or_low": 0.493,
+      "or_high": 1.771,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~11",
+      "source": "B_loop[{_1}].B3a",
+      "level": "11",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能语音识别/转文字",
+      "reference": "未选择该项",
+      "coefficient": -0.2636,
+      "odds_ratio": 0.768,
+      "or_low": 0.432,
+      "or_high": 1.272,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~12",
+      "source": "B_loop[{_1}].B3a",
+      "level": "12",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能日程管理（任务管理、会议安排、制定个性化计划等）",
+      "reference": "未选择该项",
+      "coefficient": 0.3304,
+      "odds_ratio": 1.392,
+      "or_low": 0.758,
+      "or_high": 2.681,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~13",
+      "source": "B_loop[{_1}].B3a",
+      "level": "13",
+      "group": "实际体验的AIPC内容",
+      "name": "AI编程（程序生成、解释、修正等）",
+      "reference": "未选择该项",
+      "coefficient": 0.2655,
+      "odds_ratio": 1.304,
+      "or_low": 0.513,
+      "or_high": 2.782,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~2",
+      "source": "B_loop[{_1}].B3a",
+      "level": "2",
+      "group": "实际体验的AIPC内容",
+      "name": "AI自然语言交互（AI智能助手、通过语音/手势控制电脑等）",
+      "reference": "未选择该项",
+      "coefficient": 0.076,
+      "odds_ratio": 1.079,
+      "or_low": 0.603,
+      "or_high": 1.879,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~3",
+      "source": "B_loop[{_1}].B3a",
+      "level": "3",
+      "group": "实际体验的AIPC内容",
+      "name": "AIPC内置应用可多设备协同/远程控制",
+      "reference": "未选择该项",
+      "coefficient": 0.2745,
+      "odds_ratio": 1.316,
+      "or_low": 0.724,
+      "or_high": 2.546,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~4",
+      "source": "B_loop[{_1}].B3a",
+      "level": "4",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能内容创作（智能文档生成、PPT生成等）",
+      "reference": "未选择该项",
+      "coefficient": -0.1478,
+      "odds_ratio": 0.863,
+      "or_low": 0.49,
+      "or_high": 1.476,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~5",
+      "source": "B_loop[{_1}].B3a",
+      "level": "5",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能信息处理（信息搜索、整合、内容提炼等）",
+      "reference": "未选择该项",
+      "coefficient": 0.4783,
+      "odds_ratio": 1.613,
+      "or_low": 0.9,
+      "or_high": 2.886,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~6",
+      "source": "B_loop[{_1}].B3a",
+      "level": "6",
+      "group": "实际体验的AIPC内容",
+      "name": "AI文档润色/美化/检查",
+      "reference": "未选择该项",
+      "coefficient": 0.2867,
+      "odds_ratio": 1.332,
+      "or_low": 0.729,
+      "or_high": 2.533,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~7",
+      "source": "B_loop[{_1}].B3a",
+      "level": "7",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能媒体创作（自动生成图片/音视频等）",
+      "reference": "未选择该项",
+      "coefficient": 0.0578,
+      "odds_ratio": 1.06,
+      "or_low": 0.6,
+      "or_high": 1.926,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~8",
+      "source": "B_loop[{_1}].B3a",
+      "level": "8",
+      "group": "实际体验的AIPC内容",
+      "name": "AI文件管理/查询（资料归档、快速查找等）",
+      "reference": "未选择该项",
+      "coefficient": 0.1576,
+      "odds_ratio": 1.171,
+      "or_low": 0.7,
+      "or_high": 2.432,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].B3a~9",
+      "source": "B_loop[{_1}].B3a",
+      "level": "9",
+      "group": "实际体验的AIPC内容",
+      "name": "AI智能场景模式切换/性能优化",
+      "reference": "未选择该项",
+      "coefficient": 0.5118,
+      "odds_ratio": 1.668,
+      "or_low": 0.9,
+      "or_high": 2.887,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~1",
+      "source": "B_loop[{_1}].C1a",
+      "level": "1",
+      "group": "体验较好的AIPC内容",
+      "name": "AI显著提升工作效率、节省时间",
+      "reference": "未选择该项",
+      "coefficient": 0.2038,
+      "odds_ratio": 1.226,
+      "or_low": 0.688,
+      "or_high": 2.153,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~2",
+      "source": "B_loop[{_1}].C1a",
+      "level": "2",
+      "group": "体验较好的AIPC内容",
+      "name": "AI功能娱乐性强",
+      "reference": "未选择该项",
+      "coefficient": -0.3544,
+      "odds_ratio": 0.702,
+      "or_low": 0.379,
+      "or_high": 1.301,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~3",
+      "source": "B_loop[{_1}].C1a",
+      "level": "3",
+      "group": "体验较好的AIPC内容",
+      "name": "AI界面友好、操作舒适",
+      "reference": "未选择该项",
+      "coefficient": -0.4445,
+      "odds_ratio": 0.641,
+      "or_low": 0.316,
+      "or_high": 1.18,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~4",
+      "source": "B_loop[{_1}].C1a",
+      "level": "4",
+      "group": "体验较好的AIPC内容",
+      "name": "AI生成内容质量高",
+      "reference": "未选择该项",
+      "coefficient": 0.7917,
+      "odds_ratio": 2.207,
+      "or_low": 1.181,
+      "or_high": 4.35,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~5",
+      "source": "B_loop[{_1}].C1a",
+      "level": "5",
+      "group": "体验较好的AIPC内容",
+      "name": "AI学习能力强、适应个性化需求",
+      "reference": "未选择该项",
+      "coefficient": -0.0256,
+      "odds_ratio": 0.975,
+      "or_low": 0.57,
+      "or_high": 1.763,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~6",
+      "source": "B_loop[{_1}].C1a",
+      "level": "6",
+      "group": "体验较好的AIPC内容",
+      "name": "AI与硬件结合紧密",
+      "reference": "未选择该项",
+      "coefficient": 0.2761,
+      "odds_ratio": 1.318,
+      "or_low": 0.621,
+      "or_high": 2.774,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~7",
+      "source": "B_loop[{_1}].C1a",
+      "level": "7",
+      "group": "体验较好的AIPC内容",
+      "name": "AI跨语言交流表现好",
+      "reference": "未选择该项",
+      "coefficient": 0.1533,
+      "odds_ratio": 1.166,
+      "or_low": 0.602,
+      "or_high": 2.27,
+      "stable_direction_95": false,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~8",
+      "source": "B_loop[{_1}].C1a",
+      "level": "8",
+      "group": "体验较好的AIPC内容",
+      "name": "内置AI大模型、数据更安全",
+      "reference": "未选择该项",
+      "coefficient": -0.2443,
+      "odds_ratio": 0.783,
+      "or_low": 0.382,
+      "or_high": 1.499,
+      "stable_direction_95": false,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~9",
+      "source": "B_loop[{_1}].C1a",
+      "level": "9",
+      "group": "体验较好的AIPC内容",
+      "name": "集成多个AI智能体、使用方便",
+      "reference": "未选择该项",
+      "coefficient": -0.4085,
+      "odds_ratio": 0.665,
+      "or_low": 0.368,
+      "or_high": 1.104,
+      "stable_direction_95": false,
+      "direction": "负向"
+    }
+  ],
+  "stable_drivers": [
+    {
+      "key": "B_loop[{_1}].C2=3",
+      "source": "B_loop[{_1}].C2",
+      "level": "3",
+      "group": "联想门店销售人员满意度",
+      "name": "一般",
+      "reference": "比较满意",
+      "coefficient": -2.3731,
+      "odds_ratio": 0.093,
+      "or_low": 0.042,
+      "or_high": 0.149,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1=3",
+      "source": "B_loop[{_1}].C1",
+      "level": "3",
+      "group": "联想门店整体体验满意度",
+      "name": "一般",
+      "reference": "比较满意",
+      "coefficient": -1.8343,
+      "odds_ratio": 0.16,
+      "or_low": 0.077,
+      "or_high": 0.256,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "S4=5",
+      "source": "S4",
+      "level": "5",
+      "group": "个人月收入",
+      "name": "15,001–20,000元",
+      "reference": "10,001–15,000元",
+      "coefficient": -1.1183,
+      "odds_ratio": 0.327,
+      "or_low": 0.178,
+      "or_high": 0.567,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C2=5",
+      "source": "B_loop[{_1}].C2",
+      "level": "5",
+      "group": "联想门店销售人员满意度",
+      "name": "非常满意",
+      "reference": "比较满意",
+      "coefficient": 1.0963,
+      "odds_ratio": 2.993,
+      "or_low": 1.935,
+      "or_high": 5.049,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "B_loop[{_1}].C1=5",
+      "source": "B_loop[{_1}].C1",
+      "level": "5",
+      "group": "联想门店整体体验满意度",
+      "name": "非常满意",
+      "reference": "比较满意",
+      "coefficient": 1.0112,
+      "odds_ratio": 2.749,
+      "or_low": 1.629,
+      "or_high": 5.06,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "S10=1",
+      "source": "S10",
+      "level": "1",
+      "group": "用户类型",
+      "name": "现有用户",
+      "reference": "潜在用户",
+      "coefficient": -0.8611,
+      "odds_ratio": 0.423,
+      "or_low": 0.217,
+      "or_high": 0.617,
+      "stable_direction_95": true,
+      "direction": "负向"
+    },
+    {
+      "key": "B_loop[{_1}].C1a~4",
+      "source": "B_loop[{_1}].C1a",
+      "level": "4",
+      "group": "体验较好的AIPC内容",
+      "name": "AI生成内容质量高",
+      "reference": "未选择该项",
+      "coefficient": 0.7917,
+      "odds_ratio": 2.207,
+      "or_low": 1.181,
+      "or_high": 4.35,
+      "stable_direction_95": true,
+      "direction": "正向"
+    },
+    {
+      "key": "S1a=3",
+      "source": "S1a",
+      "level": "3",
+      "group": "年龄",
+      "name": "31–40岁",
+      "reference": "41–55岁",
+      "coefficient": 0.7875,
+      "odds_ratio": 2.198,
+      "or_low": 1.087,
+      "or_high": 4.273,
+      "stable_direction_95": true,
+      "direction": "正向"
+    }
+  ],
+  "subgroups": [
+    {
+      "dimension": "性别",
+      "source": "S0",
+      "segment": "男",
+      "n": 246,
+      "observed": 78.05,
+      "model_estimate": 78.07
+    },
+    {
+      "dimension": "性别",
+      "source": "S0",
+      "segment": "女",
+      "n": 274,
+      "observed": 80.29,
+      "model_estimate": 80.18
+    },
+    {
+      "dimension": "年龄",
+      "source": "S1a",
+      "segment": "31–40岁",
+      "n": 148,
+      "observed": 83.78,
+      "model_estimate": 82.48
+    },
+    {
+      "dimension": "年龄",
+      "source": "S1a",
+      "segment": "18–30岁",
+      "n": 151,
+      "observed": 80.79,
+      "model_estimate": 80.31
+    },
+    {
+      "dimension": "年龄",
+      "source": "S1a",
+      "segment": "41–55岁",
+      "n": 221,
+      "observed": 75.11,
+      "model_estimate": 76.2
+    },
+    {
+      "dimension": "城市级别",
+      "source": "S2a",
+      "segment": "T2",
+      "n": 206,
+      "observed": 84.47,
+      "model_estimate": 84.28
+    },
+    {
+      "dimension": "城市级别",
+      "source": "S2a",
+      "segment": "T3",
+      "n": 50,
+      "observed": 74.0,
+      "model_estimate": 73.04
+    },
+    {
+      "dimension": "城市级别",
+      "source": "S2a",
+      "segment": "T1",
+      "n": 247,
+      "observed": 76.52,
+      "model_estimate": 76.86
+    },
+    {
+      "dimension": "城市级别",
+      "source": "S2a",
+      "segment": "T4",
+      "n": 17,
+      "observed": 70.59,
+      "model_estimate": 69.1
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "15,001–20,000元",
+      "n": 95,
+      "observed": 54.74,
+      "model_estimate": 56.55
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "5,001–8,000元",
+      "n": 25,
+      "observed": 84.0,
+      "model_estimate": 85.12
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "20,001–30,000元",
+      "n": 48,
+      "observed": 79.17,
+      "model_estimate": 80.15
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "10,001–15,000元",
+      "n": 185,
+      "observed": 87.57,
+      "model_estimate": 84.9
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "8,001–10,000元",
+      "n": 145,
+      "observed": 88.28,
+      "model_estimate": 88.89
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "5,000元及以下",
+      "n": 5,
+      "observed": 80.0,
+      "model_estimate": 68.25
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "30,001–40,000元",
+      "n": 12,
+      "observed": 33.33,
+      "model_estimate": 43.34
+    },
+    {
+      "dimension": "个人月收入",
+      "source": "S4",
+      "segment": "40,001–50,000元",
+      "n": 5,
+      "observed": 60.0,
+      "model_estimate": 74.24
+    },
+    {
+      "dimension": "AIPC关注程度",
+      "source": "S8",
+      "segment": "比较感兴趣，主动了解过",
+      "n": 331,
+      "observed": 77.64,
+      "model_estimate": 77.71
+    },
+    {
+      "dimension": "AIPC关注程度",
+      "source": "S8",
+      "segment": "非常感兴趣，经常关注",
+      "n": 189,
+      "observed": 82.01,
+      "model_estimate": 81.76
+    },
+    {
+      "dimension": "用户类型",
+      "source": "S10",
+      "segment": "潜在用户",
+      "n": 277,
+      "observed": 87.36,
+      "model_estimate": 87.0
+    },
+    {
+      "dimension": "用户类型",
+      "source": "S10",
+      "segment": "现有用户",
+      "n": 243,
+      "observed": 69.96,
+      "model_estimate": 70.27
+    },
+    {
+      "dimension": "联想门店整体体验满意度",
+      "source": "B_loop[{_1}].C1",
+      "segment": "比较满意",
+      "n": 354,
+      "observed": 84.75,
+      "model_estimate": 84.06
+    },
+    {
+      "dimension": "联想门店整体体验满意度",
+      "source": "B_loop[{_1}].C1",
+      "segment": "一般",
+      "n": 69,
+      "observed": 27.54,
+      "model_estimate": 31.53
+    },
+    {
+      "dimension": "联想门店整体体验满意度",
+      "source": "B_loop[{_1}].C1",
+      "segment": "非常满意",
+      "n": 94,
+      "observed": 97.87,
+      "model_estimate": 95.94
+    },
+    {
+      "dimension": "联想门店整体体验满意度",
+      "source": "B_loop[{_1}].C1",
+      "segment": "比较不满意",
+      "n": 3,
+      "observed": 33.33,
+      "model_estimate": 74.46
+    },
+    {
+      "dimension": "联想门店销售人员满意度",
+      "source": "B_loop[{_1}].C2",
+      "segment": "比较满意",
+      "n": 334,
+      "observed": 85.63,
+      "model_estimate": 84.66
+    },
+    {
+      "dimension": "联想门店销售人员满意度",
+      "source": "B_loop[{_1}].C2",
+      "segment": "一般",
+      "n": 75,
+      "observed": 25.33,
+      "model_estimate": 30.57
+    },
+    {
+      "dimension": "联想门店销售人员满意度",
+      "source": "B_loop[{_1}].C2",
+      "segment": "非常满意",
+      "n": 107,
+      "observed": 98.13,
+      "model_estimate": 96.37
+    },
+    {
+      "dimension": "联想门店销售人员满意度",
+      "source": "B_loop[{_1}].C2",
+      "segment": "比较不满意",
+      "n": 4,
+      "observed": 50.0,
+      "model_estimate": 73.47
+    }
+  ],
+  "cross_filter": {
+    "fields": [
+      "S1a",
+      "S10",
+      "B_loop[{_1}].C1",
+      "B_loop[{_1}].C2"
+    ],
+    "options": {
+      "S1a": [
+        {
+          "code": "2",
+          "label": "18–30岁",
+          "n": 151
+        },
+        {
+          "code": "3",
+          "label": "31–40岁",
+          "n": 148
+        },
+        {
+          "code": "4",
+          "label": "41–55岁",
+          "n": 221
+        }
+      ],
+      "S10": [
+        {
+          "code": "1",
+          "label": "现有用户",
+          "n": 243
+        },
+        {
+          "code": "2",
+          "label": "潜在用户",
+          "n": 277
+        }
+      ],
+      "B_loop[{_1}].C1": [
+        {
+          "code": "2",
+          "label": "比较不满意",
+          "n": 3
+        },
+        {
+          "code": "3",
+          "label": "一般",
+          "n": 69
+        },
+        {
+          "code": "4",
+          "label": "比较满意",
+          "n": 354
+        },
+        {
+          "code": "5",
+          "label": "非常满意",
+          "n": 94
+        }
+      ],
+      "B_loop[{_1}].C2": [
+        {
+          "code": "2",
+          "label": "比较不满意",
+          "n": 4
+        },
+        {
+          "code": "3",
+          "label": "一般",
+          "n": 75
+        },
+        {
+          "code": "4",
+          "label": "比较满意",
+          "n": 334
+        },
+        {
+          "code": "5",
+          "label": "非常满意",
+          "n": 107
+        }
+      ]
+    },
+    "cells": [
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 48,
+        "positive_n": 44,
+        "observed_rate": 91.67,
+        "model_probability_sum": 45.565152
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 10,
+        "positive_n": 3,
+        "observed_rate": 30.0,
+        "model_probability_sum": 3.36944
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 55,
+        "positive_n": 55,
+        "observed_rate": 100.0,
+        "model_probability_sum": 51.625813
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 67,
+        "positive_n": 66,
+        "observed_rate": 98.51,
+        "model_probability_sum": 61.800326
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 38,
+        "positive_n": 35,
+        "observed_rate": 92.11,
+        "model_probability_sum": 33.936575
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 36,
+        "positive_n": 32,
+        "observed_rate": 88.89,
+        "model_probability_sum": 30.27194
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 6,
+        "positive_n": 5,
+        "observed_rate": 83.33,
+        "model_probability_sum": 5.915089
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 67,
+        "positive_n": 43,
+        "observed_rate": 64.18,
+        "model_probability_sum": 47.113311
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.988938
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 5,
+        "positive_n": 5,
+        "observed_rate": 100.0,
+        "model_probability_sum": 4.832587
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 9,
+        "positive_n": 8,
+        "observed_rate": 88.89,
+        "model_probability_sum": 8.706508
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 5,
+        "positive_n": 5,
+        "observed_rate": 100.0,
+        "model_probability_sum": 4.775544
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.92198
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 5,
+        "positive_n": 1,
+        "observed_rate": 20.0,
+        "model_probability_sum": 0.494295
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 4,
+        "positive_n": 4,
+        "observed_rate": 100.0,
+        "model_probability_sum": 3.861733
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 24,
+        "positive_n": 24,
+        "observed_rate": 100.0,
+        "model_probability_sum": 23.655223
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 7,
+        "positive_n": 1,
+        "observed_rate": 14.29,
+        "model_probability_sum": 1.425548
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.822881
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 2,
+        "positive_n": 2,
+        "observed_rate": 100.0,
+        "model_probability_sum": 1.98252
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "1",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 24,
+        "positive_n": 24,
+        "observed_rate": 100.0,
+        "model_probability_sum": 21.63427
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 4,
+        "positive_n": 2,
+        "observed_rate": 50.0,
+        "model_probability_sum": 1.934681
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.951288
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.758449
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 9,
+        "positive_n": 1,
+        "observed_rate": 11.11,
+        "model_probability_sum": 1.74412
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 3,
+        "positive_n": 1,
+        "observed_rate": 33.33,
+        "model_probability_sum": 2.071123
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 6,
+        "positive_n": 3,
+        "observed_rate": 50.0,
+        "model_probability_sum": 2.763059
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 8,
+        "positive_n": 1,
+        "observed_rate": 12.5,
+        "model_probability_sum": 1.046216
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 5,
+        "positive_n": 1,
+        "observed_rate": 20.0,
+        "model_probability_sum": 3.498136
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "2",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.399601
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 3,
+        "positive_n": 3,
+        "observed_rate": 100.0,
+        "model_probability_sum": 1.784978
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 9,
+        "positive_n": 2,
+        "observed_rate": 22.22,
+        "model_probability_sum": 2.669944
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.698171
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "2"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.578431
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "1",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 4,
+        "positive_n": 2,
+        "observed_rate": 50.0,
+        "model_probability_sum": 1.923695
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 8,
+        "positive_n": 1,
+        "observed_rate": 12.5,
+        "model_probability_sum": 1.961633
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 8,
+        "positive_n": 0,
+        "observed_rate": 0.0,
+        "model_probability_sum": 2.441133
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.674673
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "4",
+          "B_loop[{_1}].C2": "3"
+        },
+        "n": 1,
+        "positive_n": 0,
+        "observed_rate": 0.0,
+        "model_probability_sum": 0.261524
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "1",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "2"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.526324
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "3",
+          "B_loop[{_1}].C2": "4"
+        },
+        "n": 1,
+        "positive_n": 1,
+        "observed_rate": 100.0,
+        "model_probability_sum": 0.69682
+      },
+      {
+        "filters": {
+          "S1a": "3",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 14,
+        "positive_n": 14,
+        "observed_rate": 100.0,
+        "model_probability_sum": 13.920119
+      },
+      {
+        "filters": {
+          "S1a": "2",
+          "S10": "2",
+          "B_loop[{_1}].C1": "5",
+          "B_loop[{_1}].C2": "5"
+        },
+        "n": 13,
+        "positive_n": 13,
+        "observed_rate": 100.0,
+        "model_probability_sum": 12.912499
+      },
+      {
+        "filters": {
+          "S1a": "4",
+          "S10": "2",
+          "B_loop[{_1}].C1": "2",
+          "B_loop[{_1}].C2": "2"
+        },
+        "n": 2,
+        "positive_n": 0,
+        "observed_rate": 0.0,
+        "model_probability_sum": 1.834184
+      }
+    ],
+    "minimum_reporting_base": 30
+  },
+  "descriptive_evidence": {
+    "good_experience_content": [
+      {
+        "code": "1",
+        "label": "AI显著提升工作效率、节省时间",
+        "n": 295,
+        "percent": 56.73
+      },
+      {
+        "code": "9",
+        "label": "集成多个AI智能体、使用方便",
+        "n": 191,
+        "percent": 36.73
+      },
+      {
+        "code": "4",
+        "label": "AI生成内容质量高",
+        "n": 144,
+        "percent": 27.69
+      },
+      {
+        "code": "2",
+        "label": "AI功能娱乐性强",
+        "n": 122,
+        "percent": 23.46
+      },
+      {
+        "code": "7",
+        "label": "AI跨语言交流表现好",
+        "n": 119,
+        "percent": 22.88
+      },
+      {
+        "code": "3",
+        "label": "AI界面友好、操作舒适",
+        "n": 117,
+        "percent": 22.5
+      },
+      {
+        "code": "8",
+        "label": "内置AI大模型、数据更安全",
+        "n": 108,
+        "percent": 20.77
+      },
+      {
+        "code": "5",
+        "label": "AI学习能力强、适应个性化需求",
+        "n": 106,
+        "percent": 20.38
+      },
+      {
+        "code": "6",
+        "label": "AI与硬件结合紧密",
+        "n": 76,
+        "percent": 14.62
+      }
+    ],
+    "experienced_aipc_content": [
+      {
+        "code": "5",
+        "label": "AI智能信息处理（信息搜索、整合、内容提炼等）",
+        "n": 196,
+        "percent": 37.69
+      },
+      {
+        "code": "11",
+        "label": "AI智能语音识别/转文字",
+        "n": 171,
+        "percent": 32.88
+      },
+      {
+        "code": "12",
+        "label": "AI智能日程管理（任务管理、会议安排、制定个性化计划等）",
+        "n": 171,
+        "percent": 32.88
+      },
+      {
+        "code": "10",
+        "label": "AI翻译（实时翻译、生成多语言字幕等）",
+        "n": 168,
+        "percent": 32.31
+      },
+      {
+        "code": "2",
+        "label": "AI自然语言交互（AI智能助手、通过语音/手势控制电脑等）",
+        "n": 164,
+        "percent": 31.54
+      },
+      {
+        "code": "9",
+        "label": "AI智能场景模式切换/性能优化",
+        "n": 151,
+        "percent": 29.04
+      },
+      {
+        "code": "4",
+        "label": "AI智能内容创作（智能文档生成、PPT生成等）",
+        "n": 147,
+        "percent": 28.27
+      },
+      {
+        "code": "8",
+        "label": "AI文件管理/查询（资料归档、快速查找等）",
+        "n": 146,
+        "percent": 28.08
+      },
+      {
+        "code": "7",
+        "label": "AI智能媒体创作（自动生成图片/音视频等）",
+        "n": 130,
+        "percent": 25.0
+      },
+      {
+        "code": "6",
+        "label": "AI文档润色/美化/检查",
+        "n": 126,
+        "percent": 24.23
+      },
+      {
+        "code": "1",
+        "label": "AI智能优化系统（智能调配性能、个性化电脑配置等）",
+        "n": 125,
+        "percent": 24.04
+      },
+      {
+        "code": "3",
+        "label": "AIPC内置应用可多设备协同/远程控制",
+        "n": 105,
+        "percent": 20.19
+      },
+      {
+        "code": "13",
+        "label": "AI编程（程序生成、解释、修正等）",
+        "n": 32,
+        "percent": 6.15
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "dimension": "联想门店整体体验满意度",
+      "from": "一般",
+      "to": "比较满意",
+      "eligible_n": 69,
+      "baseline_association": 30.73,
+      "scenario_association": 63.45,
+      "difference_points": 32.72,
+      "interpretation": "多变量关联情景，不是实验或因果增量"
+    },
+    {
+      "dimension": "联想门店销售人员满意度",
+      "from": "一般",
+      "to": "比较满意",
+      "eligible_n": 75,
+      "baseline_association": 29.13,
+      "scenario_association": 70.68,
+      "difference_points": 41.55,
+      "interpretation": "多变量关联情景，不是实验或因果增量"
+    }
+  ],
+  "governance": {
+    "included_questions": [
+      "S0",
+      "S1a",
+      "S2a",
+      "S4",
+      "S8",
+      "S10",
+      "B3a",
+      "C1a",
+      "C1",
+      "C2"
+    ],
+    "excluded_for_leakage": [
+      {
+        "question": "B4",
+        "reason": "与B5相邻的态度结果，容易形成同源结果泄漏"
+      },
+      {
+        "question": "C3",
+        "reason": "在B5之后询问，只用于行动需求描述"
+      },
+      {
+        "question": "B7a/B7b",
+        "reason": "在B5之后询问，只用于正负体验归因描述"
+      }
+    ],
+    "known_limits": [
+      "当前只有W2单期联想门店体验者，无法做跨期样本外验证",
+      "问卷没有实际销量、购买或门店交易标签",
+      "C1、C2与B5来自同一次问卷中的相邻态度测量，较高区分度可能包含同源测量一致性",
+      "模型识别多变量关联，不自动证明改善措施会带来同等因果增量"
+    ],
+    "next_validation": "W3沿用B5和核心体验题，以W2训练、W3完全留出验证；若能回传成交或SKU销售，改用真实结果标签。"
+  }
+}

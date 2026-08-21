@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "study": "联想FY25品牌健康度监测 Q4 大众消费者",
+    "market": "中国",
+    "generated_at": "2026-08-12T10:17:38.358572+00:00",
+    "status": "absolute_projection_blocked",
+    "gate_summary": {
+      "passed": 3,
+      "pending": 1,
+      "blocked": 4,
+      "total": 8
+    },
+    "decision": "样本比例与模型概率可以报告；总体人数必须等年龄、城市线级、收入和PC资格总体同时对齐后再发布。"
+  },
+  "target_population": {
+    "age": "18–45岁",
+    "geography": "中国T1–T6城市",
+    "role": "本人或与家人共同决定电脑购买",
+    "pc_status": "现有用户与未来12个月潜在用户各50%",
+    "sample_n": 1000,
+    "note": "这是研究目标人群与配额，不是中国全体消费者的自然构成。"
+  },
+  "source_trace": {
+    "quota_workbook": "信息存储/26-022043-01-YOGA用户调研（联想25Q4)/3 内部计划书/大众-消费者-C-配额表 2025 Q4-3月（1000个样本）.xlsx",
+    "questionnaire": "信息存储/26-022043-01-YOGA用户调研（联想25Q4)/2 问卷/Ipsos-FY25联想品牌健康度监测-Q4-C-定量问卷-20260325.docx",
+    "raw_archive": "信息存储/26-022043-01-YOGA用户调研（联想25Q4)/4 raw data/C/IIS_Deliver_CSV_S26016668大众消费F (0409).zip",
+    "stored_fields": "only aggregate margins and source trace; no respondent records"
+  },
+  "quota_margins": [
+    {
+      "dimension": "年龄",
+      "categories": [
+        {
+          "category": "18-24岁",
+          "sample_share": 35.0,
+          "sample_n": 350
+        },
+        {
+          "category": "25-34岁",
+          "sample_share": 35.0,
+          "sample_n": 350
+        },
+        {
+          "category": "35-45岁",
+          "sample_share": 30.0,
+          "sample_n": 300
+        }
+      ]
+    },
+    {
+      "dimension": "个人月收入",
+      "categories": [
+        {
+          "category": "高收入",
+          "sample_share": 20.0,
+          "sample_n": 200
+        },
+        {
+          "category": "中等收入",
+          "sample_share": 49.0,
+          "sample_n": 490
+        },
+        {
+          "category": "低收入",
+          "sample_share": 31.0,
+          "sample_n": 310
+        }
+      ]
+    },
+    {
+      "dimension": "性别",
+      "categories": [
+        {
+          "category": "男",
+          "sample_share": 50.0,
+          "sample_n": 500
+        },
+        {
+          "category": "女",
+          "sample_share": 50.0,
+          "sample_n": 500
+        }
+      ]
+    },
+    {
+      "dimension": "现有/潜在用户",
+      "categories": [
+        {
+          "category": "现有用户",
+          "sample_share": 50.0,
+          "sample_n": 500
+        },
+        {
+          "category": "潜在用户",
+          "sample_share": 50.0,
+          "sample_n": 500
+        }
+      ]
+    },
+    {
+      "dimension": "城市线级",
+      "categories": [
+        {
+          "category": "T1",
+          "sample_share": 20.0,
+          "sample_n": 200
+        },
+        {
+          "category": "T2",
+          "sample_share": 20.0,
+          "sample_n": 200
+        },
+        {
+          "category": "T3",
+          "sample_share": 25.0,
+          "sample_n": 250
+        },
+        {
+          "category": "T4",
+          "sample_share": 15.0,
+          "sample_n": 150
+        },
+        {
+          "category": "T5",
+          "sample_share": 15.0,
+          "sample_n": 150
+        },
+        {
+          "category": "T6",
+          "sample_share": 5.0,
+          "sample_n": 50
+        }
+      ]
+    },
+    {
+      "dimension": "八大区",
+      "categories": [
+        {
+          "category": "1，东北大区",
+          "sample_n": 125
+        },
+        {
+          "category": "2，东南大区",
+          "sample_n": 125
+        },
+        {
+          "category": "3，华北大区",
+          "sample_n": 125
+        },
+        {
+          "category": "4，华东大区",
+          "sample_n": 125
+        },
+        {
+          "category": "5，华南大区",
+          "sample_n": 125
+        },
+        {
+          "category": "6，西北大区",
+          "sample_n": 125
+        },
+        {
+          "category": "7，西南大区",
+          "sample_n": 125
+        },
+        {
+          "category": "8，中东大区",
+          "sample_n": 125
+        }
+      ]
+    }
+  ],
+  "official_benchmarks": [
+    {
+      "benchmark_id": "nbs_population_2025_gender",
+      "dimension": "性别",
+      "reference_date": "2025-11-01",
+      "values": [
+        {
+          "category": "男",
+          "value": 51.03,
+          "unit": "%"
+        },
+        {
+          "category": "女",
+          "value": 48.97,
+          "unit": "%"
+        }
+      ],
+      "alignment": "全国口径可用于方法演示；最终需18–45岁T1–T6同口径边际",
+      "status": "partial_alignment",
+      "source": "国家统计局2025年全国1%人口抽样调查主要数据公报",
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260522_1963788.html"
+    },
+    {
+      "benchmark_id": "nbs_population_2025_urban",
+      "dimension": "城镇人口",
+      "reference_date": "2025-12-31",
+      "values": [
+        {
+          "category": "城镇常住人口",
+          "value": 953.8,
+          "unit": "million people"
+        },
+        {
+          "category": "城镇化率",
+          "value": 67.9,
+          "unit": "%"
+        }
+      ],
+      "alignment": "仅作城市总体上界；不等于T1–T6和18–45岁PC目标人群",
+      "status": "boundary_only",
+      "source": "中华人民共和国2025年国民经济和社会发展统计公报",
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202602/t20260228_1962662.html"
+    },
+    {
+      "benchmark_id": "cnnic_2025_internet",
+      "dimension": "数字可触达总体",
+      "reference_date": "2025-12-31",
+      "values": [
+        {
+          "category": "网民规模",
+          "value": 1125,
+          "unit": "million people"
+        },
+        {
+          "category": "互联网普及率",
+          "value": 80.1,
+          "unit": "%"
+        }
+      ],
+      "alignment": "仅作数字可触达总体上界；不等于PC购买者",
+      "status": "boundary_only",
+      "source": "第57次《中国互联网络发展状况统计报告》",
+      "url": "https://www3.cnnic.cn/n4/2026/0304/c88-11549.html"
+    },
+    {
+      "benchmark_id": "omdia_china_pc_2026",
+      "dimension": "PC市场单位",
+      "reference_date": "2026 forecast",
+      "values": [
+        {
+          "category": "中国PC出货量预测",
+          "value": 36,
+          "unit": "million units"
+        },
+        {
+          "category": "同比预测",
+          "value": -14,
+          "unit": "%"
+        }
+      ],
+      "alignment": "校准市场数量级和方向；不能替代问卷目标总体或购买概率",
+      "status": "market_calibration",
+      "source": "Omdia Mainland China PC shipments forecast",
+      "url": "https://omdia.tech.informa.com/pr/2026/june/mainland-chinas-pc-shipments-fell-2percent-in-q1-2026-with-14percent-decline-forecast-for-the-full-year"
+    }
+  ],
+  "quality_gates": [
+    {
+      "gate_id": "target_definition",
+      "name": "研究总体定义",
+      "status": "passed",
+      "evidence": "正式问卷明确18–45岁、T1–T6城市、个人购买决策参与者，并设置现有/潜在用户1:1配额。",
+      "effect": "可以界定该期研究样本描述谁。",
+      "next_required": "跨期保持筛选与配额口径一致。"
+    },
+    {
+      "gate_id": "raw_demographics",
+      "name": "个体层校准字段",
+      "status": "passed",
+      "evidence": "FY25 Q4大众Raw N=1,000，包含年龄、性别、城市线级、收入、地区及现有/潜在用户字段。",
+      "effect": "具备生成个体权重的字段基础。",
+      "next_required": "复算字段缺失、配额一致性和极端单元格。"
+    },
+    {
+      "gate_id": "gender_target",
+      "name": "性别总体边际",
+      "status": "passed",
+      "evidence": "国家统计局2025年全国1%人口抽样调查：男性51.03%，女性48.97%。",
+      "effect": "可演示单维度后分层校准；不能据此形成最终综合权重。",
+      "next_required": "在18–45岁、T1–T6目标总体内取得同口径性别边际。"
+    },
+    {
+      "gate_id": "age_target",
+      "name": "年龄总体边际",
+      "status": "blocked",
+      "evidence": "现有官方公报只提供宽年龄组，尚无与18–24、25–34、35–45完全对齐的当前总体比例。",
+      "effect": "年龄配额35/35/30不能直接视为全国真实结构。",
+      "next_required": "取得国家统计局详细年龄表或经审定的同口径Panel总体。"
+    },
+    {
+      "gate_id": "city_tier_target",
+      "name": "城市线级总体边际",
+      "status": "blocked",
+      "evidence": "国家统计局可提供城镇人口，但T1–T6属于研究分类，尚未建立城市名单、常住人口与线级的可复算映射。",
+      "effect": "T1–T6配额20/20/25/15/15/5不能外推为全国城市人口结构。",
+      "next_required": "冻结城市—线级字典，并以最新常住人口计算各线级目标比例。"
+    },
+    {
+      "gate_id": "income_target",
+      "name": "收入总体边际",
+      "status": "blocked",
+      "evidence": "问卷收入档位随城市线级变化，国家统计局人均收入中位数不能直接对应个人月收入三档。",
+      "effect": "收入配额20/49/31目前只用于样本控制，不能作为总体占比。",
+      "next_required": "取得个人月收入×城市线级的兼容基准，或改用可对齐的家庭/人均口径。"
+    },
+    {
+      "gate_id": "eligible_pc_universe",
+      "name": "PC目标人群总体规模",
+      "status": "blocked",
+      "evidence": "CNNIC网民与国家统计局城镇人口都是上界；都没有同时满足18–45岁、T1–T6、购买决策参与、现有/潜在PC用户。",
+      "effect": "当前不能发布“X万名潜在购买者”。",
+      "next_required": "用权威人口逐层筛选，或通过独立代表性普查估计筛选通过率。"
+    },
+    {
+      "gate_id": "weight_qa",
+      "name": "综合权重质量",
+      "status": "pending",
+      "evidence": "尚未运行年龄×性别×城市线级的迭代比例拟合，也未检查权重极值、设计效应和加权前后差异。",
+      "effect": "当前平台保留原始N，不发布加权人数。",
+      "next_required": "目标边际齐备后运行raking、截尾敏感性与有效样本量审计。"
+    }
+  ],
+  "weighting_method": {
+    "required_dimensions": [
+      "年龄",
+      "性别",
+      "城市线级"
+    ],
+    "audit_dimensions": [
+      "收入",
+      "八大区",
+      "现有/潜在用户"
+    ],
+    "steps": [
+      "冻结每期相同的目标总体、筛选题与城市线级字典",
+      "把外部总体边际映射到Raw分类，记录无法对齐的类别",
+      "用迭代比例拟合生成年龄×性别×城市线级综合权重",
+      "检查权重最小/最大值、变异系数、设计效应与有效样本量",
+      "对极端权重做截尾敏感性分析，并比较加权/未加权KPI",
+      "总体规模与加权比例同时通过门槛后，才计算绝对人数"
+    ],
+    "formulas": [
+      {
+        "name": "单维度初始权重",
+        "formula": "w_h = 总体占比_h ÷ 样本占比_h"
+      },
+      {
+        "name": "有效样本量",
+        "formula": "N_eff = (Σw)² ÷ Σ(w²)"
+      },
+      {
+        "name": "设计效应",
+        "formula": "DEFF_w = N ÷ N_eff"
+      },
+      {
+        "name": "绝对人数",
+        "formula": "人数 = 对齐后的目标总体 × 加权比例"
+      }
+    ],
+    "release_thresholds": [
+      "所有必需总体边际来源、日期、口径均可追溯",
+      "有效样本量和权重极值通过预先登记的质量标准",
+      "关键KPI加权/未加权差异完成审计",
+      "总体规模估计与市场单位数据不发生口径混用"
+    ]
+  },
+  "gender_calibration_demo": {
+    "label": "单维度计算演示，不是最终研究权重",
+    "sample": [
+      {
+        "category": "男",
+        "share": 50,
+        "n": 500
+      },
+      {
+        "category": "女",
+        "share": 50,
+        "n": 500
+      }
+    ],
+    "target": [
+      {
+        "category": "男",
+        "share": 51.03
+      },
+      {
+        "category": "女",
+        "share": 48.97
+      }
+    ],
+    "weight_factors": [
+      {
+        "category": "男",
+        "weight": 1.0206
+      },
+      {
+        "category": "女",
+        "weight": 0.9794
+      }
+    ],
+    "effective_n": 999.58,
+    "design_effect": 1.0004,
+    "maximum_moe_95_points": 3.1,
+    "boundary": "仅完成性别边际不能发布总体人数；该结果只验证公式、字段和数据库路径。"
+  },
+  "output_policy": {
+    "publish_now": [
+      "原始样本N与未加权样本比例",
+      "来源、题号、Base和期次完整的BHT趋势",
+      "样本内细分与时间留出模型概率",
+      "Omdia出货、CNNIC网民等外部事实的独立口径校验"
+    ],
+    "publish_after_full_weighting": [
+      "年龄×性别×城市线级校准后的KPI",
+      "加权与未加权差异、有效样本量和设计效应",
+      "目标总体明确时的消费者人数区间"
+    ],
+    "blocked": [
+      "把N=1,000机械乘100或任意倍数当作总体",
+      "把网民规模乘购买意向当作PC购买人数",
+      "把购买意向当作实际销量或市场份额",
+      "把PC出货量反推为问卷总体权重"
+    ]
+  }
+}

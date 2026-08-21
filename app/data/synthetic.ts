@@ -74,7 +74,7 @@ export const segments: Array<{
     size: 15,
     probability: 55,
     opportunity: 66,
-    traits: ["High curiosity", "Budget constrained", "Study + creation"],
+    traits: ["High curiosity", "Value conscious", "Study + creation"],
     color: "#b07a25",
   },
   {
@@ -210,7 +210,7 @@ export const evidenceLedger = [
   { claim: "Campaign increased AI PC consideration by 8 points", evidence: "Matched exposed vs control post-test", method: "Doubly robust uplift", uncertainty: "95% CI +4.1 to +11.9", grade: "Causal-ready demo" },
   { claim: "Daily-use clarity is the largest creative bottleneck", evidence: "Creative diagnostics + mediation path", method: "Path model", uncertainty: "Indirect effect explains 41% of gap", grade: "Supported" },
   { claim: "Young professionals are the best scalable audience", evidence: "Audience uplift × reachable population", method: "CATE / uplift model", uncertainty: "Stable in 4/5 folds", grade: "Supported" },
-  { claim: "Display budget should be reduced", evidence: "Incremental intent per spend index", method: "Bayesian MMM", uncertainty: "Response curve overlaps at low spend", grade: "Directional" },
+  { claim: "Display allocation should be reduced", evidence: "Incremental intent per spend index", method: "Bayesian MMM", uncertainty: "Response curve overlaps at low spend", grade: "Directional" },
   { claim: "Campaign will drive PC sales", evidence: "No matched sales or SKU outcome feed", method: "Not estimable yet", uncertainty: "Requires outcome connection", grade: "Not proven" },
 ];
 
