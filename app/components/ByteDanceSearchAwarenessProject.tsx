@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 const marketFunnel = [
   ["美国", 87.1, 54.3, 9.5, 62.3],
@@ -44,7 +45,7 @@ export default function ByteDanceSearchAwarenessProject() {
         <div className="client-brandline">
           <PlatformBrand compact />
           <span className="brand-divider" />
-          <img className="client-logo bytedance-logo" src="/bytedance-logo.svg" alt="ByteDance" />
+          <img className="client-logo bytedance-logo" src={publicAssetPath("/bytedance-logo.svg")} alt="ByteDance" />
           <div><strong>消费者洞察与模型平台</strong></div>
         </div>
         <div className="client-header-actions"><Link href="/clients/bytedance">返回字节跳动项目</Link></div>

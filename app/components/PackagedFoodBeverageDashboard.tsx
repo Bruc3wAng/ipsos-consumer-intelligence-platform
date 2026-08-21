@@ -24,6 +24,7 @@ import openFoodJson from "../../output/packaged-food-beverage/open-food-facts-la
 import publicRetailJson from "../../output/packaged-food-beverage/public-retail-observations.json";
 import authoritativePublicJson from "../../input/packaged-food-beverage/authoritative-public-data-20260812.json";
 import PlatformBrand from "./PlatformBrand";
+import { IS_STATIC_DEMO } from "../lib/publicRuntime";
 
 type Tab = "市场机会" | "公开商品观察" | "商品与价格" | "货架与组合" | "新品测试" | "指标与模型" | "产品方案";
 type Sku = (typeof foodJson.skus)[number];
@@ -944,6 +945,26 @@ function MetricsAndModels({ category, channel, segment, locale, market }: { cate
     setResearchLoading(true);
     setResearchError("");
     try {
+      if (IS_STATIC_DEMO) {
+        const categoryName = foodJson.categories.find((item) => item.code === category)?.name ?? "当前品类";
+        const channelName = foodJson.channels.find((item) => item.code === channel)?.name ?? "当前渠道";
+        const rows = foodJson.skus.filter((item) => item.category === category && item.channel === channel).sort((a, b) => a.price_per_100g - b.price_per_100g);
+        const quantile = (ratio: number) => rows[Math.min(rows.length - 1, Math.floor(rows.length * ratio))]?.price_per_100g ?? 0;
+        let answer: FoodResearchAnswer;
+        if (/真实市场份额|销量|销售额|真实增量/.test(researchQuery)) {
+          answer = { title: "现有数据不直接输出真实市场份额", answer: "当前证据可用于价格、商品组合、消费者选择与模型验证，但没有覆盖明确总体的渠道POS或交易数据。", points: ["市场份额需要可定义的销售总体、覆盖范围与投影方法。", "上架增量需要门店×SKU×周结果及匹配对照。"], sources: ["包装食品与饮料数据发布边界"], boundary: "不将公开页面观察或消费者选择结果解释为全市场销量或份额。", evidence: [], dataLabel: "证据边界" };
+        } else if (/模型|系数|AUC|Brier|驱动|变量/.test(researchQuery)) {
+          const factors = foodJson.model.coefficients.filter((item) => item.source !== "model").sort((a, b) => Math.abs(b.impact_pp) - Math.abs(a.impact_pp)).slice(0, 5);
+          answer = { title: "购买选择模型的关键变量", answer: `时间留出AUC=${foodJson.model.test_auc.toFixed(3)}、Brier=${foodJson.model.test_brier.toFixed(3)}；当前影响幅度最大的变量为${factors.slice(0, 3).map((item) => item.label).join("、")}。`, points: factors.map((item) => `${item.label}：系数${item.coefficient > 0 ? "+" : ""}${item.coefficient.toFixed(3)}，情景影响${item.impact_pp > 0 ? "+" : ""}${item.impact_pp.toFixed(1)} pts。`), sources: [`${foodJson.model.name} · ${foodJson.model.test_wave}`], boundary: foodJson.model.blocked_use, evidence: factors.map((item) => ({ label: item.label, value: `${item.impact_pp > 0 ? "+" : ""}${item.impact_pp.toFixed(1)} pts`, source: `系数${item.coefficient.toFixed(3)}` })), dataLabel: foodJson.model.data_label };
+        } else if (/组合|引入|保留|淘汰|候选|TOP\s?100/i.test(researchQuery)) {
+          const ranked = [...rows].sort((a, b) => b.assortment_score - a.assortment_score);
+          answer = { title: `${channelName} · ${categoryName}候选商品组合`, answer: `当前候选池共${ranked.length}个SKU，组合分最高的是${ranked[0]?.product_name ?? "—"}，${ranked[0]?.assortment_score ?? 0}分。`, points: ["排序同时考虑增量触达、替代风险、可得性与货架容量。", "实际引入或淘汰需要门店-SKU结果回写。"], sources: [`${channelName} · ${categoryName}候选池`], boundary: "组合分是决策排序，不是销量或市场份额排名。", evidence: ranked.slice(0, 5).map((item) => ({ label: item.product_name, value: `${item.assortment_score}分`, source: item.assortment_action })), dataLabel: "候选商品数据" };
+        } else {
+          answer = { title: `${channelName} · ${categoryName}标准化价格带`, answer: `当前候选池共${rows.length}个SKU，每100g价格中间50%为¥${quantile(.25)}–¥${quantile(.75)}，中位数¥${quantile(.5)}。`, points: ["定价需要继续按规格、品牌层级和目标人群分层。", "真实价格响应需要连续观察、选择实验或授权成交数据。"], sources: [`${channelName} · ${categoryName}候选池`], boundary: foodJson.meta.prohibited_interpretation, evidence: [{ label: "SKU数", value: String(rows.length), source: "当前筛选" }, { label: "中间50%价格带", value: `¥${quantile(.25)}–¥${quantile(.75)}/100g`, source: "规格标准化" }, { label: "价格中位数", value: `¥${quantile(.5)}/100g`, source: "规格标准化" }], dataLabel: "候选商品数据" };
+        }
+        setResearchAnswer(answer);
+        return;
+      }
       const response = await fetch("/api/food-research-answer", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ query: researchQuery, category, channel }) });
       const payload = await response.json() as { answer?: FoodResearchAnswer; error?: string };
       if (!response.ok || !payload.answer) throw new Error(payload.error ?? "没有取得回答");

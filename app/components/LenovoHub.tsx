@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 type ProjectKey = "campaign" | "aipc" | "bhtSocial";
 
@@ -56,7 +57,7 @@ export default function LenovoHub() {
   return (
     <main className="client-portal lenovo-hub">
       <header className="client-header">
-        <div className="client-brandline"><PlatformBrand compact /><span className="brand-divider" /><img className="client-logo lenovo-logo" src="/lenovo-logo.svg" alt="Lenovo" /><div><strong>消费者洞察与模型平台</strong></div></div>
+        <div className="client-brandline"><PlatformBrand compact /><span className="brand-divider" /><img className="client-logo lenovo-logo" src={publicAssetPath("/lenovo-logo.svg")} alt="Lenovo" /><div><strong>消费者洞察与模型平台</strong></div></div>
         <div className="client-header-actions"><Link href="/">返回 Ipsos 平台</Link></div>
       </header>
 

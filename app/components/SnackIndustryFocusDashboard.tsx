@@ -38,12 +38,13 @@ import { buildResearchProjectPlan, PROJECT_STAGE_LABELS, type ResearchProjectSys
 import { assessQuestionForMetricSystem } from "../lib/questionnaireGovernance";
 import { summarizeQuestionnaireImpact, type QuestionImpact, type ResearchQuestion } from "../lib/questionnaireDesign";
 import { downloadResearchWorkbook } from "../lib/researchWorkbookExport";
-import type { ProductionCell, ProductionMetricDefinition, RawProductionResult } from "../lib/rawDataProduction";
+import { buildRawProductionResult, type ProductionCell, type ProductionMetricDefinition, type RawProductionResult } from "../lib/rawDataProduction";
 import { buildInsightDecisionSummary, buildInsightReportDocument, buildModelAppendixDocument, buildNextWaveResearchDesign, buildNextWaveResearchDesignDocument } from "../lib/insightDelivery";
 import { buildGridCsv, buildTableCsv, gridCsvFileName, tableCsvFileName, valueForFamily, type TableFamily } from "../lib/tableDelivery";
 import type { LockedProjectDesign, NextWaveExperimentKey, ProjectDesignLockInput, ProjectRunRecord, QuotaMode } from "../lib/projectRunContract";
 import { adjustPriceAcceptanceCurve, buildSegmentEstimate, type SegmentDimension, type SegmentKpiRow } from "../lib/segmentEstimate";
 import { EXTERNAL_RESEARCH_RESOURCES } from "../data/externalResearchResources";
+import { IS_STATIC_DEMO, publicAssetPath } from "../lib/publicRuntime";
 import CrackerConceptCase from "./CrackerConceptCase";
 import PlatformBrand from "./PlatformBrand";
 
@@ -185,6 +186,7 @@ const PROJECT_DESIGN_STORAGE_KEY = "ipsos.snack.project-design.current";
 const PROJECT_DESIGN_HISTORY_STORAGE_KEY = "ipsos.snack.project-design.history";
 const PROJECT_RUN_STORAGE_KEY = "ipsos.snack.project-run.current";
 const PROJECT_RUN_HISTORY_STORAGE_KEY = "ipsos.snack.project-run.history";
+const PROJECT_RESULT_STORAGE_PREFIX = "ipsos.snack.project-result.";
 const QUESTION_TRANSLATIONS = questionnaireTranslationsJson.questions as Record<string, { text_en: string; options_en: string[] }>;
 const QUESTION_PROGRAMMING = Object.fromEntries(questionnaireProgrammingJson.questions.map((item) => [item.question_id, item])) as Record<string, (typeof questionnaireProgrammingJson.questions)[number]>;
 const CHART_SSR_DIMENSION = { width: 800, height: 320 };
@@ -1208,7 +1210,7 @@ function ConsumerDemand({ locale, category, channel, age, income, region, active
           return <label className={`project ${selected ? "selected" : ""}`} key={item.code}><input type="checkbox" checked={selected} onChange={() => toggleNextWaveExperiment(experiment.key)} /><header><b>{item.code}</b><span>{tr(locale, "项目专项", "Project-specific")}</span></header><h4>{tr(locale, item.titleZh, item.titleEn)}</h4><p>{tr(locale, item.evidenceZh, item.evidenceEn)}</p><strong>{tr(locale, item.designZh, item.designEn)}</strong><footer><span>{item.questionIds.join(" · ")}</span><span>{selected ? tr(locale, "已选入V2", "Included in V2") : tr(locale, "本期不纳入", "Excluded this wave")}</span></footer></label>;
         })}</div>
         <section className="next-wave-confirmation"><div><span>V2 DESIGN LOCK</span><h4>{tr(locale, "确认本期专项实验与配额后生成三个独立文件", "Confirm experiments and quota, then generate three separate files")}</h4><p>{tr(locale, `${selectedNextWaveExperiments.length}个专项实验 · ${selectedNextWaveExperiments.flatMap((key) => NEXT_WAVE_EXPERIMENTS.find((item) => item.key === key)?.primaryQuestionId ?? []).length}组实验变量 · ${selectedQuota.zh}`, `${selectedNextWaveExperiments.length} project experiments · ${selectedQuota.en}`)}</p></div><button type="button" disabled={!nextWaveManifestEntry || !production || nextWaveArtifactsReady} onClick={() => { if (!nextWaveManifestEntry || !production || !onProjectDesignLocked) return; onProjectDesignLocked({ projectId: "SNACK-CN-CRACKER-001", artifactVersion: "V2", confirmationKey: nextWaveConfirmationKey, sampleN: generatedRequest.sampleN, quotaMode, experimentKeys: [...selectedNextWaveExperiments], experimentQuestionIds: [...nextWaveManifestEntry.experimentQuestionIds], sourceProductionFile: production.meta.fileName, sourceProductionProcessedAt: production.meta.processedAt, files: { questionnaire: nextWaveManifestEntry.files.questionnaire, quota: nextWaveManifestEntry.files.quota[quotaMode], dpSpec: nextWaveManifestEntry.files.dpSpec } }); }}>{nextWaveArtifactsReady ? tr(locale, "V2已锁定", "V2 locked") : tr(locale, "确认并生成V2", "Confirm and generate V2")}</button></section>
-        {nextWaveArtifactsReady && nextWaveManifestEntry ? <section className="next-wave-v2-downloads"><a href={nextWaveManifestEntry.files.questionnaire} download><span>01</span><strong>{tr(locale, "问卷 V2", "Questionnaire V2")}</strong><small>{tr(locale, "题目 · 选项 · Base · 程序逻辑 · 指标映射", "Items · options · bases · logic · metric mapping")}</small></a><a href={nextWaveManifestEntry.files.quota[quotaMode]} download><span>02</span><strong>{tr(locale, "配额表 V2", "Quota table V2")}</strong><small>{tr(locale, `${selectedQuota.zh} · 实验组随机分配监测`, `${selectedQuota.en} · experiment-cell monitoring`)}</small></a><a href={nextWaveManifestEntry.files.dpSpec} download><span>03</span><strong>DP Spec V2</strong><small>General · Spec · Banner · Grid</small></a></section> : null}
+        {nextWaveArtifactsReady && nextWaveManifestEntry ? <section className="next-wave-v2-downloads"><a href={publicAssetPath(nextWaveManifestEntry.files.questionnaire)} download><span>01</span><strong>{tr(locale, "问卷 V2", "Questionnaire V2")}</strong><small>{tr(locale, "题目 · 选项 · Base · 程序逻辑 · 指标映射", "Items · options · bases · logic · metric mapping")}</small></a><a href={publicAssetPath(nextWaveManifestEntry.files.quota[quotaMode])} download><span>02</span><strong>{tr(locale, "配额表 V2", "Quota table V2")}</strong><small>{tr(locale, `${selectedQuota.zh} · 实验组随机分配监测`, `${selectedQuota.en} · experiment-cell monitoring`)}</small></a><a href={publicAssetPath(nextWaveManifestEntry.files.dpSpec)} download><span>03</span><strong>DP Spec V2</strong><small>General · Spec · Banner · Grid</small></a></section> : null}
         <footer><p>{tr(locale, "通用核心保持可比；PJT_*只进入本项目Table与专项模型。", "The shared core remains comparable; PJT_* feeds only this project's tables and models.")}</p><p>{tr(locale, "改变专项实验或配额后需要重新确认，已锁定的V1文件不会被覆盖。", "Changing experiments or quota requires reconfirmation; locked V1 files are never overwritten.")}</p></footer>
       </section> : null}
       <section className="research-design-hub">
@@ -1602,31 +1604,47 @@ function ResearchProductionFlow({ locale, design, run, initialProduction, onProd
     try {
       if (!file.name.toLowerCase().endsWith(".csv")) throw new Error(tr(locale, "请选择CSV文件", "Select a CSV file"));
       if (file.size > 15 * 1024 * 1024) throw new Error(tr(locale, "单个CSV文件不能超过15MB", "A CSV file cannot exceed 15 MB"));
-      const headers: Record<string, string> = {
-        "x-raw-file-name": encodeURIComponent(file.name),
-        "x-raw-uncompressed-size": String(file.size),
-        "x-project-run-id": run.runId,
-        "x-design-version": design.designVersion,
-        "x-design-confirmation-key": encodeURIComponent(design.confirmationKey),
-      };
-      let body: BodyInit;
-      if (typeof CompressionStream === "function") {
-        const compressed = file.stream().pipeThrough(new CompressionStream("gzip"));
-        body = await new Response(compressed).arrayBuffer();
-        headers["content-type"] = "application/gzip";
-      } else {
-        body = file;
-        headers["content-type"] = "text/csv;charset=utf-8";
-      }
-      const response = await fetch("/api/research-operations/raw-production", { method: "POST", headers, body });
-      const responseText = await response.text();
       let payload: RawProductionResult & { error?: string };
-      try {
-        payload = JSON.parse(responseText) as RawProductionResult & { error?: string };
-      } catch {
-        throw new Error(response.ok ? tr(locale, "生产接口返回格式异常", "The production service returned an invalid response") : responseText || tr(locale, "数据生产失败", "Data production failed"));
+      if (IS_STATIC_DEMO) {
+        const resultKey = `${run.runId}__${design.designVersion}__${Date.now()}`;
+        const storedAt = new Date().toISOString();
+        payload = {
+          ...buildRawProductionResult(await file.text(), file.name),
+          binding: {
+            runId: run.runId,
+            designVersion: design.designVersion,
+            designConfirmationKey: design.confirmationKey,
+            resultKey,
+            storedAt,
+          },
+        };
+        window.localStorage.setItem(`${PROJECT_RESULT_STORAGE_PREFIX}${resultKey}`, JSON.stringify(payload));
+      } else {
+        const headers: Record<string, string> = {
+          "x-raw-file-name": encodeURIComponent(file.name),
+          "x-raw-uncompressed-size": String(file.size),
+          "x-project-run-id": run.runId,
+          "x-design-version": design.designVersion,
+          "x-design-confirmation-key": encodeURIComponent(design.confirmationKey),
+        };
+        let body: BodyInit;
+        if (typeof CompressionStream === "function") {
+          const compressed = file.stream().pipeThrough(new CompressionStream("gzip"));
+          body = await new Response(compressed).arrayBuffer();
+          headers["content-type"] = "application/gzip";
+        } else {
+          body = file;
+          headers["content-type"] = "text/csv;charset=utf-8";
+        }
+        const response = await fetch("/api/research-operations/raw-production", { method: "POST", headers, body });
+        const responseText = await response.text();
+        try {
+          payload = JSON.parse(responseText) as RawProductionResult & { error?: string };
+        } catch {
+          throw new Error(response.ok ? tr(locale, "生产接口返回格式异常", "The production service returned an invalid response") : responseText || tr(locale, "数据生产失败", "Data production failed"));
+        }
+        if (!response.ok) throw new Error(payload.error || tr(locale, "数据生产失败", "Data production failed"));
       }
-      if (!response.ok) throw new Error(payload.error || tr(locale, "数据生产失败", "Data production failed"));
       if (payload.meta.status === "ready" && (payload.binding?.runId !== run.runId || payload.binding?.designVersion !== design.designVersion || payload.binding?.designConfirmationKey !== design.confirmationKey)) {
         throw new Error(tr(locale, "项目结果未正确绑定当前运行版本", "The result was not bound to the current project run"));
       }
@@ -1819,7 +1837,7 @@ function ProjectExecutionHub({ locale, design, run, syncState, onBackToDesign, o
       {activeRun.stage === "closed" ? <div className="execution-ready-for-data"><span>05 · FIELDWORK CLOSED</span><h3>{tr(locale, "执行记录已关闭，可进入第04步上传最终Raw", "Run closed; upload the final Raw in step 04")}</h3><p>{tr(locale, "第04步会核对当前设计版本和执行记录，只接受CSV生产版本。", "Step 04 checks the current design and run record and accepts one production CSV.")}</p></div> : null}
       {dataReady && activeRun.finalRaw ? <div className="execution-ready-for-data complete"><span>FINAL RAW BOUND</span><h3>{activeRun.finalRaw.fileName}</h3><p>N={activeRun.finalRaw.eligibleRowCount.toLocaleString()} · {new Date(activeRun.finalRaw.processedAt).toLocaleString(locale === "zh" ? "zh-CN" : "en-GB")}</p></div> : null}
     </section> : null}
-    <section className="execution-version-files">{design.finalQuestionnaire ? <><button type="button" onClick={downloadLockedQuestionnaire}><span>01</span><strong>{tr(locale, "锁定问卷", "Locked questionnaire")}</strong><small>{design.finalQuestionnaire.version}</small></button><button type="button" onClick={downloadLockedQuota}><span>02</span><strong>{tr(locale, "锁定配额表", "Locked quota")}</strong><small>{tr(locale, quota.zh, quota.en)}</small></button><button type="button" onClick={downloadLockedDpSpec}><span>03</span><strong>{tr(locale, "锁定DP Spec", "Locked DP Spec")}</strong><small>{design.designVersion}</small></button></> : <><a href={design.files.questionnaire} download><span>01</span><strong>{tr(locale, "锁定问卷", "Locked questionnaire")}</strong><small>{design.artifactVersion}</small></a><a href={design.files.quota} download><span>02</span><strong>{tr(locale, "锁定配额表", "Locked quota")}</strong><small>{tr(locale, quota.zh, quota.en)}</small></a><a href={design.files.dpSpec} download><span>03</span><strong>{tr(locale, "锁定DP Spec", "Locked DP Spec")}</strong><small>{design.artifactVersion}</small></a></>}</section>
+    <section className="execution-version-files">{design.finalQuestionnaire ? <><button type="button" onClick={downloadLockedQuestionnaire}><span>01</span><strong>{tr(locale, "锁定问卷", "Locked questionnaire")}</strong><small>{design.finalQuestionnaire.version}</small></button><button type="button" onClick={downloadLockedQuota}><span>02</span><strong>{tr(locale, "锁定配额表", "Locked quota")}</strong><small>{tr(locale, quota.zh, quota.en)}</small></button><button type="button" onClick={downloadLockedDpSpec}><span>03</span><strong>{tr(locale, "锁定DP Spec", "Locked DP Spec")}</strong><small>{design.designVersion}</small></button></> : <><a href={publicAssetPath(design.files.questionnaire)} download><span>01</span><strong>{tr(locale, "锁定问卷", "Locked questionnaire")}</strong><small>{design.artifactVersion}</small></a><a href={publicAssetPath(design.files.quota)} download><span>02</span><strong>{tr(locale, "锁定配额表", "Locked quota")}</strong><small>{tr(locale, quota.zh, quota.en)}</small></a><a href={publicAssetPath(design.files.dpSpec)} download><span>03</span><strong>{tr(locale, "锁定DP Spec", "Locked DP Spec")}</strong><small>{design.artifactVersion}</small></a></>}</section>
   </div>;
 }
 
@@ -1909,6 +1927,10 @@ export default function SnackIndustryFocusDashboard() {
     }
   }, []);
   useEffect(() => {
+    if (IS_STATIC_DEMO) {
+      setRunSyncState("saved");
+      return;
+    }
     let cancelled = false;
     void fetch("/api/research-operations/project-runs", { cache: "no-store" })
       .then(async (response) => {
@@ -1987,6 +2009,10 @@ export default function SnackIndustryFocusDashboard() {
       return history;
     });
     setRunSyncState("saving");
+    if (IS_STATIC_DEMO) {
+      setRunSyncState("saved");
+      return;
+    }
     void fetch("/api/research-operations/project-runs", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -2033,6 +2059,21 @@ export default function SnackIndustryFocusDashboard() {
     }
     let cancelled = false;
     setResultLoadState("loading");
+    if (IS_STATIC_DEMO) {
+      try {
+        const stored = window.localStorage.getItem(`${PROJECT_RESULT_STORAGE_PREFIX}${projectRun.finalRaw.resultKey}`);
+        if (!stored) throw new Error("result not found");
+        const payload = JSON.parse(stored) as RawProductionResult;
+        if (payload.binding?.resultKey !== projectRun.finalRaw.resultKey) throw new Error("result mismatch");
+        setLatestProduction(payload);
+        setDeliveryProduction((current) => current ?? payload);
+        setDeliveryRun((current) => current ?? projectRun);
+        setResultLoadState("ready");
+      } catch {
+        setResultLoadState("error");
+      }
+      return;
+    }
     void fetch(`/api/research-operations/project-results?runId=${encodeURIComponent(projectRun.runId)}&designVersion=${encodeURIComponent(projectRun.designVersion)}`, { cache: "no-store" })
       .then(async (response) => {
         const payload = await response.json() as RawProductionResult & { error?: string };
@@ -2055,6 +2096,19 @@ export default function SnackIndustryFocusDashboard() {
     setDeliveryRun(selected);
     setDeliveryProduction(null);
     setResultLoadState("loading");
+    if (IS_STATIC_DEMO) {
+      try {
+        const stored = window.localStorage.getItem(`${PROJECT_RESULT_STORAGE_PREFIX}${resultKey}`);
+        if (!stored) throw new Error("result not found");
+        const payload = JSON.parse(stored) as RawProductionResult;
+        if (payload.binding?.resultKey !== resultKey) throw new Error("result mismatch");
+        setDeliveryProduction(payload);
+        setResultLoadState("ready");
+      } catch {
+        setResultLoadState("error");
+      }
+      return;
+    }
     void fetch(`/api/research-operations/project-results?runId=${encodeURIComponent(selected.runId)}&designVersion=${encodeURIComponent(selected.designVersion)}`, { cache: "no-store" })
       .then(async (response) => {
         const payload = await response.json() as RawProductionResult & { error?: string };

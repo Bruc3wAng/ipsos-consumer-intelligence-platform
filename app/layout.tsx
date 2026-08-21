@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { publicAssetPath } from "./lib/publicRuntime";
 
 export const metadata: Metadata = {
   title: "Ipsos Consumer Intelligence",
   description: "Ipsos 消费者洞察与模型平台：客户项目、研究数据、预测模型与决策应用。",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: publicAssetPath("/favicon.svg"),
+    shortcut: publicAssetPath("/favicon.svg"),
   },
   openGraph: {
     title: "Ipsos Consumer Intelligence",

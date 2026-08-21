@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 import forecastJson from "../../output/tt-ecosystem-satisfaction-w5/w6-question-kpi-forecast.json";
 
 type Metric = {
@@ -38,7 +39,7 @@ export default function ByteDanceEcosystemReport() {
   const negative = metrics.filter((metric) => metric.direction === "negative").slice(0, 4);
   return (
     <main className="ecosystem-report">
-      <header className="report-topbar"><div><PlatformBrand compact /><span /><img src="/bytedance-logo.svg" alt="ByteDance" /></div><p>TT及外部竞品生态满意度调研 · 第六期模型预测</p><Link href="/clients/bytedance/ecosystem">返回项目模型</Link></header>
+      <header className="report-topbar"><div><PlatformBrand compact /><span /><img src={publicAssetPath("/bytedance-logo.svg")} alt="ByteDance" /></div><p>TT及外部竞品生态满意度调研 · 第六期模型预测</p><Link href="/clients/bytedance/ecosystem">返回项目模型</Link></header>
 
       <section className="report-slide report-cover">
         <div className="report-cover-copy"><p>W6 CLIENT READOUT</p><h1>满意度预计恢复，<br />但核心体验修复仍不充分</h1><span>W3–W5 Raw Data · 七国每国计划 N=2,000 · Q3–Q7 跨期模型</span></div>

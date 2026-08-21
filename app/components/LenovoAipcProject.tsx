@@ -10,6 +10,7 @@ import PlatformBrand from "./PlatformBrand";
 import { forecastPreview } from "../data/lenovoCampaign";
 import { choiceProbabilities, predictConsumer, type ConsumerProfile } from "../models/consumerModels";
 import aipcStoreModelJson from "../../output/lenovo-pc-intelligence/aipc-store-purchase-uplift-model.json";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 type ModelKey = "store" | "forecast" | "choice" | "twin";
 type FilterKey = "S1a" | "S10" | "B_loop[{_1}].C1" | "B_loop[{_1}].C2";
@@ -170,7 +171,7 @@ const modelPlan = [
 export default function LenovoAipcProject() {
   const [model, setModel] = useState<ModelKey>("store");
   return <main className="client-portal focused-portal aipc-project">
-    <header className="client-header"><div className="client-brandline"><PlatformBrand compact/><span className="brand-divider"/><img className="client-logo lenovo-logo" src="/lenovo-logo.svg" alt="Lenovo"/><div><strong>AI PC Consumer Intelligence</strong></div></div><div className="client-header-actions"><Link href="/clients/lenovo">返回联想项目</Link></div></header>
+    <header className="client-header"><div className="client-brandline"><PlatformBrand compact/><span className="brand-divider"/><img className="client-logo lenovo-logo" src={publicAssetPath("/lenovo-logo.svg")} alt="Lenovo"/><div><strong>AI PC Consumer Intelligence</strong></div></div><div className="client-header-actions"><Link href="/clients/lenovo">返回联想项目</Link></div></header>
     <section className="focused-content">
       <header className="focused-intro"><div><p>AI PC&nbsp;&nbsp;/&nbsp;&nbsp;AIPC进店用户调研（第二期）</p><h1>AI PC 消费者模型</h1><span>从问卷结果进入可验证的门店决策模型：先用真实 Raw Data 回答门店体验如何关联购买意愿，再把下一期设计成样本外验证。</span></div></header>
       <section className="aipc-model-plan">{modelPlan.map((item,index) => <button className={model===item.id?"active":""} key={item.id} onClick={()=>setModel(item.id)}><b>{String(index+1).padStart(2,"0")}</b><span>{item.role}</span><h2>{item.title}</h2><p>{item.target}</p><strong>{item.validation}</strong></button>)}</section>

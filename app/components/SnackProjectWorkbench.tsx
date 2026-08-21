@@ -13,6 +13,7 @@ import {
 } from "recharts";
 import workbenchJson from "../../output/packaged-food-beverage/snack-project-workbench.json";
 import { buildSnackProjectPreview } from "../lib/snackProjectGenerator";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 type Locale = "zh" | "en";
 type Objective = "concept" | "pricing" | "channel" | "tracking";
@@ -243,7 +244,7 @@ export default function SnackProjectWorkbench({ locale }: { locale: Locale }) {
     <section className="project-workflow">
       <header><span>DELIVERY WORKFLOW</span><h3>{tr(locale, "从业务问题到模型与产品建议", "From business question to model-backed product action")}</h3></header>
       <div>{workbenchJson.workflow.map((row, index) => <article key={row.stage}><span>0{index + 1}</span><h4>{row.stage}</h4><b>{row.owner}</b><p>{row.output}</p></article>)}</div>
-      <footer><div>{workbenchJson.delivery_package.map((item) => <b key={item}>✓ {item}</b>)}</div><a href="/downloads/snack-project-workbench.json" download>{tr(locale, "下载体系数据", "Download system data")}</a><a href="/downloads/snack-common-simulated-pool.csv" download>{tr(locale, "下载通用案例样本池", "Download common case pool")}</a></footer>
+      <footer><div>{workbenchJson.delivery_package.map((item) => <b key={item}>✓ {item}</b>)}</div><a href={publicAssetPath("/downloads/snack-project-workbench.json")} download>{tr(locale, "下载体系数据", "Download system data")}</a><a href={publicAssetPath("/downloads/snack-common-simulated-pool.csv")} download>{tr(locale, "下载通用案例样本池", "Download common case pool")}</a></footer>
     </section>
   </div>;
 }

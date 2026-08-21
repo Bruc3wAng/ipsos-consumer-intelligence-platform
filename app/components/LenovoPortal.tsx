@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 import {
   campaignChannels,
   campaignFunnel,
@@ -30,7 +31,7 @@ function PortalHeader({ view, setView }: { view: PortalView; setView: (view: Por
         <div className="client-brandline">
           <PlatformBrand compact />
           <span className="brand-divider" />
-          <img className="client-logo lenovo-logo" src="/lenovo-logo.svg" alt="Lenovo" />
+          <img className="client-logo lenovo-logo" src={publicAssetPath("/lenovo-logo.svg")} alt="Lenovo" />
           <div><strong>消费者洞察与模型平台</strong></div>
         </div>
         <div className="client-header-actions"><Link href="/clients/lenovo">返回联想项目</Link></div>

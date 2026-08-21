@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
 import { tenantCatalog } from "../lib/tenants";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 const modelRouting = [
   {
@@ -75,7 +76,7 @@ export default function IpsosCommandCenter() {
             {clients.map((client) => (
               <article key={client.slug}>
                 <div className="research-client-head">
-                  <img className={`account-logo account-logo-${client.slug}`} src={client.slug === "lenovo" ? "/lenovo-logo.svg" : "/bytedance-logo.svg"} alt={client.name} />
+                  <img className={`account-logo account-logo-${client.slug}`} src={publicAssetPath(client.slug === "lenovo" ? "/lenovo-logo.svg" : "/bytedance-logo.svg")} alt={client.name} />
                   <div><strong>{client.chineseName}</strong><span>{client.name}</span></div>
                 </div>
                 <div className="client-space-summary">

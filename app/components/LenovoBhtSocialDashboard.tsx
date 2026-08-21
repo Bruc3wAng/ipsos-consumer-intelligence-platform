@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 import {
   bhtDrivers,
   bhtSocialPeriods,
@@ -307,7 +308,7 @@ export default function LenovoBhtSocialDashboard() {
   return (
     <main className="client-portal bht-dashboard">
       <header className="client-header">
-        <div className="client-brandline"><PlatformBrand compact /><span className="brand-divider" /><img className="client-logo lenovo-logo" src="/lenovo-logo.svg" alt="Lenovo" /><div><strong>BHT + Social Dashboard</strong></div></div>
+        <div className="client-brandline"><PlatformBrand compact /><span className="brand-divider" /><img className="client-logo lenovo-logo" src={publicAssetPath("/lenovo-logo.svg")} alt="Lenovo" /><div><strong>BHT + Social Dashboard</strong></div></div>
         <div className="client-header-actions"><Link href="/clients/lenovo">返回联想项目</Link></div>
       </header>
 

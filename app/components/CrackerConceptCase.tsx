@@ -21,6 +21,7 @@ import {
 import caseJson from "../../output/packaged-food-beverage/cracker-concept-simulation.json";
 import commonJson from "../../output/packaged-food-beverage/snack-common-project-system.json";
 import workbenchJson from "../../output/packaged-food-beverage/snack-project-workbench.json";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 
 type Locale = "zh" | "en";
@@ -42,7 +43,7 @@ function CaseTag({ children }: { children: React.ReactNode }) {
 }
 
 function downloadUrl(name: string) {
-  return `/downloads/${name}`;
+  return publicAssetPath(`/downloads/${name}`);
 }
 
 const CUT_LABELS: Record<CutDimension, { zh: string; en: string }> = {

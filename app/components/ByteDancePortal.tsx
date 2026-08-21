@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 const projects = [
   {
@@ -25,7 +26,7 @@ export default function ByteDancePortal() {
         <div className="client-brandline">
           <PlatformBrand compact />
           <span className="brand-divider" />
-          <img className="client-logo bytedance-logo" src="/bytedance-logo.svg" alt="ByteDance" />
+          <img className="client-logo bytedance-logo" src={publicAssetPath("/bytedance-logo.svg")} alt="ByteDance" />
           <div><strong>字节跳动项目空间</strong><span>消费者洞察与模型平台</span></div>
         </div>
         <div className="client-header-actions"><Link href="/">返回 Ipsos 平台</Link></div>

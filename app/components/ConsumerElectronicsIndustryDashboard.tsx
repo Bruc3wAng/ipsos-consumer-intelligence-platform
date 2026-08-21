@@ -37,6 +37,7 @@ import platformPcIndexJson from "../../output/lenovo-pc-intelligence/platform-pc
 import populationProjectionJson from "../../output/lenovo-pc-intelligence/pc-population-projection-gate.json";
 import externalCalibrationJson from "../../output/consumer-electronics-industry/external-calibration-register.json";
 import PlatformBrand from "./PlatformBrand";
+import { IS_STATIC_DEMO, publicAssetPath } from "../lib/publicRuntime";
 
 type AggregateRow = {
   wave: string;
@@ -459,7 +460,7 @@ type PopulationProjectionGate = {
 };
 
 const data = dashboardJson as DashboardData;
-const propensityData = propensityJson as PropensityData;
+const propensityData = propensityJson as unknown as PropensityData;
 const lenovoPcData = lenovoPcJson as LenovoPcEvidence;
 const lenovoEvidence = lenovoEvidenceJson as LenovoHistoricalEvidence;
 const lenovoMetricDictionary = pcMetricSystemJson as LenovoMetricDictionary;
@@ -990,6 +991,43 @@ export default function ConsumerElectronicsIndustryDashboard() {
     setResearchLoading(true);
     setResearchError("");
     try {
+      if (IS_STATIC_DEMO) {
+        const requestedAudience = /SMB|中小企业/i.test(query) ? "SMB" : /政企|大客户|企业级/.test(query) ? "政企大客户" : "大众消费者";
+        if (/Q14|购买意向|需求下降/.test(query)) {
+          const latest = realIntentSeries.at(-1)!;
+          setResearchAnswer({
+            title: "Q14反映未来12个月购买意向，不等于实际需求",
+            answer: `最新一期${latest.wave}笔记本购买意向为${latest.value.toFixed(1)}%；跨期读数为${realIntentSeries.map((item) => `${item.wave} ${item.value.toFixed(1)}%`).join("、")}。`,
+            points: ["该指标是问卷中的声明意向，需要与换机行为、成交和市场供给信号联合验证。", "跨期解释需同时核对样本框、配额、权重和题目口径。"],
+            sources: ["联想BHT历史Table · Q14"],
+            boundary: "购买意向不是实际购买、销量或市场份额。",
+            evidence: realIntentSeries.slice(-3).map((item) => ({ label: item.wave, value: `${item.value.toFixed(1)}%`, source: "Q14" })),
+          });
+          return;
+        }
+        if (/价格弹性|最优售价|需求曲线/.test(query)) {
+          setResearchAnswer({
+            title: "现有预算题不足以估计PC价格弹性",
+            answer: "当前数据可以描述可接受价格区间，但没有不同价格与配置下的真实选择或成交结果，不能直接推导价格弹性。",
+            points: ["下一步需加入离散选择任务，系统变动价格、配置、品牌与AI功能。", "再用Holdout选择题或上市后成交数据校验预测。"],
+            sources: ["PC指标字典 · 可接受价格"],
+            boundary: "不用单题预算分布推导价格弹性或最优售价。",
+            evidence: [],
+          });
+          return;
+        }
+        const indicator = /无提示|Q713/i.test(query) ? "无提示总认知" : "提示后总认知";
+        const insight = platformPcIndex.insights.find((item) => item.audience === requestedAudience && item.insight_id.includes(indicator)) ?? platformPcIndex.insights[0];
+        setResearchAnswer({
+          title: `${insight.audience} · ${indicator}`,
+          answer: insight.claim,
+          points: [insight.implication],
+          sources: Array.from(new Set(insight.evidence.map((item) => `${item.source_sheet} · Base N=${item.base?.toLocaleString() ?? "—"}`))),
+          boundary: insight.boundary,
+          evidence: insight.evidence.map((item) => ({ label: item.wave || item.item || "指标", value: `${item.value.toFixed(1)}%`, source: item.source_sheet })),
+        });
+        return;
+      }
       const response = await fetch("/api/research-answer", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -1010,6 +1048,39 @@ export default function ConsumerElectronicsIndustryDashboard() {
     setPlatformLoading(true);
     setPlatformError("");
     try {
+      if (IS_STATIC_DEMO) {
+        type StaticObservation = PlatformPcQueryResult["latest"][number] & { audience: string; product_space: string; wave_order: number };
+        const response = await fetch(publicAssetPath("/data/platform-pc-observations.json"));
+        if (!response.ok) throw new Error("PC聚合数据载入失败");
+        const payload = await response.json() as { observations: StaticObservation[]; meta?: { evidence_boundary?: string } };
+        const rows = payload.observations.filter((row) => (platformAudience === "全部受众" || row.audience === platformAudience)
+          && (platformProductSpace === "全部产品域" || row.product_space === platformProductSpace)
+          && (resolvedPlatformSheet === "全部指标表" || row.sheet === resolvedPlatformSheet)
+          && (resolvedPlatformIndicator === "全部指标" || row.indicator_group === resolvedPlatformIndicator)
+          && (resolvedPlatformBrand === "全部品牌/指标项" || row.brand === resolvedPlatformBrand || (!row.brand && row.analysis_item === resolvedPlatformBrand))
+          && (resolvedPlatformWave === "全部期次" || row.wave === resolvedPlatformWave));
+        const latestBySeries = new Map<string, StaticObservation>();
+        for (const row of rows) {
+          const key = `${row.brand ?? ""}__${row.analysis_item}__${row.indicator_group ?? ""}`;
+          const current = latestBySeries.get(key);
+          if (!current || row.wave_order > current.wave_order) latestBySeries.set(key, row);
+        }
+        const bases = rows.map((row) => row.base_unweighted).filter((value): value is number => typeof value === "number");
+        setPlatformResult({
+          summary: {
+            matched: rows.length,
+            series: latestBySeries.size,
+            waves: new Set(rows.map((row) => row.wave)).size,
+            base_min: bases.length ? Math.min(...bases) : null,
+            base_max: bases.length ? Math.max(...bases) : null,
+            latest_wave: rows.length ? rows.reduce((best, row) => row.wave_order > best.wave_order ? row : best).wave : null,
+          },
+          trend: rows.slice().sort((a, b) => a.wave_order - b.wave_order || b.value - a.value).slice(-600),
+          latest: [...latestBySeries.values()].sort((a, b) => b.value - a.value).slice(0, 80),
+          boundary: payload.meta?.evidence_boundary ?? platformPcIndex.meta.evidence_boundary,
+        });
+        return;
+      }
       const response = await fetch("/api/pc-platform-query", {
         method: "POST",
         headers: { "content-type": "application/json" },

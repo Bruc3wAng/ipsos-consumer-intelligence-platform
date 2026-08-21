@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { MeshPhongMaterial } from "three";
 import type { GlobeMethods, GlobeProps } from "react-globe.gl";
 import { researchMarkets, type ResearchMarket } from "../data/globalResearchNetwork";
+import { publicAssetPath } from "../lib/publicRuntime";
 
 const Globe = dynamic<GlobeProps>(() => import("react-globe.gl"), {
   ssr: false,
@@ -40,7 +41,7 @@ export default function DataGlobe() {
   );
 
   useEffect(() => {
-    fetch("/world-countries-110m.geojson")
+    fetch(publicAssetPath("/world-countries-110m.geojson"))
       .then((response) => response.json())
       .then((geojson) => setCountries(geojson.features ?? []))
       .catch(() => setCountries([]));

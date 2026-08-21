@@ -13,6 +13,7 @@ import {
   YAxis,
 } from "recharts";
 import PlatformBrand from "./PlatformBrand";
+import { publicAssetPath } from "../lib/publicRuntime";
 import ByteDanceEcosystemWorkflow, { KpiPredictionMatrix } from "./ByteDanceEcosystemWorkflow";
 
 const trajectory = [
@@ -90,7 +91,7 @@ export default function ByteDanceEcosystemProject() {
         <div className="client-brandline">
           <PlatformBrand compact />
           <span className="brand-divider" />
-          <img className="client-logo bytedance-logo" src="/bytedance-logo.svg" alt="ByteDance" />
+          <img className="client-logo bytedance-logo" src={publicAssetPath("/bytedance-logo.svg")} alt="ByteDance" />
           <div><strong>消费者洞察与模型平台</strong></div>
         </div>
         <div className="client-header-actions"><Link href="/clients/bytedance">返回字节跳动项目</Link></div>
