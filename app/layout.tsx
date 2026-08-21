@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: "Ipsos Consumer Intelligence",
     description: "消费者洞察、预测模型与决策应用。",
   },
+  ...(process.env.NEXT_PUBLIC_STATIC_DEMO === "true"
+    ? { robots: { index: false, follow: false, nocache: true } }
+    : {}),
 };
 
 export default function RootLayout({
