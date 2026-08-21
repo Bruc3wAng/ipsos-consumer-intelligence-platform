@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Ipsos Consumer Intelligence Platform</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, "Microsoft YaHei", sans-serif;
+        background: #edf1f7;
+        color: #102052;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .loading {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 78% 24%, rgba(35, 176, 174, 0.2), transparent 30%),
+          linear-gradient(135deg, #111d58 0%, #263d98 58%, #168e9e 100%);
+        color: #fff;
+        transition: opacity 220ms ease;
+      }
+
+      .loading.is-ready {
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .brand {
+        max-width: 680px;
+        padding: 32px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: #55e0d5;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+        font-size: clamp(28px, 4vw, 52px);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .line {
+        width: 92px;
+        height: 3px;
+        margin: 24px auto 0;
+        background: #55e0d5;
+      }
+
+      iframe {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #edf1f7;
+      }
+
+      noscript {
+        position: fixed;
+        inset: 0;
+        z-index: 3;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #fff;
+      }
+
+      a {
+        color: #223eb0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading" id="loading" aria-live="polite">
+      <div class="brand">
+        <p class="eyebrow">Ipsos Consumer Intelligence</p>
+        <h1>消费者洞察与模型平台</h1>
+        <div class="line" aria-hidden="true"></div>
+      </div>
+    </div>
+    <iframe
+      title="Ipsos Consumer Intelligence Platform"
+      src="https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site"
+      allow="clipboard-read; clipboard-write; fullscreen"
+      referrerpolicy="strict-origin-when-cross-origin"
+      onload="document.getElementById('loading').classList.add('is-ready')"
+    ></iframe>
+    <noscript>
+      <p>
+        请打开
+        <a href="https://ipsos-intelligence-foundry.ruiw0124.chatgpt.site">Ipsos Consumer Intelligence Platform</a>。
+      </p>
+    </noscript>
+  </body>
+</html>
