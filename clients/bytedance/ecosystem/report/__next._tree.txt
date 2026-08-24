@@ -1,4 +1,4 @@
-:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/09j-zhwmisetv.css","style"]
+:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/0u_o_kzqxkq6z.css","style"]
 :HL["/ipsos-consumer-intelligence-platform/ipsos-logo.png","image"]
 :HL["/ipsos-consumer-intelligence-platform/bytedance-logo.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"clients","param":null,"prefetchHints":0,"slots":{"children":{"name":"bytedance","param":null,"prefetchHints":0,"slots":{"children":{"name":"ecosystem","param":null,"prefetchHints":0,"slots":{"children":{"name":"report","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"sLubYxpRqcb1UB5HY_4_3"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"clients","param":null,"prefetchHints":0,"slots":{"children":{"name":"bytedance","param":null,"prefetchHints":0,"slots":{"children":{"name":"ecosystem","param":null,"prefetchHints":0,"slots":{"children":{"name":"report","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"m8CKmbmkTWa4H3ce2A2ym"}

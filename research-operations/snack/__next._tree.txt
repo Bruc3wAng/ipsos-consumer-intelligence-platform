@@ -1,2 +1,2 @@
-:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/09j-zhwmisetv.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"research-operations","param":null,"prefetchHints":0,"slots":{"children":{"name":"snack","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sLubYxpRqcb1UB5HY_4_3"}
+:HL["/ipsos-consumer-intelligence-platform/_next/static/chunks/0u_o_kzqxkq6z.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"research-operations","param":null,"prefetchHints":0,"slots":{"children":{"name":"snack","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"m8CKmbmkTWa4H3ce2A2ym"}
