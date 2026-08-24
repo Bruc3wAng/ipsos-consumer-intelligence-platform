@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, rmSync, unlinkSync } from "node:fs";
+import { existsSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
@@ -550,6 +550,26 @@ test("persists server-side project run records with the locked design snapshot",
   }
 });
 
+test("exports research workbooks with addressable cells that survive an Excel import", async () => {
+  const { buildResearchWorkbook } = await import("../app/lib/researchWorkbookExport.ts");
+  const outputPath = `/private/tmp/research-workbook-export-${process.pid}-${Date.now()}.xlsx`;
+  const wideHeader = Array.from({ length: 28 }, (_, index) => `字段${index + 1}`);
+  const wideRow = Array.from({ length: 28 }, (_, index) => index === 0 ? "中文\nEnglish" : index === 1 ? 42 : index === 2 ? "清理\u0001控制符" : null);
+  try {
+    writeFileSync(outputPath, Buffer.from(buildResearchWorkbook([{ name: "导出校验", rows: [wideHeader, wideRow] }])));
+    execFileSync("unzip", ["-t", outputPath], { stdio: "pipe" });
+    const worksheetXml = execFileSync("unzip", ["-p", outputPath, "xl/worksheets/sheet1.xml"], { encoding: "utf8" });
+    const cells = [...worksheetXml.matchAll(/<c\b([^>]*)>/g)];
+    assert.ok(cells.length >= 56, "every exported value needs a concrete cell record");
+    assert.ok(cells.every((match) => /\br="[A-Z]+[1-9][0-9]*"/.test(match[1])), "every cell must carry an A1-style address");
+    assert.match(worksheetXml, /<dimension ref="A1:AB2"\/>/);
+    assert.match(worksheetXml, /<c r="B2"[^>]*><v>42<\/v><\/c>/);
+    assert.doesNotMatch(worksheetXml, /\u0001/);
+  } finally {
+    if (existsSync(outputPath)) unlinkSync(outputPath);
+  }
+});
+
 test("blocks model production when final Raw has duplicate IDs or invalid weights", async () => {
   const { buildRawProductionResult } = await import("../app/lib/rawDataProduction.ts");
   const payload = buildRawProductionResult([
@@ -651,7 +671,7 @@ test("confirms next-wave experiments before exposing three separate V2 design fi
   assert.match(component, /designVersion: `V2-R\$\{revision\}`/);
   assert.match(component, /等待第02步锁定研究设计/);
   assert.match(component, /本页读取第02步确认的同一问卷、配额与DP Spec版本/);
-  assert.match(component, /N≥30且四项全部通过后才能开始正式回收/);
+  assert.match(component, /固定随机数、N≥30且四项全部通过后进入正式回收/);
   assert.match(component, /最低配额单元达到100%/);
   assert.match(component, /当前执行记录尚未关闭回收/);
   assert.match(component, /stage: "data_ready"/);
@@ -816,13 +836,15 @@ test("uses real-case screener logic and a bilingual questionnaire production con
   assert.match(pipeline.workflow.find((item) => item.step === "04").name_zh, /数据、Table与模型/);
   assert.match(component, /02 问卷与样本设计/);
   assert.match(component, /04 数据、Table与模型/);
-  assert.match(component, /从最终Raw Data到Table、指标与模型/);
+  assert.match(component, /从确认数据到Table、指标与模型/);
   assert.match(component, /多指标结果矩阵/);
   assert.match(component, /外部校准数据覆盖/);
   assert.match(component, /人口、人均GDP与居民消费支出用于研究市场筛选和消费环境比较/);
   const productionSource = component.slice(component.indexOf("function ResearchProductionFlow"), component.indexOf("function ProjectExecutionHub"));
   assert.doesNotMatch(productionSource, /DP Spec|配额表|配额方式|下载DP/);
-  assert.match(productionSource, /上传唯一生产数据版本/);
+  assert.match(productionSource, /选择进入Table与模型的数据/);
+  assert.match(productionSource, /使用当前回收数据/);
+  assert.match(productionSource, /上传Raw Data/);
   assert.match(productionSource, /Count · No sig · Sig/);
   assert.match(component, /问卷语言/);
   assert.match(operations, /必答与路由/);

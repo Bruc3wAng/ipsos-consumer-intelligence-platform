@@ -6496,6 +6496,8 @@ td, td strong { font-size: 11px; }
 .execution-control-fields label:last-child { border-right: 0; }
 .execution-control-fields span, .soft-launch-control label > span { color: #687187; font-size: 9px; }
 .execution-control-fields input, .soft-launch-control input[type="number"] { width: 100%; height: 38px; padding: 0 11px; color: #17245e; background: #f7f9fb; border: 1px solid #d8deea; font: 400 11px Arial, "Microsoft YaHei", sans-serif; }
+.execution-control-fields .execution-frm-field { grid-column: 1 / 2; }
+.execution-frm-link { min-height: 112px; padding: 18px 22px; display: flex; align-items: center; justify-content: center; color: #fff; background: #243aa5; font-size: 10px; font-weight: 700; text-decoration: none; }
 .execution-stage-control > footer { min-height: 66px; padding: 13px 22px; display: flex; align-items: center; justify-content: space-between; gap: 22px; background: #f5f7fa; border-top: 1px solid #e1e5eb; }
 .execution-stage-control > footer p { margin: 0; color: #687187; font-size: 8px; line-height: 1.55; }
 .execution-stage-control > footer > div { display: flex; gap: 8px; }
@@ -6524,6 +6526,26 @@ td, td strong { font-size: 11px; }
 .final-data-intake > header { padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 1px solid #d8deea; }
 .final-data-actions { display: flex; align-items: center; gap: 8px; }
 .final-data-actions > button { min-height: 40px; padding: 0 15px; color: #263aa5; background: #fff; border: 1px solid #263aa5; font: 700 11px "Microsoft YaHei", Arial, sans-serif; cursor: pointer; }
+.final-data-actions > button.active, .final-data-upload.active { color: #fff; background: #243aa5; }
+.data-source-actions { align-items: stretch; }
+.final-delivery-register { background: #fff; border: 1px solid #d8dee7; border-top: 4px solid #0aa59e; }
+.final-delivery-register > header { min-height: 84px; padding: 17px 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid #e1e5eb; }
+.final-delivery-register > header > div { display: grid; gap: 5px; }
+.final-delivery-register > header span { color: #0a958e; font-family: Arial, sans-serif; font-size: 8px; font-weight: 700; letter-spacing: .1em; }
+.final-delivery-register > header h3 { margin: 0; color: #18245b; font-size: 17px; }
+.final-delivery-register > header p { max-width: 520px; margin: 0; color: #778397; font-size: 8px; line-height: 1.6; }
+.final-delivery-register > div { display: grid; grid-template-columns: .65fr 1.7fr auto; align-items: stretch; border-bottom: 1px solid #e1e5eb; }
+.final-delivery-register > div label { min-height: 76px; padding: 13px 17px; display: grid; align-content: center; gap: 7px; border-right: 1px solid #e1e5eb; }
+.final-delivery-register > div input { width: 100%; height: 34px; padding: 0 10px; color: #17245e; background: #f7f9fb; border: 1px solid #d8deea; font: 400 10px Arial, "Microsoft YaHei", sans-serif; }
+.final-delivery-register .final-delivery-file { position: relative; cursor: pointer; }
+.final-delivery-register .final-delivery-file input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.final-delivery-register > div > button { min-width: 155px; padding: 0 20px; color: #fff; background: #243aa5; border: 0; font: 700 10px "Microsoft YaHei", Arial, sans-serif; cursor: pointer; }
+.final-delivery-register > div > button:disabled { color: #8c96a8; background: #edf0f4; cursor: not-allowed; }
+.final-delivery-register > section { display: grid; }
+.final-delivery-register > section article { min-height: 58px; padding: 10px 17px; display: grid; grid-template-columns: 90px 1fr auto; gap: 18px; align-items: center; border-bottom: 1px solid #e8ebef; }
+.final-delivery-register > section article span { color: #0a958e; font-family: Arial, sans-serif; font-size: 9px; font-weight: 700; }
+.final-delivery-register > section article strong { color: #263252; font-size: 9px; }
+.final-delivery-register > section article small { color: #7e899a; font: 400 8px Arial, "Microsoft YaHei", sans-serif; }
 .final-data-upload { position: relative; }
 .final-data-upload input { position: absolute; inline-size: 1px; block-size: 1px; opacity: 0; pointer-events: none; }
 .final-data-status { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); border-bottom: 1px solid #d8deea; }

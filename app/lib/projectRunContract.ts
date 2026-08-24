@@ -45,6 +45,14 @@ export type LockedProjectDesign = {
 export type ProjectDesignLockInput = Omit<LockedProjectDesign, "designVersion" | "revision" | "lockedAt">;
 export type ProjectRunStage = "programming" | "soft_launch" | "fieldwork" | "closed" | "data_ready";
 
+export type ProjectDeliveryFile = {
+  fileName: string;
+  version: string;
+  kind: "report" | "model" | "table" | "other";
+  size: number;
+  registeredAt: string;
+};
+
 export type ProjectRunRecord = {
   runId: string;
   projectId: LockedProjectDesign["projectId"];
@@ -56,8 +64,10 @@ export type ProjectRunRecord = {
   updatedAt: string;
   targetN: number;
   program?: { programId: string; accessUrl: string; confirmedAt: string };
-  softLaunch?: { completedN: number; routingPassed: boolean; randomizationPassed: boolean; fieldMapPassed: boolean; quotaCountPassed: boolean; confirmedAt: string };
-  fieldwork: { completedN: number; minimumQuotaCompletion: number; updatedAt: string | null };
+  softLaunch?: { completedN: number; randomSeed?: string; routingPassed: boolean; randomizationPassed: boolean; fieldMapPassed: boolean; quotaCountPassed: boolean; confirmedAt: string };
+  fieldwork: { completedN: number; minimumQuotaCompletion: number; frmUrl?: string; updatedAt: string | null };
   closedAt?: string;
+  dataConfirmation?: { source: "current_collection" | "uploaded_raw"; fileName: string; confirmedAt: string };
   finalRaw?: { fileName: string; processedAt: string; rowCount: number; eligibleRowCount: number; designVersion: string; resultKey: string; storedAt: string };
+  finalDeliverables?: ProjectDeliveryFile[];
 };
