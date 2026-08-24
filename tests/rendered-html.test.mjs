@@ -542,12 +542,87 @@ test("persists server-side project run records with the locked design snapshot",
     const restored = records.find((item) => item.runId === runId && item.designVersion === designVersion);
     assert.equal(restored.designSnapshot.confirmationKey, confirmationKey);
     assert.equal(restored.targetN, 5000);
+    await assert.rejects(() => storeProjectRunRecord({
+      ...record,
+      stage: "soft_launch",
+      updatedAt: "2026-08-20T08:04:00.000Z",
+      program: { programId: "PROGRAM-V2-R1", accessUrl: "https://example.com/program-test", confirmedAt: "2026-08-20T08:02:00.000Z" },
+      programTest: { questionnaireLoaded: true, routingPassed: true, validationPassed: true, completionPassed: true, confirmedAt: "2026-08-20T08:03:00.000Z" },
+    }), /不能从 programming 跳转到 soft_launch/);
+    const programTest = await storeProjectRunRecord({
+      ...record,
+      stage: "program_test",
+      updatedAt: "2026-08-20T08:05:00.000Z",
+      program: { programId: "PROGRAM-V2-R1", accessUrl: "https://example.com/program-test", confirmedAt: "2026-08-20T08:05:00.000Z" },
+    });
+    const deCheck = await storeProjectRunRecord({
+      ...programTest,
+      stage: "soft_launch",
+      updatedAt: "2026-08-20T08:15:00.000Z",
+      programTest: { questionnaireLoaded: true, routingPassed: true, validationPassed: true, completionPassed: true, confirmedAt: "2026-08-20T08:15:00.000Z" },
+    });
+    const launch = await storeProjectRunRecord({
+      ...deCheck,
+      stage: "fieldwork",
+      updatedAt: "2026-08-20T08:30:00.000Z",
+      softLaunch: { completedN: 50, randomSeed: "DE-V2-R98-01", routingPassed: true, randomizationPassed: true, fieldMapPassed: true, quotaCountPassed: true, confirmedAt: "2026-08-20T08:30:00.000Z" },
+    });
+    const progressed = await storeProjectRunRecord({
+      ...launch,
+      stage: "monitoring",
+      updatedAt: "2026-08-20T09:00:00.000Z",
+      fieldwork: { completedN: 0, minimumQuotaCompletion: 0, frmUrl: "https://example.com/frm", startedAt: "2026-08-20T09:00:00.000Z", updatedAt: "2026-08-20T09:00:00.000Z" },
+    });
+    assert.equal(progressed.stage, "monitoring");
+    assert.equal(progressed.programTest.routingPassed, true);
+    assert.equal(progressed.fieldwork.startedAt, "2026-08-20T09:00:00.000Z");
     const route = readFileSync(routePath, "utf8");
     assert.match(route, /listProjectRunRecords/);
     assert.match(route, /storeProjectRunRecord/);
   } finally {
     if (existsSync(storedPath)) unlinkSync(storedPath);
   }
+});
+
+test("enforces the project execution sequence and evidence gates", async () => {
+  const { PROJECT_EXECUTION_SEQUENCE, canTransitionProjectStage, checkSetReady, deCheckReady, fieldworkCloseReady, programConfigurationReady, projectRunStageEvidenceReady } = await import("../app/lib/projectExecutionWorkflow.ts");
+  assert.deepEqual(PROJECT_EXECUTION_SEQUENCE, ["programming", "program_test", "soft_launch", "fieldwork", "monitoring", "closed", "data_ready"]);
+  assert.equal(canTransitionProjectStage("programming", "program_test"), true);
+  assert.equal(canTransitionProjectStage("programming", "soft_launch"), false);
+  assert.equal(canTransitionProjectStage("closed", "programming"), true);
+  assert.equal(programConfigurationReady("PROGRAM-V2-R1", "https://example.com/program-test"), true);
+  assert.equal(programConfigurationReady("PROGRAM-V2-R1", "/research-operations/snack/program-test/"), true);
+  assert.equal(programConfigurationReady("PROGRAM-V2-R1", "program-test"), false);
+  assert.equal(checkSetReady({ routing: true, completion: true }), true);
+  assert.equal(checkSetReady({ routing: true, completion: false }), false);
+  assert.equal(deCheckReady(29, "DE-V2-R1-01", { routing: true }), false);
+  assert.equal(deCheckReady(30, "DE-V2-R1-01", { routing: true }), true);
+  assert.equal(fieldworkCloseReady(4999, 5000, 100), false);
+  assert.equal(fieldworkCloseReady(5000, 5000, 100), true);
+  assert.equal(projectRunStageEvidenceReady({
+    runId: "TEST-RUN",
+    projectId: "SNACK-CN-CRACKER-001",
+    designVersion: "V2-R1",
+    designConfirmationKey: "q|quota|dp",
+    stage: "soft_launch",
+    createdAt: "2026-08-20T08:00:00.000Z",
+    updatedAt: "2026-08-20T08:15:00.000Z",
+    targetN: 5000,
+    program: { programId: "PROGRAM-V2-R1", accessUrl: "https://example.com/program-test", confirmedAt: "2026-08-20T08:05:00.000Z" },
+    programTest: { questionnaireLoaded: true, routingPassed: true, validationPassed: true, completionPassed: false, confirmedAt: "2026-08-20T08:15:00.000Z" },
+    fieldwork: { completedN: 0, minimumQuotaCompletion: 0, updatedAt: null },
+  }), false);
+});
+
+test("provides a fixed program-test route with four independently inspectable cases", () => {
+  const component = readFileSync(new URL("../app/components/SnackProgramTest.tsx", import.meta.url), "utf8");
+  const page = readFileSync(new URL("../app/research-operations/snack/program-test/page.tsx", import.meta.url), "utf8");
+  assert.match(component, /PROGRAM-V2-R1/);
+  assert.match(component, /PT-01/);
+  assert.match(component, /PT-04/);
+  assert.match(component, /运行全部固定案例/);
+  assert.match(component, /本入口不计入正式回收/);
+  assert.match(page, /SnackProgramTest/);
 });
 
 test("exports research workbooks with addressable cells that survive an Excel import", async () => {
@@ -671,7 +746,14 @@ test("confirms next-wave experiments before exposing three separate V2 design fi
   assert.match(component, /designVersion: `V2-R\$\{revision\}`/);
   assert.match(component, /等待第02步锁定研究设计/);
   assert.match(component, /本页读取第02步确认的同一问卷、配额与DP Spec版本/);
-  assert.match(component, /固定随机数、N≥30且四项全部通过后进入正式回收/);
+  assert.match(component, /程序测试/);
+  assert.match(component, /stage: "program_test"/);
+  assert.match(component, /固定测试入口/);
+  assert.match(component, /载入案例测试结果/);
+  assert.match(component, /固定随机数、N≥30且四项全部通过后进入正式上线准备/);
+  assert.match(component, /载入案例DE结果/);
+  assert.match(component, /stage: "monitoring"/);
+  assert.match(component, /载入案例完成进度/);
   assert.match(component, /最低配额单元达到100%/);
   assert.match(component, /当前执行记录尚未关闭回收/);
   assert.match(component, /stage: "data_ready"/);

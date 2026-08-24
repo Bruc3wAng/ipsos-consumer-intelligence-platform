@@ -43,7 +43,7 @@ export type LockedProjectDesign = {
 };
 
 export type ProjectDesignLockInput = Omit<LockedProjectDesign, "designVersion" | "revision" | "lockedAt">;
-export type ProjectRunStage = "programming" | "soft_launch" | "fieldwork" | "closed" | "data_ready";
+export type ProjectRunStage = "programming" | "program_test" | "soft_launch" | "fieldwork" | "monitoring" | "closed" | "data_ready";
 
 export type ProjectDeliveryFile = {
   fileName: string;
@@ -64,8 +64,9 @@ export type ProjectRunRecord = {
   updatedAt: string;
   targetN: number;
   program?: { programId: string; accessUrl: string; confirmedAt: string };
+  programTest?: { questionnaireLoaded: boolean; routingPassed: boolean; validationPassed: boolean; completionPassed: boolean; confirmedAt: string };
   softLaunch?: { completedN: number; randomSeed?: string; routingPassed: boolean; randomizationPassed: boolean; fieldMapPassed: boolean; quotaCountPassed: boolean; confirmedAt: string };
-  fieldwork: { completedN: number; minimumQuotaCompletion: number; frmUrl?: string; updatedAt: string | null };
+  fieldwork: { completedN: number; minimumQuotaCompletion: number; frmUrl?: string; startedAt?: string; updatedAt: string | null };
   closedAt?: string;
   dataConfirmation?: { source: "current_collection" | "uploaded_raw"; fileName: string; confirmedAt: string };
   finalRaw?: { fileName: string; processedAt: string; rowCount: number; eligibleRowCount: number; designVersion: string; resultKey: string; storedAt: string };
